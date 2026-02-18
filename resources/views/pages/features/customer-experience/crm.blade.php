@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">CRM</p>
-                    <h1 class="hero-heading">Build Loyalty, Boost Repeat Business—EquipDash CRM Delivers!</h1>
-                    <p class="hero-desc">Tired of losing customers, manual tracking, and software that can't manage relationships? EquipDash's CRM feature tracks preferences, boosts retention, and drives bookings for your rentals or tours—saving time and growing revenue. Start your free trial today and connect with every customer!</p>
+                    <h1 class="hero-heading">Know your customers before they walk in</h1>
+                    <p class="hero-desc">EquipDash keeps a complete profile for every customer — booking history, waiver status, preferences, notes, and communication log. Your team has the context they need before a guest even arrives.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/crm_1-min.png') }}" alt="Personalized Engagement" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Personalized Engagement, Turn Renters into Raving Fans</h2>
-                            <p class="sec-desc">EquipDash's CRM tracks customer data—booking history, preferences, and feedback—for ski rentals, rafting trips, or city tours. Use this insight to deliver tailored offers and experiences, boosting loyalty and repeat bookings—without the hassle of manual spreadsheets or clunky systems.</p>
+                            <h2 class="fea-title">Profiles that build themselves</h2>
+                            <p class="sec-desc">Every booking, payment, waiver, and form response is automatically added to the customer's profile. No manual data entry — just a complete record of every interaction.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Effortless Data Management, No More Guesswork</h2>
-                            <p class="sec-desc">Say goodbye to scattered notes and hello to EquipDash's intuitive CRM tools. Store and access customer details, segment lists, and analyze trends effortlessly—ensuring you stay organized, save time, and make smarter decisions, even during peak seasons.</p>
+                            <h2 class="fea-title">Search, filter, and segment your customers</h2>
+                            <p class="sec-desc">Find any customer in seconds. Filter by booking type, date range, location, or custom tags. Build segments for targeted campaigns — like all customers who booked last winter but have not returned.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/crm_2-min.png') }}" alt="Effortless Data Management" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Connect CRM data to your tools" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Connect CRM data to your tools" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Customer Insights</h2>
-                            <p class="sec-desc">Connect CRM with online booking, payments, and marketing tools for a unified approach. This integration eliminates silos, enhances communication, and saves hours—letting you focus on delivering epic experiences instead of managing customer data manually.</p>
+                            <h2 class="fea-title">Connect CRM data to your marketing and booking tools</h2>
+                            <p class="sec-desc">Customer data flows into Mailchimp for email campaigns, into your booking system for personalised upsells, and into reports for customer lifetime value analysis.</p>
                         </div>
                     </div>
                 </div>
@@ -123,21 +123,22 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including CRM, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from CRM?', 'answer' => 'EquipDash\'s CRM is perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) improving customer retention.'],
-            ['question' => 'Is CRM customizable?', 'answer' => 'Yes! Customize data fields, segmentation, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s CRM is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does CRM integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and Mailchimp, making it easy to sync your customer data.'],
-            ['question' => 'How will CRM help during peak seasons?', 'answer' => 'CRM\'s personalized engagement and data management handle seasonal demand, boosting retention and bookings without the stress of manual processes.'],
+            ['question' => 'What data does the CRM track?', 'answer' => 'Booking history, payment records, waiver status, form responses, communication log, notes, and custom tags.'],
+            ['question' => 'Can I segment customers for campaigns?', 'answer' => 'Yes. Filter by booking type, date, location, spend, or custom tags. Export segments to Mailchimp or use them for in-app campaigns.'],
+            ['question' => 'Is customer data imported automatically?', 'answer' => 'Yes. Every booking, payment, and form submission creates or updates a customer profile automatically.'],
+            ['question' => 'Can I add notes to customer profiles?', 'answer' => 'Yes. Your team can add internal notes to any profile — for example, preferences, allergies, or special requests.'],
+            ['question' => 'Does the CRM connect to email marketing?', 'answer' => 'Yes. Sync customer segments with Mailchimp for targeted email campaigns.'],
+            ['question' => 'Can I see a customer\'s full history?', 'answer' => 'Yes. Open any profile to see every booking, payment, waiver, message, and note in chronological order.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Strengthen Your Customer Relationships?"
-        description="Don't let outdated software lose you loyal customers. Start your free trial now or watch our demo online to see why EquipDash's CRM is the #1 choice for rental and tour operators worldwide."
+        title="Know your customers better than anyone"
+        description="Start your free 21-day trial and build customer profiles automatically."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

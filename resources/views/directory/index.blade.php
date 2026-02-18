@@ -16,7 +16,7 @@
                     <div class="banner__content">
                         <h1 class="banner__title">Find the right expert for your next journey</h1>
                         <div class="banner__desc">
-                            <p>Ut enim ad minim veniam. quis nostrud exercitatio se ullamco sadipscing nonumy elitr. Sadipscing elitr.</p>
+                            <p>Browse equipment rental businesses and experience operators from around the world.</p>
                         </div>
                     </div>
                     <div class="banner__media">
@@ -88,8 +88,8 @@
             <div class="container">
                 <div class="inner-ready">
                     <div class="ready-content">
-                        <h2 class="global-title">Ready to boost your bookings?</h2>
-                        <p class="sec-desc">Don't let outdated software cost you customers. Start your free trial now or watch our demo online to see why EquipDash's Online Booking is the #1 choice for rental and tour operators worldwide.</p>
+                        <h2 class="global-title">Ready to grow your business</h2>
+                        <p class="sec-desc">Start your free 21-day trial and see how EquipDash helps you manage bookings, inventory, and customers in one place.</p>
                         <div class="gr-btn">
                             <a href="/book-a-demo" class="global-btn">Start Your Free 21-Day Trial</a>
                             <a href="/book-a-demo" class="global-btn-white">See It In Action</a>

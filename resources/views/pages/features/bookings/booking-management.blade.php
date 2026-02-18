@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">Booking Management</p>
-                    <h1 class="hero-heading">Control Your Bookings, Maximize Your Success—Effortlessly!</h1>
-                    <p class="hero-desc">Tired of scheduling chaos, missed slots, and software that can't manage your rentals or tours? EquipDash's Bookings Management feature keeps your equipment and adventures on track—saving time and boosting revenue. Start your free trial today and take charge of every booking!</p>
+                    <h1 class="hero-heading">Every reservation, one calendar</h1>
+                    <p class="hero-desc">See all bookings across locations and channels in a single view. Modify dates, reassign equipment, update group sizes, and track payment status — all from one screen.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/mana_1.png') }}" alt="Effortless Schedule Oversight" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Effortless Schedule Oversight, No More Missed Slots</h2>
-                            <p class="sec-desc">EquipDash's Bookings Management gives you complete control over your schedules, from availability to cancellations. With real-time updates and intuitive tools, you'll never miss a booking for skis, tours, or kayaks—ensuring every slot is filled, even during peak seasons, without manual guesswork.</p>
+                            <h2 class="fea-title">A unified calendar for your entire business</h2>
+                            <p class="sec-desc">Online bookings, walk-ins, phone reservations, and OTA orders all appear in one calendar. Filter by location, product, or date to find exactly what you need.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Flexible Changes, Happy Customers Every Time</h2>
-                            <p class="sec-desc">Handle booking changes, rescheduling, and cancellations with ease using EquipDash's user-friendly interface. Automated notifications keep customers informed, reducing frustration and no-shows—while you save time and maintain smooth operations, no matter the demand.</p>
+                            <h2 class="fea-title">Modify bookings without the back-and-forth</h2>
+                            <p class="sec-desc">Change dates, swap products, adjust group sizes, or add extras directly from the booking detail screen. Customers get an updated confirmation automatically.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/mana_2.png') }}" alt="Flexible Changes" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Booking Status Tracking" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Booking Status Tracking" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, One System for Total Control</h2>
-                            <p class="sec-desc">Connect Bookings Management with online booking, POS, and inventory tools for a unified workflow. This integration eliminates silos, reduces errors, and saves hours—letting you focus on delivering epic experiences instead of wrestling with fragmented systems.</p>
+                            <h2 class="fea-title">Track booking status at a glance</h2>
+                            <p class="sec-desc">See which bookings are confirmed, pending payment, checked in, or completed. Colour-coded statuses let your team process the queue faster.</p>
                         </div>
                     </div>
                 </div>
@@ -123,21 +123,22 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Bookings Management, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Bookings Management?', 'answer' => 'EquipDash\'s Bookings Management is perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) managing schedules and bookings.'],
-            ['question' => 'Is Bookings Management customizable?', 'answer' => 'Yes! Customize availability settings, workflows, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Bookings Management is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Bookings Management integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your online booking system, making it easy to sync your operations.'],
-            ['question' => 'How will Bookings Management help during peak seasons?', 'answer' => 'Bookings Management\'s real-time updates, flexible changes, and integrations handle seasonal surges, ensuring you manage every slot without the stress.'],
+            ['question' => 'Can I see bookings from all channels in one place?', 'answer' => 'Yes. Direct, walk-in, phone, and OTA bookings all appear in the same calendar.'],
+            ['question' => 'Can I modify a booking after it is confirmed?', 'answer' => 'Yes. Change dates, products, quantities, or add-ons from the booking detail page. An updated confirmation is sent automatically.'],
+            ['question' => 'How do I handle group bookings?', 'answer' => 'Create a group booking with multiple participants. Each person can have their own waiver, form responses, and payment.'],
+            ['question' => 'Can I filter bookings by location?', 'answer' => 'Yes. Filter the calendar by location, product type, date range, or booking status.'],
+            ['question' => 'Does it track payment status?', 'answer' => 'Yes. Each booking shows paid, partially paid, or unpaid. You can send payment links for outstanding balances.'],
+            ['question' => 'Can staff see only their own bookings?', 'answer' => 'Yes. Role-based permissions let you control which bookings each team member can view and edit.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Master Your Bookings?"
-        description="Don't let outdated software cost you slots. Start your free trial now or watch our demo online to see why EquipDash's Bookings Management is the #1 choice for rental and tour operators worldwide."
+        title="Take control of your booking calendar"
+        description="Start your free 21-day trial and manage every reservation from one screen."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

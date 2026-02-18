@@ -98,23 +98,30 @@ class PageLoadTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_features_planning_returns_200(): void
+    public function test_features_scheduling_logistics_returns_200(): void
+    {
+        $response = $this->get('/features/scheduling-logistics');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_features_planning_redirects_to_scheduling_logistics(): void
     {
         $response = $this->get('/features/planning');
 
+        $response->assertRedirect('/features/scheduling-logistics');
+    }
+
+    public function test_features_resource_management_returns_200(): void
+    {
+        $response = $this->get('/features/resource-management');
+
         $response->assertStatus(200);
     }
 
-    public function test_features_resources_management_returns_200(): void
+    public function test_features_dash_ai_returns_200(): void
     {
-        $response = $this->get('/features/resources-management');
-
-        $response->assertStatus(200);
-    }
-
-    public function test_features_ai_automation_returns_200(): void
-    {
-        $response = $this->get('/features/ai-automation');
+        $response = $this->get('/features/dash-ai');
 
         $response->assertStatus(200);
     }
@@ -172,16 +179,30 @@ class PageLoadTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_features_planning_staff_rostering_returns_200(): void
+    public function test_features_scheduling_logistics_staff_rostering_returns_200(): void
     {
-        $response = $this->get('/features/planning/staff-rostering');
+        $response = $this->get('/features/scheduling-logistics/staff-rostering');
 
         $response->assertStatus(200);
     }
 
-    public function test_features_resources_management_inventory_management_returns_200(): void
+    public function test_features_scheduling_logistics_guestlist_manifest_returns_200(): void
     {
-        $response = $this->get('/features/resources-management/inventory-management');
+        $response = $this->get('/features/scheduling-logistics/guestlist-manifest');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_features_resource_management_store_catalogue_returns_200(): void
+    {
+        $response = $this->get('/features/resource-management/store-catalogue');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_features_resource_management_inventory_management_returns_200(): void
+    {
+        $response = $this->get('/features/resource-management/inventory-management');
 
         $response->assertStatus(200);
     }

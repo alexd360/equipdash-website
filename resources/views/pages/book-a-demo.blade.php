@@ -3,12 +3,12 @@
 @section('seo')
     <x-seo
         title="Book a Demo | EquipDash"
-        description="Schedule a personalized demo of EquipDash. See how our platform can transform your rental business."
+        description="See EquipDash in action. Book a free 30-minute demo and discover how our AI-powered platform can streamline your rental or tour business."
         :structuredData="[
             '@context' => 'https://schema.org',
             '@type' => 'WebPage',
             'name' => 'Book a Demo - EquipDash',
-            'description' => 'Schedule a personalized demo of EquipDash.',
+            'description' => 'See EquipDash in action. Book a free 30-minute demo and discover how our AI-powered platform can streamline your rental or tour business.',
         ]"
     />
 @endsection
@@ -25,14 +25,14 @@
                             <img src="{{ asset('images/smb-1.jpg') }}" alt="">
                             <img src="{{ asset('images/smb-2.jpg') }}" alt="">
                         </div>
-                        <span>Trusted by 100+ SMB's</span>
+                        <span>Trusted by hundreds of rental and tour operators</span>
                     </div>
-                    <h1 class="hero-heading">See EquipDash in action—Book a demo today!</h1>
+                    <h1 class="hero-heading">See EquipDash in action — Book a demo today</h1>
                     <h3 class="book-a-demo_features_title">What you'll get:</h3>
-                    <p class="book-a-demo_feature">A personalized walkthrough of the platform</p>
-                    <p class="book-a-demo_feature">Answers to all your questions</p>
-                    <p class="book-a-demo_feature">Custom pricing based on your needs</p>
-                    <p class="book-a-demo_feature">Free 21-day trial setup</p>
+                    <p class="book-a-demo_feature">See how Dash AI handles your daily admin</p>
+                    <p class="book-a-demo_feature">Get a walkthrough tailored to your business</p>
+                    <p class="book-a-demo_feature">Learn how operators save 10+ hours per week</p>
+                    <p class="book-a-demo_feature">One platform for bookings, inventory, and operations</p>
                     <p class="book-a-demo_feature">No commitment required</p>
                 </div>
                 <div class="global-form">
@@ -116,30 +116,10 @@
             <div class="inner-audience">
                 <p class="sub-title">KEY FEATURES</p>
                 <h2 class="global-title">With EquipDash you can..</h2>
-                <p class="sec-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do eiusmod tempor sed nonue incididunt ut labores sed ipsum dolor sit amet consectetur adipiscing elit.</p>
-                <div class="key_access">
-                    <div class="key-access_list">
-                        <div class="key-access_item">
-                            <p class="key-access_percent">200+</p>
-                            <p class="key-access_txt">Active Businesses</p>
-                        </div>
-                        <div class="key-access_item">
-                            <p class="key-access_percent">50K+</p>
-                            <p class="key-access_txt">Bookings Processed</p>
-                        </div>
-                        <div class="key-access_item">
-                            <p class="key-access_percent">98%</p>
-                            <p class="key-access_txt">Customer Satisfaction</p>
-                        </div>
-                        <div class="key-access_item">
-                            <p class="key-access_percent">35%</p>
-                            <p class="key-access_txt">Average Revenue Increase</p>
-                        </div>
-                    </div>
-                </div>
+                <p class="sec-desc">Everything you need to book more, manage smarter, and grow faster — all from one platform.</p>
                 <div class="key_benefit">
                     <div class="key-benefit_content">
-                        <h3 class="key-benefit_title">Key benefits of our all-in-one platform that powers your outdoor equipment rentals and adventure tours.</h3>
+                        <h3 class="key-benefit_title">Everything you need to run rentals, tours, and your in-store operations</h3>
                         <div class="key-benefit_lists">
                             <ul class="key-benefit_list">
                                 <li class="key_benefit_item">Online Booking</li>
@@ -149,9 +129,9 @@
                             </ul>
                             <ul class="key-benefit_list">
                                 <li class="key_benefit_item">Digital Waivers</li>
-                                <li class="key_benefit_item">Loyalty Programs</li>
+                                <li class="key_benefit_item">CRM</li>
                                 <li class="key_benefit_item">Reviews & Surveys</li>
-                                <li class="key_benefit_item">AI & Automation</li>
+                                <li class="key_benefit_item">Dash AI</li>
                             </ul>
                             <ul class="key-benefit_list">
                                 <li class="key_benefit_item">Staff Rostering</li>
@@ -169,18 +149,4 @@
         </div>
     </section>
 
-    {{-- FAQ --}}
-    <x-faq-section
-        badge="FREQUENTLY ASKED QUESTION"
-        title="What would you like to know about EquipDash?"
-        description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
-        :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your business before committing.'],
-            ['question' => 'Who is EquipDash for?', 'answer' => 'EquipDash is designed for equipment rental providers and experience/tour operators, including those offering ski rentals, bike tours, rafting trips, scuba diving, and more.'],
-            ['question' => 'Is EquipDash customizable?', 'answer' => 'Yes! EquipDash adapts to your unique needs with options for custom workflows, digital waivers, and tailored reports.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash is beginner-friendly, and you can get started quickly with intuitive setup tools and dedicated support.'],
-            ['question' => 'Does EquipDash integrate with my existing systems?', 'answer' => 'Yes, EquipDash connects seamlessly with tools like Stripe, QuickBooks, Shopify, and more, making it easy to sync your operations.'],
-            ['question' => 'How will EquipDash help me get more bookings?', 'answer' => 'EquipDash offers real-time availability, automated reminders, and online booking tools that help you capture more reservations and reduce no-shows.'],
-        ]"
-    />
 @endsection

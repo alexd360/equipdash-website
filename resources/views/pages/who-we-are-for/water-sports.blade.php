@@ -10,8 +10,8 @@
 @section('content')
     {{-- Hero Banner --}}
     <x-wwf-hero
-        title="Ride the Wave of Success with Water Sports Rentals!"
-        description="Tired of missed bookings, gear tangles, and software that sinks under pressure? EquipDash powers water sports rental providers—surfboards, kayaks, SUPs, snorkeling gear—with smooth operations, packed waves, and happy customers. Start your free trial today and make a splash!"
+        title="Water sport rentals, simplified"
+        description="EquipDash helps water sport rental operators manage kayaks, SUPs, jet skis, and snorkel gear with real-time bookings, safety waivers, and equipment tracking. Built for waterfront businesses that deal with weather, tides, and peak-season rushes."
         image="images/water-sports-thumb.png"
         imageAlt="Water Sport Rental Software"
         heroClass="who-where-for-ski"
@@ -20,9 +20,9 @@
     {{-- Features List --}}
     <x-wwf-features-list
         :items="[
-            ['image' => 'images/seamless-online-bookings-every-wave-packed.png', 'title' => 'Seamless Online Bookings, Every Wave Packed', 'description' => 'Say goodbye to manual booking struggles and hello to EquipDash\'s real-time online booking system. Customers book surfboards, kayaks, and SUPs instantly, even during peak summer rush, while automated reminders and waitlist management ensure no spot goes unfilled. Watch your revenue surge as you fill every wave effortlessly.'],
-            ['image' => 'images/smart-inventory-tracking-say-goodbye-to-gear-mishaps.png', 'title' => 'Smart Inventory Tracking, No More Gear Mishaps', 'description' => 'Keep your water sports gear in prime condition with EquipDash\'s intuitive inventory tools. Track availability, schedule maintenance, and automate alerts for wear and tear—ensuring every surfboard, kayak, and snorkel is ready for the next adventure. No more scrambling to locate gear or losing track during busy days.'],
-            ['image' => 'images/water-sports-features-3.png', 'title' => 'Effortless Staff Scheduling, Peak Performance on the Water', 'description' => 'Tackle seasonal water sports surges with EquipDash\'s staff rostering and HR tools. Optimize your team\'s schedules, manage peak boating days, and keep operations smooth—without the stress of manual planning or clunky interfaces. Focus on delivering epic water experiences, not fighting your software.'],
+            ['image' => 'images/seamless-online-bookings-every-wave-packed.png', 'title' => 'Online bookings with real-time availability', 'description' => 'Customers book gear online, see what is available, and get instant confirmation. Walk-in bookings update the same availability, so you never oversell — even when the beach is packed.'],
+            ['image' => 'images/smart-inventory-tracking-say-goodbye-to-gear-mishaps.png', 'title' => 'Track every piece of water sport equipment', 'description' => 'See what is rented, returned, or needs a rinse-down. EquipDash tracks equipment condition, schedules maintenance, and alerts you when stock runs low.'],
+            ['image' => 'images/water-sports-features-3.png', 'title' => 'Roster your team for waterfront operations', 'description' => 'Build staff schedules around tide times, weather, and expected demand. Your team sees their shifts on the app and gets notified of changes.'],
         ]"
     />
 
@@ -35,21 +35,21 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your water sports rental business before committing.'],
-            ['question' => 'Who is EquipDash for?', 'answer' => 'EquipDash is ideal for water sports rental providers offering surfboards, kayaks, SUPs, and snorkeling gear, looking to streamline operations and boost bookings during peak seasons.'],
-            ['question' => 'Is EquipDash customizable for water sports rentals?', 'answer' => 'Yes! EquipDash adapts to your unique needs with custom workflows, digital waivers, and tailored reports for water sports operations.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast, even in peak season.'],
-            ['question' => 'Does EquipDash integrate with my existing systems?', 'answer' => 'Yes, EquipDash connects seamlessly with tools like Stripe, QuickBooks, Shopify, and more, making it easy to sync your water sports rentals.'],
-            ['question' => 'How will EquipDash handle busy water sports seasons?', 'answer' => 'EquipDash\'s inventory tracking, staff rostering, and online booking tools manage seasonal demand, ensuring you\'re ready for peak times without the stress.'],
+            ['question' => 'Can EquipDash handle weather-dependent scheduling?', 'answer' => 'Yes. You can set operating hours, blackout dates, and seasonal schedules. If conditions change, you can close or modify time slots directly from the dashboard.'],
+            ['question' => 'How do digital waivers work for water sports?', 'answer' => 'Send waivers by email or SMS before the session. Customers sign on their phone, and the waiver attaches to their booking. Staff can verify waiver status at check-in.'],
+            ['question' => 'Can I rent equipment by the hour?', 'answer' => 'Yes. EquipDash supports hourly, half-day, and full-day rental periods with automatic pricing adjustments.'],
+            ['question' => 'How does equipment condition tracking work?', 'answer' => 'Log the condition of each item on return. EquipDash tracks wear over time and flags items due for maintenance or replacement.'],
+            ['question' => 'Can I manage a beachfront rental hut and a shop?', 'answer' => 'Yes. EquipDash supports multiple locations with separate inventory, staff, and availability for each.'],
+            ['question' => 'Does EquipDash work on tablets?', 'answer' => 'Yes. EquipDash is fully responsive and works on tablets, which is ideal for beachfront check-in counters.'],
         ]"
     />
 
     {{-- CTA Section --}}
     <x-cta-section
-        title="Ready to lead? Let's get started!"
-        description="Start your free trial now to see why EquipDash is the #1 choice for rental pros and tour operators worldwide."
+        title="See how EquipDash works for water sport rentals"
+        description="Start your free 21-day trial. No credit card, no commitment."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"
-        secondButtonUrl="#"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

@@ -2,8 +2,8 @@
 
 @section('seo')
     <x-seo
-        title="Features - EquipDash"
-        description="Unleash the Power of EquipDash—Every Feature You Need, One Platform! Bookings, customer experience, operations, and more."
+        title="All Features | EquipDash"
+        description="Explore EquipDash's complete feature suite — bookings, CRM, inventory, scheduling, operations, and integrations for rental and tour businesses."
     />
 @endsection
 
@@ -13,11 +13,11 @@
         <div class="container">
             <div class="inner-fea-banner">
                 <div class="fea-content">
-                    <h1 class="hero-heading">Unleash the Power of EquipDash—Every Feature You Need, One Platform!</h1>
-                    <p class="hero-desc">Tired of juggling fragmented tools, missing features, and clunky software? EquipDash delivers an all-in-one feature suite for equipment rentals and tour operators—bookings, customer experience, operations, and more. Explore our features, start your free trial, and dominate your business today!</p>
+                    <h1 class="hero-heading">One platform. Every tool your rental or tour business needs.</h1>
+                    <p class="hero-desc">EquipDash brings bookings, inventory, CRM, digital waivers, payments, and AI-powered insights into a single platform built for rental providers and tour operators. Spend less time switching between tools and more time growing your business.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                     <p class="hero-credit">No credit card required, cancel anytime.</p>
                 </div>
@@ -39,7 +39,7 @@
                             <li class="fea-item"><a href="#bookings">Bookings</a></li>
                             <li class="fea-item"><a href="#customer_experience">Customer Experience</a></li>
                             <li class="fea-item"><a href="#resource_management">Resource Management</a></li>
-                            <li class="fea-item"><a href="#planning">Planning</a></li>
+                            <li class="fea-item"><a href="#scheduling_logistics">Scheduling & Logistics</a></li>
                             <li class="fea-item"><a href="#operations">Operations</a></li>
                             <li class="fea-item"><a href="#api__integrations">API & Integrations</a></li>
                             <li class="fea-item"><a href="#integrations">Integrations</a></li>
@@ -61,8 +61,8 @@
                     </div>
                     <div class="features_content fea-sec-content">
                         <p class="sub-title">Bookings</p>
-                        <h2 class="fea-title">Block for Each Category</h2>
-                        <p class="sec-desc">Discover how EquipDash's powerful features transform your outdoor business—click each category to dive deeper into the tools that drive success.</p>
+                        <h2 class="fea-title">Fill every slot, online and in-person</h2>
+                        <p class="sec-desc">From real-time online reservations to in-store POS, EquipDash handles every booking channel so nothing slips through the cracks.</p>
                         <a href="{{ url('/features/bookings') }}" class="global-btn">Explore All Features</a>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                         <div class="icon"><img src="{{ asset('images/features/booking.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Online Booking</h3>
-                            <p>Real-time, user-friendly bookings to fill your slots fast.</p>
+                            <p>Let customers book 24/7 with real-time availability and instant confirmation.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/bookings/online-booking') }}" class="see-btn">See Online Booking<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -83,7 +83,7 @@
                         <div class="icon"><img src="{{ asset('images/features/pos.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>POS Integrations</h3>
-                            <p>Seamless in-person payments and inventory tracking.</p>
+                            <p>Process walk-in rentals and on-site payments from a single screen.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/bookings/pos-management') }}" class="see-btn">See POS Integrations<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -93,7 +93,7 @@
                         <div class="icon"><img src="{{ asset('images/features/manage.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Booking Management</h3>
-                            <p>Effortlessly manage schedules, availability, and cancellations.</p>
+                            <p>View, modify, and manage every reservation from one calendar.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/bookings/booking-management') }}" class="see-btn">See Booking Management<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -103,7 +103,7 @@
                         <div class="icon"><img src="{{ asset('images/features/refund.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Refund and Cancellation Policies</h3>
-                            <p>Automate policies to keep customers happy and operations smooth.</p>
+                            <p>Set custom refund rules that enforce automatically.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/bookings/refund-cancellation') }}" class="see-btn">See Refund & Cancellation<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -113,7 +113,7 @@
                         <div class="icon"><img src="{{ asset('images/features/workfow.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Workflow Automation</h3>
-                            <p>Save time with smart, automated customer communications.</p>
+                            <p>Send confirmations, reminders, and follow-ups without lifting a finger.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/bookings/workflow-automation') }}" class="see-btn">See Workflow Automation<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -123,7 +123,7 @@
                         <div class="icon"><img src="{{ asset('images/features/waitlist.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Waitlist Management</h3>
-                            <p>Capture every opportunity with efficient waitlist tools.</p>
+                            <p>Auto-notify customers when spots open up to capture lost revenue.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/bookings/waitlist-management') }}" class="see-btn">See Waitlist Management<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -132,8 +132,8 @@
                     <div class="detail-box">
                         <div class="icon"><img src="{{ asset('images/features/secure.svg') }}" alt=""></div>
                         <div class="content-box">
-                            <h3>Secure Payment Processing with Integrations like Stripe and PayPal</h3>
-                            <p>Fast, secure transactions to boost trust and revenue.</p>
+                            <h3>Secure Payments</h3>
+                            <p>Accept Stripe, PayPal, and more with PCI-compliant processing.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/bookings/secure-payment') }}" class="see-btn">See Secure Payments<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -149,8 +149,8 @@
                 <div class="features_main-banner">
                     <div class="features_content fea-sec-content">
                         <p class="sub-title">Customer Experience</p>
-                        <h2 class="fea-title">Delight your customers, drive loyalty</h2>
-                        <p class="sec-desc">EquipDash's Customer Experience features—CRM, waivers, loyalty, and more—boost satisfaction, repeat business, and rave reviews. Explore our tools and win over every customer!</p>
+                        <h2 class="fea-title">Turn first-timers into regulars</h2>
+                        <p class="sec-desc">Build lasting relationships with CRM, digital waivers, loyalty rewards, and automated campaigns — all from one dashboard.</p>
                         <a href="{{ url('/features/customer-experience') }}" class="global-btn">Explore All Features</a>
                     </div>
                     <div class="features_media fea-sec-thumb">
@@ -165,7 +165,7 @@
                         <div class="icon"><img src="{{ asset('images/features/cmr.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>CRM</h3>
-                            <p>Track customer data and preferences for personalized engagement.</p>
+                            <p>Build detailed guest profiles with booking history and preferences.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/customer-experience/crm') }}" class="see-btn">See CRM<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -175,7 +175,7 @@
                         <div class="icon"><img src="{{ asset('images/features/digital.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Digital Waivers</h3>
-                            <p>Streamline liability with secure, paperless forms.</p>
+                            <p>Collect e-signatures before arrival — no paper, no queues.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/customer-experience/digital-waivers') }}" class="see-btn">See Digital Waivers<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -185,27 +185,17 @@
                         <div class="icon"><img src="{{ asset('images/features/forms.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Custom Forms</h3>
-                            <p>Tailor forms to meet your unique needs and workflows.</p>
+                            <p>Gather the exact information you need at every stage.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/customer-experience/custom-forms') }}" class="see-btn">See Custom Forms<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 </div>
                 <div class="fea-box col-4">
                     <div class="detail-box">
-                        <div class="icon"><img src="{{ asset('images/features/loyalty.svg') }}" alt=""></div>
-                        <div class="content-box">
-                            <h3>Loyalty Programs</h3>
-                            <p>Reward repeat customers and drive retention.</p>
-                        </div>
-                    </div>
-                    <a href="{{ url('/features/customer-experience/loyalty-programs') }}" class="see-btn">See Loyalty Programs<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                </div>
-                <div class="fea-box col-4">
-                    <div class="detail-box">
                         <div class="icon"><img src="{{ asset('images/features/gift.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Gift Cards & Vouchers</h3>
-                            <p>Boost sales with flexible customer incentives.</p>
+                            <p>Sell gift cards online and redeem them at checkout.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/customer-experience/gift-cards-vouchers') }}" class="see-btn">See Gift Cards & Vouchers<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -215,17 +205,17 @@
                         <div class="icon"><img src="{{ asset('images/features/promotions.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Promotions and Campaigns</h3>
-                            <p>Launch targeted marketing to fill bookings and build buzz.</p>
+                            <p>Create promo codes and run targeted email or SMS campaigns.</p>
                         </div>
                     </div>
-                    <a href="{{ url('/features/customer-experience/promotionsand-campaigns') }}" class="see-btn">See Promo & Campaigns<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <a href="{{ url('/features/customer-experience/promotions-campaigns') }}" class="see-btn">See Promo & Campaigns<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 </div>
                 <div class="fea-box col-4">
                     <div class="detail-box">
                         <div class="icon"><img src="{{ asset('images/features/reviews.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Reviews and Surveys</h3>
-                            <p>Gather feedback to improve satisfaction and attract more business.</p>
+                            <p>Collect post-experience feedback and build your online reputation.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/customer-experience/reviews-surveys') }}" class="see-btn">See Reviews & Surveys<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -245,9 +235,9 @@
                     </div>
                     <div class="features_content fea-sec-content">
                         <p class="sub-title">Resource Management</p>
-                        <h2 class="fea-title">Optimize your resources, maximize your efficiency</h2>
-                        <p class="sec-desc">EquipDash's Resource Management features—inventory, guides, catalogues, and schedules—streamline your operations and boost profitability.</p>
-                        <a href="{{ url('/features/resources-management') }}" class="global-btn">Explore All Features</a>
+                        <h2 class="fea-title">Know where every piece of gear is. Always.</h2>
+                        <p class="sec-desc">Track inventory across locations, coordinate guides, manage product catalogues, and plan seasonal schedules — all in real time.</p>
+                        <a href="{{ url('/features/resource-management') }}" class="global-btn">Explore All Features</a>
                     </div>
                 </div>
             </div>
@@ -257,69 +247,79 @@
                         <div class="icon"><img src="{{ asset('images/features/invento.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Inventory Management</h3>
-                            <p>Track gear and equipment with smart alerts and maintenance scheduling.</p>
+                            <p>Track stock levels, schedule maintenance, and get low-stock alerts.</p>
                         </div>
                     </div>
-                    <a href="{{ url('/features/resources-management/inventory-management') }}" class="see-btn">See Inventory Management<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <a href="{{ url('/features/resource-management/inventory-management') }}" class="see-btn">See Inventory Management<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 </div>
                 <div class="fea-box col-3">
                     <div class="detail-box">
                         <div class="icon"><img src="{{ asset('images/features/guide.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Guide Management</h3>
-                            <p>Optimize guide schedules for peak performance.</p>
+                            <p>Assign guides to trips based on availability and qualifications.</p>
                         </div>
                     </div>
-                    <a href="{{ url('/features/resources-management/guide-management') }}" class="see-btn">See Guide Management<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <a href="{{ url('/features/resource-management/guide-management') }}" class="see-btn">See Guide Management<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 </div>
                 <div class="fea-box col-3">
                     <div class="detail-box">
                         <div class="icon"><img src="{{ asset('images/features/product.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Product Catalogue</h3>
-                            <p>Showcase your offerings with a dynamic, easy-to-update catalogue.</p>
+                            <p>Set up rental products with variants, pricing rules, and images.</p>
                         </div>
                     </div>
-                    <a href="{{ url('/features/resources-management/product-catalogue') }}" class="see-btn">See Product Catalogue<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <a href="{{ url('/features/resource-management/product-catalogue') }}" class="see-btn">See Product Catalogue<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 </div>
                 <div class="fea-box col-3">
                     <div class="detail-box">
                         <div class="icon"><img src="{{ asset('images/features/exper.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Experience Catalogue</h3>
-                            <p>Highlight tours and activities with a user-friendly experience list.</p>
+                            <p>List tours and activities with capacity, schedules, and pricing tiers.</p>
                         </div>
                     </div>
-                    <a href="{{ url('/features/resources-management/experience-catalogue') }}" class="see-btn">See Experience Catalogue<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <a href="{{ url('/features/resource-management/experience-catalogue') }}" class="see-btn">See Experience Catalogue<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 </div>
                 <div class="fea-box col-3">
                     <div class="detail-box">
                         <div class="icon"><img src="{{ asset('images/features/season.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Season & Schedule Management</h3>
-                            <p>Plan for seasonal peaks with flexible scheduling tools.</p>
+                            <p>Set seasonal pricing, blackout dates, and operating hours.</p>
                         </div>
                     </div>
-                    <a href="{{ url('/features/resources-management/season-schedule') }}" class="see-btn">See Season & Schedule<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <a href="{{ url('/features/resource-management/season-schedule') }}" class="see-btn">See Season & Schedule<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+                <div class="fea-box col-3">
+                    <div class="detail-box">
+                        <div class="icon"><img src="{{ asset('images/features/product.svg') }}" alt=""></div>
+                        <div class="content-box">
+                            <h3>Store Catalogue</h3>
+                            <p>Sell retail products and merchandise in-store or online alongside rentals.</p>
+                        </div>
+                    </div>
+                    <a href="{{ url('/features/resource-management/store-catalogue') }}" class="see-btn">See Store Catalogue<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 </div>
             </div>
         </div>
     </section>
 
-    {{-- Planning Section --}}
-    <section class="fea-sec fea-sec2" id="planning">
+    {{-- Scheduling & Logistics Section --}}
+    <section class="fea-sec fea-sec2" id="scheduling_logistics">
         <div class="container">
             <div class="dth-features_main">
                 <div class="features_main-banner">
                     <div class="features_content fea-sec-content">
-                        <p class="sub-title">Planning</p>
-                        <h2 class="fea-title">Plan smarter,<br> operate seamlessly</h2>
-                        <p class="sec-desc">EquipDash's Planning features—guestlists, staff rostering, and more—optimize your operations and boost efficiency. Explore our tools and stay ahead of every peak today!</p>
-                        <a href="{{ url('/features/planning') }}" class="global-btn">Explore All Features</a>
+                        <p class="sub-title">Scheduling & Logistics</p>
+                        <h2 class="fea-title">The right staff, in the right place, at the right time</h2>
+                        <p class="sec-desc">Plan guest lists, build manifests, and roster staff across locations — so you are always prepared for what is next.</p>
+                        <a href="{{ url('/features/scheduling-logistics') }}" class="global-btn">Explore All Features</a>
                     </div>
                     <div class="features_media fea-sec-thumb">
-                        <img class="hidden-mb" src="{{ asset('images/planning.png') }}" alt="Planning Features">
-                        <img class="features_thumb hidden-pc" src="{{ asset('images/planning.png') }}" alt="Planning Features">
+                        <img class="hidden-mb" src="{{ asset('images/planning.png') }}" alt="Scheduling & Logistics Features">
+                        <img class="features_thumb hidden-pc" src="{{ asset('images/planning.png') }}" alt="Scheduling & Logistics Features">
                     </div>
                 </div>
             </div>
@@ -329,20 +329,30 @@
                         <div class="icon"><img src="{{ asset('images/features/gues.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Guestlist and Manifest Management</h3>
-                            <p>Manage participants effortlessly for every event or trip.</p>
+                            <p>Track participants, generate manifests, and manage check-ins.</p>
                         </div>
                     </div>
-                    <a href="{{ url('/features/planning/guestlist-manifest') }}" class="see-btn">See Guestlist and Manifest<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <a href="{{ url('/features/scheduling-logistics/guestlist-manifest') }}" class="see-btn">See Guestlist and Manifest<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 </div>
                 <div class="fea-box col-2">
                     <div class="detail-box">
                         <div class="icon"><img src="{{ asset('images/features/staff.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Staff Rostering</h3>
-                            <p>Schedule your team efficiently, even during busy seasons.</p>
+                            <p>Build shift schedules, manage availability, and balance workloads.</p>
                         </div>
                     </div>
-                    <a href="{{ url('/features/planning/staff-rostering') }}" class="see-btn">See Staff Rostering<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <a href="{{ url('/features/scheduling-logistics/staff-rostering') }}" class="see-btn">See Staff Rostering<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+                <div class="fea-box col-2">
+                    <div class="detail-box">
+                        <div class="icon"><img src="{{ asset('images/features/gues.svg') }}" alt=""></div>
+                        <div class="content-box">
+                            <h3>Calendar</h3>
+                            <p>See every booking and session on one calendar with day, week, and month views.</p>
+                        </div>
+                    </div>
+                    <a href="{{ url('/features/scheduling-logistics/calendar') }}" class="see-btn">See Calendar<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 </div>
             </div>
         </div>
@@ -359,8 +369,8 @@
                     </div>
                     <div class="features_content fea-sec-content">
                         <p class="sub-title">Operations</p>
-                        <h2 class="fea-title">Run business smarter, operate flawlessly</h2>
-                        <p class="sec-desc">EquipDash's Operations features—staff management, maintenance, analytics, and integrations—streamline your workflows and boost profitability.</p>
+                        <h2 class="fea-title">Run your business on data, not gut feel</h2>
+                        <p class="sec-desc">Manage your team, maintain equipment, track performance, and connect your tools — all from one operational hub.</p>
                         <a href="{{ url('/features/operations') }}" class="global-btn">Explore All Features</a>
                     </div>
                 </div>
@@ -381,7 +391,7 @@
                         <div class="icon"><img src="{{ asset('images/features/asset.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Asset Maintenance</h3>
-                            <p>Gain actionable insights to optimize revenue and efficiency.</p>
+                            <p>Keep gear in top shape with automated service schedules and alerts.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/operations/asset-equipment-maintenance') }}" class="see-btn">See Asset Maintenance<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -391,7 +401,7 @@
                         <div class="icon"><img src="{{ asset('images/features/invento.svg') }}" alt=""></div>
                         <div class="content-box">
                             <h3>Reports & Analytics</h3>
-                            <p>Ensure gear longevity with automated maintenance tracking.</p>
+                            <p>Understand revenue, bookings, and utilisation with real-time dashboards.</p>
                         </div>
                     </div>
                     <a href="{{ url('/features/operations/reports-insights') }}" class="see-btn">See Reports & Analytics<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.66675L13.3333 8.00008L8 13.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6665 8H13.3332" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -407,8 +417,8 @@
                 <div class="features_main-banner">
                     <div class="features_content fea-sec-content">
                         <p class="sub-title">API & Integrations</p>
-                        <h2 class="fea-title">Work smart, not hard with intelligent feature</h2>
-                        <p class="sec-desc">Vero eos et accusamus et iusto odio dignissimos ducmus sed qui blanditiis praesentium voluptatum deleniti atque corrup un quos dolores et quas molestias excepturi sint occup.</p>
+                        <h2 class="fea-title">Connect your favourite tools in minutes</h2>
+                        <p class="sec-desc">EquipDash's open API and pre-built integrations let you sync accounting, payments, marketing, and distribution channels.</p>
                         <a href="{{ url('/features/operations/api-integrations') }}" class="global-btn">Explore All Features</a>
                     </div>
                     <div class="features_media fea-sec-thumb">
@@ -464,20 +474,21 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how they fit your business before committing.'],
-            ['question' => 'Who is EquipDash for?', 'answer' => 'EquipDash is designed for equipment rental providers and experience/tour operators, including ski rentals, bike tours, rafting trips, and more.'],
-            ['question' => 'Are all features customizable?', 'answer' => 'Yes! EquipDash\'s features adapt to your unique needs with custom workflows, reports, and integrations.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does EquipDash integrate with my existing systems?', 'answer' => 'Yes, EquipDash connects seamlessly with tools like Stripe, QuickBooks, Shopify, and more, making it easy to sync your operations.'],
-            ['question' => 'How will these features help during peak seasons?', 'answer' => 'EquipDash\'s features—like inventory tracking, staff rostering, and online booking—manage seasonal demand, ensuring you\'re ready for busy times without the stress.'],
+            ['question' => 'What does the free trial include?', 'answer' => 'Full access to every EquipDash feature for 21 days. No credit card required, no feature limits. You can import your data and test with real bookings.'],
+            ['question' => 'Is EquipDash built for both rentals and tours?', 'answer' => 'Yes. EquipDash is purpose-built for equipment rental providers (ski, bike, water sport, camping) and experience operators (tours, activities, attractions, charters) — each with a complete set of tools.'],
+            ['question' => 'Can I customise features for my business?', 'answer' => 'Most features are configurable — from booking widget design to waiver templates, refund policies, and report filters. If you need something specific, our team can help.'],
+            ['question' => 'Do I need technical skills to get started?', 'answer' => 'No. EquipDash is designed for business owners, not developers. Setup takes minutes, and our onboarding team is available to help.'],
+            ['question' => 'Which integrations are available?', 'answer' => 'EquipDash connects with Stripe, PayPal, QuickBooks, Xero, Shopify, Mailchimp, Viator, Expedia, TripAdvisor, and more. Our open API supports custom integrations too.'],
+            ['question' => 'How does EquipDash handle peak seasons?', 'answer' => 'Features like real-time availability, waitlist management, staff rostering, and automated workflows are designed specifically for high-volume periods. Most operators see fewer overbookings and faster check-ins during their busiest months.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Unlock Your Full Potential?"
-        description="Don't let outdated software limit your growth. Start your free trial now or watch our demo online to see why EquipDash's features are the #1 choice for rental and tour operators worldwide"
+        title="See what EquipDash can do for your business"
+        description="Start your free 21-day trial and explore every feature. No credit card, no commitment — just the tools you need to grow."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"
+        :secondButtonUrl="route('book-a-demo')"
     />
 @endsection

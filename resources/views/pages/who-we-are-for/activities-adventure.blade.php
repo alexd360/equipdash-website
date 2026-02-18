@@ -10,8 +10,8 @@
 @section('content')
     {{-- Hero Banner --}}
     <x-wwf-hero
-        title="Thrill Your Adventures, Drive Your Success!"
-        description="Frustrated by booking delays, guide scheduling headaches, and software that can't handle your adventure activities? EquipDash powers ziplining, rafting, and rock climbing operators with smooth operations, packed thrills, and happy adventurers. Start your free trial today and conquer your peak seasons!"
+        title="Adventure activity software for high-energy operators"
+        description="EquipDash helps adventure operators manage bookings, safety waivers, guide scheduling, and participant manifests for ziplines, rafting, rock climbing, and more."
         image="images/activities-banner.png"
         imageAlt="Activities & Adventure Software"
         heroClass="who-where-for-activities"
@@ -19,11 +19,10 @@
 
     {{-- Features List --}}
     <x-wwf-features-list
-        description="Unlock the full power of EquipDash features designed for experience & tour operator."
         :items="[
-            ['image' => 'images/activities-features-1.png', 'title' => 'Seamless Online Bookings, Every Adventure Packed', 'description' => 'Say goodbye to manual booking chaos and hello to EquipDash\'s real-time online booking system. Customers book ziplining, rafting, and rock climbing instantly, even during peak season, while automated reminders and waitlist management ensure no spot goes unfilled. Watch your revenue soar as you fill every adventure effortlessly.'],
-            ['image' => 'images/activities-features-2.png', 'title' => 'Smart Guide Management, No More Safety Worries', 'description' => 'Keep your adventure guides on track with EquipDash\'s intuitive guide management tools. Schedule activities, assign staff, and ensure safety compliance—ensuring every guide is ready for action, even during busy periods. No more scrambling to coordinate or risking oversight with manual processes.'],
-            ['image' => 'images/activities-features-3.png', 'title' => 'Effortless Guest Manifests, Peak Performance on Every Thrill', 'description' => 'Tackle seasonal adventure surges with EquipDash\'s guestlist and manifest tools. Manage participant lists, track bookings, and maintain safety protocols—without the stress of manual planning or clunky interfaces. Focus on delivering epic adventure experiences, not fighting your software.'],
+            ['image' => 'images/activities-features-1.png', 'title' => 'Online bookings with built-in waiver collection', 'description' => 'Customers book activities online and sign safety waivers before they arrive. By check-in time, your team already has signed waivers attached to every booking.'],
+            ['image' => 'images/activities-features-2.png', 'title' => 'Schedule guides with safety in mind', 'description' => 'Assign certified guides to activities based on qualifications and availability. EquipDash tracks certifications so you always have the right person leading the right activity.'],
+            ['image' => 'images/activities-features-3.png', 'title' => 'Manage every participant on every trip', 'description' => 'Guest manifests are built automatically from bookings. See who is checked in, who has signed their waiver, and who still needs attention — all in real time.'],
         ]"
     />
 
@@ -36,21 +35,21 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your adventure activity business before committing.'],
-            ['question' => 'Who is EquipDash for?', 'answer' => 'EquipDash is ideal for adventure activity operators offering ziplining, rafting, rock climbing, and more, looking to streamline operations and boost bookings during peak seasons.'],
-            ['question' => 'Is EquipDash customizable for adventure activities?', 'answer' => 'Yes! EquipDash adapts to your unique needs with custom workflows, digital waivers, and tailored reports for adventure operations.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast, even in peak season.'],
-            ['question' => 'Does EquipDash integrate with my existing systems?', 'answer' => 'Yes, EquipDash connects seamlessly with tools like Stripe, QuickBooks, Shopify, and more, making it easy to sync your adventures.'],
-            ['question' => 'How will EquipDash handle busy adventure seasons?', 'answer' => 'EquipDash\'s guide management, guest manifests, and online booking tools manage seasonal demand, ensuring you\'re ready for peak times without the stress.'],
+            ['question' => 'Can EquipDash handle multiple activity types?', 'answer' => 'Yes. Set up each activity with its own schedule, capacity, pricing, and guide requirements. Manage ziplines, rafting, and climbing from one dashboard.'],
+            ['question' => 'How do safety waivers work?', 'answer' => 'Send digital waivers by email or SMS before the activity. Customers sign on their phone. Signed waivers attach to the booking and are accessible to guides at check-in.'],
+            ['question' => 'Can I track guide certifications?', 'answer' => 'Yes. Store certification details and expiry dates for each guide. EquipDash flags upcoming expirations so you can plan renewals.'],
+            ['question' => 'How does capacity management work?', 'answer' => 'Set maximum participants per session. EquipDash enforces limits and shows remaining spots to customers booking online.'],
+            ['question' => 'Can customers book multiple activities in one transaction?', 'answer' => 'Yes. Customers can add multiple activities to their cart and check out once. Each activity generates its own booking with the correct date, time, and waiver.'],
+            ['question' => 'Does EquipDash handle group bookings?', 'answer' => 'Yes. Groups can book together with a single payment. The group leader provides participant details, and each person receives their own waiver to sign.'],
         ]"
     />
 
     {{-- CTA Section --}}
     <x-cta-section
-        title="Ready to lead? Let's get started!"
-        description="Start your free trial now to see why EquipDash is the #1 choice for rental pros and tour operators worldwide."
+        title="See how EquipDash works for adventure operators"
+        description="Start your free 21-day trial. No credit card, no commitment."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"
-        secondButtonUrl="#"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

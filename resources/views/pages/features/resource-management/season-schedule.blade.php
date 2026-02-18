@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">SEASON & SCHEDULE</p>
-                    <h1 class="hero-heading">Plan for Peaks, Stay on Track—EquipDash Season & Schedule Management Delivers!</h1>
-                    <p class="hero-desc">Tired of seasonal scheduling chaos, missed opportunities, and software that can’t handle your rentals or tours? EquipDash’s Season & Schedule Management feature optimizes your ski seasons, rafting trips, and more—boosting efficiency and revenue. Start your free trial today and conquer every season!</p>
+                    <h1 class="hero-heading">Adapt pricing and availability to every season</h1>
+                    <p class="hero-desc">Set seasonal pricing, blackout dates, and operating hours for each product or experience. EquipDash adjusts rates and availability automatically when seasons change.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/season_1-min.png') }}" alt="Flexible Scheduling, Handle Seasonal Surges with Ease" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Flexible Scheduling, Handle Seasonal Surges with Ease</h2>
-                            <p class="sec-desc">EquipDash’s Season & Schedule Management lets you plan and adjust schedules for ski rentals, whale-watching tours, or hiking trips effortlessly. Set seasonal availability, manage peak demand, and ensure resources are ready—preventing bottlenecks and maximizing bookings without manual effort or clunky systems.</p>
+                            <h2 class="fea-title">Seasonal pricing that switches automatically</h2>
+                            <p class="sec-desc">Define date ranges with custom prices. When a season starts, pricing updates across your booking widget, POS, and OTA listings. No manual price changes needed.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Real-Time Updates, Stay Ahead of Demand</h2>
-                            <p class="sec-desc">Say goodbye to outdated schedules and hello to EquipDash’s real-time scheduling tools. Track availability, adjust for weather or demand shifts, and keep your operations smooth—ensuring you meet customer needs and maintain efficiency, even during the busiest seasons.</p>
+                            <h2 class="fea-title">Blackout dates and operating hours</h2>
+                            <p class="sec-desc">Block specific dates for maintenance, holidays, or private events. Set operating hours per season so customers only see available time slots.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/season_2-min.png') }}" alt="Real-Time Updates, Stay Ahead of Demand" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Efficiency" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Efficiency" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Plan ahead with schedule templates" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Plan ahead with schedule templates" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Efficiency</h2>
-                            <p class="sec-desc">Connect Season & Schedule Management with inventory, guide management, and online booking for a unified approach. This integration eliminates silos, saves hours, and keeps your schedules synchronized—letting you focus on delivering epic experiences instead of managing plans manually.</p>
+                            <h2 class="fea-title">Plan ahead with schedule templates</h2>
+                            <p class="sec-desc">Create season templates that you can reuse year after year. Copy last winter's pricing and hours, make adjustments, and publish — saving hours of setup time.</p>
                         </div>
                     </div>
                 </div>
@@ -121,19 +121,19 @@
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Season & Schedule Management, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Season & Schedule Management?', 'answer' => 'EquipDash\'s Season & Schedule Management is perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) managing seasonal operations.'],
-            ['question' => 'Is Season & Schedule Management customizable?', 'answer' => 'Yes! Customize seasonal plans, scheduling rules, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Season & Schedule Management is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Season & Schedule Management integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your online booking system, making it easy to sync your schedules.'],
-            ['question' => 'How will Season & Schedule Management help during peak seasons?', 'answer' => 'Season & Schedule Management\'s flexible scheduling and real-time updates handle seasonal demand, ensuring efficient operations without the stress of manual processes.'],
+            ['question' => 'How do seasonal prices work?', 'answer' => 'Define a date range and custom pricing for that period. When the season starts, prices update automatically across all channels.'],
+            ['question' => 'Can I set blackout dates?', 'answer' => 'Yes. Block specific dates when you are closed, booked for private events, or doing maintenance.'],
+            ['question' => 'Can I have different hours per season?', 'answer' => 'Yes. Set operating hours per season. Your booking widget only shows available time slots within those hours.'],
+            ['question' => 'Can I reuse last year\'s season settings?', 'answer' => 'Yes. Copy a previous season\'s configuration, adjust dates and prices, and publish.'],
+            ['question' => 'Do seasonal changes affect OTA listings?', 'answer' => 'Yes. Price and availability changes propagate to connected OTAs automatically.'],
+            ['question' => 'Can I set minimum rental durations per season?', 'answer' => 'Yes. Configure minimum rental periods that change by season — for example, weekly minimums in peak summer and daily rentals in off-peak.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Master Your Seasons?"
-        description="Don't let outdated software derail your peaks. Start your free trial now or watch our demo online to see why EquipDash's Season & Schedule Management is the #1 choice for rental and tour operators worldwide."
+        title="Get ready for every season"
+        description="Start your free 21-day trial and set up seasonal pricing and schedules."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"

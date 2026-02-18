@@ -10,8 +10,8 @@
 @section('content')
     {{-- Hero Banner --}}
     <x-wwf-hero
-        title="Master Your <br />Ski & Snowboard Rentals, Conquer the Slopes!"
-        description="Tired of lost bookings, gear mix-ups, and software that can't handle snow season surges? EquipDash powers ski & snowboard rental providers with seamless operations, packed slopes, and happy customers. Start your free trial today and glide to success!"
+        title="Ski rental software for the busiest seasons"
+        description="EquipDash helps ski and snowboard rental shops handle peak-season volume with real-time availability, inventory tracking by size, and automated gear management. Your team stays organised even on the busiest powder days."
         image="images/main-thumb.png"
         imageAlt="Ski & Snowboard Rental Software"
         heroClass="who-where-for-ski"
@@ -20,9 +20,9 @@
     {{-- Features List --}}
     <x-wwf-features-list
         :items="[
-            ['image' => 'images/features-thumb-1.png', 'title' => 'Seamless Online Bookings, Packed Slopes Guaranteed', 'description' => 'Say goodbye to manual booking headaches and hello to EquipDash\'s real-time online booking system. Customers book skis and snowboards instantly, even during peak winter rush, while automated reminders and waitlist management ensure no slot goes unfilled. Watch your revenue soar as you fill every snowy day effortlessly.'],
-            ['image' => 'images/features-thumb-2.png', 'title' => 'Smart Inventory Tracking, No More Gear Mishaps', 'description' => 'Keep your ski and snowboard inventory in check with EquipDash\'s intuitive management tools. Track availability, schedule maintenance, and automate alerts for wear and tear—ensuring every piece of gear is ready for the next adventure. No more scrambling during busy seasons or losing track of equipment.'],
-            ['image' => 'images/features-thumb-3.png', 'title' => 'Effortless Staff Rostering, Peak Performance All Season', 'description' => 'Handle seasonal spikes with ease using EquipDash\'s staff rostering and HR tools. Optimize your team\'s schedules, manage peak snow days, and keep operations smooth—without the stress of manual planning or clunky interfaces. Focus on delivering epic snow experiences, not fighting your software.'],
+            ['image' => 'images/features-thumb-1.png', 'title' => 'Fill every time slot, even on powder days', 'description' => 'Customers book skis and snowboards online with real-time availability. Automated confirmations and reminders reduce no-shows. Waitlist management fills cancellations instantly so no slot goes empty.'],
+            ['image' => 'images/features-thumb-2.png', 'title' => 'Track every boot, binding, and board', 'description' => 'See what is rented out, what is in the shop, and what needs a tune-up. EquipDash updates stock automatically as bookings come in and returns are processed. Set alerts for low stock and overdue maintenance.'],
+            ['image' => 'images/features-thumb-3.png', 'title' => 'Staff your busiest days with confidence', 'description' => 'Build shift schedules based on demand forecasts and staff availability. Your team sees their roster on the app, and you see coverage gaps before they become problems.'],
         ]"
     />
 
@@ -35,20 +35,20 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your ski & snowboard rental business before committing.'],
-            ['question' => 'Who is EquipDash for?', 'answer' => 'EquipDash is ideal for ski & snowboard rental providers looking to streamline operations and boost bookings during snow seasons.'],
-            ['question' => 'Is EquipDash customizable for snow rentals?', 'answer' => 'Yes! EquipDash adapts to your unique needs with custom workflows, digital waivers, and tailored reports for ski and snowboard operations.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast, even in peak season.'],
-            ['question' => 'How will EquipDash handle busy snow seasons?', 'answer' => 'EquipDash\'s inventory tracking, staff rostering, and online booking tools manage seasonal demand, ensuring you\'re ready for peak times without the stress.'],
+            ['question' => 'Can EquipDash handle our busiest ski weekends?', 'answer' => 'Yes. Real-time availability, waitlist management, and automated workflows are designed for high-volume periods. Most ski shops see fewer overbookings and faster check-ins during peak days.'],
+            ['question' => 'How does sizing and fitting work?', 'answer' => 'You can set up product variants for each size (boot, board length, etc.) with individual stock counts. Staff select the right variant when processing a booking.'],
+            ['question' => 'Can we manage seasonal staff?', 'answer' => 'Yes. Add seasonal hires with their own logins, set availability windows, and roster them alongside permanent staff. Remove access when the season ends.'],
+            ['question' => 'Does EquipDash track maintenance on ski gear?', 'answer' => 'Yes. Schedule tune-ups, track service history, and flag gear that needs attention. Items in the workshop are automatically unavailable for rent.'],
+            ['question' => 'Can customers book online in advance?', 'answer' => 'Yes. Your booking widget shows real-time availability. Customers select dates, choose products, and confirm — reducing counter time on arrival day.'],
         ]"
     />
 
     {{-- CTA Section --}}
     <x-cta-section
-        title="Ready to lead? Let's get started!"
-        description="Start your free trial now to see why EquipDash is the #1 choice for rental pros and tour operators worldwide."
+        title="See how EquipDash works for ski rentals"
+        description="Start your free 21-day trial. No credit card, no commitment."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"
-        secondButtonUrl="#"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

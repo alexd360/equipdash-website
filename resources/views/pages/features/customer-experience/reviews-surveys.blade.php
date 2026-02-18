@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">REVIEWS & SURVEYS</p>
-                    <h1 class="hero-heading">Win Rave Reviews, Improve Your Business—EquipDash Delivers!</h1>
-                    <p class="hero-desc">Tired of sparse feedback, manual surveys, and software that can’t boost your rentals or tours? EquipDash’s Reviews & Surveys feature automates feedback collection—enhancing satisfaction, reputation, and bookings. Start your free trial today and shine with customer praise!</p>
+                    <h1 class="hero-heading">Collect feedback and build your online reputation</h1>
+                    <p class="hero-desc">Send post-experience review requests and feedback surveys automatically. Positive reviews get pushed to Google and TripAdvisor. Survey responses feed into your CRM.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                     <div class="banner-content">
                         <p class="credit">No credit card required, cancel anytime.</p>
@@ -68,8 +68,8 @@
                             <img src="{{ asset('images/review_1.png') }}" alt="Automated Reviews, Build Your Reputation Easily" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Automated Reviews, Build Your Reputation Easily</h2>
-                            <p class="sec-desc">EquipDash’s Reviews & Surveys lets you collect customer reviews for ski rentals, rafting trips, or tours with automated post-booking prompts. Drive positive online ratings, attract new clients, and boost trust—without the hassle of manual outreach or clunky systems, even during peak seasons.</p>
+                            <h2 class="fea-title">Automated review requests after every experience</h2>
+                            <p class="sec-desc">After a trip or rental, EquipDash sends an email asking for a review. Include a direct link to your Google Business page or TripAdvisor listing.</p>
                         </div>
                     </div>
                 </div>
@@ -84,8 +84,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Insightful Surveys, Unlock Actionable Feedback</h2>
-                            <p class="sec-desc">Say goodbye to guesswork and hello to EquipDash’s customizable survey tools. Gather detailed customer insights on their experience with your equipment or tours, helping you improve operations and satisfaction—saving time and delivering results effortlessly.</p>
+                            <h2 class="fea-title">Post-trip feedback surveys</h2>
+                            <p class="sec-desc">Attach a survey form to your post-experience workflow. Ask about satisfaction, guide quality, equipment condition, or anything else. Responses are stored in the customer profile.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/review_2.png') }}" alt="Insightful Surveys, Unlock Actionable Feedback" class="features_thumb hidden-mb">
@@ -104,12 +104,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Growth" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Growth" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Use feedback to improve operations" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Use feedback to improve operations" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Growth</h2>
-                            <p class="sec-desc">Connect Reviews & Surveys with CRM, online booking, and payments for a unified approach. This integration eliminates silos, tracks feedback automatically, and saves hours—letting you focus on delivering epic experiences instead of managing reviews manually.</p>
+                            <h2 class="fea-title">Use feedback to improve operations</h2>
+                            <p class="sec-desc">Review survey results in aggregate. Spot patterns — like consistent feedback about a specific guide or product — and take action before small issues become big ones.</p>
                         </div>
                     </div>
                 </div>
@@ -124,22 +124,23 @@
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Reviews & Surveys, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Reviews & Surveys?', 'answer' => 'EquipDash\'s Reviews & Surveys are perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) improving customer feedback.'],
-            ['question' => 'Are Reviews & Surveys customizable?', 'answer' => 'Yes! Customize review prompts, survey questions, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Reviews & Surveys are beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Reviews & Surveys integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and Mailchimp, making it easy to sync your feedback collection.'],
-            ['question' => 'How will Reviews & Surveys help during peak seasons?', 'answer' => 'Reviews & Surveys\' automation and integrations handle seasonal feedback surges, boosting satisfaction and reputation without the stress of manual processes.'],
+            ['question' => 'Are review requests sent automatically?', 'answer' => 'Yes. Configure them to send after the booking is marked as completed. Set the timing — same day, next day, or after a set delay.'],
+            ['question' => 'Can I link to Google reviews?', 'answer' => 'Yes. Include a direct link to your Google Business review page in the email.'],
+            ['question' => 'Can I customise the survey questions?', 'answer' => 'Yes. Build your survey using the custom forms builder with any fields you need.'],
+            ['question' => 'Where are survey responses stored?', 'answer' => 'Responses are linked to the booking and the customer profile, and available in aggregate reports.'],
+            ['question' => 'Can I filter reviews by rating?', 'answer' => 'Survey responses can be filtered by question or response value in reports.'],
+            ['question' => 'Does this help with SEO?', 'answer' => 'Consistent Google reviews improve your local search ranking and build trust with potential customers.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Earn Rave Reviews?"
-        description="Don't let outdated software miss your customer feedback. Start your free trial now or watch our demo online to see why EquipDash's Reviews & Surveys are the #1 choice for rental and tour operators worldwide."
+        title="Turn every experience into a five-star review"
+        description="Start your free 21-day trial and automate review collection."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection
 

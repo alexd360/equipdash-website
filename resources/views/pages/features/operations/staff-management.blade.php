@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">STAFF MANAGEMENT</p>
-                    <h1 class="hero-heading">Simplify Your Team, Boost Productivity—EquipDash Staff Management (HR) Excels!</h1>
-                    <p class="hero-desc">Tired of manual HR tasks, payroll headaches, and software that can’t manage your rentals or tours? EquipDash’s Staff Management (HR) feature automates payroll, benefits, and coordination—saving time and ensuring a happy workforce. Start your free trial today and streamline your team!</p>
+                    <h1 class="hero-heading">Manage your team from one dashboard</h1>
+                    <p class="hero-desc">Add team members, assign roles, set permissions, and track activity. EquipDash gives each staff member the access they need — and nothing they do not.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/staff-management-item-1.png') }}" alt="Automated Payroll, No More Manual Errors" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Automated Payroll, No More Manual Errors</h2>
-                            <p class="sec-desc">EquipDash’s Staff Management (HR) handles payroll for your ski rental staff, tour guides, or equipment crew with ease. Automate calculations, ensure compliance, and process payments on time—eliminating errors and saving hours, even during peak seasons.</p>
+                            <h2 class="fea-title">Roles and permissions that fit your business</h2>
+                            <p class="sec-desc">Create roles like admin, manager, front-desk, and guide. Set which features each role can access — bookings, reports, settings, or customer data. Adjust at any time.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Benefits Management, Keep Your Team Happy</h2>
-                            <p class="sec-desc">Say goodbye to benefits tracking headaches and hello to EquipDash’s intuitive HR tools. Manage health plans, time-off requests, and perks effortlessly—boosting employee satisfaction and retention, without manual effort or clunky systems.</p>
+                            <h2 class="fea-title">Team invitations and onboarding</h2>
+                            <p class="sec-desc">Invite new team members by email. They create their own login and get access based on their assigned role. Revoke access when they leave.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/staff-management-item-2.png') }}" alt="Seamless Benefits Management, Keep Your Team Happy" class="features_thumb hidden-mb">
@@ -105,8 +105,8 @@
                             <img src="{{ asset('images/Guestlist-and-manifest-item-3.png') }}" alt="Integrated Workflow, Unified HR for Efficiency" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Integrated Workflow, Unified HR for Efficiency</h2>
-                            <p class="sec-desc">Connect Staff Management (HR) with staff rostering, reports, and payments for a unified approach. This integration eliminates silos, saves time, and keeps your team data synchronized—letting you focus on delivering epic experiences instead of managing HR manually.</p>
+                            <h2 class="fea-title">Activity logs for accountability</h2>
+                            <p class="sec-desc">See who created, modified, or cancelled a booking. Activity logs track every action by user, so you always know who did what and when.</p>
                         </div>
                     </div>
                 </div>
@@ -121,19 +121,19 @@
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Staff Management (HR), for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Staff Management (HR)?', 'answer' => 'EquipDash\'s Staff Management (HR) is perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) managing their workforce.'],
-            ['question' => 'Is Staff Management (HR) customizable?', 'answer' => 'Yes! Customize payroll rules, benefits options, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Staff Management (HR) is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Staff Management (HR) integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your rostering system, making it easy to sync your HR processes.'],
-            ['question' => 'How will Staff Management (HR) help during peak seasons?', 'answer' => 'Staff Management (HR)\'s automation and integrations handle seasonal workforce demands, ensuring efficient payroll and benefits without the stress of manual processes.'],
+            ['question' => 'Can I set different permissions per role?', 'answer' => 'Yes. Define exactly which features each role can access — view bookings, edit settings, run reports, manage inventory, etc.'],
+            ['question' => 'How do I add a new team member?', 'answer' => 'Send an email invitation. They create a password, and their account is set up with the role you assigned.'],
+            ['question' => 'Can I see what staff members have done?', 'answer' => 'Yes. Activity logs show every booking created, modified, or cancelled by each user.'],
+            ['question' => 'Can I have multiple admin accounts?', 'answer' => 'Yes. You can assign the admin role to multiple team members.'],
+            ['question' => 'Can I revoke access instantly?', 'answer' => 'Yes. Disable a user account at any time. Their access is removed immediately.'],
+            ['question' => 'Is there a limit on team members?', 'answer' => 'Starter plans include 2 team members, Growth includes 10, and Pro is unlimited.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Streamline Your Team?"
-        description="Don't let outdated software bog down your HR. Start your free trial now or watch our demo online to see why EquipDash's Staff Management (HR) is the #1 choice for rental and tour operators worldwide."
+        title="Get your team set up in minutes"
+        description="Start your free 21-day trial and invite your team today."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"

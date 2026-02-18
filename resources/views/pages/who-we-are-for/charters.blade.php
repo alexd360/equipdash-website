@@ -10,8 +10,8 @@
 @section('content')
     {{-- Hero Banner --}}
     <x-wwf-hero
-        title="Chart a Course to Charter Success!"
-        description="Frustrated by missed bookings, crew scheduling headaches, and software that can't navigate your charters? EquipDash powers fishing, whale-watching, and boat tour operators with smooth operations, packed trips, and delighted guests. Start your free trial today and sail to profitability!"
+        title="Charter booking software for fishing, whale-watching, and boat tours"
+        description="EquipDash helps charter operators manage vessel bookings, crew scheduling, passenger manifests, and customer deposits from one platform."
         image="images/charters-banner.png"
         imageAlt="Charter Booking Software"
         heroClass="who-where-for-charters"
@@ -19,11 +19,10 @@
 
     {{-- Features List --}}
     <x-wwf-features-list
-        description="Unlock the full power of EquipDash features designed for experience & tour operator."
         :items="[
-            ['image' => 'images/charters-features-1.png', 'title' => 'Seamless Online Bookings, Every Charter Packed', 'description' => 'Say goodbye to manual booking chaos and hello to EquipDash\'s real-time online booking system. Customers book fishing, whale-watching, and boat tours instantly, even during peak season, while automated reminders and waitlist management ensure no trip goes unbooked. Watch your revenue climb as you fill every charter effortlessly.'],
-            ['image' => 'images/charters-features-2.png', 'title' => 'Smart Crew Management, No More Scheduling Stress', 'description' => 'Keep your charter crews on track with EquipDash\'s intuitive guide management tools. Schedule captains, crew, and guides, and optimize availability—ensuring every team member is ready for action, even during busy periods. No more scrambling to coordinate or losing track of who\'s on board.'],
-            ['image' => 'images/charters-features-3.png', 'title' => 'Effortless Guest Manifests, Peak Performance on Every Trip', 'description' => 'Tackle seasonal charter surges with EquipDash\'s guestlist and manifest tools. Manage passenger lists, track bookings, and maintain smooth operations—without the stress of manual planning or clunky interfaces. Focus on delivering epic charter experiences, not fighting your software.'],
+            ['image' => 'images/charters-features-1.png', 'title' => 'Book charters online with deposits', 'description' => 'Customers browse your vessels, check availability, and book with a deposit. Confirmation emails and pre-trip waivers go out automatically. Your team sees every booking in one calendar.'],
+            ['image' => 'images/charters-features-2.png', 'title' => 'Schedule crew and captains by availability', 'description' => 'Assign captains and crew to charters based on availability, qualifications, and vessel requirements. Your team sees their schedule on the app and gets notified of changes.'],
+            ['image' => 'images/charters-features-3.png', 'title' => 'Generate passenger manifests automatically', 'description' => 'EquipDash builds manifests from booking data — passenger names, contact details, waiver status, and custom form responses. Print or share them with your captain before departure.'],
         ]"
     />
 
@@ -36,21 +35,21 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your business before committing.'],
-            ['question' => 'Who is EquipDash for?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your business before committing.'],
-            ['question' => 'Is EquipDash customizable?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your business before committing.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your business before committing.'],
-            ['question' => 'Does EquipDash integrate with my existing systems?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your business before committing.'],
-            ['question' => 'How will EquipDash help me get more bookings?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your business before committing.'],
+            ['question' => 'How does the free trial work?', 'answer' => 'You get full access to every EquipDash feature for 21 days. No credit card required. Import your vessels, set up your schedule, and test with real bookings.'],
+            ['question' => 'Can EquipDash manage multiple vessels?', 'answer' => 'Yes. Each vessel has its own availability, capacity, and crew requirements. You manage your entire fleet from one dashboard.'],
+            ['question' => 'How do deposits and payments work?', 'answer' => 'Collect deposits at the time of booking through Stripe or PayPal. EquipDash tracks the balance due and can send payment links for the remainder before the trip.'],
+            ['question' => 'Can I assign captains to specific charters?', 'answer' => 'Yes. Set each captain\'s availability and qualifications. When scheduling a charter, EquipDash shows who is free and qualified. Captains see their assignments on the app.'],
+            ['question' => 'How do passenger manifests work?', 'answer' => 'Manifests are generated automatically from booking data. They include passenger names, contact info, waiver status, and any custom form responses. Print, export, or share with your crew.'],
+            ['question' => 'Can customers sign waivers before the trip?', 'answer' => 'Yes. Digital waivers are sent by email or SMS after booking. Passengers sign on their phone, and the waiver attaches to the booking. Your crew can verify at check-in.'],
         ]"
     />
 
     {{-- CTA Section --}}
     <x-cta-section
-        title="Ready to lead? Let's get started!"
-        description="Start your free trial now to see why EquipDash is the #1 choice for rental pros and tour operators worldwide."
+        title="See how EquipDash works for charter operators"
+        description="Start your free 21-day trial. No credit card, no commitment."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"
-        secondButtonUrl="#"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

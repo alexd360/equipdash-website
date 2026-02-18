@@ -3,7 +3,7 @@
 @section('seo')
     <x-seo
         title="Secure Payment Processing | EquipDash"
-        description="Accept payments with confidence. EquipDash supports Stripe, PayPal, Square, and more with PCI-compliant processing, deposits, and automated billing."
+        description="Accept payments with confidence using Stripe, built right into EquipDash. PCI-compliant processing, deposits, split payments, and payment links — all included."
     />
 @endsection
 
@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">Secure Payment</p>
-                    <h1 class="hero-heading">Fast, Secure Payments—EquipDash Drives Your Revenue!</h1>
-                    <p class="hero-desc">Tired of slow transactions, payment hiccups, and software that can't handle your rental or tour payments? EquipDash's Payments feature delivers secure, seamless processing with integrations like Stripe and PayPal—boosting trust and cash flow. Start your free trial today and cash in on every opportunity!</p>
+                    <h1 class="hero-heading">Accept payments with confidence</h1>
+                    <p class="hero-desc">EquipDash uses Stripe to process credit cards, debit cards, and Apple Pay. Collect deposits, split payments, and send payment links — all PCI-compliant and recorded automatically in your reports.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/payment_1.png') }}" alt="Lightning-Fast Transactions" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Lightning-Fast Transactions, Happy Customers Every Time</h2>
-                            <p class="sec-desc">EquipDash's Payments feature processes payments for ski rentals, tour tickets, or gear sales instantly, whether online or on-site. Integrated with Stripe, PayPal, and more, it ensures quick, reliable transactions that keep customers satisfied and lines moving—perfect for busy peak days.</p>
+                            <h2 class="fea-title">Stripe, built right in</h2>
+                            <p class="sec-desc">Accept Visa, Mastercard, American Express, and Apple Pay through Stripe. Customers pay during checkout, and funds reach your account on your standard Stripe payout schedule. No third-party plugins or extra setup required.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Secure Processing, Build Trust and Reduce Disputes</h2>
-                            <p class="sec-desc">Say goodbye to payment worries with EquipDash's secure payment gateway. Our robust encryption and trusted integrations protect every transaction, minimizing disputes and building customer confidence—ensuring smooth operations and repeat business, even during high-demand periods.</p>
+                            <h2 class="fea-title">Deposits, split payments, and payment links</h2>
+                            <p class="sec-desc">Collect a deposit at booking and the balance later. Split payments across methods. Send payment links by email for outstanding amounts. Every transaction is tracked.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/payment_2.png') }}" alt="Secure Processing" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="PCI-Compliant Security" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="PCI-Compliant Security" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Easy Revenue</h2>
-                            <p class="sec-desc">Connect Payments with online booking, POS, and inventory systems for a unified approach. This integration eliminates silos, saves time, and accelerates your cash flow—letting you focus on delivering epic experiences instead of managing payment headaches manually.</p>
+                            <h2 class="fea-title">PCI-compliant and fully encrypted</h2>
+                            <p class="sec-desc">EquipDash never stores card numbers. All payment data is processed through Stripe's PCI Level 1 certified infrastructure with end-to-end encryption. Your customers' data is protected by the same security trusted by millions of businesses worldwide.</p>
                         </div>
                     </div>
                 </div>
@@ -123,21 +123,22 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Payments, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Payments?', 'answer' => 'EquipDash\'s Payments is perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) handling transactions.'],
-            ['question' => 'Is Payments customizable?', 'answer' => 'Yes! Customize payment options, gateways, and workflows to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Payments is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Payments integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your online booking system, making it easy to sync your payments.'],
-            ['question' => 'How will Payments help during peak seasons?', 'answer' => 'Payments\' fast, secure processing and integrations handle seasonal transaction surges, ensuring smooth revenue flow without the stress.'],
+            ['question' => 'Which payment methods are supported?', 'answer' => 'EquipDash uses Stripe to accept Visa, Mastercard, American Express, debit cards, and Apple Pay. All major card types are supported out of the box.'],
+            ['question' => 'Can I collect deposits?', 'answer' => 'Yes. Set deposit amounts as a percentage or fixed amount per product. EquipDash tracks the remaining balance and can send payment links for the rest.'],
+            ['question' => 'Are payments PCI-compliant?', 'answer' => 'Yes. EquipDash does not store card data. All transactions are processed through Stripe\'s PCI Level 1 certified infrastructure.'],
+            ['question' => 'Can I send payment links?', 'answer' => 'Yes. Generate a payment link for any outstanding balance and send it to the customer by email.'],
+            ['question' => 'How do refunds work?', 'answer' => 'Refunds are processed back to the original card through Stripe. EquipDash can handle this automatically based on your refund policy, or your team can issue manual refunds.'],
+            ['question' => 'Can I accept cash or manual payments?', 'answer' => 'Yes. Record cash or bank transfer payments manually in EquipDash so all transactions appear in your reports alongside card payments.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Streamline Your Payments?"
-        description="Don't let outdated software slow your cash flow. Start your free trial now or watch our demo online to see why EquipDash's Payments is the #1 choice for rental and tour operators worldwide."
+        title="Process payments securely from day one"
+        description="Start your free 21-day trial with built-in Stripe integration."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

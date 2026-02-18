@@ -157,8 +157,8 @@
             <div class="container">
                 <div class="inner-ready">
                     <div class="ready-content">
-                        <h2 class="global-title">Ready to lead? Let's get started!</h2>
-                        <p class="sec-desc">Start your free trial now to see why EquipDash is the #1 choice for rental pros and tour operators worldwide.</p>
+                        <h2 class="global-title">Manage your business with EquipDash</h2>
+                        <p class="sec-desc">Start your free 21-day trial and simplify bookings, inventory, and customer management.</p>
                         <div class="gr-btn">
                             <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
                             <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>

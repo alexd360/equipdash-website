@@ -10,8 +10,8 @@
 @section('content')
     {{-- Hero Banner --}}
     <x-wwf-hero
-        title="Guide Your Tours to Unstoppable Success!"
-        description="Tired of booking bottlenecks, guide scheduling headaches, and software that can't keep up with your tours? EquipDash powers guided tour operators—hiking, city, cultural experiences—with smooth operations, packed tours, and delighted customers. Start your free trial today and lead the way to profitability!"
+        title="Tour operator software that fills every departure"
+        description="EquipDash helps guided tour companies manage group bookings, coordinate guides, and distribute tours across OTAs. From walking tours to multi-day expeditions, one platform keeps everything on track."
         image="images/tours-banner.png"
         imageAlt="Tour Operator Software"
         heroClass="who-where-for-tours"
@@ -19,11 +19,10 @@
 
     {{-- Features List --}}
     <x-wwf-features-list
-        description="Unlock the full power of EquipDash features designed for experience & tour operator."
         :items="[
-            ['image' => 'images/tours-features-1.png', 'title' => 'Seamless Online Bookings, Every Tour Sold Out', 'description' => 'Say goodbye to manual booking chaos and hello to EquipDash\'s real-time online booking system. Customers book hiking, city, and cultural tours instantly, even during peak season, while automated reminders and waitlist management ensure no spot goes unfilled. Watch your revenue climb as you fill every tour effortlessly.'],
-            ['image' => 'images/tours-features-3.png', 'title' => 'Smart Guide Management, No More Scheduling Stress', 'description' => 'Keep your guides on track with EquipDash\'s intuitive guide management tools. Schedule tours, assign staff, and optimize availability—ensuring every guide is ready for action, even during busy periods. No more scrambling to coordinate or losing track of who\'s leading what.'],
-            ['image' => 'images/tours-features-2.png', 'title' => 'Effortless Guest Manifests, Peak Performance on Every Tour', 'description' => 'Tackle seasonal tour surges with EquipDash\'s guestlist and manifest tools. Manage participant lists, track bookings, and keep operations smooth—without the stress of manual planning or clunky interfaces. Focus on delivering unforgettable tour experiences, not fighting your software.'],
+            ['image' => 'images/tours-features-1.png', 'title' => 'Fill every tour, from website to OTA', 'description' => 'Customers book tours on your website with real-time availability. Distribute the same tours to Viator, Expedia, and TripAdvisor — bookings sync back automatically so you never oversell.'],
+            ['image' => 'images/tours-features-3.png', 'title' => 'Assign the right guide to every trip', 'description' => 'See guide availability, qualifications, and scheduled trips in one view. Assign guides based on who is free and best qualified. They get notified through the app.'],
+            ['image' => 'images/tours-features-2.png', 'title' => 'Know who is on every departure', 'description' => 'EquipDash builds guest manifests from booking data — participant names, emergency contacts, waiver status, and custom form responses. Share manifests with guides before departure.'],
         ]"
     />
 
@@ -36,21 +35,21 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your guided tour business before committing.'],
-            ['question' => 'Who is EquipDash for?', 'answer' => 'EquipDash is ideal for guided tour operators offering hiking, city, and cultural tours, looking to streamline operations and boost bookings during peak seasons.'],
-            ['question' => 'Is EquipDash customizable for tour operations?', 'answer' => 'Yes! EquipDash adapts to your unique needs with custom workflows, digital waivers, and tailored reports for tour management.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast, even in peak season.'],
-            ['question' => 'Does EquipDash integrate with my existing systems?', 'answer' => 'Yes, EquipDash connects seamlessly with tools like Stripe, QuickBooks, Shopify, and more, making it easy to sync your tours.'],
-            ['question' => 'How will EquipDash handle busy tour seasons?', 'answer' => 'EquipDash\'s guide management, guest manifests, and online booking tools manage seasonal demand, ensuring you\'re ready for peak times without the stress.'],
+            ['question' => 'Can I distribute tours on OTAs like Viator?', 'answer' => 'Yes. EquipDash syncs your tours with Viator, Expedia, and TripAdvisor. Bookings from OTAs appear in your calendar alongside direct bookings, with availability updated in real time.'],
+            ['question' => 'How does guide assignment work?', 'answer' => 'Set each guide\'s availability, qualifications, and languages. When scheduling a trip, EquipDash shows who is free and qualified. Guides see their schedule on the mobile app.'],
+            ['question' => 'Can I manage group sizes and capacity?', 'answer' => 'Yes. Set maximum capacity per tour. EquipDash enforces limits automatically — when a tour is full, customers see the next available departure or join the waitlist.'],
+            ['question' => 'How do guest manifests work?', 'answer' => 'Manifests are generated from booking data with participant details, emergency contacts, and waiver status. Print, export, or share them with your guides.'],
+            ['question' => 'Can customers book private tours?', 'answer' => 'Yes. You can create private tour options with custom pricing and minimum group sizes. Customers book and pay online, just like regular tours.'],
+            ['question' => 'Does EquipDash handle multi-day tours?', 'answer' => 'Yes. Create multi-day itineraries with per-day scheduling, guide assignments, and accommodation notes. Customers book the full package in one transaction.'],
         ]"
     />
 
     {{-- CTA Section --}}
     <x-cta-section
-        title="Ready to lead? Let's get started!"
-        description="Start your free trial now to see why EquipDash is the #1 choice for rental pros and tour operators worldwide."
+        title="See how EquipDash works for tour operators"
+        description="Start your free 21-day trial. No credit card, no commitment."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"
-        secondButtonUrl="#"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

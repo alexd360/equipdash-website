@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">Workflow Automation</p>
-                    <h1 class="hero-heading">Automate Your Workflows, Save Time, and Boost Bookings!</h1>
-                    <p class="hero-desc">Tired of manual emails, missed reminders, and no-shows for your rentals or tours? EquipDash's Workflow Automation handles confirmations, reminders, follow-ups, and rescheduling—keeping your customers engaged and your business running smoothly. Start your free trial today and reclaim your time!</p>
+                    <h1 class="hero-heading">Automate the emails and messages your team sends manually</h1>
+                    <p class="hero-desc">EquipDash sends booking confirmations, payment receipts, pre-trip reminders, and post-experience follow-ups automatically. Your team saves hours, and customers get the right message at the right time.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/wo-1.png') }}" alt="Smart Confirmations" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Smart Confirmations, No More Customer Confusion</h2>
-                            <p class="sec-desc">EquipDash's Workflow Automation sends instant, personalized confirmation emails and SMS for every booking—ski rentals, rafting trips, or city tours. This reduces confusion, builds trust, and ensures customers show up ready, minimizing no-shows and boosting your operational efficiency, even during peak seasons.</p>
+                            <h2 class="fea-title">Confirmation and receipt emails, handled</h2>
+                            <p class="sec-desc">Every booking triggers a confirmation email. Every payment triggers a receipt. Customise the templates with your branding, include pre-trip info, and add attachments like waiver links.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Timely Reminders, Slash No-Shows Instantly</h2>
-                            <p class="sec-desc">Say goodbye to forgotten bookings with automated reminders sent before every rental or tour. EquipDash's system delivers timely notifications via email or SMS, cutting no-shows dramatically and keeping your slots filled—saving you time and revenue without manual effort.</p>
+                            <h2 class="fea-title">Pre-trip reminders that reduce no-shows</h2>
+                            <p class="sec-desc">Schedule reminder emails or SMS messages before the experience. Include directions, what to bring, and waiver links. Customers arrive prepared, and no-show rates drop.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/wo-2.png') }}" alt="Timely Reminders" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Follow-Ups and Rescheduling" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Follow-Ups and Rescheduling" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Post-Experience Follow-Ups" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Post-Experience Follow-Ups" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Effortless Follow-Ups and Rescheduling, Happy Customers Guaranteed</h2>
-                            <p class="sec-desc">Keep customers coming back with automated follow-ups and rescheduling options. EquipDash's Workflow Automation sends post-booking surveys, thank-you messages, and rescheduling prompts, enhancing satisfaction and retention—while you focus on delivering epic experiences, not chasing updates.</p>
+                            <h2 class="fea-title">Post-experience follow-ups that drive reviews</h2>
+                            <p class="sec-desc">After a trip, EquipDash can automatically send a thank-you email with a review request link. Collect Google reviews, send feedback surveys, or offer a return-visit discount.</p>
                         </div>
                     </div>
                 </div>
@@ -123,21 +123,22 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Workflow Automation, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Workflow Automation?', 'answer' => 'EquipDash\'s Workflow Automation is perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) managing customer communications.'],
-            ['question' => 'Is Workflow Automation customizable?', 'answer' => 'Yes! Customize confirmation timings, reminder schedules, and follow-up messages to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Workflow Automation is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Workflow Automation integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your online booking system, making it easy to sync your communications.'],
-            ['question' => 'How will Workflow Automation help during peak seasons?', 'answer' => 'Workflow Automation\'s automated reminders and follow-ups handle seasonal booking surges, reducing no-shows and ensuring smooth operations without the stress.'],
+            ['question' => 'What messages can I automate?', 'answer' => 'Booking confirmations, payment receipts, pre-trip reminders, waiver requests, post-experience thank-yous, and review requests.'],
+            ['question' => 'Can I customise email templates?', 'answer' => 'Yes. Edit the content, add your logo, and include dynamic fields like customer name, booking date, and product details.'],
+            ['question' => 'Does it support SMS?', 'answer' => 'Yes. Send pre-trip reminders and waiver requests via SMS as well as email.'],
+            ['question' => 'How do reminder timings work?', 'answer' => 'You set when reminders go out — for example, 48 hours before the experience, or 7 days before for multi-day trips.'],
+            ['question' => 'Can I send different messages for different products?', 'answer' => 'Yes. Create separate automation sequences per product or booking type.'],
+            ['question' => 'Does it help reduce no-shows?', 'answer' => 'Yes. Operators using pre-trip reminders typically see fewer no-shows because customers receive timely information about their upcoming booking.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Automate Your Success?"
-        description="Don't let manual processes cost you time or customers. Start your free trial now or watch our demo online to see why EquipDash's Workflow Automation is the #1 choice for rental and tour operators worldwide."
+        title="Stop sending emails manually"
+        description="Start your free 21-day trial and automate your booking communications."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

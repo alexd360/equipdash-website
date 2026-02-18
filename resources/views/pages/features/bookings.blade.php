@@ -2,8 +2,8 @@
 
 @section('seo')
     <x-seo
-        title="Bookings Features | EquipDash"
-        description="Manage every aspect of your rental bookings with EquipDash. Online reservations, POS management, booking oversight, and hassle-free refunds all in one place."
+        title="Booking Features | EquipDash"
+        description="Manage online reservations, POS, refunds, waitlists, and payments in one place. EquipDash booking tools built for rental and tour businesses."
     />
 @endsection
 
@@ -13,11 +13,11 @@
         <div class="container">
             <div class="inner-fea-banner">
                 <div class="fea-content">
-                    <h1 class="hero-heading">Book More, Stress Less—Master Your Bookings with EquipDash!</h1>
-                    <p class="hero-desc">Tired of missed bookings, manual chaos, and software that can't keep up? EquipDash's booking features—online, in-person, and automated—power your equipment rentals and tours with seamless efficiency. Explore our tools, start your free trial, and fill every slot today!</p>
+                    <h1 class="hero-heading">More bookings. Zero double-bookings.</h1>
+                    <p class="hero-desc">EquipDash gives you real-time online reservations, in-store POS, automated confirmations, and flexible refund policies — so every booking is handled from start to finish.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                     <p class="hero-credit">No credit card required, cancel anytime.</p>
                 </div>
@@ -59,8 +59,8 @@
         <div class="container">
             <div class="inner-features">
                 <p class="sub-title">FEATURES</p>
-                <h2 class="global-title">Everything You Need to Manage Bookings</h2>
-                <p class="sec-desc">Discover how EquipDash's booking features transform your business—click each to dive deeper into the tools that drive success.</p>
+                <h2 class="global-title">Everything you need to manage bookings</h2>
+                <p class="sec-desc">From the moment a customer finds you online to the follow-up email after their trip, EquipDash handles the full booking lifecycle.</p>
             </div>
         </div>
     </section>
@@ -77,8 +77,8 @@
                         </div>
                         <div class="fea-sec-content">
                             <p class="sub-title">ONLINE BOOKING</p>
-                            <h2 class="fea-title">Real-Time, User-Friendly Bookings</h2>
-                            <p class="sec-desc">Say goodbye to phone tag and hello to instant online bookings. Customers book skis, kayaks, or tours 24/7 with real-time availability, boosting your revenue and filling slots fast. No more missed opportunities or clunky interfaces.</p>
+                            <h2 class="fea-title">Bookings that never sleep</h2>
+                            <p class="sec-desc">Your customers can browse availability, pick dates, and confirm their reservation any time of day. Real-time sync means no double-bookings, even when walk-ins and online orders overlap.</p>
                             <a href="/features/bookings/online-booking" class="global-btn">See Online Booking</a>
                         </div>
                     </div>
@@ -95,8 +95,8 @@
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
                             <p class="sub-title">POS Integration</p>
-                            <h2 class="fea-title">Seamless In-Person Payments & Tracking</h2>
-                            <p class="sec-desc">Handle on-site bookings and payments effortlessly with EquipDash's POS integration. Track inventory, process tickets, and manage rentals in real time—keeping your operations smooth and customers happy, even during peak crowds.</p>
+                            <h2 class="fea-title">One screen for walk-ins and on-site sales</h2>
+                            <p class="sec-desc">Process walk-in rentals, sell retail products, and take payments from a single POS interface. Inventory updates automatically, so your team always knows what is available.</p>
                             <a href="/features/bookings/pos-management" class="global-btn">See POS Integrations</a>
                         </div>
                         <div class="fea-sec-thumb">
@@ -121,8 +121,8 @@
                         </div>
                         <div class="fea-sec-content">
                             <p class="sub-title">Booking Management</p>
-                            <h2 class="fea-title">Effortless schedule control</h2>
-                            <p class="sec-desc">Manage your bookings with ease, from availability to cancellations. EquipDash's intuitive tools let you oversee schedules, handle changes, and keep operations running without the stress of manual spreadsheets or complex systems.</p>
+                            <h2 class="fea-title">Every reservation, one calendar</h2>
+                            <p class="sec-desc">See all bookings across locations and channels in a unified calendar. Modify dates, reassign equipment, or update group sizes — changes sync everywhere instantly.</p>
                             <a href="/features/bookings/booking-management" class="global-btn">See Booking Management</a>
                         </div>
                     </div>
@@ -139,8 +139,8 @@
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
                             <p class="sub-title">Refund and Cancellation Policies</p>
-                            <h2 class="fea-title">Automated, Customer-Friendly Policies</h2>
-                            <p class="sec-desc">Set clear refund and cancellation rules, automate communications, and keep customers satisfied. EquipDash ensures smooth policy enforcement, reducing disputes and saving you time—perfect for busy seasons.</p>
+                            <h2 class="fea-title">Clear policies, enforced automatically</h2>
+                            <p class="sec-desc">Define refund windows, cancellation fees, and partial refund rules once. EquipDash enforces them on every booking, sends the right emails, and processes refunds without back-and-forth.</p>
                             <a href="/features/bookings/refund-cancellation" class="global-btn">See Refund & Cancellation</a>
                         </div>
                         <div class="fea-sec-thumb">
@@ -164,7 +164,7 @@
                         </div>
                         <div class="benefits-content">
                             <h3>Workflow Automation</h3>
-                            <p>Automate customer emails, SMS reminders, and rescheduling notifications to keep bookings on track. EquipDash saves you hours, reduces no-shows, and boosts satisfaction—without lifting a finger.</p>
+                            <p>Set up confirmation emails, pre-trip reminders, and post-experience follow-ups once. EquipDash sends them at the right time for every booking, reducing no-shows and saving your team hours each week.</p>
                             <a href="/features/bookings/workflow-automation" class="benefits-btn">
                                 See Workflow Automation
                                 <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 1L12 5.5M12 5.5L7.5 10M12 5.5H1" stroke="#F7581F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -177,7 +177,7 @@
                         </div>
                         <div class="benefits-content">
                             <h3>Waitlist Management</h3>
-                            <p>Turn waiting lists into revenue with EquipDash's waitlist tools. Notify customers instantly when spots open, ensuring you maximize bookings and keep your gear or tours fully utilized, even during peak demand.</p>
+                            <p>When a trip or time slot fills up, customers join a waitlist automatically. If someone cancels, the next person gets notified instantly — so you fill every spot.</p>
                             <a href="/features/bookings/waitlist-management" class="benefits-btn">
                                 See Waitlist Management
                                 <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 1L12 5.5M12 5.5L7.5 10M12 5.5H1" stroke="#F7581F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -189,8 +189,8 @@
                             <img src="{{ asset('images/secure.png') }}" alt="Secure Payment">
                         </div>
                         <div class="benefits-content">
-                            <h3>Secure Payment Processing with Integrations like Stripe and PayPal</h3>
-                            <p>Process payments securely and seamlessly with integrations like Stripe and PayPal. EquipDash ensures quick, reliable transactions, building trust with customers and accelerating your cash flow.</p>
+                            <h3>Secure Payments</h3>
+                            <p>Accept credit cards, debit cards, and Apple Pay through Stripe. Deposits, split payments, and payment links are built in — with PCI-compliant security.</p>
                             <a href="/features/bookings/secure-payment" class="benefits-btn">
                                 See Secure Payment
                                 <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 1L12 5.5M12 5.5L7.5 10M12 5.5H1" stroke="#F7581F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -205,19 +205,19 @@
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all booking features and see how they fit your business before committing.'],
-            ['question' => 'Who is EquipDash for?', 'answer' => 'EquipDash is designed for equipment rental providers and experience/tour operators, including ski rentals, bike tours, rafting trips, and more.'],
-            ['question' => 'Are these booking features customizable?', 'answer' => 'Yes! EquipDash\'s booking tools adapt to your unique needs with custom workflows and integrations for your specific operations.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s booking features are beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does EquipDash integrate with my existing booking systems?', 'answer' => 'Yes, EquipDash connects seamlessly with tools like Stripe, QuickBooks, Shopify, and more, making it easy to sync your bookings.'],
-            ['question' => 'How will these features help during peak seasons?', 'answer' => 'EquipDash\'s booking tools—online booking, waitlist management, and automation—handle seasonal demand, ensuring you fill every slot without the stress.'],
+            ['question' => 'Can customers book online 24/7?', 'answer' => 'Yes. Your EquipDash booking widget is live around the clock. Customers see real-time availability and get instant confirmation. You can embed it on your website or share a direct booking link.'],
+            ['question' => 'How does EquipDash prevent double-bookings?', 'answer' => 'Every booking, walk-in, and hold updates availability in real time across all channels. If a kayak is reserved online, it is immediately unavailable at the counter and on any connected OTA.'],
+            ['question' => 'Can I set different refund policies for different products?', 'answer' => 'Yes. You can create multiple refund and cancellation policies and assign them to specific products, experiences, or booking types.'],
+            ['question' => 'Does the POS work with card readers?', 'answer' => 'EquipDash POS integrates with Stripe Terminal for in-person card payments. You can also process cash, manual card entry, and split payments.'],
+            ['question' => 'How do automated workflows help my business?', 'answer' => 'Automated emails and SMS messages go out at key moments — booking confirmation, payment receipt, pre-trip reminders, and post-experience review requests. This reduces no-shows and increases repeat bookings.'],
+            ['question' => 'What payment methods are supported?', 'answer' => 'EquipDash uses Stripe to accept credit cards, debit cards, and Apple Pay. You can also record cash or bank transfer payments manually, and send payment links for deposits or outstanding balances.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Book Your Success?"
-        description="Don't let outdated software cost you bookings. Start your free trial now or watch our demo online to see why EquipDash's booking features are the #1 choice for rental and tour operators worldwide."
+        title="Take the guesswork out of bookings"
+        description="Start your free 21-day trial and see how EquipDash handles online reservations, walk-ins, payments, and follow-ups — all in one place."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"
     />

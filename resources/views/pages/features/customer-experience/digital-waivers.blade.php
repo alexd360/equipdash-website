@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">Digital Waivers</p>
-                    <h1 class="hero-heading">Go Paperless, Stay Compliant—EquipDash Digital Waivers Simplify!</h1>
-                    <p class="hero-desc">Tired of shuffling paper waivers, risking compliance issues, and software that can't handle your rentals or tours? EquipDash's Digital Waivers feature delivers fast, secure, paperless forms—saving time and ensuring safety. Start your free trial today and streamline your operations!</p>
+                    <h1 class="hero-heading">Waivers signed before guests arrive</h1>
+                    <p class="hero-desc">Send digital waivers by email or SMS after booking. Customers sign on their phone, and the waiver attaches to their booking automatically. No paper, no clipboard queues at check-in.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/digital_1.png') }}" alt="Instant Signatures" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Instant Signatures, No More Paper Pileup</h2>
-                            <p class="sec-desc">EquipDash's Digital Waivers let customers sign liability forms for ski rentals, rafting trips, or zip-lining instantly on any device. Say goodbye to manual paperwork and hello to quick, secure signatures—reducing admin time and keeping your operations efficient, even during peak seasons.</p>
+                            <h2 class="fea-title">E-signatures from any device</h2>
+                            <p class="sec-desc">Customers sign waivers on their phone, tablet, or laptop. The signed document is stored securely and linked to their booking and customer profile.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Secure Storage, Compliance Made Easy</h2>
-                            <p class="sec-desc">Store digital waivers securely in the cloud with EquipDash, ensuring compliance with legal requirements and easy access for audits. Our robust encryption protects sensitive data, minimizing risks and giving you peace of mind—without the hassle of physical files or clunky systems.</p>
+                            <h2 class="fea-title">Send automatically after booking</h2>
+                            <p class="sec-desc">Configure waiver requests to go out as soon as a booking is confirmed. By arrival time, most guests have already signed — reducing check-in delays.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/digital_2.png') }}" alt="Secure Storage" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Verify waiver status at check-in" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Verify waiver status at check-in" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Safety</h2>
-                            <p class="sec-desc">Connect Digital Waivers with CRM, online booking, and payments for a unified approach. This integration eliminates silos, saves time, and ensures every customer's waiver is linked to their booking—letting you focus on delivering epic experiences instead of managing paperwork manually.</p>
+                            <h2 class="fea-title">Verify waiver status at check-in</h2>
+                            <p class="sec-desc">Your team sees waiver status on the booking detail page. Green means signed, red means outstanding. Staff can resend the waiver or have the guest sign on a tablet on-site.</p>
                         </div>
                     </div>
                 </div>
@@ -123,21 +123,22 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Digital Waivers, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Digital Waivers?', 'answer' => 'EquipDash\'s Digital Waivers are perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) ensuring compliance and efficiency.'],
-            ['question' => 'Are Digital Waivers customizable?', 'answer' => 'Yes! Customize waiver templates, fields, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Digital Waivers are beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Digital Waivers integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your online booking system, making it easy to sync your waivers.'],
-            ['question' => 'How will Digital Waivers help during peak seasons?', 'answer' => 'Digital Waivers\' instant signatures and secure storage handle seasonal demand, ensuring compliance and efficiency without the stress of paper processes.'],
+            ['question' => 'Can customers sign on their phone?', 'answer' => 'Yes. Waivers are mobile-friendly and can be signed on any device.'],
+            ['question' => 'Are waivers sent automatically?', 'answer' => 'Yes. Configure them to send after booking confirmation. Customers get an email or SMS with a link to sign.'],
+            ['question' => 'Can I customise the waiver content?', 'answer' => 'Yes. Write your own waiver text, add checkboxes, and include your branding.'],
+            ['question' => 'Where are signed waivers stored?', 'answer' => 'Signed waivers are stored securely in EquipDash and linked to the booking and customer profile. You can download or print them.'],
+            ['question' => 'Can minors sign waivers?', 'answer' => 'Yes. A parent or guardian can sign on behalf of a minor, with their details recorded.'],
+            ['question' => 'Can guests sign at check-in?', 'answer' => 'Yes. If a guest has not signed in advance, they can sign on a tablet at your location.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Go Paperless?"
-        description="Don't let outdated software bog you down with paperwork. Start your free trial now or watch our demo online to see why EquipDash's Digital Waivers are the #1 choice for rental and tour operators worldwide."
+        title="Go paperless with digital waivers"
+        description="Start your free 21-day trial and send waivers automatically with every booking."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

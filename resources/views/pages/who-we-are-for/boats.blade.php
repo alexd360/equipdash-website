@@ -10,8 +10,8 @@
 @section('content')
     {{-- Hero Banner --}}
     <x-wwf-hero
-        title="Set Sail with Seamless Boat Rentals!"
-        description="Frustrated by missed bookings, boat maintenance headaches, and software that can't navigate peak season? EquipDash powers boat rental providers and charters with smooth operations, packed voyages, and happy customers. Start your free trial today and chart a course to success!"
+        title="Boat rental and charter software, all in one"
+        description="EquipDash helps boat rental operators and charter companies manage reservations, captain scheduling, fleet maintenance, and customer deposits from a single platform."
         image="images/boats-banner.png"
         imageAlt="Boat Rental Software"
         heroClass="who-where-for-ski"
@@ -20,9 +20,9 @@
     {{-- Features List --}}
     <x-wwf-features-list
         :items="[
-            ['image' => 'images/boats-features-1.png', 'title' => 'Effortless Online Bookings, Every Voyage Booked', 'description' => 'Say goodbye to manual booking chaos and hello to EquipDash\'s real-time online booking system. Customers book boats and charters instantly, even during peak summer rush, while automated reminders and waitlist management ensure no trip goes unbooked. Watch your revenue soar as you fill every harbor effortlessly.'],
-            ['image' => 'images/boats-features-2.png', 'title' => 'Smart Inventory Tracking, No More Boat Mishaps', 'description' => 'Keep your boat fleet shipshape with EquipDash\'s intuitive inventory tools. Track availability, schedule maintenance, and automate alerts for wear and tear—ensuring every boat is ready for the next adventure. No more scrambling to locate boats or losing track during busy days.'],
-            ['image' => 'images/boats-features-3.png', 'title' => 'Streamlined Staff Scheduling, Peak Performance on the Water', 'description' => 'Tackle seasonal boating surges with EquipDash\'s staff rostering and HR tools. Optimize your team\'s schedules, manage peak charter days, and keep operations smooth—without the stress of manual planning or clunky interfaces. Focus on delivering epic boat experiences, not fighting your software.'],
+            ['image' => 'images/boats-features-1.png', 'title' => 'Book boats and charters online around the clock', 'description' => 'Customers browse your fleet, check availability, and book directly from your website. Deposits are collected at checkout, and confirmation emails go out automatically.'],
+            ['image' => 'images/boats-features-2.png', 'title' => 'Keep your fleet in top condition', 'description' => 'Track each vessel\'s service history, schedule maintenance windows, and flag boats that need attention. Items in the workshop are automatically marked as unavailable.'],
+            ['image' => 'images/boats-features-3.png', 'title' => 'Schedule captains and crew with ease', 'description' => 'Assign captains and crew to charters based on availability and qualifications. Your team sees their schedule on the app and gets notified of changes.'],
         ]"
     />
 
@@ -35,21 +35,21 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your boat rental business before committing.'],
-            ['question' => 'Who is EquipDash for?', 'answer' => 'EquipDash is ideal for boat rental providers and charter operators looking to streamline operations and boost bookings during peak boating seasons.'],
-            ['question' => 'Is EquipDash customizable for boat rentals?', 'answer' => 'Yes! EquipDash adapts to your unique needs with custom workflows, digital waivers, and tailored reports for boat and charter operations.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast, even in peak season.'],
-            ['question' => 'Does EquipDash integrate with my existing systems?', 'answer' => 'Yes, EquipDash connects seamlessly with tools like Stripe, QuickBooks, Shopify, and more, making it easy to sync your boat rentals.'],
-            ['question' => 'How will EquipDash handle busy boating seasons?', 'answer' => 'EquipDash\'s inventory tracking, staff rostering, and online booking tools manage seasonal demand, ensuring you\'re ready for peak times without the stress.'],
+            ['question' => 'Can EquipDash handle both hourly rentals and multi-day charters?', 'answer' => 'Yes. Configure rental periods from hourly to multi-day, each with its own pricing. Charter bookings can include captain assignment and passenger manifests.'],
+            ['question' => 'How do deposits work?', 'answer' => 'Collect deposits at the time of booking through Stripe or PayPal. EquipDash tracks the balance due and can send payment links for the remainder.'],
+            ['question' => 'Can I manage captain and crew scheduling?', 'answer' => 'Yes. Set availability, qualifications, and working hours for each crew member. Assign them to trips based on who is free and qualified.'],
+            ['question' => 'Does EquipDash handle passenger manifests?', 'answer' => 'Yes. Manifests are generated automatically from booking data with passenger names, contact info, and waiver status.'],
+            ['question' => 'Can customers sign waivers before boarding?', 'answer' => 'Yes. Digital waivers are sent by email or SMS before the trip. Customers sign on their phone, and the waiver attaches to their booking.'],
+            ['question' => 'Can I manage multiple docks or marinas?', 'answer' => 'Yes. Each location has its own fleet, crew, and availability. You manage everything from one dashboard.'],
         ]"
     />
 
     {{-- CTA Section --}}
     <x-cta-section
-        title="Ready to lead? Let's get started!"
-        description="Start your free trial now to see why EquipDash is the #1 choice for rental pros and tour operators worldwide."
+        title="See how EquipDash works for boat rentals"
+        description="Start your free 21-day trial. No credit card, no commitment."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"
-        secondButtonUrl="#"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

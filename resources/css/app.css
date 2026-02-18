@@ -394,6 +394,7 @@ main {
 .main-header .menu .nav-menu {
     display: flex;
     gap: 28px;
+    margin-left: 40px;
 }
 
 .main-header .menu .nav-menu li {
@@ -404,7 +405,7 @@ main {
     display: flex;
     gap: 6px;
     align-items: center;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     color: #000000;
@@ -635,7 +636,7 @@ body.mobile-menu-open {
 
 .submenu-category .category-menu .category-tabs .click-toggle {
     border-radius: 16px;
-    padding: 20px 25px 20px 23px;
+    padding: 13px 25px 13px 23px;
     cursor: pointer;
 }
 
@@ -653,7 +654,7 @@ body.mobile-menu-open {
 }
 
 .category-menu .category-tabs:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .category-menu .category-tabs .category-header {
@@ -1008,8 +1009,7 @@ body.mobile-menu-open {
 }
 
 .banner-intro {
-    max-width: 269px;
-    width: 100%;
+    width: fit-content;
     margin: 0 auto 35px;
     border: 1px solid #CDD2E4;
     border-radius: 100px;
@@ -1042,11 +1042,27 @@ body.mobile-menu-open {
     color: #000;
 }
 
+.hero-pill {
+    display: inline-block;
+    background: #F0F1F5;
+    color: #1B2B4B;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 22px;
+    border-radius: 100px;
+    margin: 0 auto 20px;
+    letter-spacing: 0.02em;
+}
+
+.banner-content {
+    text-align: center;
+}
+
 .banner-content h1 {
-    max-width: 816px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto 13px;
-    text-align: center;
 }
 
 .banner-content .desc {
@@ -1300,13 +1316,15 @@ body.mobile-menu-open {
 }
 
 .inner-integrations h2 {
-    max-width: 645px;
+    max-width: 900px;
     width: 100%;
     margin: 0 auto 12px;
+    text-align: center;
 }
 
 .inner-integrations .sec-desc {
     margin: 0 0 60px;
+    text-align: center;
 }
 
 .box-brand {
@@ -1769,7 +1787,7 @@ body.mobile-menu-open {
         display: block;
     }
 
-    .main-header {
+    .inner-header .main-header {
         display: none;
         position: fixed;
         top: 0;
@@ -1783,13 +1801,14 @@ body.mobile-menu-open {
         z-index: 999;
     }
 
-    .main-header.active {
+    .inner-header .main-header.active {
         display: flex;
     }
 
     .main-header .menu .nav-menu {
         flex-direction: column;
         gap: 0;
+        margin-left: 0;
     }
 
     .main-header .menu .nav-menu > li {
@@ -2219,6 +2238,40 @@ h1.pricing-p_heading {
     margin-left: 13px;
 }
 
+.price_original {
+    font-size: 16px;
+    font-weight: 500;
+    color: #999;
+    text-decoration: line-through;
+    margin: 0 0 -4px;
+}
+
+.price_promo {
+    font-size: 14px;
+    color: #F7581F;
+    font-weight: 600;
+    margin: -16px 0 24px;
+}
+
+.price_fee {
+    font-size: 13px;
+    color: #666;
+    margin: -16px 0 20px;
+}
+
+.save-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: #F7581F;
+}
+
+.compare_footnote {
+    font-size: 14px;
+    color: #666;
+    margin-top: 16px;
+    font-style: italic;
+}
+
 .plan_btn {
     width: 100%;
 }
@@ -2607,22 +2660,24 @@ h1.pricing-p_heading {
 
 .features_menus {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 76px;
+    padding: 0;
     margin-bottom: 40px;
+    gap: 6px;
 }
 
 .features_menu {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: -0.02em;
     text-align: center;
     cursor: pointer;
     border-radius: 12px;
-    padding: 14px 16px;
+    padding: 12px 14px;
     color: #828b9c;
     transition: color 0.3s, background-color 0.3s;
+    white-space: nowrap;
 }
 
 .features_menu:hover,
@@ -2816,6 +2871,7 @@ h1.pricing-p_heading {
     font-weight: 700;
     line-height: 30px;
     margin-bottom: 30px;
+    text-align: left;
 }
 
 .book-a-demo_feature {
@@ -2824,6 +2880,7 @@ h1.pricing-p_heading {
     position: relative;
     font-size: 19px;
     line-height: 30px;
+    text-align: left;
 }
 
 .book-a-demo_feature::before {

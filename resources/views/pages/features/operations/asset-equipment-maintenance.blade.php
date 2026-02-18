@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">ASSET EQUIPMENT & MAINTENANCE</p>
-                    <h1 class="hero-heading">Keep Your Gear Ready, Minimize Downtime—EquipDash Asset & Equipment Maintenance Wins!</h1>
-                    <p class="hero-desc">Tired of equipment failures, manual maintenance tracking, and software that can’t protect your rentals or tours? EquipDash’s Asset & Equipment Maintenance feature automates upkeep for skis, kayaks, tents, and more—boosting reliability and revenue. Start your free trial today and safeguard your assets!</p>
+                    <h1 class="hero-heading">Keep every piece of equipment in working order</h1>
+                    <p class="hero-desc">Track service history, schedule maintenance, and flag items that need attention. EquipDash shows you which gear is in the workshop, which is due for a check, and which is ready to rent.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/asset-equipment-item-1.png') }}" alt="Automated Maintenance Alerts, Prevent Breakdowns" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Automated Maintenance Alerts, Prevent Breakdowns</h2>
-                            <p class="sec-desc">EquipDash’s Asset & Equipment Maintenance tracks wear and tear on your rental gear—skis, bikes, kayaks, tents—with smart alerts. Schedule repairs or replacements proactively, reducing downtime and ensuring every piece of equipment is ready—eliminating surprises, even during peak seasons.</p>
+                            <h2 class="fea-title">Service schedules and maintenance alerts</h2>
+                            <p class="sec-desc">Set maintenance intervals per product — for example, a ski tune-up every 50 rentals or a boat inspection every 90 days. EquipDash sends alerts when service is due.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Real-Time Tracking, No More Guesswork</h2>
-                            <p class="sec-desc">Say goodbye to manual maintenance logs and hello to EquipDash’s intuitive tools. Monitor asset health, log repairs, and manage schedules in real time—ensuring your equipment stays in top shape and customers stay satisfied, without clunky systems or manual effort.</p>
+                            <h2 class="fea-title">Workshop status tracking</h2>
+                            <p class="sec-desc">When an item goes to the workshop, its status updates automatically. It becomes unavailable for booking. When repairs are done, mark it as ready and it is back in your available stock.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/asset-equipment-item-2.png') }}" alt="Real-Time Tracking, No More Guesswork" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/Guestlist-and-manifest-item-3.png') }}" alt="Seamless Integration, Unified Workflow for Efficiency" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/Guestlist-and-manifest-item-3.png') }}" alt="Seamless Integration, Unified Workflow for Efficiency" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/Guestlist-and-manifest-item-3.png') }}" alt="Full service history per item" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/Guestlist-and-manifest-item-3.png') }}" alt="Full service history per item" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Efficiency</h2>
-                            <p class="sec-desc">Connect Asset & Equipment Maintenance with inventory, online booking, and reports for a unified approach. This integration eliminates silos, saves hours, and keeps your equipment data synchronized—letting you focus on delivering epic experiences instead of managing maintenance manually.</p>
+                            <h2 class="fea-title">Full service history per item</h2>
+                            <p class="sec-desc">Every maintenance event, repair, and condition check is logged. See the full history of any item — what was done, when, and by whom.</p>
                         </div>
                     </div>
                 </div>
@@ -121,19 +121,19 @@
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Asset & Equipment Maintenance, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Asset & Equipment Maintenance?', 'answer' => 'EquipDash\'s Asset & Equipment Maintenance is perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures) managing gear upkeep.'],
-            ['question' => 'Is Asset & Equipment Maintenance customizable?', 'answer' => 'Yes! Customize maintenance schedules, alert thresholds, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Asset & Equipment Maintenance is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Asset & Equipment Maintenance integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your inventory system, making it easy to sync your maintenance.'],
-            ['question' => 'How will Asset & Equipment Maintenance help during peak seasons?', 'answer' => 'Asset & Equipment Maintenance\'s automation and integrations handle seasonal demand, ensuring reliable gear and minimal downtime without the stress of manual processes.'],
+            ['question' => 'Does maintenance tracking integrate with inventory?', 'answer' => 'Yes. Items marked for maintenance are automatically removed from available inventory until they are cleared.'],
+            ['question' => 'Can I set recurring maintenance schedules?', 'answer' => 'Yes. Configure schedules based on time intervals or rental count per item.'],
+            ['question' => 'Can I log repairs and notes?', 'answer' => 'Yes. Add notes, costs, and details for each service event. Everything is stored in the item\'s history.'],
+            ['question' => 'Who gets maintenance alerts?', 'answer' => 'Configure which team members receive alerts — managers, workshop staff, or both.'],
+            ['question' => 'Can I track maintenance costs?', 'answer' => 'Yes. Log the cost of each repair or service. EquipDash aggregates costs per item and per product type.'],
+            ['question' => 'Does it support condition reports on return?', 'answer' => 'Yes. Staff can log the condition of an item on return, flagging any damage or wear.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Protect Your Assets?"
-        description="Don't let outdated software risk your equipment. Start your free trial now or watch our demo online to see why EquipDash's Asset & Equipment Maintenance is the #1 choice for rental and tour operators worldwide."
+        title="Extend the life of your equipment"
+        description="Start your free 21-day trial and set up maintenance tracking."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"

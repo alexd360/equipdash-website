@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">GUIDE MANAGEMENT</p>
-                    <h1 class="hero-heading">Schedule Your Guides, Streamline Your Adventures—EquipDash Leads!</h1>
-                    <p class="hero-desc">Tired of guide scheduling chaos, missed assignments, and software that can’t manage your tours or activities? EquipDash’s Guide Management feature keeps rafting, hiking, and zip-lining guides on track—boosting efficiency and customer satisfaction. Start your free trial today and take control of your team!</p>
+                    <h1 class="hero-heading">Assign the right guide to every trip</h1>
+                    <p class="hero-desc">See guide availability, qualifications, and scheduled trips in one view. Assign guides to experiences based on who is free and best qualified. Guides get notified through the app.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/guide_1-min.png') }}" alt="Effortless Scheduling, No More Missed Assignments" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Effortless Scheduling, No More Missed Assignments</h2>
-                            <p class="sec-desc">EquipDash’s Guide Management lets you schedule rafting guides, tour leaders, or rock climbing instructors with ease. With real-time updates and availability tracking, you’ll assign the right guide every time—preventing overlaps and ensuring smooth operations, even during peak seasons.</p>
+                            <h2 class="fea-title">Availability and qualifications at a glance</h2>
+                            <p class="sec-desc">Each guide has a profile with their availability, skills, certifications, and language capabilities. When assigning a trip, you see who is free and qualified in one view.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Optimized Availability, Keep Your Team Ready</h2>
-                            <p class="sec-desc">Say goodbye to guide availability headaches and hello to EquipDash’s intuitive tools. Track guides’ schedules, manage preferences, and balance workloads—ensuring your team is always prepared and reducing stress, without manual effort or clunky systems.</p>
+                            <h2 class="fea-title">Assign guides and notify them instantly</h2>
+                            <p class="sec-desc">Drag a guide onto a trip or select from available options. They get a notification through the mobile app with trip details, guest manifest, and any special notes.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/guide_2-min.png') }}" alt="Optimized Availability, Keep Your Team Ready" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Efficiency" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Efficiency" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Track certifications and training" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Track certifications and training" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Efficiency</h2>
-                            <p class="sec-desc">Connect Guide Management with staff rostering, online booking, and reports for a unified approach. This integration eliminates silos, saves hours, and keeps your guides synchronized—letting you focus on delivering epic adventures instead of managing schedules manually.</p>
+                            <h2 class="fea-title">Track certifications and training</h2>
+                            <p class="sec-desc">Store certification details and expiry dates. EquipDash flags upcoming expirations so you can plan renewals before they lapse.</p>
                         </div>
                     </div>
                 </div>
@@ -121,19 +121,19 @@
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Guide Management, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Guide Management?', 'answer' => 'EquipDash\'s Guide Management is perfect for experience/tour operators (tours, adventures, charters) managing guides for rafting, hiking, or other activities.'],
-            ['question' => 'Is Guide Management customizable?', 'answer' => 'Yes! Customize scheduling rules, availability settings, and integrations to match your unique tour or adventure needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Guide Management is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Guide Management integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your online booking system, making it easy to sync your guides.'],
-            ['question' => 'How will Guide Management help during peak seasons?', 'answer' => 'Guide Management\'s scheduling and availability tools handle seasonal demand, ensuring efficient guide assignments without the stress of manual processes.'],
+            ['question' => 'Can guides see their own schedule?', 'answer' => 'Yes. Guides view their upcoming trips, guest manifests, and trip notes through the EquipDash mobile app.'],
+            ['question' => 'How do I assign guides to trips?', 'answer' => 'Select from available guides when scheduling a trip. EquipDash shows who is free and qualified based on their profile.'],
+            ['question' => 'Can I track guide certifications?', 'answer' => 'Yes. Store certification types, dates, and expiry. EquipDash alerts you before a certification expires.'],
+            ['question' => 'Does it support multiple languages?', 'answer' => 'Yes. Add language capabilities to each guide\'s profile and filter by language when assigning trips.'],
+            ['question' => 'Can guides update their own availability?', 'answer' => 'Yes. Guides can set their available days and hours through the app. Changes are reflected in the scheduling view.'],
+            ['question' => 'Can I see guide utilisation in reports?', 'answer' => 'Yes. View hours worked, trips assigned, and utilisation rates per guide.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Optimize Your Guides?"
-        description="Don't let outdated software disrupt your adventures. Start your free trial now or watch our demo online to see why EquipDash's Guide Management is the #1 choice for tour and adventure operators worldwide."
+        title="Schedule your guides with confidence"
+        description="Start your free 21-day trial and manage guide availability from one place."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"

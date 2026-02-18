@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">REPORTS & INSIGHTS</p>
-                    <h1 class="hero-heading">Unlock Data, Drive Decisions—EquipDash Reports & Insights Empower You!</h1>
-                    <p class="hero-desc">Tired of manual reports, missed trends, and software that can’t reveal your rental or tour performance? EquipDash’s Reports & Insights feature delivers actionable data on revenue, occupancy, and efficiency—boosting profitability and strategy. Start your free trial today and see the big picture!</p>
+                    <h1 class="hero-heading">See exactly how your business is performing</h1>
+                    <p class="hero-desc">Revenue, bookings, utilisation, and customer trends — all in real-time dashboards. Filter by date, location, or product. Export reports or ask Dash AI to pull the numbers for you.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/reports-insights-item-1.png') }}" alt="Actionable Analytics, No More Guesswork" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Actionable Analytics, No More Guesswork</h2>
-                            <p class="sec-desc">EquipDash’s Reports & Insights provides real-time data on your ski rentals, rafting trips, or tours—tracking revenue, occupancy, and efficiency. Gain clear, actionable insights to optimize pricing, fill slots, and grow—eliminating manual spreadsheets and ensuring smart decisions, even during peak seasons.</p>
+                            <h2 class="fea-title">Real-time dashboards with the metrics that matter</h2>
+                            <p class="sec-desc">See revenue, bookings, inventory utilisation, and customer activity on one screen. Dashboards update as bookings come in, so your numbers are always current.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Custom Dashboards, Tailored to Your Needs</h2>
-                            <p class="sec-desc">Say goodbye to generic reports and hello to EquipDash’s customizable dashboards. Create tailored reports for bike rentals, whale-watching tours, or equipment maintenance—saving time, highlighting key metrics, and driving better outcomes without clunky systems or manual effort.</p>
+                            <h2 class="fea-title">Filter, drill down, and export</h2>
+                            <p class="sec-desc">Slice your data by date range, location, product, or booking channel. Drill into any metric for details. Export any report as CSV for further analysis or sharing.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/reports-insights-item-2.png') }}" alt="Custom Dashboards, Tailored to Your Needs" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/Guestlist-and-manifest-item-3.png') }}" alt="Seamless Integration, Unified Workflow for Growth" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/Guestlist-and-manifest-item-3.png') }}" alt="Seamless Integration, Unified Workflow for Growth" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/Guestlist-and-manifest-item-3.png') }}" alt="Ask Dash AI for the numbers" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/Guestlist-and-manifest-item-3.png') }}" alt="Ask Dash AI for the numbers" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Growth</h2>
-                            <p class="sec-desc">Connect Reports & Insights with inventory, booking, and payments for a unified approach. This integration eliminates silos, syncs data automatically, and saves hours—letting you focus on delivering epic experiences instead of compiling reports manually.</p>
+                            <h2 class="fea-title">Ask Dash AI for the numbers</h2>
+                            <p class="sec-desc">On Pro plans, ask Dash AI questions like 'What was my revenue last month?' or 'Which products had the most bookings this summer?' and get answers in seconds.</p>
                         </div>
                     </div>
                 </div>
@@ -121,19 +121,19 @@
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Reports & Insights, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Reports & Insights?', 'answer' => 'EquipDash\'s Reports & Insights are perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) analyzing performance.'],
-            ['question' => 'Are Reports & Insights customizable?', 'answer' => 'Yes! Customize dashboards, metrics, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Reports & Insights are beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Reports & Insights integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and Google Analytics, making it easy to sync your data.'],
-            ['question' => 'How will Reports & Insights help during peak seasons?', 'answer' => 'Reports & Insights\' real-time analytics and customization handle seasonal demand, ensuring data-driven decisions and efficiency without the stress of manual processes.'],
+            ['question' => 'What reports are available?', 'answer' => 'Revenue, bookings, inventory utilisation, customer analytics, cancellation rates, and staff activity. All support date and location filtering.'],
+            ['question' => 'Can I export reports?', 'answer' => 'Yes. Export any report as CSV. Dashboards can also be viewed in a printable format.'],
+            ['question' => 'Does it support multi-location reporting?', 'answer' => 'Yes. View metrics per location or across your entire operation.'],
+            ['question' => 'How does Dash AI reporting work?', 'answer' => 'On Pro plans, type a question in natural language. Dash AI queries your data and returns the answer with supporting numbers.'],
+            ['question' => 'Can I track revenue by booking channel?', 'answer' => 'Yes. See how much revenue comes from your website, walk-ins, and each connected OTA.'],
+            ['question' => 'Are reports real-time?', 'answer' => 'Yes. Data updates as bookings, payments, and returns are processed.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to See Your Success?"
-        description="Don't let outdated software blind you to opportunities. Start your free trial now or watch our demo online to see why EquipDash's Reports & Insights are the #1 choice for rental and tour operators worldwide."
+        title="Make data-driven decisions"
+        description="Start your free 21-day trial and see your business performance in real time."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"

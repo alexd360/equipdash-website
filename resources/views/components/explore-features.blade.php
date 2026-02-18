@@ -1,5 +1,6 @@
 @props([
     'currentSlug' => '',
+    'variant' => 'feature',
 ])
 
 @php
@@ -22,35 +23,35 @@ $categories = [
     [
         'label' => 'Customer Experience',
         'title' => 'Delight your customers, drive loyalty',
-        'desc' => "EquipDash's Customer Experience features—CRM, waivers, loyalty, and more—boost satisfaction, repeat business, and rave reviews. Explore our tools and win over every customer!",
+        'desc' => "Build lasting relationships with CRM, digital waivers, loyalty programs, gift cards, and automated campaigns — all from one dashboard.",
         'image' => 'Group-1000003303.png',
         'pills' => [
             ['title' => 'CRM', 'icon' => 'cmr.svg', 'href' => '/features/customer-experience/crm'],
             ['title' => 'Reviews & Surveys', 'icon' => 'reviews.svg', 'href' => '/features/customer-experience/reviews-surveys'],
-            ['title' => 'Promotions and Campaigns', 'icon' => 'promotions.svg', 'href' => '/features/customer-experience/promotionsand-campaigns'],
+            ['title' => 'Promotions and Campaigns', 'icon' => 'promotions.svg', 'href' => '/features/customer-experience/promotions-campaigns'],
             ['title' => 'Gift Cards & Vouchers', 'icon' => 'gift.svg', 'href' => '/features/customer-experience/gift-cards-vouchers'],
-            ['title' => 'Loyalty Programs', 'icon' => 'loyalty.svg', 'href' => '/features/customer-experience/loyalty-programs'],
             ['title' => 'Digital Waivers', 'icon' => 'digital.svg', 'href' => '/features/customer-experience/digital-waivers'],
             ['title' => 'Custom Forms', 'icon' => 'forms.svg', 'href' => '/features/customer-experience/custom-forms'],
         ],
     ],
     [
-        'label' => 'Resources Management',
-        'title' => 'Optimize your resources, maximize your efficiency',
-        'desc' => "EquipDash's Resource Management features—inventory, guides, catalogues, and schedules—streamline your operations and boost profitability.",
+        'label' => 'Resource Management',
+        'title' => 'Full control over every resource',
+        'desc' => "Track inventory across locations, coordinate guides, manage product and experience catalogues, and plan for seasonal demand — all in real time.",
         'image' => 'Group-1000003425.png',
         'pills' => [
-            ['title' => 'Inventory Management', 'icon' => 'manage.svg', 'href' => '/features/resources-management/inventory-management'],
-            ['title' => 'Guide Management', 'icon' => 'manage.svg', 'href' => '/features/resources-management/guide-management'],
-            ['title' => 'Product Catalogue', 'icon' => 'manage.svg', 'href' => '/features/resources-management/product-catalogue'],
-            ['title' => 'Experience Catalogue', 'icon' => 'manage.svg', 'href' => '/features/resources-management/experience-catalogue'],
-            ['title' => 'Season & Schedule', 'icon' => 'manage.svg', 'href' => '/features/resources-management/season-schedule'],
+            ['title' => 'Inventory Management', 'icon' => 'manage.svg', 'href' => '/features/resource-management/inventory-management'],
+            ['title' => 'Guide Management', 'icon' => 'manage.svg', 'href' => '/features/resource-management/guide-management'],
+            ['title' => 'Product Catalogue', 'icon' => 'manage.svg', 'href' => '/features/resource-management/product-catalogue'],
+            ['title' => 'Experience Catalogue', 'icon' => 'manage.svg', 'href' => '/features/resource-management/experience-catalogue'],
+            ['title' => 'Season & Schedule', 'icon' => 'manage.svg', 'href' => '/features/resource-management/season-schedule'],
+            ['title' => 'Store Catalogue', 'icon' => 'manage.svg', 'href' => '/features/resource-management/store-catalogue'],
         ],
     ],
     [
         'label' => 'Operations',
-        'title' => 'Run business smarter, operate flawlessly',
-        'desc' => "EquipDash's Operations features—staff management, maintenance, analytics, and integrations—streamline your workflows and boost profitability.",
+        'title' => 'Run your business smarter, operate flawlessly',
+        'desc' => "Manage your team, maintain equipment, track performance with real-time reports, and connect your favourite tools through integrations.",
         'image' => 'Group-1000003430.png',
         'pills' => [
             ['title' => 'Staff Management', 'icon' => 'manage.svg', 'href' => '/features/operations/staff-management'],
@@ -60,21 +61,22 @@ $categories = [
         ],
     ],
     [
-        'label' => 'AI & Automation',
-        'title' => 'Work smart, not hard with intelligent feature',
-        'desc' => "EquipDash's AI & Automation features use intelligent technology to streamline operations, reduce manual work, and help you make smarter business decisions.",
+        'label' => 'Dash AI',
+        'title' => 'Work smart, not hard with intelligent features',
+        'desc' => "EquipDash's Dash AI uses intelligent technology to streamline operations, reduce manual work, and help you make smarter business decisions.",
         'image' => 'Group-1000003495.png',
         'pills' => [],
-        'button' => ['text' => 'Explore All Features', 'href' => '/features/ai-automation'],
+        'button' => ['text' => 'Explore All Features', 'href' => '/features/dash-ai'],
     ],
     [
-        'label' => 'Planning',
+        'label' => 'Scheduling & Logistics',
         'title' => 'Plan smarter, operate seamlessly',
-        'desc' => "EquipDash's Planning features—guestlists, staff rostering, and more—optimize your operations and boost efficiency. Explore our tools and stay ahead of every peak today!",
+        'desc' => "Build guest lists, generate trip manifests, and roster staff across locations — so you are always prepared, even during your busiest weeks.",
         'image' => 'Group-1000003488.png',
         'pills' => [
-            ['title' => 'Guestlist & Manifest', 'icon' => 'manage.svg', 'href' => '/features/planning/guestlist-manifest'],
-            ['title' => 'Staff Rostering', 'icon' => 'manage.svg', 'href' => '/features/planning/staff-rostering'],
+            ['title' => 'Guestlist & Manifest', 'icon' => 'manage.svg', 'href' => '/features/scheduling-logistics/guestlist-manifest'],
+            ['title' => 'Staff Rostering', 'icon' => 'manage.svg', 'href' => '/features/scheduling-logistics/staff-rostering'],
+            ['title' => 'Calendar', 'icon' => 'manage.svg', 'href' => '/features/scheduling-logistics/calendar'],
         ],
     ],
 ];
@@ -93,12 +95,12 @@ $integrationBrands = [
 ];
 @endphp
 
-<section class="wwf_features ol-features">
+<section class="wwf_features{{ $variant === 'feature' ? ' ol-features' : '' }}">
     <div class="container">
         <div class="inner-audience">
-            <p class="sub-title">EXPLORE MORE FEATURES</p>
-            <h2 class="global-title features_global-title">All-in-one solution that runs your entire business</h2>
-            <p class="sec-desc features_sec-desc">The ultimate all-in-one solution that runs your entire business from one dashboard.</p>
+            <p class="sub-title">{{ $variant === 'feature' ? 'EXPLORE MORE FEATURES' : 'FEATURES' }}</p>
+            <h2 class="global-title{{ $variant === 'feature' ? ' features_global-title' : '' }}">All-in-one solution that runs your entire business</h2>
+            <p class="sec-desc{{ $variant === 'feature' ? ' features_sec-desc' : '' }}">The ultimate all-in-one solution that runs your entire business from one dashboard.</p>
             <div class="features_body">
                 <div class="features_nav">
                     <ul class="features_menus">
@@ -144,7 +146,7 @@ $integrationBrands = [
                 <div id="fea-integrations" class="features_main">
                     <div class="fea-integrations-content fea-integrations">
                         <div class="inner-integrations">
-                            <h2 class="features_content-title">Connects the dots with the tools you love</h2>
+                            <h2 class="features_content-title">Connect the dots with the tools you love</h2>
                             <p class="sec-desc">Stop wrestling with disconnected systems—EquipDash brings it all together.</p>
                         </div>
                         <div class="brand-grid brand-grid--5col">

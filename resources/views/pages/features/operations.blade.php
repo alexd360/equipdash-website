@@ -3,7 +3,7 @@
 @section('seo')
     <x-seo
         title="Operations Features | EquipDash"
-        description="Automate workflows, manage staff, maintain equipment, and gain insights with EquipDash. Built for equipment rental providers and experience operators."
+        description="Manage staff, maintain equipment, track performance, and connect your tools. EquipDash operations features for rental and tour businesses."
     />
 @endsection
 
@@ -13,11 +13,11 @@
         <div class="container">
             <div class="inner-fea-banner">
                 <div class="fea-content">
-                    <h1 class="hero-heading">Run Your Business Smarter, Operate Flawlessly—EquipDash Operations Excel!</h1>
-                    <p class="hero-desc">Tired of manual reports, equipment maintenance headaches, and software that can't optimize your rentals or tours? EquipDash's Operations features—staff management, maintenance, analytics, and integrations—streamline your workflows and boost profitability. Explore our tools, start your free trial, and dominate your operations today!</p>
+                    <h1 class="hero-heading">Run your business on data, not gut feel</h1>
+                    <p class="hero-desc">EquipDash gives you staff management tools, equipment maintenance tracking, real-time analytics, and an open API — so you can make better decisions and keep everything running.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                     <p class="hero-credit">No credit card required, cancel anytime.</p>
                 </div>
@@ -59,8 +59,8 @@
         <div class="container">
             <div class="inner-features">
                 <p class="sub-title">FEATURES</p>
-                <h2 class="global-title">Goodbye to fragmented tools and hello to EquipDash</h2>
-                <p class="sec-desc">Discover how EquipDash's operations features transform your business—click each to dive deeper into the tools that drive efficiency.</p>
+                <h2 class="global-title">One hub for your entire operation</h2>
+                <p class="sec-desc">From team management to equipment maintenance and business analytics — everything your operations team needs, in one place.</p>
             </div>
         </div>
     </section>
@@ -77,8 +77,8 @@
                         </div>
                         <div class="fea-sec-content">
                             <p class="sub-title">STAFF MANAGEMENT (HR TOOLS)</p>
-                            <h2 class="fea-title">Simplify Team Coordination, Boost Productivity</h2>
-                            <p class="sec-desc">Manage payroll, benefits, and team schedules for ski rentals, tour guiding, or equipment check-ins with EquipDash's HR tools. Automate tasks, ensure compliance, and keep your workforce happy—eliminating manual effort and ensuring smooth operations, even during peak seasons.</p>
+                            <h2 class="fea-title">Manage your team from one dashboard</h2>
+                            <p class="sec-desc">Add team members, assign roles and permissions, and track activity. EquipDash handles user access so your front-desk staff sees bookings while your manager sees reports and settings.</p>
                             <a href="/features/operations/staff-management" class="global-btn">See Staff Management</a>
                         </div>
                     </div>
@@ -95,8 +95,8 @@
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
                             <p class="sub-title">ASSET & EQUIPMENT MAINTENANCE</p>
-                            <h2 class="fea-title">Keep Gear in Top Shape, Reduce Downtime</h2>
-                            <p class="sec-desc">Track and maintain skis, kayaks, tents, or tour equipment with EquipDash's maintenance tools. Automate alerts for wear and tear, schedule repairs, and ensure longevity—preventing breakdowns and keeping customers satisfied without manual tracking or clunky systems.</p>
+                            <h2 class="fea-title">Keep every piece of equipment in working order</h2>
+                            <p class="sec-desc">Track service history, schedule maintenance, and flag items that need attention. EquipDash shows you which gear is in the workshop, which is due for a check, and which is ready to rent.</p>
                             <a href="/features/operations/asset-equipment-maintenance" class="global-btn">See Asset Maintenance</a>
                         </div>
                         <div class="fea-sec-thumb">
@@ -121,8 +121,8 @@
                         </div>
                         <div class="fea-sec-content">
                             <p class="sub-title">REPORTS & ANALYTICS</p>
-                            <h2 class="fea-title">Gain Insights, Drive Decisions</h2>
-                            <p class="sec-desc">Unlock actionable insights with EquipDash's reporting tools. Analyze revenue, occupancy, and efficiency for bike rentals, rafting trips, or tours—making data-driven decisions to optimize operations and boost profits, without the hassle of manual reports.</p>
+                            <h2 class="fea-title">See exactly how your business is performing</h2>
+                            <p class="sec-desc">Revenue, bookings, utilisation, and customer trends — all in real-time dashboards. Filter by date range, location, or product. Export reports or ask Dash AI to pull the numbers for you.</p>
                             <a href="/features/operations/reports-insights" class="global-btn">See Reports & Analytics</a>
                         </div>
                     </div>
@@ -139,9 +139,9 @@
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
                             <p class="sub-title">API & INTEGRATIONS</p>
-                            <h2 class="fea-title">Connect Seamlessly, Enhance Flexibility</h2>
-                            <p class="sec-desc">Integrate EquipDash with leading tools like QuickBooks, Shopify, and Mailchimp for a unified workflow. Customize your operations, sync data effortlessly, and save time—ensuring flexibility and efficiency without the limitations of fragmented systems.</p>
-                            <a href="/features/operations/api-integrations" class="global-btn">API & Integrations</a>
+                            <h2 class="fea-title">Connect EquipDash to your existing tools</h2>
+                            <p class="sec-desc">Use the EquipDash REST API and webhooks to build custom integrations. Pre-built connections with Stripe, QuickBooks, Xero, Shopify, and major OTAs are ready to activate in minutes.</p>
+                            <a href="/features/operations/api-integrations" class="global-btn">See API & Integrations</a>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/operations-features-3.png') }}" alt="API & Integrations" class="features_thumb hidden-mb">
@@ -156,19 +156,19 @@
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Operations features, for 21 days—no credit card required. Test the tools and see how they fit your business before committing.'],
-            ['question' => 'Who can benefit from Operations features?', 'answer' => 'EquipDash\'s Operations are perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) optimizing workflows.'],
-            ['question' => 'Are these features customizable?', 'answer' => 'Yes! Customize HR rules, maintenance schedules, analytics, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Operations tools are beginner-friendly, with intuitive setup and dedicated support to get you started fast.'],
-            ['question' => 'Does Operations integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your online booking system, making it easy to sync your operations.'],
-            ['question' => 'How will Operations help during peak seasons?', 'answer' => 'Operations\' automation and integrations handle seasonal demand, ensuring efficient workflows and equipment management without the stress of manual processes.'],
+            ['question' => 'What staff management features are included?', 'answer' => 'You can add team members, assign roles (admin, manager, staff), set feature-level permissions, and view activity logs. Each team member gets their own login.'],
+            ['question' => 'How does equipment maintenance tracking work?', 'answer' => 'Create maintenance schedules for any product. EquipDash tracks service dates, flags overdue items, and shows workshop status so you know what is available to rent.'],
+            ['question' => 'What reports are available?', 'answer' => 'Revenue reports, booking reports, inventory utilisation, customer analytics, and staff activity. All reports support date filtering, location filtering, and CSV export.'],
+            ['question' => 'Can I use Dash AI for reporting?', 'answer' => 'Yes. On Pro plans, you can ask Dash AI questions like \'What was my revenue last month?\' or \'Which products had the most bookings this summer?\' and get instant answers.'],
+            ['question' => 'Is there an API for custom integrations?', 'answer' => 'Yes. EquipDash provides a REST API with full documentation. You can build custom integrations, automate data flows, and connect with any third-party system.'],
+            ['question' => 'Which tools integrate out of the box?', 'answer' => 'Stripe, PayPal, QuickBooks, Xero, Shopify, Mailchimp, Viator, Expedia, TripAdvisor, and Square. We are adding new integrations regularly.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Optimize Your Operations?"
-        description="Don't let outdated software slow your business. Start your free trial now or watch our demo online to see why EquipDash's Operations features are the #1 choice for rental and tour operators worldwide."
+        title="Get the full picture of your operations"
+        description="Start your free 21-day trial and see how EquipDash helps you manage your team, maintain equipment, and make data-driven decisions."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"
     />

@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">CUSTOM FORMS</p>
-                    <h1 class="hero-heading">Tailor Your Data, Enhance Your Operations—EquipDash Custom Forms Deliver!</h1>
-                    <p class="hero-desc">Tired of generic forms, manual data entry, and software that can’t meet your rental or tour needs? EquipDash’s Custom Forms feature lets you create flexible, targeted forms—saving time and improving customer insights. Start your free trial today and collect exactly what you need!</p>
+                    <h1 class="hero-heading">Collect the right information at every stage</h1>
+                    <p class="hero-desc">Build custom forms for anything — dietary requirements, skill levels, emergency contacts, medical declarations, or post-trip feedback. Attach forms to bookings or send them standalone.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                     <div class="banner-content">
                         <p class="credit">No credit card required, cancel anytime.</p>
@@ -68,8 +68,8 @@
                             <img src="{{ asset('images/cus_form_1-Copy.png') }}" alt="Flexible Design, Capture Exactly What You Need" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Flexible Design, Capture Exactly What You Need</h2>
-                            <p class="sec-desc">EquipDash’s Custom Forms let you build tailored forms for ski rentals, rafting trips, or tours—collecting specific customer data like preferences, skill levels, or emergency contacts. Say goodbye to one-size-fits-all solutions and hello to precise insights that enhance your operations, even during peak seasons.</p>
+                            <h2 class="fea-title">Drag-and-drop form builder</h2>
+                            <p class="sec-desc">Create forms with text fields, dropdowns, checkboxes, date pickers, and file uploads. No coding required — build and publish forms in minutes.</p>
                         </div>
                     </div>
                 </div>
@@ -84,8 +84,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Effortless Data Collection, No More Manual Hassles</h2>
-                            <p class="sec-desc">Replace paper or scattered spreadsheets with EquipDash’s user-friendly Custom Forms. Customers fill out forms digitally on any device, streamlining data entry and reducing errors—saving you time and ensuring consistent, actionable information without clunky processes.</p>
+                            <h2 class="fea-title">Attach forms to bookings automatically</h2>
+                            <p class="sec-desc">Link a form to a product or booking type. Customers receive the form after booking and fill it out before arrival. Responses appear on the booking detail page.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/cus_form_2-Copy.png') }}" alt="Effortless Data Collection, No More Manual Hassles" class="features_thumb hidden-mb">
@@ -104,12 +104,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Insights" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Insights" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Use responses in manifests and reports" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Use responses in manifests and reports" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Insights</h2>
-                            <p class="sec-desc">Connect Custom Forms with CRM, online booking, and payments for a unified approach. This integration eliminates silos, saves hours, and provides a holistic view of customer data—letting you focus on delivering epic experiences instead of managing data manually.</p>
+                            <h2 class="fea-title">Use responses in manifests and reports</h2>
+                            <p class="sec-desc">Form data flows into guest manifests, customer profiles, and reports. If you ask for dietary preferences, guides see them on the manifest before departure.</p>
                         </div>
                     </div>
                 </div>
@@ -124,22 +124,23 @@
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Custom Forms, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Custom Forms?', 'answer' => 'EquipDash\'s Custom Forms are perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) collecting specific customer data.'],
-            ['question' => 'Are Custom Forms customizable?', 'answer' => 'Yes! Design and adjust forms, fields, and workflows to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Custom Forms are beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Custom Forms integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your online booking system, making it easy to sync your forms.'],
-            ['question' => 'How will Custom Forms help during peak seasons?', 'answer' => 'Custom Forms\' flexible design and automation handle seasonal data surges, ensuring efficient data collection without the stress of manual processes.'],
+            ['question' => 'What field types are available?', 'answer' => 'Text, long text, dropdown, checkbox, radio, date picker, number, email, phone, and file upload.'],
+            ['question' => 'Can I attach forms to specific products?', 'answer' => 'Yes. Link a form to any product or booking type. Customers fill it out after booking.'],
+            ['question' => 'Are form responses visible to staff?', 'answer' => 'Yes. Responses appear on the booking detail page and can be included in guest manifests.'],
+            ['question' => 'Can I create post-trip surveys?', 'answer' => 'Yes. Send a survey form after the experience via automated workflow.'],
+            ['question' => 'Can customers upload files?', 'answer' => 'Yes. Add a file upload field for documents like medical certificates or ID.'],
+            ['question' => 'Can I export form data?', 'answer' => 'Yes. Export form responses as CSV for analysis or record-keeping.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Collect the Right Data?"
-        description="Don't let outdated software limit your insights. Start your free trial now or watch our demo online to see why EquipDash's Custom Forms are the #1 choice for rental and tour operators worldwide."
+        title="Gather the information your team needs"
+        description="Start your free 21-day trial and build custom forms in minutes."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection
 

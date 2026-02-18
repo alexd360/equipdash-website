@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">EXPERIENCE CATALOGUE</p>
-                    <h1 class="hero-heading">Highlight Your Adventures, Drive Bookings—EquipDash Experience Catalogue Shines!</h1>
-                    <p class="hero-desc">Tired of outdated listings, manual updates, and software that can’t showcase your tours or activities? EquipDash’s Experience Catalogue feature creates a dynamic, user-friendly showcase for rafting, zip-lining, and more—boosting visibility and sales. Start your free trial today and stand out!</p>
+                    <h1 class="hero-heading">List every tour and activity with full control</h1>
+                    <p class="hero-desc">Define experiences with schedules, capacity limits, guide requirements, and tiered pricing. Customers see what is available and book directly. Changes update everywhere.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/exp_1-min.png') }}" alt="Dynamic Listings, Attract Customers Instantly" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Dynamic Listings, Attract Customers Instantly</h2>
-                            <p class="sec-desc">EquipDash’s Experience Catalogue lets you showcase your tours, adventures, and attractions—rafting, hiking, or city tours—with rich descriptions, photos, and pricing. Update listings easily to reflect availability, driving customer interest and bookings—without the hassle of manual edits or clunky systems, even during peak seasons.</p>
+                            <h2 class="fea-title">Schedules, capacity, and guide requirements</h2>
+                            <p class="sec-desc">Create each experience with a recurring schedule, maximum capacity per session, and guide requirements. EquipDash enforces capacity and assigns guides automatically.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">User-Friendly Design, Customers Explore with Ease</h2>
-                            <p class="sec-desc">Say goodbye to confusing experience pages and hello to EquipDash’s intuitive catalogue interface. Customers navigate your rafting trips, zip-lining adventures, or seasonal events effortlessly on any device, enhancing satisfaction and encouraging bookings—saving you time and improving engagement.</p>
+                            <h2 class="fea-title">Tiered pricing and add-ons</h2>
+                            <p class="sec-desc">Set different prices for adults, children, and groups. Add optional extras like photo packages or equipment upgrades that customers select during checkout.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/exp_2-min.png') }}" alt="User-Friendly Design, Customers Explore with Ease" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Growth" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Growth" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="One listing powers every booking channel" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="One listing powers every booking channel" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Growth</h2>
-                            <p class="sec-desc">Connect Experience Catalogue with online booking, guide management, and payments for a unified approach. This integration eliminates silos, syncs availability automatically, and saves hours—letting you focus on delivering epic experiences instead of managing listings manually.</p>
+                            <h2 class="fea-title">One listing powers every booking channel</h2>
+                            <p class="sec-desc">Your experience listings drive your booking widget, OTA connections, and any embedded booking links. Update a schedule or price once and it takes effect everywhere.</p>
                         </div>
                     </div>
                 </div>
@@ -121,19 +121,19 @@
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Experience Catalogue, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Experience Catalogue?', 'answer' => 'EquipDash\'s Experience Catalogue is perfect for experience/tour operators (tours, adventures, charters) showcasing their activities like rafting, zip-lining, or city tours.'],
-            ['question' => 'Is Experience Catalogue customizable?', 'answer' => 'Yes! Customize layouts, descriptions, and integrations to match your unique tour or adventure needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Experience Catalogue is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Experience Catalogue integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your online booking system, making it easy to sync your experiences.'],
-            ['question' => 'How will Experience Catalogue help during peak seasons?', 'answer' => 'Experience Catalogue\'s dynamic updates and integrations handle seasonal demand, boosting visibility and bookings without the stress of manual processes.'],
+            ['question' => 'Can I set capacity limits per session?', 'answer' => 'Yes. Define maximum participants per session. EquipDash enforces the limit and shows remaining spots online.'],
+            ['question' => 'Can I create different pricing tiers?', 'answer' => 'Yes. Set prices for adults, children, seniors, groups, or custom categories.'],
+            ['question' => 'Can I add optional extras?', 'answer' => 'Yes. Create add-on products like photo packages, equipment upgrades, or meal options.'],
+            ['question' => 'How do schedules work?', 'answer' => 'Set recurring schedules — daily, specific days of the week, or custom dates. Each session has its own start time, duration, and capacity.'],
+            ['question' => 'Can I list experiences on OTAs?', 'answer' => 'Yes. Connected OTAs like Viator and Expedia pull from your experience catalogue automatically.'],
+            ['question' => 'Can I assign guides to experiences?', 'answer' => 'Yes. Set guide requirements per experience. When a session is scheduled, EquipDash shows available guides.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Showcase Your Experiences?"
-        description="Don't let outdated software dull your adventures. Start your free trial now or watch our demo online to see why EquipDash's Experience Catalogue is the #1 choice for tour and adventure operators worldwide."
+        title="List your experiences and start selling"
+        description="Start your free 21-day trial and create your experience catalogue."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"

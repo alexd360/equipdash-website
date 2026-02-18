@@ -74,7 +74,7 @@
     </section>
 
     <x-cta-section
-        title="Ready to Get Started?"
-        description="Book a demo and see how EquipDash can transform your business."
+        title="Ready to get started"
+        description="Start your free 21-day trial or book a demo to see EquipDash in action."
     />
 @endsection

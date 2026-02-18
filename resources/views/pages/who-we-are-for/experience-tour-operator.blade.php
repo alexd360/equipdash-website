@@ -9,51 +9,51 @@
 
 @section('content')
     <x-wwf-hero
-        title="Power Your Tours, Grow Your Adventures!"
-        description="Tired of booking bottlenecks, operational headaches, and software that can't keep up? EquipDash empowers experience & tour operators—tours, activities, adventures, attractions, charters—to simplify operations, drive bookings, and create unforgettable moments. Start your free trial today and transform your business!"
+        title="Tour and activity software that sells while you sleep"
+        description="EquipDash helps tour and experience operators manage bookings, coordinate guides, and deliver consistent guest experiences. From walking tours to whale-watching charters, one platform handles it all."
         image="images/Mask-group.png"
         imageAlt="Experience & Tour Operator Dashboard"
     />
 
     <x-how-we-help
-        title="EquipDash puts  you in the driver's seat"
-        description="EquipDash isn't just software—it's your partner in delivering seamless, thrilling experiences for your customers. Say goodbye to manual chaos, clunky systems, and fragmented tools. We streamline your bookings, manage your guides, and boost customer satisfaction with one powerful platform."
+        title="How EquipDash helps tour operators"
+        description="EquipDash replaces manual scheduling, paper manifests, and fragmented booking systems with one platform designed for experience operators."
         :cards="[
-            ['icon' => 'images/boost-bookings.png', 'title' => 'Boost Bookings', 'description' => 'Real-time online booking, automated reminders, and dynamic pricing fill your tours and activities faster.'],
-            ['icon' => 'images/optimize-operations.png', 'title' => 'Optimize Operations', 'description' => 'Staff rostering, guest manifests, and AI-driven insights keep your team and schedules on track, even during peak seasons.'],
-            ['icon' => 'images/delight-customers.png', 'title' => 'Delight Customers', 'description' => 'CRM, digital waivers, and reviews ensure happy guests who return for more adventures.'],
+            ['icon' => 'images/boost-bookings.png', 'title' => 'Fill every departure', 'description' => 'Online bookings with real-time availability, OTA distribution, and automated waitlists. Customers book tours and activities around the clock.'],
+            ['icon' => 'images/optimize-operations.png', 'title' => 'Keep trips running smoothly', 'description' => 'Guide scheduling, guest manifests, and waiver collection — all connected to your bookings. Your team knows who is on every trip.'],
+            ['icon' => 'images/delight-customers.png', 'title' => 'Build guest loyalty', 'description' => 'CRM profiles, post-trip review requests, and loyalty programs turn one-time visitors into repeat customers.'],
         ]"
     />
 
     <x-industries-section
-        title="No matter your niche, EquipDash scales with you"
-        description="EquipDash is built for the adventure pros crafting unforgettable experiences:"
+        title="Purpose-built for your experience niche"
+        description="EquipDash adapts to the specific needs of each tour and activity vertical."
         :twoColumn="[
-            ['url' => '/experience-tour-operator/tours', 'title' => 'Tours', 'description' => 'Guided hiking, city tours, and cultural experiences—streamline bookings and deliver seamless journeys.', 'image' => 'images/tours.jpg'],
-            ['url' => '/experience-tour-operator/activities-adventure', 'title' => 'Activities & Adventure', 'description' => 'Ziplining, rafting, rock climbing—manage thrilling adventures with ease and efficiency.', 'image' => 'images/activities-and-adventure.jpg'],
-            ['url' => '/experience-tour-operator/attractions', 'title' => 'Attractions', 'description' => 'Aerial parks, seasonal events—keep visitors engaged with smart scheduling and customer tools.', 'image' => 'images/attractionss.jpg'],
-            ['url' => '/experience-tour-operator/charters', 'title' => 'Charters', 'description' => 'Fishing, whale-watching, boat tours—coordinate charters effortlessly with automated workflows and tracking.', 'image' => 'images/charters.jpg'],
+            ['url' => '/experience-tour-operator/tours', 'title' => 'Tours', 'description' => 'Schedule guided tours, manage group sizes, and distribute across OTAs from one calendar.', 'image' => 'images/tours.jpg'],
+            ['url' => '/experience-tour-operator/activities-adventure', 'title' => 'Activities & Adventure', 'description' => 'Handle safety waivers, participant management, and multi-activity scheduling for high-energy experiences.', 'image' => 'images/activities-and-adventure.jpg'],
+            ['url' => '/experience-tour-operator/attractions', 'title' => 'Attractions', 'description' => 'Manage timed entry, capacity limits, and group bookings for parks, museums, and seasonal events.', 'image' => 'images/attractionss.jpg'],
+            ['url' => '/experience-tour-operator/charters', 'title' => 'Charters', 'description' => 'Coordinate vessels, crew, and passenger manifests for fishing, whale-watching, and boat tours.', 'image' => 'images/charters.jpg'],
         ]"
     />
 
-    <x-wwf-features-tabs />
+    <x-explore-features variant="wwf" />
 
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your tour business before committing.'],
-            ['question' => 'Who is EquipDash for?', 'answer' => 'EquipDash is perfect for experience & tour operators offering tours, adventure activities, attractions, and charters, like rafting guides, whale-watching operators, and historical tour companies.'],
-            ['question' => 'Is EquipDash customizable?', 'answer' => 'Yes! EquipDash adapts to your unique needs with custom workflows, digital waivers, and tailored reports for your tour operations.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast'],
-            ['question' => 'Does EquipDash integrate with my existing systems?', 'answer' => 'Yes, EquipDash connects seamlessly with tools like Stripe, QuickBooks, Shopify, and more, making it easy to sync your tours.'],
-            ['question' => 'How will EquipDash help me manage seasonal demand?', 'answer' => 'EquipDash\'s staff rostering, guest manifests, and AI insights handle seasonal spikes, ensuring you\'re ready for busy periods without the stress.'],
+            ['question' => 'What types of tour businesses use EquipDash?', 'answer' => 'EquipDash is used by walking tour companies, adventure activity providers, attraction operators, and charter businesses. It works for solo operators and multi-guide teams.'],
+            ['question' => 'Can I distribute tours on OTAs like Viator?', 'answer' => 'Yes. EquipDash syncs your availability and pricing with Viator, Expedia, and TripAdvisor. Bookings from OTAs appear in your calendar alongside direct bookings.'],
+            ['question' => 'How does guide scheduling work?', 'answer' => 'Set each guide\'s availability, qualifications, and working hours. Assign them to trips based on who is free and best qualified. Guides see their schedule on the mobile app.'],
+            ['question' => 'Does EquipDash handle digital waivers?', 'answer' => 'Yes. Send waivers by email or SMS before the trip. Customers sign on their phone, and the waiver attaches to their booking automatically.'],
+            ['question' => 'Can I manage guest manifests?', 'answer' => 'Yes. EquipDash generates manifests from booking data with participant details, emergency contacts, and waiver status. Share them with guides before departure.'],
+            ['question' => 'What integrations are available for tour operators?', 'answer' => 'EquipDash integrates with Stripe, PayPal, QuickBooks, Xero, Mailchimp, Viator, Expedia, and TripAdvisor. An open API supports custom integrations.'],
         ]"
     />
 
     <x-cta-section
-        title="Ready to lead? Let's get started!"
-        description="Start your free trial now to see why EquipDash is the #1 choice for rental pros and tour operators worldwide."
+        title="See how EquipDash works for your tour business"
+        description="Start your free 21-day trial. No credit card, no commitment — just the tools you need to fill more trips and deliver better experiences."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"
-        secondButtonUrl="#"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

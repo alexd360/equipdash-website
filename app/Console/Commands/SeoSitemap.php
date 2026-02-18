@@ -29,7 +29,7 @@ class SeoSitemap extends Command
             ['loc' => '/blog', 'priority' => '0.9', 'changefreq' => 'daily'],
             ['loc' => '/directory', 'priority' => '0.8', 'changefreq' => 'weekly'],
             ['loc' => '/features', 'priority' => '0.8', 'changefreq' => 'monthly'],
-            ['loc' => '/features/ai-automation', 'priority' => '0.7', 'changefreq' => 'monthly'],
+            ['loc' => '/features/dash-ai', 'priority' => '0.7', 'changefreq' => 'monthly'],
             ['loc' => '/integrations', 'priority' => '0.7', 'changefreq' => 'monthly'],
             ['loc' => '/terms-of-use', 'priority' => '0.3', 'changefreq' => 'yearly'],
             ['loc' => '/privacy-policy', 'priority' => '0.3', 'changefreq' => 'yearly'],
@@ -45,7 +45,7 @@ class SeoSitemap extends Command
         }
 
         // Feature category pages
-        $featureCategories = ['bookings', 'customer-experience', 'resource-management', 'planning', 'operations'];
+        $featureCategories = ['bookings', 'customer-experience', 'resource-management', 'scheduling-logistics', 'operations'];
         foreach ($featureCategories as $slug) {
             $staticPages[] = ['loc' => '/features/'.$slug, 'priority' => '0.7', 'changefreq' => 'monthly'];
         }

@@ -61,8 +61,8 @@
                     {{-- In-article CTA --}}
                     <section class="post__ready">
                         <div class="ready__content">
-                            <div class="ready__title">Ready to lead?<br>Let's get started!</div>
-                            <div class="ready__desc txt-default">See why EquipDash is the #1 choice for rental pros and tour operators.</div>
+                            <div class="ready__title">Manage your business<br>in one place</div>
+                            <div class="ready__desc txt-default">Start your free 21-day trial and see how EquipDash simplifies your operations.</div>
                             <div class="ready__btn">
                                 <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
                             </div>
@@ -85,8 +85,8 @@
                     {{-- Sidebar CTA --}}
                     <div class="sidebar__ready">
                         <div class="sidebar-ready__content">
-                            <div class="sidebar-ready__title">Ready to plan your success?</div>
-                            <div class="sidebar-ready__desc txt-default">Don't let outdated software disrupt your operations.</div>
+                            <div class="sidebar-ready__title">Try EquipDash free for 21 days</div>
+                            <div class="sidebar-ready__desc txt-default">No credit card required. Set up in minutes.</div>
                             <div class="sidebar-ready__btn">
                                 <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
                             </div>

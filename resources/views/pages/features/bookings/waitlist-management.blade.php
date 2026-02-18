@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">Waitlist Management</p>
-                    <h1 class="hero-heading">Turn Waiting Lists into Revenue—EquipDash Waitlist Delivers!</h1>
-                    <p class="hero-desc">Frustrated by lost bookings, overbooking risks, and software that can't manage waitlists? EquipDash's Waitlist feature captures every opportunity for your rentals or tours—filling slots fast and boosting profits. Start your free trial today and maximize every moment!</p>
+                    <h1 class="hero-heading">Fill cancellations automatically with waitlist management</h1>
+                    <p class="hero-desc">When a time slot or trip fills up, customers join a waitlist. If someone cancels, the next person is notified automatically and can confirm their spot — so you fill every opening.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/wailist_1.png') }}" alt="Instant Notifications" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Instant Notifications, No Lost Opportunities</h2>
-                            <p class="sec-desc">EquipDash's Waitlist automatically notifies customers when a slot opens for ski rentals, rafting trips, or city tours. With real-time alerts via email or SMS, you'll fill cancellations instantly, ensuring every piece of gear or tour spot is utilized—maximizing revenue without manual effort.</p>
+                            <h2 class="fea-title">Automatic waitlist when a slot fills up</h2>
+                            <p class="sec-desc">Customers see a 'Join Waitlist' option when a time slot is full. They provide their contact details and are added to the queue in order. No manual tracking needed.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Smart Queue Management, Prevent Overbooking Hassles</h2>
-                            <p class="sec-desc">Say goodbye to overbooking chaos with EquipDash's intuitive Waitlist tools. Track waiting customers, manage availability, and prioritize bookings seamlessly—keeping your operations smooth, reducing customer frustration, and protecting your reputation, even during peak seasons.</p>
+                            <h2 class="fea-title">Instant notifications on cancellations</h2>
+                            <p class="sec-desc">When a spot opens up, the next person on the waitlist gets an email or SMS with a link to confirm their booking. If they do not respond within your set window, the notification moves to the next person.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/wailist_2.png') }}" alt="Smart Queue Management" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Recover Lost Revenue" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Recover Lost Revenue" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Full Capacity</h2>
-                            <p class="sec-desc">Connect Waitlist with online booking, POS, and inventory systems for a unified approach. This integration eliminates silos, saves time, and ensures you're always operating at full capacity—letting you focus on delivering epic experiences instead of managing waitlists manually.</p>
+                            <h2 class="fea-title">Recover revenue you would otherwise lose</h2>
+                            <p class="sec-desc">Without a waitlist, cancellations mean empty slots and lost revenue. With EquipDash, most cancellations are filled within hours because the next interested customer is notified immediately.</p>
                         </div>
                     </div>
                 </div>
@@ -123,21 +123,21 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Waitlist, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Waitlist?', 'answer' => 'EquipDash\'s Waitlist is perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) managing high-demand bookings.'],
-            ['question' => 'Is Waitlist customizable?', 'answer' => 'Yes! Customize notification settings, priority rules, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Waitlist is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Waitlist integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your online booking system, making it easy to sync your waitlists.'],
-            ['question' => 'How will Waitlist help during peak seasons?', 'answer' => 'Waitlist\'s real-time notifications and queue management handle seasonal demand, ensuring you fill every slot and minimize lost revenue without the stress.'],
+            ['question' => 'How does the waitlist work?', 'answer' => 'When a time slot is full, customers can join the waitlist. If someone cancels, the next person is notified automatically via email or SMS.'],
+            ['question' => 'Do customers know their position?', 'answer' => 'Customers receive a confirmation that they have joined the waitlist. Position details are managed internally by your team.'],
+            ['question' => 'Does the waitlist work across OTAs?', 'answer' => 'Yes. Cancellations from any channel trigger waitlist notifications.'],
+            ['question' => 'Can I manage the waitlist manually?', 'answer' => 'Yes. Your team can reorder the list, remove entries, or manually offer a spot to a specific customer.'],
+            ['question' => 'Is there a limit on waitlist size?', 'answer' => 'No. The waitlist can grow as large as demand allows.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Capture Every Booking?"
-        description="Don't let outdated software cost you opportunities. Start your free trial now or watch our demo online to see why EquipDash's Waitlist is the #1 choice for rental and tour operators worldwide."
+        title="Never leave a slot empty again"
+        description="Start your free 21-day trial and turn cancellations into confirmed bookings."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

@@ -49,7 +49,9 @@
       "Bash(for f in inventory-management.html staff-management.html ai-automation.html)",
       "Bash(do)",
       "Bash(node -e:*)",
-      "Bash(for file in \"/Users/alexanderdanieli/Google Drive/Project Freedom/4. Development/equipdash-website/resources/views/pages/who-we-are-for\"/*.blade.php)"
+      "Bash(for file in \"/Users/alexanderdanieli/Google Drive/Project Freedom/4. Development/equipdash-website/resources/views/pages/who-we-are-for\"/*.blade.php)",
+      "WebFetch(domain:www.zaui.com)",
+      "Bash(docker exec:*)"
     ]
   }
 }

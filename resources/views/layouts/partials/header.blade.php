@@ -23,7 +23,7 @@
                                 <div class="submenu-intro">
                                     <div class="submenu-intro-content">
                                         <h2>Who We're For</h2>
-                                        <p>Built for the trailblazers—SMB owners in outdoor equipment rentals and adventure tourism who demand simplicity, growth, and control.</p>
+                                        <p>Purpose-built for equipment rental providers and experience operators who want to grow without the complexity.</p>
                                         <div class="card-item">
                                             <a href="#">
                                                 <img class="icon" src="{{ asset('images/menu/see-it.svg') }}" alt="">
@@ -41,7 +41,7 @@
                                                         <h3>Equipment Rental Providers</h3>
                                                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L1 12" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11.3273V1H1.78622" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                                     </div>
-                                                    <p>Streamline your operations, boost bookings, and keep gear moving.</p>
+                                                    <p>Manage inventory, bookings, and customers from one dashboard.</p>
                                                 </a>
                                             </div>
                                             <div class="category-item">
@@ -84,7 +84,7 @@
                                                         <h3>Experience & Tour Operators</h3>
                                                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L1 12" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11.3273V1H1.78622" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                                     </div>
-                                                    <p>Deliver exceptional, unforgettable experiences with none of the tech headaches.</p>
+                                                    <p>Fill more seats, coordinate guides, and deliver standout experiences.</p>
                                                 </a>
                                             </div>
                                             <div class="category-item">
@@ -135,11 +135,11 @@
                                 <div class="submenu-intro">
                                     <div class="submenu-intro-content">
                                         <h2>Features</h2>
-                                        <p>Say goodbye to fragmented tools and hello to EquipDash—the ultimate all-in-one solution that runs your entire business from one dashboard.</p>
+                                        <p>One platform to manage bookings, inventory, customers, and day-to-day operations.</p>
                                         <div class="card-item">
-                                            <a href="/features/ai-automation">
+                                            <a href="/features/dash-ai">
                                                 <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-9.svg') }}" alt="">
-                                                <span>AI & Automation</span>
+                                                <span>Dash AI</span>
                                             </a>
                                         </div>
                                         <div class="card-item">
@@ -161,7 +161,7 @@
                                                         <h3>Bookings</h3>
                                                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L1 12" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11.3273V1H1.78622" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                                     </div>
-                                                    <p>Keep customers booking and you stress-free.</p>
+                                                    <p>Accept bookings online and in-store, process payments, and automate workflows.</p>
                                                 </a>
                                             </div>
                                             <div class="category-item">
@@ -217,7 +217,7 @@
                                                         <h3>Customer Experience</h3>
                                                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L1 12" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11.3273V1H1.78622" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                                     </div>
-                                                    <p>Drive repeat business and rave reviews.</p>
+                                                    <p>Build lasting relationships with CRM, waivers, loyalty rewards, and reviews.</p>
                                                 </a>
                                             </div>
                                             <div class="category-item">
@@ -240,19 +240,13 @@
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
-                                                    <a href="/features/customer-experience/loyalty-programs">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-21.svg') }}" alt="">
-                                                        <span>Loyalty Programs</span>
-                                                    </a>
-                                                </div>
-                                                <div class="card-item">
                                                     <a href="/features/customer-experience/gift-cards-vouchers">
                                                         <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-2.svg') }}" alt="">
                                                         <span>Gift Cards and Vouchers</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
-                                                    <a href="/features/customer-experience/promotionsand-campaigns">
+                                                    <a href="/features/customer-experience/promotions-campaigns">
                                                         <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-3-1.svg') }}" alt="">
                                                         <span>Promotions and Campaigns</span>
                                                     </a>
@@ -268,69 +262,81 @@
                                         {{-- Resource Management --}}
                                         <li class="category-tabs">
                                             <div class="click-toggle">
-                                                <a href="/features/resources-management">
+                                                <a href="/features/resource-management">
                                                     <div class="category-header">
                                                         <h3>Resource Management</h3>
                                                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L1 12" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11.3273V1H1.78622" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                                     </div>
-                                                    <p>Optimize every move, seasonal or year-round.</p>
+                                                    <p>Track gear, manage catalogues, coordinate guides, and plan for every season.</p>
                                                 </a>
                                             </div>
                                             <div class="category-item">
                                                 <div class="card-item">
-                                                    <a href="/features/resources-management/inventory-management">
+                                                    <a href="/features/resource-management/inventory-management">
                                                         <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-4-1.svg') }}" alt="">
                                                         <span>Inventory Management</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
-                                                    <a href="/features/resources-management/guide-management">
+                                                    <a href="/features/resource-management/guide-management">
                                                         <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-23.svg') }}" alt="">
                                                         <span>Guide Management</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
-                                                    <a href="/features/resources-management/product-catalogue">
+                                                    <a href="/features/resource-management/product-catalogue">
                                                         <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-24.svg') }}" alt="">
                                                         <span>Product Catalogue</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
-                                                    <a href="/features/resources-management/experience-catalogue">
+                                                    <a href="/features/resource-management/experience-catalogue">
                                                         <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-25.svg') }}" alt="">
                                                         <span>Experience Catalogue</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
-                                                    <a href="/features/resources-management/season-schedule">
+                                                    <a href="/features/resource-management/season-schedule">
                                                         <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-2-1.svg') }}" alt="">
                                                         <span>Season & Schedule</span>
                                                     </a>
                                                 </div>
+                                                <div class="card-item">
+                                                    <a href="/features/resource-management/store-catalogue">
+                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-24.svg') }}" alt="">
+                                                        <span>Store Catalogue</span>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </li>
-                                        {{-- Planning --}}
+                                        {{-- Scheduling & Logistics --}}
                                         <li class="category-tabs">
                                             <div class="click-toggle">
-                                                <a href="/features/planning">
+                                                <a href="/features/scheduling-logistics">
                                                     <div class="category-header">
-                                                        <h3>Planning</h3>
+                                                        <h3>Scheduling & Logistics</h3>
                                                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L1 12" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11.3273V1H1.78622" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                                     </div>
-                                                    <p>Optimize your operations & boost efficiency.</p>
+                                                    <p>Build rosters, generate manifests, and manage guest lists effortlessly.</p>
                                                 </a>
                                             </div>
                                             <div class="category-item">
                                                 <div class="card-item">
-                                                    <a href="/features/planning/guestlist-manifest">
+                                                    <a href="/features/scheduling-logistics/guestlist-manifest">
                                                         <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-26.svg') }}" alt="">
                                                         <span>Guestlist & Manifest</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
-                                                    <a href="/features/planning/staff-rostering">
+                                                    <a href="/features/scheduling-logistics/staff-rostering">
                                                         <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-27.svg') }}" alt="">
                                                         <span>Staff Rostering</span>
+                                                    </a>
+                                                </div>
+                                                <div class="card-item">
+                                                    <a href="/features/scheduling-logistics/calendar">
+                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-26.svg') }}" alt="">
+                                                        <span>Calendar</span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -343,7 +349,7 @@
                                                         <h3>Operations</h3>
                                                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L1 12" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11.3273V1H1.78622" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                                     </div>
-                                                    <p>Streamline your workflows & boost profit.</p>
+                                                    <p>Manage your team, maintain equipment, and track performance with real-time reports.</p>
                                                 </a>
                                             </div>
                                             <div class="category-item">
@@ -373,6 +379,11 @@
                         </div>
                     </li>
 
+                    {{-- Dash AI --}}
+                    <li>
+                        <a href="/features/dash-ai" class="menu-items">Dash AI</a>
+                    </li>
+
                     {{-- Pricing --}}
                     <li>
                         <a href="{{ route('pricing') }}" class="menu-items">Pricing</a>
@@ -393,7 +404,7 @@
                                 <div class="submenu-intro">
                                     <div class="submenu-intro-content">
                                         <h2>Resources</h2>
-                                        <p>Anything and everything you're looking for to grow your business. You ask it, we talk about it.</p>
+                                        <p>Guides, articles, and support to help you get the most out of EquipDash.</p>
                                     </div>
                                 </div>
                                 <div class="submenu-category">
@@ -403,21 +414,21 @@
                                                 <img src="{{ asset('images/menu/vuesax_linear_flash-1-31.svg') }}" alt="">
                                                 <h3><a href="{{ route('blog.index') }}">Blog</a></h3>
                                             </div>
-                                            <p>Ideas and insights to improve your rental business.</p>
+                                            <p>Tips and insights for rental and tour operators.</p>
                                         </li>
                                         <li class="submenu-items">
                                             <div class="items-header">
                                                 <img src="{{ asset('images/menu/vuesax_linear_flash-1-32.svg') }}" alt="">
                                                 <h3><a href="{{ route('contact-us') }}">Contact Us</a></h3>
                                             </div>
-                                            <p>Questions, support, feedback...our team is here to help.</p>
+                                            <p>Get in touch — our team is here to help.</p>
                                         </li>
                                         <li class="submenu-items">
                                             <div class="items-header">
                                                 <img src="{{ asset('images/menu/vuesax_linear_flash-1-33.svg') }}" alt="">
                                                 <h3><a href="{{ route('help-docs') }}">Help Docs</a></h3>
                                             </div>
-                                            <p>Resource to help you get the most out of EquipDash.</p>
+                                            <p>Step-by-step guides and product documentation.</p>
                                         </li>
                                     </ul>
                                     <div class="new-blog">

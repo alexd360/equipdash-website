@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">PROMOTIONSAND CAMPAIGNS</p>
-                    <h1 class="hero-heading">Fill Your Slots, Build Buzz—EquipDash Promotions & Campaigns Deliver!</h1>
-                    <p class="hero-desc">Tired of empty bookings, manual marketing, and software that can’t drive your rentals or tours? EquipDash’s Promotions & Campaigns feature automates targeted emails, SMS, and promo codes—boosting visibility and revenue. Start your free trial today and attract more customers!</p>
+                    <h1 class="hero-heading">Create promo codes and run targeted campaigns</h1>
+                    <p class="hero-desc">Build percentage or fixed-amount discount codes. Set start and end dates, usage limits, and minimum order values. Pair promo codes with email or SMS campaigns to drive bookings.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                     <div class="banner-content">
                         <p class="credit">No credit card required, cancel anytime.</p>
@@ -68,8 +68,8 @@
                             <img src="{{ asset('images/pro_1.png') }}" alt="Targeted Offers, Drive Bookings Instantly" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Targeted Offers, Drive Bookings Instantly</h2>
-                            <p class="sec-desc">EquipDash’s Promotions & Campaigns lets you create and launch personalized email, SMS, or promo code campaigns for ski rentals, rafting trips, or tours. Reach the right customers with tailored discounts, filling slots and increasing revenue—without the hassle of manual outreach or clunky systems, even during peak seasons.</p>
+                            <h2 class="fea-title">Flexible promo code builder</h2>
+                            <p class="sec-desc">Create promo codes with percentage or dollar-amount discounts. Set validity dates, usage limits per customer, minimum order values, and which products they apply to.</p>
                         </div>
                     </div>
                 </div>
@@ -84,8 +84,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Automated Campaigns, Save Time and Maximize Impact</h2>
-                            <p class="sec-desc">Say goodbye to time-consuming marketing tasks and hello to EquipDash’s automated campaign tools. Schedule emails, track performance, and adjust in real time—ensuring your promotions hit the mark, boost engagement, and drive bookings effortlessly.</p>
+                            <h2 class="fea-title">Email and SMS campaigns from one place</h2>
+                            <p class="sec-desc">Build targeted campaigns using customer segments from your CRM. Send promo codes to past customers, first-time bookers, or anyone who has not visited in 90 days.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/pro_2.png') }}" alt="Automated Campaigns, Save Time and Maximize Impact" class="features_thumb hidden-mb">
@@ -104,12 +104,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Growth" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Growth" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Track campaign performance" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="Track campaign performance" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Growth</h2>
-                            <p class="sec-desc">Connect Promotions & Campaigns with CRM, online booking, and payments for a unified approach. This integration eliminates silos, tracks campaign results automatically, and saves hours—letting you focus on delivering epic experiences instead of managing marketing manually.</p>
+                            <h2 class="fea-title">Track campaign performance</h2>
+                            <p class="sec-desc">See which promo codes are being used, how many bookings each campaign generated, and the revenue impact. Use this data to refine your next campaign.</p>
                         </div>
                     </div>
                 </div>
@@ -119,27 +119,28 @@
 
 
     {{-- Explore More Features --}}
-    <x-explore-features currentSlug="promotionsand-campaigns" />
+    <x-explore-features currentSlug="promotions-campaigns" />
 
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Promotions & Campaigns, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Promotions & Campaigns?', 'answer' => 'EquipDash\'s Promotions & Campaigns are perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) boosting bookings.'],
-            ['question' => 'Are Promotions & Campaigns customizable?', 'answer' => 'Yes! Customize offers, schedules, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Promotions & Campaigns are beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Promotions & Campaigns integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and Mailchimp, making it easy to sync your marketing efforts.'],
-            ['question' => 'How will Promotions & Campaigns help during peak seasons?', 'answer' => 'Promotions & Campaigns\' automation and integrations handle seasonal demand, driving bookings and visibility without the stress of manual processes'],
+            ['question' => 'Can I limit promo codes to specific products?', 'answer' => 'Yes. Restrict codes to specific products, booking types, or date ranges.'],
+            ['question' => 'Can I set usage limits?', 'answer' => 'Yes. Limit codes to one use per customer, a total number of uses, or a specific date range.'],
+            ['question' => 'Does EquipDash send email campaigns?', 'answer' => 'Yes. Build and send email campaigns from within EquipDash using your customer segments.'],
+            ['question' => 'Can I send SMS campaigns?', 'answer' => 'Yes. SMS campaigns are available for pre-trip reminders and promotional offers.'],
+            ['question' => 'How do I track campaign results?', 'answer' => 'EquipDash tracks promo code usage, bookings generated, and revenue per campaign.'],
+            ['question' => 'Can I create a referral programme?', 'answer' => 'You can create unique promo codes for referrers and track their usage and resulting bookings.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Boost Your Bookings?"
-        description="Don't let outdated software miss your marketing opportunities. Start your free trial now or watch our demo online to see why EquipDash's Promotions & Campaigns are the #1 choice for rental and tour operators worldwide."
+        title="Drive bookings with targeted promotions"
+        description="Start your free 21-day trial and create your first promo code."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection
 

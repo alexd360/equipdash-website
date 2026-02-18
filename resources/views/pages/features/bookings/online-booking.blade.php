@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">Online Booking</p>
-                    <h1 class="hero-heading">Fill Every Slot, <br>24/7—EquipDash Online Booking Delivers!</h1>
-                    <p class="hero-desc">Tired of missed bookings, phone tag, and software that can't handle real-time demand? EquipDash's Online Booking feature powers your equipment rentals and tours with instant, user-friendly bookings—boosting revenue and saving time. Start your free trial today and watch your business thrive!</p>
+                    <h1 class="hero-heading">Let customers book anytime, from anywhere</h1>
+                    <p class="hero-desc">EquipDash's booking widget sits on your website and lets customers browse availability, pick dates, and pay — 24 hours a day. Every booking syncs with your calendar, inventory, and payment system in real time.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/live.png') }}" alt="Real-Time Availability" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Real-Time Availability, No Missed Opportunities</h2>
-                            <p class="sec-desc">EquipDash's Online Booking lets customers book skis, kayaks, tours, or any adventure instantly, 24/7, with real-time availability updates. Say goodbye to manual scheduling errors and hello to packed slots—ensuring you capture every booking, even during peak seasons, without lifting a finger.</p>
+                            <h2 class="fea-title">Real-time availability across every channel</h2>
+                            <p class="sec-desc">Online bookings, walk-ins, and OTA reservations all draw from the same live availability. When someone books a kayak online, it is instantly unavailable at the counter and on Viator.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">User-Friendly Interface, Customers Book with Ease</h2>
-                            <p class="sec-desc">Designed for simplicity, our Online Booking feature features an intuitive, mobile-friendly interface that customers love. No more clunky forms or confusing processes—your clients book effortlessly, increasing satisfaction and driving repeat business, while you focus on what matters most.</p>
+                            <h2 class="fea-title">A booking experience customers actually enjoy</h2>
+                            <p class="sec-desc">Your booking widget is mobile-friendly, fast, and customisable. Customers pick dates, select products, add extras, and pay in a few taps. No account creation required.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/user.png') }}" alt="User-Friendly Interface" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integrations" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integrations" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="OTA Distribution" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="OTA Distribution" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integrations, Maximize Your Reach</h2>
-                            <p class="sec-desc">Connect EquipDash's Online Booking with marketplaces like Viator, TripAdvisor, and Expedia, plus payment gateways like Stripe and PayPal, to expand your audience and streamline transactions. This integration ensures your bookings sync across platforms, boosting visibility and revenue without added complexity.</p>
+                            <h2 class="fea-title">Distribute to OTAs without double-selling</h2>
+                            <p class="sec-desc">Connect your availability to Viator, Expedia, and TripAdvisor. Bookings from any channel sync back to one calendar. Pricing and capacity update everywhere automatically.</p>
                         </div>
                     </div>
                 </div>
@@ -123,21 +123,22 @@
         title="What would you like to know about EquipDash?"
         description="Find answers to your questions below. Contact us if you couldn't find what you're looking for."
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Online Booking, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Online Booking?', 'answer' => 'EquipDash\'s Online Booking is perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures, charters) looking to boost bookings.'],
-            ['question' => 'Is Online Booking customizable?', 'answer' => 'Yes! Customize workflows, availability settings, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Online Booking is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Online Booking integrate with my website?', 'answer' => 'Yes, it integrates seamlessly with your website and tools like Shopify, QuickBooks, and marketplaces, making it easy to sync your bookings.'],
-            ['question' => 'How will Online Booking help during peak seasons?', 'answer' => 'Online Booking\'s real-time updates, waitlist management, and automation handle seasonal surges, ensuring you fill every slot without the stress.'],
+            ['question' => 'Can I customise the booking widget?', 'answer' => 'Yes. Match colours, fonts, and layout to your brand. Choose which products to show, set minimum lead times, and add custom fields.'],
+            ['question' => 'Does it work on mobile?', 'answer' => 'Yes. The widget is fully responsive and works on phones, tablets, and desktops.'],
+            ['question' => 'How do OTA bookings sync?', 'answer' => 'Bookings from Viator, Expedia, and TripAdvisor appear in your EquipDash calendar automatically. Availability updates in real time so you never oversell.'],
+            ['question' => 'Can customers book multiple items?', 'answer' => 'Yes. Customers can add multiple products to their cart and check out in one transaction.'],
+            ['question' => 'How are confirmations sent?', 'answer' => 'Customers receive an email confirmation immediately after booking. You can customise the email template and include pre-trip information.'],
+            ['question' => 'Can I accept deposits instead of full payment?', 'answer' => 'Yes. Configure deposit amounts as a percentage or fixed amount. EquipDash tracks the balance and can send payment links for the remainder.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Boost Your Bookings?"
-        description="Don't let outdated software cost you customers. Start your free trial now or watch our demo online to see why EquipDash's Online Booking is the #1 choice for rental and tour operators worldwide."
+        title="Start taking bookings online today"
+        description="Start your free 21-day trial and set up your booking widget in minutes."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

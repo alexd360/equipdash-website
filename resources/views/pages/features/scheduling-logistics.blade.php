@@ -2,8 +2,8 @@
 
 @section('seo')
     <x-seo
-        title="Planning & Scheduling Features | EquipDash"
-        description="Plan staff rosters, manage guest lists, and build trip manifests with EquipDash. Scheduling tools designed for rental and tour businesses."
+        title="Scheduling & Logistics Features | EquipDash"
+        description="Schedule staff rosters, manage guest lists, and build trip manifests with EquipDash. Scheduling and logistics tools designed for rental and tour businesses."
     />
 @endsection
 
@@ -22,7 +22,7 @@
                     <p class="hero-credit">No credit card required, cancel anytime.</p>
                 </div>
                 <div class="fea-thumb">
-                    <img src="{{ asset('images/planning-banner.png') }}" alt="EquipDash Planning & Scheduling">
+                    <img src="{{ asset('images/planning-banner.png') }}" alt="EquipDash Scheduling & Logistics">
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@
                             <p class="sub-title">GUESTLIST AND MANIFEST MANAGEMENT</p>
                             <h2 class="fea-title">Know exactly who is on every trip</h2>
                             <p class="sec-desc">Build guest lists from bookings automatically. Generate manifests with participant details, emergency contacts, and waiver status. Print or share them with guides before departure.</p>
-                            <a href="/features/planning/guestlist-manifest" class="global-btn">See Guestlist & Manifest</a>
+                            <a href="/features/scheduling-logistics/guestlist-manifest" class="global-btn">See Guestlist & Manifest</a>
                         </div>
                     </div>
                 </div>
@@ -97,11 +97,33 @@
                             <p class="sub-title">STAFF ROSTERING</p>
                             <h2 class="fea-title">Build rosters that work for your team and your business</h2>
                             <p class="sec-desc">Create shift schedules based on staff availability, qualifications, and labour targets. Staff see their roster on the mobile app and get notified of changes. You see coverage gaps before they become problems.</p>
-                            <a href="/features/planning/staff-rostering" class="global-btn">See Staff Rostering</a>
+                            <a href="/features/scheduling-logistics/staff-rostering" class="global-btn">See Staff Rostering</a>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/planning-features-2.png') }}" alt="Staff Rostering" class="features_thumb hidden-mb">
                             <img src="{{ asset('images/planning-features-2.png') }}" alt="Staff Rostering" class="features_thumb hidden-pc">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Feature 3: Calendar (even index = image left) --}}
+    <section class="sec-booking">
+        <div class="container">
+            <div class="inner-management">
+                <div class="dth-features_main">
+                    <div class="features_main-banner">
+                        <div class="fea-sec-thumb">
+                            <img src="{{ asset('images/planning-features-1.png') }}" alt="Calendar" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/planning-features-1.png') }}" alt="Calendar" class="features_thumb hidden-pc">
+                        </div>
+                        <div class="fea-sec-content">
+                            <p class="sub-title">CALENDAR</p>
+                            <h2 class="fea-title">Your entire schedule, visible at a glance</h2>
+                            <p class="sec-desc">See every rental booking and experience session on one calendar. Switch between day, week, and month views, filter by product or guide, and create bookings without leaving the page.</p>
+                            <a href="/features/scheduling-logistics/calendar" class="global-btn">See Calendar</a>
                         </div>
                     </div>
                 </div>

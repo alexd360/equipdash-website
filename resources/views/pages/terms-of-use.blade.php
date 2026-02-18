@@ -8,7 +8,7 @@
     <section style="padding:120px 0 80px;">
         <div class="container" style="max-width:800px;">
             <h1 class="hero-heading" style="font-size:50px;line-height:55px;margin-bottom:20px;">Terms of Use</h1>
-            <p style="color:#828B9C;margin-bottom:40px;">Last updated: {{ date('F j, Y') }}</p>
+            <p style="color:#828B9C;margin-bottom:40px;">Last updated: February 17, 2026</p>
 
             <div class="txt-default" style="color:#000;">
                 <h2 style="font-size:30px;line-height:38px;margin:40px 0 15px;">1. Acceptance of Terms</h2>

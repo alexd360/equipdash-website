@@ -46,9 +46,9 @@ class PageController extends Controller
         return view('pages.features.index');
     }
 
-    public function aiAutomation()
+    public function dashAi()
     {
-        return view('pages.features.ai-automation');
+        return view('pages.features.dash-ai');
     }
 
     public function integrations()

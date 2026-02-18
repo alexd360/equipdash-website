@@ -14,11 +14,11 @@
             <div class="inner-fea-banner">
                 <div class="fea-content">
                     <p class="page-name">PRODUCT CATALOGUE</p>
-                    <h1 class="hero-heading">Showcase Your Gear, Drive Bookings—EquipDash Product Catalogue Shines!</h1>
-                    <p class="hero-desc">Tired of outdated listings, manual updates, and software that can’t highlight your rentals or tours? EquipDash’s Product Catalogue feature creates a dynamic, user-friendly showcase for skis, kayaks, and more—boosting visibility and sales. Start your free trial today and stand out!</p>
+                    <h1 class="hero-heading">Set up your rental products once, sell them everywhere</h1>
+                    <p class="hero-desc">Create products with sizes, variants, pricing rules, and images. Your product catalogue powers your booking widget, POS, and OTA listings from a single source of truth.</p>
                     <div class="banner-btn">
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
+                        <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
@@ -65,8 +65,8 @@
                             <img src="{{ asset('images/product_1-min.png') }}" alt="Dynamic Listings, Attract Customers Instantly" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Dynamic Listings, Attract Customers Instantly</h2>
-                            <p class="sec-desc">EquipDash’s Product Catalogue lets you showcase your rental gear—skis, bikes, tents—with rich descriptions, photos, and pricing. Update listings easily to reflect availability, driving customer interest and bookings—without the hassle of manual edits or clunky systems, even during peak seasons.</p>
+                            <h2 class="fea-title">Products with variants, sizes, and pricing</h2>
+                            <p class="sec-desc">Set up each product with variants — for example, ski boot sizes or bike frame types. Each variant has its own stock count and can have its own pricing rules.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">User-Friendly Design, Customers Browse with Ease</h2>
-                            <p class="sec-desc">Say goodbye to confusing product pages and hello to EquipDash’s intuitive catalogue interface. Customers navigate your ski rentals, kayak tours, or gear effortlessly on any device, enhancing satisfaction and encouraging bookings—saving you time and improving engagement.</p>
+                            <h2 class="fea-title">Images and descriptions for your booking widget</h2>
+                            <p class="sec-desc">Add photos and descriptions that appear on your online booking widget. Customers browse your catalogue, select products, and book directly.</p>
                         </div>
                         <div class="fea-sec-thumb">
                             <img src="{{ asset('images/product_2-min.png') }}" alt="User-Friendly Design, Customers Browse with Ease" class="features_thumb hidden-mb">
@@ -101,12 +101,12 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-thumb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Growth" class="features_thumb hidden-mb">
-                            <img src="{{ asset('images/seamless.png') }}" alt="Seamless Integration, Unified Workflow for Growth" class="features_thumb hidden-pc">
+                            <img src="{{ asset('images/seamless.png') }}" alt="One catalogue powers every channel" class="features_thumb hidden-mb">
+                            <img src="{{ asset('images/seamless.png') }}" alt="One catalogue powers every channel" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
-                            <h2 class="fea-title">Seamless Integration, Unified Workflow for Growth</h2>
-                            <p class="sec-desc">Connect Product Catalogue with online booking, inventory, and payments for a unified approach. This integration eliminates silos, syncs availability automatically, and saves hours—letting you focus on delivering epic experiences instead of managing listings manually.</p>
+                            <h2 class="fea-title">One catalogue powers every channel</h2>
+                            <p class="sec-desc">Your product catalogue drives availability on your website, POS, Viator, Expedia, and every other connected channel. Update a product once and the change appears everywhere.</p>
                         </div>
                     </div>
                 </div>
@@ -121,19 +121,19 @@
     {{-- FAQ --}}
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash, including Product Catalogue, for 21 days—no credit card required. Test the feature and see how it fits your business before committing.'],
-            ['question' => 'Who can benefit from Product Catalogue?', 'answer' => 'EquipDash\'s Product Catalogue is perfect for equipment rental providers (ski, bike, water sports) and experience/tour operators (tours, adventures) showcasing their offerings.'],
-            ['question' => 'Is Product Catalogue customizable?', 'answer' => 'Yes! Customize layouts, descriptions, and integrations to match your unique rental or tour needs.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash\'s Product Catalogue is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does Product Catalogue integrate with my existing systems?', 'answer' => 'Yes, it integrates seamlessly with tools like Stripe, QuickBooks, Shopify, and your online booking system, making it easy to sync your listings.'],
-            ['question' => 'How will Product Catalogue help during peak seasons?', 'answer' => 'Product Catalogue\'s dynamic updates and integrations handle seasonal demand, boosting visibility and bookings without the stress of manual processes'],
+            ['question' => 'Can I create product variants?', 'answer' => 'Yes. Add variants like sizes, colours, or types. Each variant has its own stock count and pricing.'],
+            ['question' => 'Do products appear on my booking widget?', 'answer' => 'Yes. Your catalogue is the source of truth for your booking widget. Customers browse and book directly.'],
+            ['question' => 'Can I set different prices per variant?', 'answer' => 'Yes. Each variant can have its own base price and seasonal pricing.'],
+            ['question' => 'How do I add images?', 'answer' => 'Upload images directly in the product editor. They appear on your booking widget and OTA listings.'],
+            ['question' => 'Can I import products from a spreadsheet?', 'answer' => 'Yes. Import products via CSV, including names, descriptions, variants, and stock counts.'],
+            ['question' => 'Does the catalogue sync with OTAs?', 'answer' => 'Yes. Products and availability sync with Viator, Expedia, and other connected channels.'],
         ]"
     />
 
     {{-- CTA --}}
     <x-cta-section
-        title="Ready to Showcase Your Products?"
-        description="Don't let outdated software dull your listings. Start your free trial now or watch our demo online to see why EquipDash's Product Catalogue is the #1 choice for rental and tour operators worldwide."
+        title="Build your product catalogue today"
+        description="Start your free 21-day trial and list your products online in minutes."
         buttonText="Start Your Free 21-Day Trial"
         variant="feature"
         secondButtonText="See It In Action"

@@ -9,54 +9,54 @@
 
 @section('content')
     <x-wwf-hero
-        title="Gear up your rentals, boost your profits!"
-        description="Struggling with missed bookings, inventory chaos, and outdated software? EquipDash empowers equipment rental providers—ski, bike, water sports, boats, camping & hiking—to simplify operations, boost profits, and delight customers. Start your free trial today and transform your business!"
+        title="Built for rental shops that want to grow"
+        description="EquipDash helps equipment rental providers manage bookings, track inventory, and coordinate staff from one platform. Whether you rent skis, bikes, boats, or camping gear, everything your business needs is in one place."
         image="images/wwf-banner-thumb-1.png"
         imageAlt="Equipment Rental Management Dashboard"
     />
 
     <x-how-we-help
-        title="EquipDash puts you in control"
-        description="EquipDash isn't just software—it's your secret weapon to crush the chaos of running an equipment rental business. Say goodbye to manual headaches, clunky interfaces, and fragmented tools. We streamline your bookings, manage your gear, and drive more customers with one powerful platform."
+        title="How EquipDash helps rental providers"
+        description="EquipDash replaces spreadsheets, paper waivers, and disconnected tools with a single platform built for how rental shops actually work."
         :cards="[
-            ['icon' => 'images/maximize-bookings.svg', 'title' => 'Maximize Bookings', 'description' => 'Real-time availability, online booking, and automated reminders fill your slots faster.'],
-            ['icon' => 'images/master-inventory.svg', 'title' => 'Master Inventory', 'description' => 'Track skis, bikes, kayaks, and tents effortlessly with smart inventory management and maintenance alerts.'],
-            ['icon' => 'images/save-time-grow-revenue.svg', 'title' => 'Save Time, Grow Revenue', 'description' => 'Eliminate manual processes with POS, staff rostering, and AI-driven insights tailored for seasonal spikes.'],
+            ['icon' => 'images/maximize-bookings.svg', 'title' => 'Fill more rental slots', 'description' => 'Online bookings with real-time availability, automated confirmations, and waitlist management. Customers book 24/7 from your website or phone.'],
+            ['icon' => 'images/master-inventory.svg', 'title' => 'Track every piece of gear', 'description' => 'See what is available, what is rented out, and what needs servicing — across every location. Low-stock alerts keep you prepared.'],
+            ['icon' => 'images/save-time-grow-revenue.svg', 'title' => 'Save hours every week', 'description' => 'Automated emails, staff rostering, POS, and reporting reduce the manual work that slows your team down.'],
         ]"
     />
 
     <x-industries-section
-        title="No matter your niche, EquipDash scales with you"
-        description="EquipDash is built for the gear pros powering outdoor adventures."
+        title="Purpose-built for your rental niche"
+        description="EquipDash adapts to the specific needs of each equipment rental vertical."
         :threeColumn="[
-            ['url' => '/equipment-rental-providers/ski-snowboard', 'title' => 'Ski & Snowboard Rentals', 'description' => 'Keep slopes buzzing with seamless bookings and gear tracking.', 'image' => 'images/skisnowboard-rentals.png'],
-            ['url' => '/equipment-rental-providers/bikes', 'title' => 'Bike Rentals', 'description' => 'Pedal profits with easy online bookings and inventory management for every ride.', 'image' => 'images/bike-rentals.png'],
-            ['url' => '/equipment-rental-providers/water-sport', 'title' => 'Water Sports Rentals', 'description' => 'Surfboards, kayaks, SUPs—manage it all with zero stress, even in peak season.', 'image' => 'images/water-sports-rentals.png'],
+            ['url' => '/equipment-rental-providers/ski-snowboard', 'title' => 'Ski & Snowboard Rentals', 'description' => 'Manage high-volume winter seasons with inventory tracking by size, peak-day staffing, and real-time gear tracking.', 'image' => 'images/skisnowboard-rentals.png'],
+            ['url' => '/equipment-rental-providers/bikes', 'title' => 'Bike Rentals', 'description' => 'Handle hourly, daily, and multi-day rentals with fleet tracking and maintenance scheduling.', 'image' => 'images/bike-rentals.png'],
+            ['url' => '/equipment-rental-providers/water-sport', 'title' => 'Water Sports Rentals', 'description' => 'Coordinate kayaks, SUPs, and jet skis with weather-aware scheduling and safety waivers.', 'image' => 'images/water-sports-rentals.png'],
         ]"
         :twoColumn="[
-            ['url' => '/equipment-rental-providers/boats', 'title' => 'Boat Rentals', 'description' => 'Streamline charters and rentals with automated workflows and customer tools.', 'image' => 'images/boat-rentals.png'],
-            ['url' => '/equipment-rental-providers/camping-hiking', 'title' => 'Camping & Hiking Gear Rentals', 'description' => 'Ensure tents, backpacks, and sleeping bags are ready with smart tracking and scheduling.', 'image' => 'images/campinghiking-gear-rentals.png'],
+            ['url' => '/equipment-rental-providers/boats', 'title' => 'Boat Rentals', 'description' => 'Schedule boats and captains, handle deposits, and manage dock logistics from one system.', 'image' => 'images/boat-rentals.png'],
+            ['url' => '/equipment-rental-providers/camping-hiking', 'title' => 'Camping & Hiking Gear Rentals', 'description' => 'Track gear kits, handle multi-day rentals, and manage return condition checks.', 'image' => 'images/campinghiking-gear-rentals.png'],
         ]"
     />
 
-    <x-wwf-features-tabs />
+    <x-explore-features variant="wwf" />
 
     <x-faq-section
         :faqs="[
-            ['question' => 'How does the free trial work?', 'answer' => 'You\'ll get full access to EquipDash for 21 days—no credit card required. Test all features and see how it fits your rental business before committing.'],
-            ['question' => 'Who is EquipDash for?', 'answer' => 'EquipDash is perfect for equipment rental providers like ski shops, bike rental companies, water sports outfitters, boat charters, and camping gear operators.'],
-            ['question' => 'Is EquipDash customizable?', 'answer' => 'Yes! EquipDash adapts to your unique needs with custom workflows, digital waivers, and tailored reports for your rental operations.'],
-            ['question' => 'Do I need technical expertise?', 'answer' => 'Not at all. EquipDash is beginner-friendly, with intuitive setup tools and dedicated support to get you started fast.'],
-            ['question' => 'Does EquipDash integrate with my existing systems?', 'answer' => 'Yes, EquipDash connects seamlessly with tools like Stripe, QuickBooks, Shopify, and more, making it easy to sync your rentals.'],
-            ['question' => 'How will EquipDash help me manage seasonal demand?', 'answer' => 'EquipDash\'s inventory tracking, staff rostering, and AI insights handle seasonal spikes, ensuring you\'re ready for peak times without the stress.'],
+            ['question' => 'What types of rental businesses use EquipDash?', 'answer' => 'EquipDash is used by ski and snowboard shops, bike rental companies, water sport outfitters, boat rental operators, and camping gear providers. It works for single-location shops and multi-location fleets.'],
+            ['question' => 'Can I track inventory across multiple locations?', 'answer' => 'Yes. Each location has its own stock counts, and you can transfer equipment between locations with full tracking.'],
+            ['question' => 'How does online booking work for rentals?', 'answer' => 'Customers see real-time availability on your website, select dates and products, and confirm their booking instantly. Walk-in and phone bookings update the same availability.'],
+            ['question' => 'Does EquipDash handle equipment maintenance?', 'answer' => 'Yes. You can schedule maintenance, track service history, and flag items that need attention. Equipment in the workshop is automatically marked as unavailable.'],
+            ['question' => 'Can I manage seasonal staff?', 'answer' => 'Yes. Staff rostering supports seasonal hires with availability management, shift scheduling, and role-based permissions.'],
+            ['question' => 'What integrations are available for rental businesses?', 'answer' => 'EquipDash integrates with Stripe, PayPal, QuickBooks, Xero, Shopify, and Mailchimp. You can also list on OTAs like Viator and Expedia.'],
         ]"
     />
 
     <x-cta-section
-        title="Ready to lead? Let's get started!"
-        description="Start your free trial now to see why EquipDash is the #1 choice for rental pros and tour operators worldwide."
+        title="See how EquipDash works for your rental business"
+        description="Start your free 21-day trial. No credit card, no commitment — just the tools you need to run a better rental shop."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"
-        secondButtonUrl="#"
+        secondButtonUrl="{{ route('book-a-demo') }}"
     />
 @endsection

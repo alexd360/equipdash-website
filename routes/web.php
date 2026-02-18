@@ -21,7 +21,7 @@ Route::get('/privacy-policy', [PageController::class, 'privacyPolicy'])->name('p
 Route::get('/features', [PageController::class, 'featuresIndex'])->name('features.index');
 
 // Features - standalone pages
-Route::get('/features/ai-automation', [PageController::class, 'aiAutomation'])->name('features.ai-automation');
+Route::get('/features/dash-ai', [PageController::class, 'dashAi'])->name('features.dash-ai');
 
 // Integrations (standalone route, not under /features/)
 Route::get('/integrations', [PageController::class, 'integrations'])->name('integrations');

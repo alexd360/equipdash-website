@@ -392,17 +392,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (monthlyBtn && annuallyBtn) {
         monthlyBtn.addEventListener('click', function () {
-            document.querySelectorAll('.price_value.monthly').forEach(function (el) { el.style.display = ''; });
-            document.querySelectorAll('.price_value.annually').forEach(function (el) { el.style.display = 'none'; });
-            document.querySelectorAll('.price_month').forEach(function (el) { el.textContent = '/ month'; });
+            document.querySelectorAll('.plan .monthly').forEach(function (el) { el.style.display = ''; });
+            document.querySelectorAll('.plan .annually').forEach(function (el) { el.style.display = 'none'; });
             monthlyBtn.classList.add('active');
             annuallyBtn.classList.remove('active');
         });
 
         annuallyBtn.addEventListener('click', function () {
-            document.querySelectorAll('.price_value.monthly').forEach(function (el) { el.style.display = 'none'; });
-            document.querySelectorAll('.price_value.annually').forEach(function (el) { el.style.display = ''; });
-            document.querySelectorAll('.price_month').forEach(function (el) { el.textContent = '/ month (Billed Annually)'; });
+            document.querySelectorAll('.plan .monthly').forEach(function (el) { el.style.display = 'none'; });
+            document.querySelectorAll('.plan .annually').forEach(function (el) { el.style.display = ''; });
             annuallyBtn.classList.add('active');
             monthlyBtn.classList.remove('active');
         });
