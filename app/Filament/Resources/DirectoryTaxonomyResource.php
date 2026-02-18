@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Spatie\ResponseCache\Facades\ResponseCache;
 
 class DirectoryTaxonomyResource extends Resource
 {
@@ -87,11 +88,13 @@ class DirectoryTaxonomyResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->after(fn () => ResponseCache::clear()),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\DeleteBulkAction::make()
+                        ->after(fn () => ResponseCache::clear()),
                 ]),
             ]);
     }

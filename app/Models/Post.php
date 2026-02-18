@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
@@ -53,6 +54,19 @@ class Post extends Model implements HasMedia
         $this->addMediaCollection('featured_image')->singleFile();
     }
 
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('webp')
+            ->format('webp')
+            ->quality(80);
+
+        $this->addMediaConversion('thumb')
+            ->width(400)
+            ->height(300)
+            ->format('webp')
+            ->quality(80);
+    }
+
     public function author(): BelongsTo
     {
         return $this->belongsTo(Author::class);
@@ -77,5 +91,13 @@ class Post extends Model implements HasMedia
     public function scopeFeatured($query)
     {
         return $query->where('is_featured', true);
+    }
+
+    /**
+     * Accessor: $post->read_time returns the read_time_minutes column.
+     */
+    public function getReadTimeAttribute(): ?int
+    {
+        return $this->read_time_minutes;
     }
 }

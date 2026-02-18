@@ -3,28 +3,42 @@
 namespace App\Http\Controllers;
 
 use App\Models\FormSubmission;
+use App\Notifications\FormSubmissionNotification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Notification;
 
 class FormController extends Controller
 {
     public function submitDemo(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'company' => 'nullable|string|max:255',
             'phone' => 'nullable|string|max:50',
-            'message' => 'nullable|string|max:2000',
+            'company' => 'required|string|max:255',
+            'website' => 'required|url|max:255',
+            'business_type' => 'required|string|max:255',
         ]);
 
-        FormSubmission::create([
+        $submission = FormSubmission::create([
             'form_type' => 'demo_request',
             'data' => $validated,
             'ip_address' => $request->ip(),
             'user_agent' => $request->userAgent(),
             'referrer_url' => $request->headers->get('referer'),
         ]);
+
+        // Send notification to admin
+        try {
+            Notification::route('mail', config('mail.from.address', 'admin@equipdash.com'))
+                ->notify(new FormSubmissionNotification($submission));
+        } catch (\Exception $e) {
+            // Silently fail - don't block form submission if email fails
+            Log::warning('Form notification email failed: ' . $e->getMessage());
+        }
 
         return back()->with('success', 'Thank you! We\'ll be in touch soon to schedule your demo.');
     }
@@ -38,13 +52,22 @@ class FormController extends Controller
             'message' => 'required|string|max:5000',
         ]);
 
-        FormSubmission::create([
+        $submission = FormSubmission::create([
             'form_type' => 'contact',
             'data' => $validated,
             'ip_address' => $request->ip(),
             'user_agent' => $request->userAgent(),
             'referrer_url' => $request->headers->get('referer'),
         ]);
+
+        // Send notification to admin
+        try {
+            Notification::route('mail', config('mail.from.address', 'admin@equipdash.com'))
+                ->notify(new FormSubmissionNotification($submission));
+        } catch (\Exception $e) {
+            // Silently fail - don't block form submission if email fails
+            Log::warning('Form notification email failed: ' . $e->getMessage());
+        }
 
         return back()->with('success', 'Thank you for reaching out! We\'ll get back to you shortly.');
     }
@@ -55,13 +78,22 @@ class FormController extends Controller
             'email' => 'required|email|max:255',
         ]);
 
-        FormSubmission::create([
+        $submission = FormSubmission::create([
             'form_type' => 'newsletter',
             'data' => $validated,
             'ip_address' => $request->ip(),
             'user_agent' => $request->userAgent(),
             'referrer_url' => $request->headers->get('referer'),
         ]);
+
+        // Send notification to admin
+        try {
+            Notification::route('mail', config('mail.from.address', 'admin@equipdash.com'))
+                ->notify(new FormSubmissionNotification($submission));
+        } catch (\Exception $e) {
+            // Silently fail - don't block form submission if email fails
+            Log::warning('Form notification email failed: ' . $e->getMessage());
+        }
 
         return back()->with('success', 'You\'ve been subscribed to our newsletter!');
     }

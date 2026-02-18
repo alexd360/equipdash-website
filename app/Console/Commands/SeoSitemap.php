@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\Category;
 use App\Models\DirectoryListing;
+use App\Models\LandingPage;
 use App\Models\Post;
 use Illuminate\Console\Command;
 
@@ -27,9 +28,27 @@ class SeoSitemap extends Command
             ['loc' => '/help-docs', 'priority' => '0.6', 'changefreq' => 'monthly'],
             ['loc' => '/blog', 'priority' => '0.9', 'changefreq' => 'daily'],
             ['loc' => '/directory', 'priority' => '0.8', 'changefreq' => 'weekly'],
+            ['loc' => '/features', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['loc' => '/features/ai-automation', 'priority' => '0.7', 'changefreq' => 'monthly'],
+            ['loc' => '/integrations', 'priority' => '0.7', 'changefreq' => 'monthly'],
             ['loc' => '/terms-of-use', 'priority' => '0.3', 'changefreq' => 'yearly'],
             ['loc' => '/privacy-policy', 'priority' => '0.3', 'changefreq' => 'yearly'],
         ];
+
+        // "Who We're For" pages
+        $whoWeAreForPages = [
+            '/equipment-rental-providers',
+            '/experience-tour-operator',
+        ];
+        foreach ($whoWeAreForPages as $slug) {
+            $staticPages[] = ['loc' => $slug, 'priority' => '0.7', 'changefreq' => 'monthly'];
+        }
+
+        // Feature category pages
+        $featureCategories = ['bookings', 'customer-experience', 'resource-management', 'planning', 'operations'];
+        foreach ($featureCategories as $slug) {
+            $staticPages[] = ['loc' => '/features/'.$slug, 'priority' => '0.7', 'changefreq' => 'monthly'];
+        }
 
         foreach ($staticPages as $page) {
             $urls[] = [
@@ -68,6 +87,17 @@ class SeoSitemap extends Command
             $urls[] = [
                 'loc' => $baseUrl.'/directory/'.$listing->slug,
                 'lastmod' => ($listing->updated_at ?? $listing->published_at)->toDateString(),
+                'changefreq' => 'monthly',
+                'priority' => '0.6',
+            ];
+        }
+
+        // Landing pages
+        $landingPages = LandingPage::where('is_published', true)->get();
+        foreach ($landingPages as $page) {
+            $urls[] = [
+                'loc' => $baseUrl.'/l/'.$page->slug,
+                'lastmod' => ($page->updated_at ?? $page->published_at)->toDateString(),
                 'changefreq' => 'monthly',
                 'priority' => '0.6',
             ];

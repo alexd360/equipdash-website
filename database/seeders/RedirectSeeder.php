@@ -33,6 +33,38 @@ class RedirectSeeder extends Seeder
             // WordPress admin
             ['from_path' => '/wp-admin', 'to_path' => '/admin', 'status_code' => 301],
             ['from_path' => '/wp-login.php', 'to_path' => '/admin/login', 'status_code' => 301],
+
+            // Directory: Equipment Rental Providers (trailing slash redirects)
+            ['from_path' => '/equipment-rental-providers/ski-snowboard/', 'to_path' => '/equipment-rental-providers/ski-snowboard', 'status_code' => 301],
+            ['from_path' => '/equipment-rental-providers/bikes/', 'to_path' => '/equipment-rental-providers/bikes', 'status_code' => 301],
+            ['from_path' => '/equipment-rental-providers/water-sports/', 'to_path' => '/equipment-rental-providers/water-sports', 'status_code' => 301],
+            ['from_path' => '/equipment-rental-providers/boats/', 'to_path' => '/equipment-rental-providers/boats', 'status_code' => 301],
+            ['from_path' => '/equipment-rental-providers/camping-hiking/', 'to_path' => '/equipment-rental-providers/camping-hiking', 'status_code' => 301],
+
+            // Directory: Experience & Tour Operator (trailing slash redirects)
+            ['from_path' => '/experience-tour-operator/tours/', 'to_path' => '/experience-tour-operator/tours', 'status_code' => 301],
+            ['from_path' => '/experience-tour-operator/activities-adventure/', 'to_path' => '/experience-tour-operator/activities-adventure', 'status_code' => 301],
+            ['from_path' => '/experience-tour-operator/attractions/', 'to_path' => '/experience-tour-operator/attractions', 'status_code' => 301],
+            ['from_path' => '/experience-tour-operator/charters/', 'to_path' => '/experience-tour-operator/charters', 'status_code' => 301],
+
+            // Features: Bookings (trailing slash redirects)
+            ['from_path' => '/features/bookings/online-booking/', 'to_path' => '/features/bookings/online-booking', 'status_code' => 301],
+            ['from_path' => '/features/bookings/pos-management/', 'to_path' => '/features/bookings/pos-management', 'status_code' => 301],
+            ['from_path' => '/features/bookings/booking-management/', 'to_path' => '/features/bookings/booking-management', 'status_code' => 301],
+
+            // Features: Customer Experience (trailing slash redirects)
+            ['from_path' => '/features/customer-experience/crm/', 'to_path' => '/features/customer-experience/crm', 'status_code' => 301],
+            ['from_path' => '/features/customer-experience/digital-waivers/', 'to_path' => '/features/customer-experience/digital-waivers', 'status_code' => 301],
+            ['from_path' => '/features/customer-experience/loyalty-programs/', 'to_path' => '/features/customer-experience/loyalty-programs', 'status_code' => 301],
+            ['from_path' => '/features/customer-experience/custom-forms/', 'to_path' => '/features/customer-experience/custom-forms', 'status_code' => 301],
+
+            // WordPress catch-all patterns
+            ['from_path' => '/wp-content/*', 'to_path' => '/', 'status_code' => 301],
+            ['from_path' => '/wp-json/*', 'to_path' => '/', 'status_code' => 301],
+            ['from_path' => '/?p=*', 'to_path' => '/blog', 'status_code' => 301],
+
+            // WordPress misc pages
+            ['from_path' => '/sample-page/', 'to_path' => '/', 'status_code' => 301],
         ];
 
         foreach ($redirects as $redirect) {

@@ -14,27 +14,29 @@
             <div class="container">
                 <div class="banner__wrapper">
                     <div class="banner__content">
-                        <h1 class="banner__title">Rental & Experience Directory</h1>
-                        <p class="banner__desc">
-                            Discover top-rated equipment rental providers and experience operators powered by EquipDash.
-                            Find the perfect business for your next adventure.
-                        </p>
+                        <h1 class="banner__title">Find the right expert for your next journey</h1>
+                        <div class="banner__desc">
+                            <p>Ut enim ad minim veniam. quis nostrud exercitatio se ullamco sadipscing nonumy elitr. Sadipscing elitr.</p>
+                        </div>
                     </div>
                     <div class="banner__media">
                         <div class="banner__img banner__img--square">
-                            <img src="{{ asset('images/directory/gallery-1.jpg') }}" alt="Rental business">
+                            <img src="{{ asset('images/directory/banner-1.png') }}" alt="Rental business">
                         </div>
                         <div class="banner__img banner__img--circle">
-                            <img src="{{ asset('images/directory/gallery-2.jpg') }}" alt="Experience operator">
-                        </div>
-                        <div class="banner__img banner__img--square">
-                            <img src="{{ asset('images/directory/gallery-3.jpg') }}" alt="Equipment rental">
+                            <img src="{{ asset('images/directory/banner-2.png') }}" alt="Experience operator">
                         </div>
                         <div class="banner__img banner__img--circle">
-                            <img src="{{ asset('images/directory/gallery-4.jpg') }}" alt="Adventure business">
+                            <img src="{{ asset('images/directory/banner-3.png') }}" alt="Equipment rental">
+                        </div>
+                        <div class="banner__img banner__img--circle">
+                            <img src="{{ asset('images/directory/banner-4.png') }}" alt="Adventure business">
+                        </div>
+                        <div class="banner__img banner__img--circle">
+                            <img src="{{ asset('images/directory/banner-5.png') }}" alt="Outdoor activities">
                         </div>
                         <div class="banner__img banner__img--square">
-                            <img src="{{ asset('images/directory/gallery-5.jpg') }}" alt="Outdoor activities">
+                            <img src="{{ asset('images/directory/banner-6.png') }}" alt="Tour operator">
                         </div>
                     </div>
                 </div>
@@ -47,228 +49,193 @@
                 {{-- Search & Filters --}}
                 <div class="directory__search-filter">
                     <div class="directory__search">
-                        <img class="directory__search-icon" src="{{ asset('images/directory/search-icon.svg') }}" alt="Search">
-                        <form action="{{ route('directory.index') }}" method="GET" style="width:100%;">
-                            @if(request('location'))
-                                <input type="hidden" name="location" value="{{ request('location') }}">
-                            @endif
-                            @if(request('activity'))
-                                <input type="hidden" name="activity" value="{{ request('activity') }}">
-                            @endif
-                            <input
-                                class="directory__search-input"
-                                type="text"
-                                name="search"
-                                placeholder="Search businesses..."
-                                value="{{ request('search') }}"
-                            >
-                        </form>
+                        <img class="directory__search-icon" src="{{ asset('images/directory/icon_search.svg') }}" alt="Search" />
+                        <input
+                            class="directory__search-input"
+                            name="search"
+                            type="text"
+                            placeholder="Search by activity type"
+                            value=""
+                        />
                     </div>
-
                     <div class="directory__filter-group">
-                        {{-- Location Filter --}}
-                        <div class="filter-location" id="filter-location-btn" style="cursor:pointer;">
-                            <span class="filter-locations__txt">Location</span>
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11.6028 5.20534L7.81335 9.03556C7.36582 9.48791 6.6335 9.48791 6.18597 9.03556L2.39648 5.20534" stroke="#828B9C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <div class="directory__filter-locations" id="filter-location-btn">
+                            <img src="{{ asset('images/directory/filter-location-icon.svg') }}" alt="" class="directory__filter-location-icon" />
+                            <div class="filter-locations__txt">All Locations</div>
                         </div>
-
-                        {{-- Activity Filter --}}
-                        <div class="filter-activity" id="filter-activity-btn" style="cursor:pointer;">
-                            <span class="filter-activity__txt">Activity type</span>
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11.6028 5.20534L7.81335 9.03556C7.36582 9.48791 6.6335 9.48791 6.18597 9.03556L2.39648 5.20534" stroke="#828B9C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <div class="directory__filter-activity" id="filter-activity-btn">
+                            <img src="{{ asset('images/directory/filter-activity-icon.svg') }}" alt="" class="directory__filter-activity-icon" />
+                            <div class="filter-activity__txt">Filters</div>
                         </div>
                     </div>
                 </div>
 
-                {{-- Selected Filters Display --}}
-                @if(request('location') || request('activity') || request('search'))
-                    <div class="directory__filter-selected">
-                        @if(request('search'))
-                            <a href="{{ route('directory.index', array_filter(['location' => request('location'), 'activity' => request('activity')])) }}" class="directory__filter-selected-item">
-                                Search: {{ request('search') }}
-                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L9 9M9 1L1 9" stroke="#828B9C" stroke-width="1.5" stroke-linecap="round"/>
-                                </svg>
-                            </a>
-                        @endif
-                        @if(request('location'))
-                            <a href="{{ route('directory.index', array_filter(['search' => request('search'), 'activity' => request('activity')])) }}" class="directory__filter-selected-item">
-                                {{ request('location') }}
-                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L9 9M9 1L1 9" stroke="#828B9C" stroke-width="1.5" stroke-linecap="round"/>
-                                </svg>
-                            </a>
-                        @endif
-                        @if(request('activity'))
-                            <a href="{{ route('directory.index', array_filter(['search' => request('search'), 'location' => request('location')])) }}" class="directory__filter-selected-item">
-                                {{ request('activity') }}
-                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L9 9M9 1L1 9" stroke="#828B9C" stroke-width="1.5" stroke-linecap="round"/>
-                                </svg>
-                            </a>
-                        @endif
-                    </div>
-                @endif
+                <div class="directory__filter-selected" id="directory-selected"></div>
 
-                {{-- Search Result Count --}}
-                @if(isset($listings))
-                    <p class="directory__search-result">
-                        {{ $listings->total() }} {{ Str::plural('result', $listings->total()) }}
-                    </p>
-                @endif
-
-                {{-- Directory Grid --}}
-                @if(isset($listings) && $listings->count())
-                    <div class="directory__list">
-                        @foreach($listings as $listing)
-                            <div class="directory__item">
-                                <div class="directory-item__thumb-group">
-                                    <img
-                                        class="directory-item__thumb"
-                                        src="{{ $listing->getFirstMediaUrl('featured_image') ?: asset('images/directory/default-listing.jpg') }}"
-                                        alt="{{ $listing->title }}"
-                                    >
-                                    @if($listing->category)
-                                        <span class="directory-item__category">
-                                            @if($listing->category_icon)
-                                                <img src="{{ $listing->category_icon }}" alt="" style="width:14px;height:14px;">
-                                            @endif
-                                            {{ $listing->category }}
-                                        </span>
-                                    @endif
-                                </div>
-                                <div class="directory-item__under">
-                                    <div>
-                                        <h3 class="directory-item__title">
-                                            <a href="{{ route('directory.show', $listing->slug) }}">{{ $listing->title }}</a>
-                                        </h3>
-                                        @if($listing->address)
-                                            <p class="directory-item__location">{{ $listing->address }}</p>
-                                        @endif
-                                    </div>
-                                    @if($listing->venture_icon)
-                                        <div class="directory-item__venture">
-                                            <img src="{{ $listing->venture_icon }}" alt="">
-                                        </div>
-                                    @endif
-                                </div>
-                            </div>
-                        @endforeach
+                <div class="frmFilterDirectory-container">
+                    <div class="frmFilterDirectory-ajax">
+                        <div id="directory-count"></div>
+                        <div class="directory__list" id="directory-grid"></div>
+                        <div id="directory-pagination" class="directory-listing" style="margin-top:60px;margin-bottom:80px;"></div>
                     </div>
-
-                    {{-- Pagination --}}
-                    <div class="pagination">
-                        {{ $listings->withQueryString()->links() }}
-                    </div>
-                @else
-                    <div style="text-align:center;padding:80px 0;">
-                        <h3 style="font-size:24px;font-weight:700;margin-bottom:12px;">No listings found</h3>
-                        <p style="font-size:19px;line-height:30px;color:#828B9C;">Try adjusting your search or filters.</p>
-                        <a href="{{ route('directory.index') }}" class="global-btn" style="margin-top:24px;">View All Listings</a>
-                    </div>
-                @endif
+                </div>
             </div>
+        </section>
+
+        {{-- CTA Section --}}
+        <section class="ready olbooking-ready">
+            <div class="overlay-left"></div>
+            <div class="container">
+                <div class="inner-ready">
+                    <div class="ready-content">
+                        <h2 class="global-title">Ready to boost your bookings?</h2>
+                        <p class="sec-desc">Don't let outdated software cost you customers. Start your free trial now or watch our demo online to see why EquipDash's Online Booking is the #1 choice for rental and tour operators worldwide.</p>
+                        <div class="gr-btn">
+                            <a href="/book-a-demo" class="global-btn">Start Your Free 21-Day Trial</a>
+                            <a href="/book-a-demo" class="global-btn-white">See It In Action</a>
+                        </div>
+                        <div class="banner-content">
+                            <p class="credit">No credit card required, cancel anytime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-right"></div>
         </section>
 
         {{-- Location Filter Popup --}}
         @if(isset($locations) && $locations->count())
-            <div class="popup" id="location-popup">
+            <div id="location-popup" class="popup">
                 <div class="popup-wrapper">
                     <div class="popup-overlay">
                         <div class="popup-banner">
-                            <h2>Location</h2>
-                            <span class="close-btn" onclick="document.getElementById('location-popup').style.display='none'">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L13 13M13 1L1 13" stroke="#000" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </span>
+                            <h2>Locations</h2>
+                            <img src="{{ asset('images/directory/close-btn.svg') }}" alt="" class="close-btn" />
                         </div>
                         <div class="popup-content">
                             <div class="popup-list-check">
                                 @foreach($locations as $location)
                                     <div class="popup-list-check__item">
-                                        <input type="checkbox" id="loc-{{ $loop->index }}" value="{{ $location }}">
-                                        <label for="loc-{{ $loop->index }}">{{ $location }}</label>
+                                        <input type="checkbox" name="location" id="{{ $location->slug }}" value="{{ $location->slug }}" />
+                                        <label for="{{ $location->slug }}">{{ $location->name }}</label>
                                     </div>
                                 @endforeach
                             </div>
                         </div>
                         <div class="popup-under">
-                            <span class="clear-all">Clear All</span>
-                            <span class="apply-change">Show Results</span>
+                            <span class="clear-all">Clear all</span>
+                            <a href="#" class="apply-change">Apply Change</a>
                         </div>
                     </div>
                 </div>
             </div>
         @endif
 
-        {{-- Activity Filter Popup --}}
-        @if((isset($experiences) && $experiences->count()) || (isset($rentals) && $rentals->count()))
-            <div class="popup" id="filter-popup">
-                <div class="popup-wrapper">
-                    <div class="popup-overlay">
-                        <div class="popup-banner">
-                            <h2>Activity Type</h2>
-                            <span class="close-btn" onclick="document.getElementById('filter-popup').style.display='none'">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L13 13M13 1L1 13" stroke="#000" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="popup-content">
-                            @if(isset($rentals) && $rentals->count())
-                                <div class="popup-filter">
-                                    <p class="popup-list-title">Rentals</p>
-                                    <div class="popup-list-filter">
-                                        @foreach($rentals as $rental)
-                                            <div class="popup-list-filter__item">
-                                                <input type="checkbox" id="rental-{{ $loop->index }}" value="{{ $rental }}">
-                                                <label for="rental-{{ $loop->index }}">{{ $rental }}</label>
-                                            </div>
-                                        @endforeach
-                                    </div>
+        {{-- Filter Popup --}}
+        <div id="filter-popup" class="popup">
+            <div class="popup-wrapper">
+                <div class="popup-overlay">
+                    <div class="popup-banner">
+                        <h2>Filters</h2>
+                        <img src="{{ asset('images/directory/close-btn.svg') }}" alt="" class="close-btn" />
+                    </div>
+                    <div class="popup-content">
+                        @if(isset($rentals) && $rentals->count())
+                            <div class="popup-filter">
+                                <h3 class="popup-list-title">Rentals</h3>
+                                <div class="popup-list-filter">
+                                    @foreach($rentals as $rental)
+                                        <div class="popup-list-filter__item">
+                                            <input type="checkbox" name="rentals" id="{{ $rental->slug }}" value="{{ $rental->slug }}" />
+                                            <label for="{{ $rental->slug }}">{{ $rental->name }}</label>
+                                        </div>
+                                    @endforeach
                                 </div>
-                            @endif
+                            </div>
+                        @endif
 
-                            @if(isset($experiences) && $experiences->count())
-                                <div class="popup-filter">
-                                    <p class="popup-list-title">Experiences</p>
-                                    <div class="popup-list-filter">
-                                        @foreach($experiences as $experience)
-                                            <div class="popup-list-filter__item">
-                                                <input type="checkbox" id="exp-{{ $loop->index }}" value="{{ $experience }}">
-                                                <label for="exp-{{ $loop->index }}">{{ $experience }}</label>
-                                            </div>
-                                        @endforeach
-                                    </div>
+                        @if(isset($experiences) && $experiences->count())
+                            <div class="popup-filter">
+                                <h3 class="popup-list-title">Experiences & Tours</h3>
+                                <div class="popup-list-filter">
+                                    @foreach($experiences as $experience)
+                                        <div class="popup-list-filter__item">
+                                            <input type="checkbox" name="experiences" id="{{ $experience->slug }}" value="{{ $experience->slug }}" />
+                                            <label for="{{ $experience->slug }}">{{ $experience->name }}</label>
+                                        </div>
+                                    @endforeach
                                 </div>
-                            @endif
-                        </div>
-                        <div class="popup-under">
-                            <span class="clear-all">Clear All</span>
-                            <span class="apply-change">Show Results</span>
-                        </div>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="popup-under">
+                        <span class="clear-all">Clear all</span>
+                        <a href="#" class="apply-change">Apply Change</a>
                     </div>
                 </div>
             </div>
-        @endif
-
-        {{-- CTA Section --}}
-        <x-cta-section
-            title="Want to List Your Business?"
-            description="Join the EquipDash directory and get discovered by customers looking for rentals and experiences."
-            buttonText="Get Started"
-        />
+        </div>
     </div>
 @endsection
 
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        var ajaxUrl = {!! json_encode(route('directory.ajax')) !!};
+        var grid = document.getElementById('directory-grid');
+        var paginationEl = document.getElementById('directory-pagination');
+        var countEl = document.getElementById('directory-count');
+        var searchTimeout = null;
+
+        function loadListings(page, search, locations, experiences, rentals) {
+            var params = new URLSearchParams();
+            params.set('page', page || 1);
+            if (search) params.set('search', search);
+            if (locations) params.set('locations', locations);
+            if (experiences) params.set('experiences', experiences);
+            if (rentals) params.set('rentals', rentals);
+
+            grid.classList.add('is-loading');
+
+            fetch(ajaxUrl + '?' + params.toString())
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    grid.innerHTML = data.listings_html;
+                    paginationEl.innerHTML = data.pagination_html;
+                    countEl.innerHTML = data.count_html;
+                    grid.classList.remove('is-loading');
+                })
+                .catch(function() {
+                    grid.innerHTML = '<p style="text-align:center;padding:40px;">Error loading listings.</p>';
+                    grid.classList.remove('is-loading');
+                });
+        }
+
+        function getSelectedLocations() {
+            var selected = [];
+            document.querySelectorAll('#location-popup input[name="location"]:checked').forEach(function(cb) {
+                selected.push(cb.value);
+            });
+            return selected.join(',');
+        }
+
+        function getSelectedExperiences() {
+            var selected = [];
+            document.querySelectorAll('#filter-popup input[name="experiences"]:checked').forEach(function(cb) {
+                selected.push(cb.value);
+            });
+            return selected.join(',');
+        }
+
+        function getSelectedRentals() {
+            var selected = [];
+            document.querySelectorAll('#filter-popup input[name="rentals"]:checked').forEach(function(cb) {
+                selected.push(cb.value);
+            });
+            return selected.join(',');
+        }
+
+        // Popup open/close
         var locationBtn = document.getElementById('filter-location-btn');
         var activityBtn = document.getElementById('filter-activity-btn');
         var locationPopup = document.getElementById('location-popup');
@@ -279,12 +246,115 @@
                 locationPopup.style.display = 'block';
             });
         }
-
         if (activityBtn && filterPopup) {
             activityBtn.addEventListener('click', function() {
                 filterPopup.style.display = 'block';
             });
         }
+
+        // Close buttons
+        document.querySelectorAll('.close-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                this.closest('.popup').style.display = 'none';
+            });
+        });
+
+        // Clear all
+        document.querySelectorAll('.clear-all').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                this.closest('.popup-overlay').querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
+                    cb.checked = false;
+                });
+                renderFilterTags();
+            });
+        });
+
+        // Render selected filter tags
+        function renderFilterTags() {
+            var container = document.getElementById('directory-selected');
+            var html = '';
+            var closeSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><g clip-path="url(#clip0_700_2288)"><path d="M1.77246 11.2298L11.2288 1.77344" stroke="#828B9C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.2288 11.2298L1.77246 1.77344" stroke="#828B9C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_700_2288"><rect width="13" height="13" fill="white"/></clipPath></defs></svg>';
+
+            document.querySelectorAll('#location-popup input[name="location"]:checked').forEach(function(cb) {
+                html += '<div class="directory__filter-selected-item" data-taxonomy="location" data-filter="' + cb.value + '"><span>' + cb.nextElementSibling.textContent + '</span>' + closeSvg + '</div>';
+            });
+            document.querySelectorAll('#filter-popup input[name="rentals"]:checked').forEach(function(cb) {
+                html += '<div class="directory__filter-selected-item" data-taxonomy="rental" data-filter="' + cb.value + '"><span>' + cb.nextElementSibling.textContent + '</span>' + closeSvg + '</div>';
+            });
+            document.querySelectorAll('#filter-popup input[name="experiences"]:checked').forEach(function(cb) {
+                html += '<div class="directory__filter-selected-item" data-taxonomy="experience" data-filter="' + cb.value + '"><span>' + cb.nextElementSibling.textContent + '</span>' + closeSvg + '</div>';
+            });
+
+            container.innerHTML = html;
+        }
+
+        // Handle filter tag removal (delegated)
+        document.getElementById('directory-selected').addEventListener('click', function(e) {
+            var item = e.target.closest('.directory__filter-selected-item');
+            if (!item) return;
+            var filterVal = item.getAttribute('data-filter');
+            // Uncheck matching checkbox
+            var cb = document.querySelector('input[value="' + filterVal + '"]');
+            if (cb) cb.checked = false;
+            item.remove();
+            // Re-fetch
+            var searchVal = document.querySelector('.directory__search-input').value;
+            loadListings(1, searchVal, getSelectedLocations(), getSelectedExperiences(), getSelectedRentals());
+        });
+
+        function applyAndClose(popup) {
+            popup.style.display = 'none';
+            renderFilterTags();
+            var searchVal = document.querySelector('.directory__search-input').value;
+            loadListings(1, searchVal, getSelectedLocations(), getSelectedExperiences(), getSelectedRentals());
+        }
+
+        // Location popup apply
+        var locationApply = document.querySelector('#location-popup .apply-change');
+        if (locationApply) {
+            locationApply.addEventListener('click', function(e) {
+                e.preventDefault();
+                applyAndClose(this.closest('.popup'));
+            });
+        }
+
+        // Filter popup apply
+        var filterApply = document.querySelector('#filter-popup .apply-change');
+        if (filterApply) {
+            filterApply.addEventListener('click', function(e) {
+                e.preventDefault();
+                applyAndClose(this.closest('.popup'));
+            });
+        }
+
+        // Live search with debounce
+        var searchInput = document.querySelector('.directory__search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                var val = this.value;
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(function() {
+                    loadListings(1, val, getSelectedLocations(), getSelectedExperiences(), getSelectedRentals());
+                }, 300);
+            });
+        }
+
+        // Pagination clicks (delegated)
+        paginationEl.addEventListener('click', function(e) {
+            var link = e.target.closest('a[data-page]');
+            if (!link) return;
+            e.preventDefault();
+            var page = link.getAttribute('data-page');
+            var searchVal = document.querySelector('.directory__search-input').value;
+            loadListings(page, searchVal, getSelectedLocations(), getSelectedExperiences(), getSelectedRentals());
+            var container = document.querySelector('.frmFilterDirectory-container');
+            if (container) {
+                window.scrollTo({ top: container.offsetTop - 200, behavior: 'smooth' });
+            }
+        });
+
+        // Initial load
+        loadListings(1, '', '', '', '');
     });
 </script>
 @endpush

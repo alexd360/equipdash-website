@@ -9,72 +9,26 @@
 
 @section('content')
     {{-- Hero Banner --}}
-    <section class="wwf_banner who-where-for-attractions">
-        <div class="container">
-            <div class="wwf_inner-banner">
-                <div class="wwf_banner-content">
-                    <h1 class="hero-heading">Light Up Your Attractions, Drive Your Crowds!</h1>
-                    <p class="wwf_desc hero-desc">Tired of booking bottlenecks, event scheduling headaches, and software that can't handle your attractions? EquipDash powers aerial parks, seasonal events, and more with smooth operations, packed venues, and thrilled visitors. Start your free trial today and shine brighter than ever!</p>
-                    <div class="wwf_banner-btn banner-btn">
-                        <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
-                        <a href="#" class="global-btn-white">See It In Action</a>
-                    </div>
-                </div>
-                <div class="banner-thumb">
-                    <img src="{{ asset('images/attractions-banner.png') }}" alt="Attractions Management Software">
-                </div>
-            </div>
-        </div>
-    </section>
+    <x-wwf-hero
+        title="Light Up Your Attractions, Drive Your Crowds!"
+        description="Tired of booking bottlenecks, event scheduling headaches, and software that can't handle your attractions? EquipDash powers aerial parks, seasonal events, and more with smooth operations, packed venues, and thrilled visitors. Start your free trial today and shine brighter than ever!"
+        image="images/attractions-banner.png"
+        imageAlt="Attractions Management Software"
+        heroClass="who-where-for-attractions"
+    />
 
     {{-- Features List --}}
-    <section class="audience wwf-ski_features">
-        <div class="container">
-            <div class="inner-audience">
-                <p class="sub-title">FEATURES</p>
-                <h2 class="global-title wwf-ski_features-title">All-in-one solution that runs your entire business</h2>
-                <p class="sec-desc txt-default">Unlock the full power of EquipDash features designed for experience & tour operator.</p>
+    <x-wwf-features-list
+        description="Unlock the full power of EquipDash features designed for experience & tour operator."
+        :items="[
+            ['image' => 'images/attractions-features-1.png', 'title' => 'Seamless Online Bookings, Every Attraction Packed', 'description' => 'Say goodbye to manual booking chaos and hello to EquipDash\'s real-time online booking system. Customers book aerial parks, seasonal events, and attractions instantly, even during peak season, while automated reminders and waitlist management ensure no spot goes unfilled. Watch your revenue climb as you fill every event effortlessly.'],
+            ['image' => 'images/attractions-features-2.png', 'title' => 'Smart Staff Scheduling, No More Operational Stress', 'description' => 'Keep your attraction staff on track with EquipDash\'s intuitive staff rostering tools. Schedule employees, manage peak event days, and optimize availability—ensuring every team member is ready for action, even during busy periods. No more scrambling to coordinate or losing track of who\'s on duty.'],
+            ['image' => 'images/attractions-features-3.png', 'title' => 'Effortless Guest Management, Peak Performance at Every Event', 'description' => 'Tackle seasonal attraction surges with EquipDash\'s guestlist and manifest tools. Manage visitor lists, track bookings, and maintain smooth operations—without the stress of manual planning or clunky interfaces. Focus on delivering unforgettable attraction experiences, not fighting your software.'],
+        ]"
+    />
 
-                <div class="features_list">
-                    <div class="features_item">
-                        <div class="features_item-thumb">
-                            <img src="{{ asset('images/attractions-features-1.png') }}" alt="Seamless Online Bookings">
-                        </div>
-                        <div class="features_item-content">
-                            <h3 class="features_item-title">Seamless Online Bookings, Every Attraction Packed</h3>
-                            <div class="features_item-desc txt-default">
-                                <p>Say goodbye to manual booking chaos and hello to EquipDash's real-time online booking system. Customers book aerial parks, seasonal events, and attractions instantly, even during peak season, while automated reminders and waitlist management ensure no spot goes unfilled. Watch your revenue climb as you fill every event effortlessly.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="features_item">
-                        <div class="features_item-thumb">
-                            <img src="{{ asset('images/attractions-features-2.png') }}" alt="Smart Staff Scheduling">
-                        </div>
-                        <div class="features_item-content">
-                            <h3 class="features_item-title">Smart Staff Scheduling, No More Operational Stress</h3>
-                            <div class="features_item-desc txt-default">
-                                <p>Keep your attraction staff on track with EquipDash's intuitive staff rostering tools. Schedule employees, manage peak event days, and optimize availability—ensuring every team member is ready for action, even during busy periods. No more scrambling to coordinate or losing track of who's on duty.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="features_item">
-                        <div class="features_item-thumb">
-                            <img src="{{ asset('images/attractions-features-3.png') }}" alt="Effortless Guest Management">
-                        </div>
-                        <div class="features_item-content">
-                            <h3 class="features_item-title">Effortless Guest Management, Peak Performance at Every Event</h3>
-                            <div class="features_item-desc txt-default">
-                                <p>Tackle seasonal attraction surges with EquipDash's guestlist and manifest tools. Manage visitor lists, track bookings, and maintain smooth operations—without the stress of manual planning or clunky interfaces. Focus on delivering unforgettable attraction experiences, not fighting your software.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{-- Blog Preview --}}
+    <x-blog-preview />
 
     {{-- FAQ Section --}}
     <x-faq-section
@@ -93,7 +47,7 @@
 
     {{-- CTA Section --}}
     <x-cta-section
-        title="Ready to lead? Let’s get started!"
+        title="Ready to lead? Let's get started!"
         description="Start your free trial now to see why EquipDash is the #1 choice for rental pros and tour operators worldwide."
         buttonText="Start Your Free 21-Day Trial"
         secondButtonText="See It In Action"

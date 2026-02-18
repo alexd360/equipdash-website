@@ -20,6 +20,21 @@
                     <h2 class="form_title">Send Us a Message</h2>
                     <form action="/forms/contact" method="POST">
                         @csrf
+                        @if(session('success'))
+                            <div class="form-success">
+                                <p>{{ session('success') }}</p>
+                            </div>
+                        @endif
+
+                        @if($errors->any())
+                            <div class="form-errors">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <div class="form_row">
                             <div class="form_item required">
                                 <label for="name">Full Name</label>

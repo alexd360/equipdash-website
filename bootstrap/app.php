@@ -11,8 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+        $middleware->prepend(\App\Http\Middleware\HandleRedirects::class);
         $middleware->web(append: [
-            \App\Http\Middleware\HandleRedirects::class,
+            \Spatie\ResponseCache\Middlewares\CacheResponse::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

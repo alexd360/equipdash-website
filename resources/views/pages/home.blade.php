@@ -4,6 +4,20 @@
     <x-seo
         title="Equipment Rental Software | EquipDash"
         description="EquipDash is the all-in-one platform that powers your outdoor equipment rentals and adventure tours—seamlessly, smartly, and profitably."
+        :structuredData="[
+            '@context' => 'https://schema.org',
+            '@type' => 'Organization',
+            'name' => 'EquipDash',
+            'url' => url('/'),
+            'logo' => asset('images/logo.svg'),
+            'description' => 'EquipDash is the all-in-one platform that powers your outdoor equipment rentals and adventure tours.',
+            'sameAs' => [],
+            'contactPoint' => [
+                '@type' => 'ContactPoint',
+                'contactType' => 'customer service',
+                'email' => 'support@equipdash.com',
+            ],
+        ]"
     />
 @endsection
 

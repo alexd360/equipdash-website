@@ -2,7 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Category;
 use App\Models\DirectoryListing;
+use App\Models\LandingPage;
 use App\Models\Post;
 use Illuminate\Console\Command;
 
@@ -66,6 +68,53 @@ class SeoAudit extends Command
             }
         }
 
+        // Audit published landing pages
+        $landingPages = LandingPage::where('is_published', true)->get();
+        foreach ($landingPages as $page) {
+            $missing = [];
+            if (empty($page->meta_title)) {
+                $missing[] = 'meta_title';
+            }
+            if (empty($page->meta_description)) {
+                $missing[] = 'meta_description';
+            }
+            if (empty($page->og_image)) {
+                $missing[] = 'og_image';
+            }
+
+            if (! empty($missing)) {
+                $issues[] = [
+                    'LandingPage',
+                    $page->id,
+                    $page->title,
+                    $page->slug,
+                    implode(', ', $missing),
+                ];
+            }
+        }
+
+        // Audit categories
+        $categories = Category::all();
+        foreach ($categories as $category) {
+            $missing = [];
+            if (empty($category->meta_title)) {
+                $missing[] = 'meta_title';
+            }
+            if (empty($category->meta_description)) {
+                $missing[] = 'meta_description';
+            }
+
+            if (! empty($missing)) {
+                $issues[] = [
+                    'Category',
+                    $category->id,
+                    $category->name,
+                    $category->slug,
+                    implode(', ', $missing),
+                ];
+            }
+        }
+
         if (empty($issues)) {
             $this->info('No SEO issues found. All published content has complete SEO fields.');
 
@@ -80,11 +129,15 @@ class SeoAudit extends Command
         // Summary counts
         $postIssues = collect($issues)->where(0, 'Post')->count();
         $listingIssues = collect($issues)->where(0, 'DirectoryListing')->count();
+        $landingIssues = collect($issues)->where(0, 'LandingPage')->count();
+        $categoryIssues = collect($issues)->where(0, 'Category')->count();
 
         $this->newLine();
         $this->info('SEO Audit Summary');
         $this->line("  Posts with issues:              {$postIssues} / {$posts->count()}");
         $this->line("  Directory listings with issues: {$listingIssues} / {$listings->count()}");
+        $this->line("  Landing pages with issues:      {$landingIssues} / {$landingPages->count()}");
+        $this->line("  Categories with issues:         {$categoryIssues} / {$categories->count()}");
         $this->line("  Total issues:                   ".count($issues));
 
         return self::SUCCESS;

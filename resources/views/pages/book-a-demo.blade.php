@@ -1,7 +1,16 @@
 @extends('layouts.app')
 
 @section('seo')
-    <x-seo title="Book a Demo | EquipDash" description="Schedule a personalized demo of EquipDash. See how our platform can transform your rental business." />
+    <x-seo
+        title="Book a Demo | EquipDash"
+        description="Schedule a personalized demo of EquipDash. See how our platform can transform your rental business."
+        :structuredData="[
+            '@context' => 'https://schema.org',
+            '@type' => 'WebPage',
+            'name' => 'Book a Demo - EquipDash',
+            'description' => 'Schedule a personalized demo of EquipDash.',
+        ]"
+    />
 @endsection
 
 @section('content')
@@ -30,6 +39,21 @@
                     <h2 class="form_title">Book a free demo</h2>
                     <form action="/forms/demo" method="POST">
                         @csrf
+                        @if(session('success'))
+                            <div class="form-success">
+                                <p>{{ session('success') }}</p>
+                            </div>
+                        @endif
+
+                        @if($errors->any())
+                            <div class="form-errors">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <div class="form_row">
                             <div class="form_item required">
                                 <label for="first_name">First name</label>
@@ -45,8 +69,6 @@
                                 <label for="email">Email address</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
-                        </div>
-                        <div class="form_row">
                             <div class="form_item">
                                 <label for="phone">Phone number</label>
                                 <input type="tel" id="phone" name="phone">
@@ -94,6 +116,7 @@
             <div class="inner-audience">
                 <p class="sub-title">KEY FEATURES</p>
                 <h2 class="global-title">With EquipDash you can..</h2>
+                <p class="sec-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do eiusmod tempor sed nonue incididunt ut labores sed ipsum dolor sit amet consectetur adipiscing elit.</p>
                 <div class="key_access">
                     <div class="key-access_list">
                         <div class="key-access_item">

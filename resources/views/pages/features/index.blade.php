@@ -428,20 +428,20 @@
                 <h2 class="global-title">Connects the dots with the tools you love</h2>
                 <p class="sec-desc">Stop wrestling with disconnected systems—EquipDash brings it all together.</p>
             </div>
-            <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:60px;">
+            <div class="brand-grid">
                 @php
                     $brands = [
                         ['logo' => 'brand_1.png', 'name' => 'Viator'],
-                        ['logo' => 'brand_7.png', 'name' => 'Expedia'],
                         ['logo' => 'brand_2.png', 'name' => 'Tripadvisor'],
-                        ['logo' => 'brand_8.png', 'name' => 'Square'],
                         ['logo' => 'brand_3.png', 'name' => 'Stripe'],
-                        ['logo' => 'brand_9.png', 'name' => 'PowerBI'],
                         ['logo' => 'brand_4.png', 'name' => 'PayPal'],
-                        ['logo' => 'brand_11.png', 'name' => 'Mailchimp'],
                         ['logo' => 'brand_5.png', 'name' => 'QuickBooks'],
-                        ['logo' => 'brand_12.png', 'name' => 'Shopify'],
                         ['logo' => 'brand_6.png', 'name' => 'Xero'],
+                        ['logo' => 'brand_7.png', 'name' => 'Expedia'],
+                        ['logo' => 'brand_8.png', 'name' => 'Square'],
+                        ['logo' => 'brand_9.png', 'name' => 'PowerBI'],
+                        ['logo' => 'brand_11.png', 'name' => 'Mailchimp'],
+                        ['logo' => 'brand_12.png', 'name' => 'Shopify'],
                         ['logo' => 'brand_13.png', 'name' => 'Open APIs'],
                     ];
                 @endphp
@@ -452,7 +452,7 @@
                     </div>
                 @endforeach
             </div>
-            <div style="text-align:center;margin-top:40px;">
+            <div class="brand-grid-cta">
                 <a href="{{ url('/integrations') }}" class="global-btn">Explore All Integrations</a>
             </div>
         </div>

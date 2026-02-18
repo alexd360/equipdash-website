@@ -2,6 +2,8 @@
 
 namespace App\Console\Commands;
 
+use App\Models\DirectoryListing;
+use App\Models\LandingPage;
 use App\Models\Post;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
@@ -21,8 +23,20 @@ class CacheWarm extends Command
             '/',
             '/pricing',
             '/book-a-demo',
+            '/contact-us',
+            '/help-docs',
             '/blog',
             '/directory',
+            '/features',
+            '/features/bookings',
+            '/features/customer-experience',
+            '/features/resource-management',
+            '/features/planning',
+            '/features/operations',
+            '/features/ai-automation',
+            '/integrations',
+            '/equipment-rental-providers',
+            '/experience-tour-operator',
         ];
 
         // Add all published blog post URLs
@@ -31,11 +45,24 @@ class CacheWarm extends Command
             $pages[] = '/blog/'.$slug;
         }
 
+        // Add all published directory listing URLs
+        $listings = DirectoryListing::where('is_published', true)->pluck('slug');
+        foreach ($listings as $slug) {
+            $pages[] = '/directory/'.$slug;
+        }
+
+        // Add all published landing page URLs
+        $landingPages = LandingPage::where('is_published', true)->pluck('slug');
+        foreach ($landingPages as $slug) {
+            $pages[] = '/l/'.$slug;
+        }
+
         $total = count($pages);
         $bar = $this->output->createProgressBar($total);
         $bar->start();
 
         $results = [];
+        $errors = 0;
         $startTime = microtime(true);
 
         foreach ($pages as $path) {
@@ -47,6 +74,7 @@ class CacheWarm extends Command
                 $status = $response->status();
             } catch (\Exception $e) {
                 $status = 'ERROR';
+                $errors++;
             }
 
             $elapsed = round((microtime(true) - $pageStart) * 1000);
@@ -75,6 +103,7 @@ class CacheWarm extends Command
         $this->newLine();
         $this->info('Cache warming complete.');
         $this->line("  Pages warmed: {$total}");
+        $this->line("  Errors:       {$errors}");
         $this->line("  Total time:   {$totalTime}ms");
         $this->line("  Average time: ".round($totalTime / max($total, 1)).'ms');
 

@@ -9,7 +9,7 @@
 
 @section('content')
     {{-- Hero Banner --}}
-    <section class="ol-banner sec-hero">
+    <section class="fea-bk-banner fea-banner sec-hero">
         <div class="container">
             <div class="inner-fea-banner">
                 <div class="fea-content">
@@ -19,6 +19,7 @@
                         <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
                         <a href="#" class="global-btn-white">See It In Action</a>
                     </div>
+                    <p class="hero-credit">No credit card required, cancel anytime.</p>
                 </div>
                 <div class="fea-thumb">
                     <img src="{{ asset('images/ai_auto-min.png') }}" alt="EquipDash AI & Automation">
@@ -64,6 +65,7 @@
                             <img src="{{ asset('images/ai_auto_1-min.png') }}" alt="Smart Data for Smarter Decisions" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
+                            <p class="sub-title">AI-Driven Insights</p>
                             <h2 class="fea-title">Smart Data for Smarter Decisions</h2>
                             <p class="sec-desc">Harness EquipDash's AI to analyze trends in ski rentals, rafting trips, or tours. Get actionable insights on revenue, customer behavior, and peak times—optimizing your strategy and boosting profits without manual data crunching or clunky systems.</p>
                         </div>
@@ -80,6 +82,7 @@
                 <div class="dth-features_main">
                     <div class="features_main-banner">
                         <div class="fea-sec-content">
+                            <p class="sub-title">Dynamic Pricing</p>
                             <h2 class="fea-title">Maximize Revenue with Real-Time Adjustments</h2>
                             <p class="sec-desc">Let EquipDash's AI adjust prices for bike rentals, whale-watching tours, or gear based on demand and seasonality. Automate pricing strategies to fill slots and increase earnings—eliminating guesswork and ensuring competitiveness, even during peak seasons.</p>
                         </div>
@@ -104,6 +107,7 @@
                             <img src="{{ asset('images/ai_auto_3-min.png') }}" alt="Create and Simplify Content" class="features_thumb hidden-pc">
                         </div>
                         <div class="fea-sec-content">
+                            <p class="sub-title">AI Content Generation & Summarization</p>
                             <h2 class="fea-title">Create and Simplify Content Effortlessly</h2>
                             <p class="sec-desc">Empower your business with EquipDash's AI to generate product descriptions for ski gear, craft personalized customer emails, or summarize feedback for tours. Automate content creation and insights—saving time, enhancing marketing, and engaging customers without manual writing or clunky tools.</p>
                         </div>

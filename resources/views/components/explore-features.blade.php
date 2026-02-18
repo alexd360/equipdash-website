@@ -81,14 +81,14 @@ $categories = [
 
 $integrationBrands = [
     ['logo' => 'brand_1.png', 'name' => 'Viator'],
-    ['logo' => 'brand_7.png', 'name' => 'Expedia'],
     ['logo' => 'brand_2.png', 'name' => 'Tripadvisor'],
-    ['logo' => 'brand_8.png', 'name' => 'Square'],
     ['logo' => 'brand_3.png', 'name' => 'Stripe'],
-    ['logo' => 'brand_9.png', 'name' => 'PowerBI'],
     ['logo' => 'brand_4.png', 'name' => 'PayPal'],
-    ['logo' => 'brand_11.png', 'name' => 'Mailchimp'],
     ['logo' => 'brand_5.png', 'name' => 'QuickBooks'],
+    ['logo' => 'brand_7.png', 'name' => 'Expedia'],
+    ['logo' => 'brand_8.png', 'name' => 'Square'],
+    ['logo' => 'brand_9.png', 'name' => 'PowerBI'],
+    ['logo' => 'brand_11.png', 'name' => 'Mailchimp'],
     ['logo' => 'brand_12.png', 'name' => 'Shopify'],
 ];
 @endphp
@@ -147,19 +147,17 @@ $integrationBrands = [
                             <h2 class="features_content-title">Connects the dots with the tools you love</h2>
                             <p class="sec-desc">Stop wrestling with disconnected systems—EquipDash brings it all together.</p>
                         </div>
-                        <div class="brand-slider brand-slider-grid">
-                            @foreach(array_chunk($integrationBrands, 2) as $pair)
-                            <div class="items">
-                                @foreach($pair as $brand)
-                                <div class="box-brand">
-                                    <img src="{{ asset('images/' . $brand['logo']) }}" alt="{{ $brand['name'] }}">
-                                    <p>{{ $brand['name'] }}</p>
-                                </div>
-                                @endforeach
+                        <div class="brand-grid brand-grid--5col">
+                            @foreach($integrationBrands as $brand)
+                            <div class="box-brand">
+                                <img src="{{ asset('images/' . $brand['logo']) }}" alt="{{ $brand['name'] }}">
+                                <p>{{ $brand['name'] }}</p>
                             </div>
                             @endforeach
                         </div>
-                        <a href="/integrations" class="global-btn">Explore All Integrations</a>
+                        <div class="brand-grid-cta">
+                            <a href="/integrations" class="global-btn">Explore All Integrations</a>
+                        </div>
                     </div>
                 </div>
             </div>

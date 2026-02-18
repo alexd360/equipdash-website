@@ -1,7 +1,16 @@
 @extends('layouts.app')
 
 @section('seo')
-    <x-seo title="Pricing | EquipDash" description="EquipDash offers flexible, affordable plans to power your equipment rentals and tours. No hidden fees, no overpriced complexity." />
+    <x-seo
+        title="Pricing | EquipDash"
+        description="EquipDash offers flexible, affordable plans to power your equipment rentals and tours. No hidden fees, no overpriced complexity."
+        :structuredData="[
+            '@context' => 'https://schema.org',
+            '@type' => 'WebPage',
+            'name' => 'EquipDash Pricing',
+            'description' => 'Compare EquipDash pricing plans for equipment rental and tour operator businesses.',
+        ]"
+    />
 @endsection
 
 @section('content')

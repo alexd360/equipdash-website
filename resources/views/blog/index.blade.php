@@ -10,14 +10,9 @@
 
 @section('content')
     {{-- Hero / Featured Section --}}
-    <section class="blog-page blog-page_fv">
+    <section class="blog-page_fv fv">
         <div class="container">
-            <x-breadcrumb :items="[
-                ['label' => 'Home', 'url' => url('/')],
-                ['label' => 'Blog'],
-            ]" />
-
-            <h1 class="fv__heading">Latest Insights for Rental & Experience Businesses</h1>
+            <h1 class="fv__heading">Ideas and insight to improve your business</h1>
 
             @if(isset($featured) && $featured)
                 <div class="fv__main">
@@ -31,31 +26,24 @@
                         </a>
                         <div class="blog-card__content">
                             @if($featured->category)
-                                <span class="blog-card__category">
+                                <div class="blog-card__category">
                                     <a href="{{ route('blog.category', $featured->category->slug) }}">
                                         {{ $featured->category->name }}
                                     </a>
-                                </span>
+                                </div>
                             @endif
                             <h3 class="blog-card__title">
                                 <a href="{{ route('blog.show', $featured->slug) }}">{{ $featured->title }}</a>
                             </h3>
-                            <div class="blog-card__meta">
-                                @if($featured->author)
-                                    <span class="blog-card__author">{{ $featured->author->name }}</span>
-                                @endif
-                                @if($featured->read_time)
-                                    <span class="blog-card__read-time">{{ $featured->read_time }} min read</span>
-                                @endif
-                            </div>
+                            <p class="blog-card__read-time">Max {{ $featured->read_time ?: 4 }} mins read</p>
                         </div>
                     </div>
 
                     {{-- Secondary Featured Posts --}}
                     @if(isset($secondaryFeatured) && $secondaryFeatured->count())
-                        <div class="fv__blog-cards">
+                        <div class="fv__blog-cards blog-cards">
                             @foreach($secondaryFeatured->take(3) as $secondary)
-                                <div class="blog-card fv__blog-card">
+                                <div class="fv__blog-card blog-card">
                                     <a href="{{ route('blog.show', $secondary->slug) }}" class="blog-card__thumb">
                                         <img
                                             src="{{ $secondary->getFirstMediaUrl('featured_image') ?: asset('images/post_1.png') }}"
@@ -64,20 +52,16 @@
                                     </a>
                                     <div class="blog-card__content">
                                         @if($secondary->category)
-                                            <span class="blog-card__category">
+                                            <div class="blog-card__category">
                                                 <a href="{{ route('blog.category', $secondary->category->slug) }}">
                                                     {{ $secondary->category->name }}
                                                 </a>
-                                            </span>
+                                            </div>
                                         @endif
                                         <h3 class="blog-card__title">
                                             <a href="{{ route('blog.show', $secondary->slug) }}">{{ $secondary->title }}</a>
                                         </h3>
-                                        <div class="blog-card__meta">
-                                            @if($secondary->read_time)
-                                                <span class="blog-card__read-time">{{ $secondary->read_time }} min read</span>
-                                            @endif
-                                        </div>
+                                        <p class="blog-card__read-time">Max {{ $secondary->read_time ?: 4 }} mins read</p>
                                     </div>
                                 </div>
                             @endforeach
@@ -94,92 +78,114 @@
             {{-- Category Tabs & Search --}}
             <div class="blog-card-listing__filters">
                 @if(isset($categories) && $categories->count())
-                    <div class="blog-card-listing__tabs">
-                        <div class="blog-card-listing__tab {{ !request('category') ? 'active' : '' }}">
-                            <a href="{{ route('blog.index') }}">All</a>
-                        </div>
+                    <ul class="blog-card-listing__tabs">
+                        <li class="blog-card-listing__tab active">
+                            <a href="#" data-category="">All Articles</a>
+                        </li>
                         @foreach($categories as $category)
-                            <div class="blog-card-listing__tab {{ request('category') === $category->slug ? 'active' : '' }}">
-                                <a href="{{ route('blog.index', ['category' => $category->slug]) }}">
+                            <li class="blog-card-listing__tab">
+                                <a href="#" data-category="{{ $category->slug }}">
                                     {{ $category->name }}
-                                    @if($category->posts_count)
-                                        <span>({{ $category->posts_count }})</span>
-                                    @endif
                                 </a>
-                            </div>
+                            </li>
                         @endforeach
-                    </div>
+                    </ul>
                 @endif
 
                 <div class="blog-card-listing__search">
-                    <form action="{{ route('blog.index') }}" method="GET" style="display:flex;align-items:center;width:100%;">
-                        <input
-                            type="text"
-                            name="search"
-                            placeholder="Search articles..."
-                            value="{{ request('search') }}"
-                        >
-                    </form>
+                    <input type="text" id="blog-search" placeholder="Search articles" />
                 </div>
             </div>
 
-            {{-- Post Grid --}}
-            @if(isset($posts) && $posts->count())
-                <div class="blog-cards blog-card-listing__blog-cards">
-                    @foreach($posts as $post)
-                        <div class="blog-card">
-                            <a href="{{ route('blog.show', $post->slug) }}" class="blog-card__thumb">
-                                <img
-                                    src="{{ $post->getFirstMediaUrl('featured_image') ?: asset('images/post_1.png') }}"
-                                    alt="{{ $post->title }}"
-                                >
-                            </a>
-                            <div class="blog-card__content">
-                                @if($post->category)
-                                    <span class="blog-card__category">
-                                        <a href="{{ route('blog.category', $post->category->slug) }}">
-                                            {{ $post->category->name }}
-                                        </a>
-                                    </span>
-                                @endif
-                                <h3 class="blog-card__title">
-                                    <a href="{{ route('blog.show', $post->slug) }}">{{ $post->title }}</a>
-                                </h3>
-                                <div class="blog-card__meta">
-                                    @if($post->author)
-                                        <span class="blog-card__author">{{ $post->author->name }}</span>
-                                    @endif
-                                    @if($post->read_time)
-                                        <span class="blog-card__read-time">{{ $post->read_time }} min read</span>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
+            {{-- Post Grid (loaded via AJAX) --}}
+            <div class="blog-cards blog-card-listing__blog-cards"></div>
 
-                {{-- Pagination --}}
-                <div class="pagination" style="margin-top:60px;margin-bottom:80px;">
-                    {{ $posts->withQueryString()->links() }}
-                </div>
-            @else
-                <div style="text-align:center;padding:80px 0;">
-                    <h3 style="font-size:24px;font-weight:700;margin-bottom:12px;">No posts found</h3>
-                    <p style="font-size:19px;line-height:30px;color:#828B9C;">Try adjusting your search or filter to find what you are looking for.</p>
-                </div>
-            @endif
+            {{-- Pagination (loaded via AJAX) --}}
+            <div id="ajax-pagination" style="margin-top:60px;margin-bottom:80px;"></div>
         </div>
     </section>
-
-    {{-- CTA Section --}}
-    <x-cta-section
-        title="Ready to Transform Your Rental Business?"
-        description="Join hundreds of rental providers and experience operators who trust EquipDash to run their business."
-        buttonText="Book a Demo"
-    />
 
     {{-- Subscribe Section --}}
     <div class="blog-page__subscribe">
         <x-subscribe-section title="Subscribe to our newsletter" />
     </div>
 @endsection
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var ajaxUrl = @json(route('blog.ajax'));
+    var currentCategory = '';
+    var searchTimeout = null;
+    var grid = document.querySelector('.blog-card-listing__blog-cards');
+    var paginationEl = document.getElementById('ajax-pagination');
+
+    function loadPosts(page, category, search) {
+        var params = new URLSearchParams();
+        if (category) params.set('category', category);
+        if (search) params.set('search', search);
+        params.set('page', page || 1);
+
+        grid.classList.add('is-loading');
+
+        fetch(ajaxUrl + '?' + params.toString())
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                grid.innerHTML = data.posts_html;
+                paginationEl.innerHTML = data.pagination_html;
+                grid.classList.remove('is-loading');
+            })
+            .catch(function() {
+                grid.innerHTML = '<p style="text-align:center;padding:40px;">Error loading posts.</p>';
+                grid.classList.remove('is-loading');
+            });
+    }
+
+    // Category tab clicks
+    document.querySelectorAll('.blog-card-listing__tabs a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            currentCategory = this.getAttribute('data-category');
+
+            // Update active tab
+            document.querySelectorAll('.blog-card-listing__tab').forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            this.parentElement.classList.add('active');
+
+            // Clear search
+            document.getElementById('blog-search').value = '';
+            loadPosts(1, currentCategory, '');
+        });
+    });
+
+    // Live search with debounce
+    var searchInput = document.getElementById('blog-search');
+    searchInput.addEventListener('input', function() {
+        var val = this.value;
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(function() {
+            loadPosts(1, currentCategory, val);
+        }, 300);
+    });
+
+    // Pagination clicks (delegated on ul li a)
+    paginationEl.addEventListener('click', function(e) {
+        var link = e.target.closest('a[data-page]');
+        if (!link) return;
+        e.preventDefault();
+        var page = link.getAttribute('data-page');
+        loadPosts(page, currentCategory, searchInput.value);
+
+        // Scroll to filters
+        var filters = document.querySelector('.blog-card-listing__filters');
+        if (filters) {
+            window.scrollTo({ top: filters.offsetTop - 100, behavior: 'smooth' });
+        }
+    });
+
+    // Initial load
+    loadPosts(1, '', '');
+});
+</script>
+@endpush

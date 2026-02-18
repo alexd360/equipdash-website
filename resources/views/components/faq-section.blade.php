@@ -42,3 +42,20 @@
         </div>
     </div>
 </section>
+
+@if(count($faqs))
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'FAQPage',
+    'mainEntity' => collect($faqs)->map(fn($faq) => [
+        '@type' => 'Question',
+        'name' => $faq['question'],
+        'acceptedAnswer' => [
+            '@type' => 'Answer',
+            'text' => $faq['answer'],
+        ],
+    ])->toArray(),
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+</script>
+@endif

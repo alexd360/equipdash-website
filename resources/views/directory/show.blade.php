@@ -9,127 +9,167 @@
 @endsection
 
 @section('content')
-    <div class="directory-page">
-        <div class="directory-post">
+    <div class="directory-post directory-page">
+        <section class="directory-post-header">
             <div class="container">
-                {{-- Breadcrumb --}}
-                <x-breadcrumb :items="[
-                    ['label' => 'Home', 'url' => url('/')],
-                    ['label' => 'Directory', 'url' => route('directory.index')],
-                    ['label' => $listing->title],
-                ]" />
-
-                {{-- Back Link --}}
-                <a href="{{ route('directory.index') }}" class="backtodirectory">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.6028 5.20534L7.81335 9.03556C7.36582 9.48791 6.6335 9.48791 6.18597 9.03556L2.39648 5.20534" stroke="#828B9C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Back to Directory
-                </a>
-
-                {{-- Featured Image --}}
                 <div class="directory-post-banner">
-                    @php
-                        $featuredImage = $listing->getFirstMediaUrl('featured_image');
-                    @endphp
-                    @if($featuredImage)
-                        <div class="directory-thumb-group pc">
-                            <img class="directory-post-thumb" src="{{ $featuredImage }}" alt="{{ $listing->title }}">
-                            @if($listing->category)
-                                <span class="directory-post-category">
-                                    @if($listing->category_icon)
-                                        <img src="{{ $listing->category_icon }}" alt="" style="width:14px;height:14px;">
-                                    @endif
-                                    {{ $listing->category }}
-                                </span>
-                            @endif
+                    {{-- Desktop Featured Image --}}
+                    <div class="directory-thumb-group pc">
+                        @php
+                            $featuredImage = $listing->getFirstMediaUrl('featured_image') ?: asset('images/directory/default-listing.jpg');
+                        @endphp
+                        <div class="directory-post-thumb">
+                            <img src="{{ $featuredImage }}" alt="{{ $listing->title }}" />
                         </div>
-                    @endif
-                </div>
-
-                {{-- Mobile Featured Image --}}
-                @if($featuredImage)
-                    <div class="directory-thumb-group mb">
-                        <img class="directory-post-thumb" src="{{ $featuredImage }}" alt="{{ $listing->title }}">
-                        @if($listing->category)
+                        @if($listing->taxonomies && $listing->taxonomies->where('type', 'experience')->count())
                             <span class="directory-post-category">
-                                @if($listing->category_icon)
-                                    <img src="{{ $listing->category_icon }}" alt="" style="width:14px;height:14px;">
-                                @endif
-                                {{ $listing->category }}
+                                <img src="{{ asset('images/directory/experiences-tours.svg') }}" alt="" />
+                                <span>EXPERIENCES & TOURS</span>
+                            </span>
+                        @endif
+                        @if($listing->taxonomies && $listing->taxonomies->where('type', 'rental')->count())
+                            <span class="directory-post-category">
+                                <img src="{{ asset('images/directory/rentals.svg') }}" alt="" />
+                                <span>Rentals</span>
+                            </span>
+                        @endif
+                        @if($listing->category && !($listing->taxonomies && $listing->taxonomies->count()))
+                            <span class="directory-post-category">
+                                <span>{{ $listing->category }}</span>
                             </span>
                         @endif
                     </div>
-                @endif
 
-                {{-- Info Section --}}
-                <div class="directory-post-info">
+                    {{-- Info Group --}}
                     <div class="directory-post-info-group">
-                        <div class="directory-post-info-left">
-                            <h1>{{ $listing->title }}</h1>
-
-                            @if($listing->address)
-                                <div class="directory-post-location">
-                                    <img src="{{ asset('images/directory/filter-location-icon.svg') }}" alt="Location">
-                                    <span>{{ $listing->address }}</span>
-                                </div>
-                            @endif
-
-                            @if($listing->website)
-                                <div class="directory-post-website">
-                                    <img src="{{ asset('images/directory/website-icon.svg') }}" alt="Website">
-                                    <a href="{{ $listing->website }}" target="_blank" rel="noopener noreferrer">
-                                        {{ parse_url($listing->website, PHP_URL_HOST) ?? $listing->website }}
-                                    </a>
+                        <div class="directory-post-info">
+                            <div class="directory-post-info-left">
+                                <h1>{{ $listing->title }}</h1>
+                                @if($listing->address)
+                                    @php
+                                        $addressParts = array_map('trim', explode(',', $listing->address));
+                                        if (count($addressParts) >= 3) {
+                                            $stateZip = $addressParts[count($addressParts) - 1];
+                                            $state = preg_replace('/\s*\d{5}(-\d{4})?$/', '', $stateZip);
+                                            $city = $addressParts[count($addressParts) - 2];
+                                            $displayAddress = $city . ', ' . $state;
+                                        } else {
+                                            $displayAddress = $listing->address;
+                                        }
+                                    @endphp
+                                    <div class="directory-post-location">
+                                        <img src="{{ asset('images/directory/filter-location-icon.svg') }}" alt="" />
+                                        <span>{{ $displayAddress }}</span>
+                                    </div>
+                                @endif
+                                @if($listing->website)
+                                    @php
+                                        $url = $listing->website;
+                                        $parsed = parse_url($url);
+                                        if (!isset($parsed['scheme'])) {
+                                            $url = 'https://' . $url;
+                                        }
+                                    @endphp
+                                    <div class="directory-post-website">
+                                        <img src="{{ asset('images/directory/website.svg') }}" alt="" />
+                                        <a href="{{ $url }}" target="_blank">{{ $listing->website }}</a>
+                                    </div>
+                                @endif
+                            </div>
+                            @if($listing->logo)
+                                <div class="directory-post-venture">
+                                    <img src="{{ $listing->logo }}" alt="" />
                                 </div>
                             @endif
                         </div>
+
+                        {{-- Mobile Featured Image --}}
+                        <div class="directory-thumb-group mb">
+                            <div class="directory-post-thumb">
+                                <img src="{{ $featuredImage }}" alt="{{ $listing->title }}" />
+                            </div>
+                            @if($listing->taxonomies && $listing->taxonomies->where('type', 'experience')->count())
+                                <span class="directory-post-category">
+                                    <img src="{{ asset('images/directory/experiences-tours.svg') }}" alt="" />
+                                    <span>EXPERIENCES & TOURS</span>
+                                </span>
+                            @endif
+                            @if($listing->taxonomies && $listing->taxonomies->where('type', 'rental')->count())
+                                <span class="directory-post-category">
+                                    <img src="{{ asset('images/directory/rentals.svg') }}" alt="" />
+                                    <span>Rentals</span>
+                                </span>
+                            @endif
+                            @if($listing->category && !($listing->taxonomies && $listing->taxonomies->count()))
+                                <span class="directory-post-category">
+                                    <span>{{ $listing->category }}</span>
+                                </span>
+                            @endif
+                        </div>
+
+                        {{-- Rentals Offered --}}
+                        @if($listing->rentals && $listing->rentals->count())
+                            <div class="directory-post-activity">
+                                <div class="directory-post-activity-title">Rentals Offered</div>
+                                <div class="directory-post-activity-list">
+                                    @foreach($listing->rentals as $rental)
+                                        <div class="directory-post-activity-item">{{ $rental->name }}</div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endif
+
+                        {{-- Activities Offered --}}
+                        @if($listing->experiences && $listing->experiences->count())
+                            <div class="directory-post-activity">
+                                <div class="directory-post-activity-title">Activities Offered</div>
+                                <div class="directory-post-activity-list">
+                                    @foreach($listing->experiences as $experience)
+                                        <div class="directory-post-activity-item">{{ $experience->name }}</div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endif
                     </div>
-
-                    @if($listing->logo)
-                        <div class="directory-post-venture">
-                            <img src="{{ $listing->logo }}" alt="{{ $listing->title }} logo">
-                        </div>
-                    @endif
                 </div>
-
-                {{-- Activity Lists --}}
-                @if($listing->rentals && count($listing->rentals))
-                    <div class="directory-post-activity">
-                        <p class="directory-post-activity-title">Rentals Offered</p>
-                        <div class="directory-post-activity-list">
-                            @foreach($listing->rentals as $rental)
-                                <span class="directory-post-activity-item">{{ $rental }}</span>
-                            @endforeach
-                        </div>
-                    </div>
-                @endif
-
-                @if($listing->activities && count($listing->activities))
-                    <div class="directory-post-activity">
-                        <p class="directory-post-activity-title">Activities Offered</p>
-                        <div class="directory-post-activity-list">
-                            @foreach($listing->activities as $activity)
-                                <span class="directory-post-activity-item">{{ $activity }}</span>
-                            @endforeach
-                        </div>
-                    </div>
-                @endif
-
-                {{-- Description Content --}}
-                @if($listing->description)
-                    <article>
-                        {!! $listing->description !!}
-                    </article>
-                @endif
             </div>
-        </div>
+        </section>
+
+        {{-- Description Content --}}
+        @if($listing->description)
+            <article>
+                <div class="container">
+                    <a href="{{ route('directory.index') }}" class="backtodirectory">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M11.6028 8.79466L7.81335 4.96444C7.36582 4.51209 6.6335 4.51209 6.18597 4.96444L2.39648 8.79466" stroke="#828B9C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Back to directory
+                    </a>
+                    <h2>About {{ $listing->title }}</h2>
+                    {!! $listing->description !!}
+                </div>
+            </article>
+        @endif
 
         {{-- CTA Section --}}
-        <x-cta-section
-            title="Ready to Transform Your Rental Business?"
-            description="Join hundreds of rental providers and experience operators who trust EquipDash to run their business."
-            buttonText="Book a Demo"
-        />
+        <section class="ready olbooking-ready">
+            <div class="overlay-left"></div>
+            <div class="container">
+                <div class="inner-ready">
+                    <div class="ready-content">
+                        <h2 class="global-title">Ready to lead? Let's get started!</h2>
+                        <p class="sec-desc">Start your free trial now to see why EquipDash is the #1 choice for rental pros and tour operators worldwide.</p>
+                        <div class="gr-btn">
+                            <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
+                            <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
+                        </div>
+                        <div class="banner-content">
+                            <p class="credit">No credit card required, cancel anytime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-right"></div>
+        </section>
     </div>
 @endsection

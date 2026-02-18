@@ -6,92 +6,71 @@
         :description="$post->excerpt ?? 'Read this article on the EquipDash blog.'"
         :ogImage="$post->getFirstMediaUrl('featured_image') ?: null"
         type="article"
+        :structuredData="[
+            '@context' => 'https://schema.org',
+            '@type' => 'Article',
+            'headline' => $post->title,
+            'author' => ['@type' => 'Person', 'name' => $post->author->name ?? 'EquipDash'],
+            'datePublished' => $post->published_at?->toIso8601String(),
+            'publisher' => ['@type' => 'Organization', 'name' => 'EquipDash'],
+        ]"
     />
 @endsection
 
 @section('content')
-    <div class="blog-post-page">
-        <div class="container">
-            {{-- Breadcrumb --}}
-            <x-breadcrumb :items="array_filter([
-                ['label' => 'Home', 'url' => url('/')],
-                ['label' => 'Blog', 'url' => route('blog.index')],
-                $post->category ? ['label' => $post->category->name, 'url' => route('blog.category', $post->category->slug)] : null,
-                ['label' => $post->title],
-            ])" />
+    <main class="blog-post-page">
 
-            {{-- Post Header --}}
-            @if($post->category)
-                <span class="blog-card__category" style="margin-top:20px;">
-                    <a href="{{ route('blog.category', $post->category->slug) }}">{{ $post->category->name }}</a>
-                </span>
-            @endif
-
-            <h1>{{ $post->title }}</h1>
-
-            {{-- Author Info & Meta --}}
-            <div class="banner__desc" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-                @if($post->author)
-                    <span style="display:inline-flex;align-items:center;gap:8px;">
-                        @if($post->author->avatar)
-                            <img
-                                src="{{ $post->author->avatar }}"
-                                alt="{{ $post->author->name }}"
-                                style="width:32px;height:32px;border-radius:50%;object-fit:cover;"
-                            >
-                        @endif
-                        <a href="{{ route('blog.author', $post->author->slug) }}" style="color:#000;font-weight:600;">
-                            {{ $post->author->name }}
-                        </a>
-                    </span>
-                @endif
-                @if($post->published_at)
-                    <span style="color:#828B9C;">{{ $post->published_at->format('M d, Y') }}</span>
-                @endif
-                @if($post->read_time)
-                    <span style="color:#828B9C;">{{ $post->read_time }} min read</span>
-                @endif
-            </div>
-        </div>
-
-        {{-- Post Content --}}
-        <section class="post__content">
+        <div class="post__content">
             <div class="container">
                 <article class="post__article">
+                    {{-- Breadcrumb --}}
+                    <div class="banner__breakcrumb">
+                        <a href="{{ route('blog.index') }}">Blog</a>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M11.6028 8.79466L7.81335 4.96444C7.36582 4.51209 6.6335 4.51209 6.18597 4.96444L2.39648 8.79466"
+                                    stroke="#828B9C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        <a href="{{ route('blog.show', $post->slug) }}">
+                            {{ $post->title }}
+                        </a>
+                    </div>
+
+                    <h1>{{ $post->title }}</h1>
+
+                    {{-- Author Info & Meta (WP BEM style) --}}
+                    <div class="banner__desc">
+                        @if($post->author)
+                            <span class="banner__desc--author">by {{ $post->author->name }}</span>
+                        @endif
+                        @if($post->published_at)
+                            <span class="banner__desc--time"> &bull; {{ $post->published_at->format('F j, Y') }}</span>
+                        @endif
+                        <span class="banner__desc--mins-read"> &bull; Max {{ $post->read_time ?? 4 }} mins read</span>
+                    </div>
+
                     {{-- Featured Image --}}
-                    @php
-                        $featuredImage = $post->getFirstMediaUrl('featured_image');
-                    @endphp
-                    @if($featuredImage)
-                        <div class="post__thumb">
-                            <img src="{{ $featuredImage }}" alt="{{ $post->title }}">
-                        </div>
-                    @endif
+                    <div class="post__thumb">
+                        <img src="{{ $post->getFirstMediaUrl('featured_image') ?: asset('images/post_1.png') }}" alt="{{ $post->title }}">
+                    </div>
 
                     {{-- Article Body --}}
                     {!! $post->content !!}
 
-                    {{-- Tags --}}
-                    @if($post->tags && $post->tags->count())
-                        <div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:8px;">
-                            @foreach($post->tags as $tag)
-                                <span style="display:inline-block;font-size:16px;line-height:1;border:solid 1px #cdd2e4;border-radius:100px;padding:12px 15px 11px;color:#828B9C;">
-                                    {{ $tag->name }}
-                                </span>
-                            @endforeach
+                    {{-- In-article CTA --}}
+                    <section class="post__ready">
+                        <div class="ready__content">
+                            <div class="ready__title">Ready to lead?<br>Let's get started!</div>
+                            <div class="ready__desc txt-default">See why EquipDash is the #1 choice for rental pros and tour operators.</div>
+                            <div class="ready__btn">
+                                <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
+                            </div>
                         </div>
-                    @endif
-
-                    {{-- Inline CTA Box --}}
-                    <div class="post__box">
-                        <div>
-                            <h3 class="post__box-title">Ready to Get Started?</h3>
-                            <p class="post__box-desc">See how EquipDash can simplify your rental operations and boost your bookings.</p>
+                        <div class="ready__thumb">
+                            <img src="{{ asset('images/ready__img.png') }}" alt="EquipDash Dashboard" />
                         </div>
-                        <div class="post__box-btn">
-                            <a href="{{ route('book-a-demo') }}" class="global-btn">Book a Demo</a>
-                        </div>
-                    </div>
+                    </section>
                 </article>
 
                 {{-- Sidebar --}}
@@ -99,19 +78,30 @@
                     <div class="sidebar__menu">
                         <h4 class="sidebar__title">Table of Contents</h4>
                         <nav class="sidebar__list" id="toc-nav">
-                            {{-- TOC is typically generated via JS from h2/h3 headings --}}
+                            {{-- TOC is generated via JS from h2/h3 headings --}}
                         </nav>
+                    </div>
+
+                    {{-- Sidebar CTA --}}
+                    <div class="sidebar__ready">
+                        <div class="sidebar-ready__content">
+                            <div class="sidebar-ready__title">Ready to plan your success?</div>
+                            <div class="sidebar-ready__desc txt-default">Don't let outdated software disrupt your operations.</div>
+                            <div class="sidebar-ready__btn">
+                                <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
+                            </div>
+                        </div>
                     </div>
                 </aside>
             </div>
-        </section>
+        </div>
 
         {{-- Related Posts --}}
         @if(isset($related) && $related->count())
             <section class="post__continue-read sec-blog">
                 <div class="container">
-                    <h2 class="continue-read__title">Continue Reading</h2>
-                    <div class="list-blog">
+                    <h2 class="continue-read__title">Continue reading</h2>
+                    <div class="list-blog hidden-mb">
                         @foreach($related->take(3) as $relatedPost)
                             <div class="card-post">
                                 <a href="{{ route('blog.show', $relatedPost->slug) }}" class="thumb">
@@ -121,18 +111,12 @@
                                     >
                                 </a>
                                 @if($relatedPost->category)
-                                    <p class="cate">
-                                        <a href="{{ route('blog.category', $relatedPost->category->slug) }}">
-                                            {{ $relatedPost->category->name }}
-                                        </a>
-                                    </p>
+                                    <p class="category">{{ $relatedPost->category->name }}</p>
                                 @endif
                                 <h3>
-                                    <a href="{{ route('blog.show', $relatedPost->slug) }}">{{ $relatedPost->title }}</a>
+                                    <a href="{{ route('blog.show', $relatedPost->slug) }}">{{ Str::words($relatedPost->title, 15, '...') }}</a>
                                 </h3>
-                                @if($relatedPost->read_time)
-                                    <p class="mins-read">{{ $relatedPost->read_time }} min read</p>
-                                @endif
+                                <p class="mins-read">Max {{ $relatedPost->read_time ?? 4 }} mins read</p>
                             </div>
                         @endforeach
                     </div>
@@ -144,5 +128,50 @@
         <div class="post__subscribe">
             <x-subscribe-section title="Subscribe to our newsletter" />
         </div>
-    </div>
+
+    </main>
 @endsection
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const article = document.querySelector('.post__article');
+    const tocNav = document.getElementById('toc-nav');
+    if (!article || !tocNav) return;
+
+    const headings = article.querySelectorAll('h2, h3');
+    if (headings.length === 0) {
+        const sidebar = document.querySelector('.sidebar__menu');
+        if (sidebar) sidebar.style.display = 'none';
+        return;
+    }
+
+    headings.forEach(function(heading, index) {
+        const id = 'section-' + index;
+        heading.id = id;
+
+        const wrapper = document.createElement('div');
+        const link = document.createElement('a');
+        link.href = '#' + id;
+        link.textContent = heading.textContent;
+        link.className = 'toc-link' + (heading.tagName === 'H3' ? ' toc-link--sub' : '');
+        wrapper.appendChild(link);
+        tocNav.appendChild(wrapper);
+    });
+
+    // Highlight active TOC link on scroll
+    var tocLinks = tocNav.querySelectorAll('.toc-link');
+    window.addEventListener('scroll', function() {
+        var current = '';
+        headings.forEach(function(heading) {
+            if (window.scrollY >= heading.offsetTop - 120) {
+                current = heading.id;
+            }
+        });
+        tocLinks.forEach(function(link) {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+        });
+    });
+});
+</script>
+@endpush

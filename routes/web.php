@@ -32,12 +32,14 @@ Route::get('/features/{category}/{slug}', [PageController::class, 'featureSingle
 
 // Blog
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/ajax-posts', [BlogController::class, 'ajaxPosts'])->name('blog.ajax');
 Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/category/{slug}', [BlogController::class, 'category'])->name('blog.category');
 Route::get('/author/{slug}', [BlogController::class, 'author'])->name('blog.author');
 
 // Directory
 Route::get('/directory', [DirectoryController::class, 'index'])->name('directory.index');
+Route::get('/directory/ajax-listings', [DirectoryController::class, 'ajaxListings'])->name('directory.ajax');
 Route::get('/directory/{slug}', [DirectoryController::class, 'show'])->name('directory.show');
 
 // Landing pages

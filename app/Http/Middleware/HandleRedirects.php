@@ -14,12 +14,16 @@ class HandleRedirects
     {
         $path = '/' . ltrim($request->path(), '/');
 
-        $redirects = Cache::remember('redirects', 3600, function () {
-            return Redirect::active()->pluck('to_path', 'from_path')->toArray();
-        });
+        try {
+            $redirects = Cache::remember('redirects', 3600, function () {
+                return Redirect::where('is_active', true)->pluck('to_path', 'from_path')->toArray();
+            });
+        } catch (\Throwable $e) {
+            return $next($request);
+        }
 
         if (isset($redirects[$path])) {
-            $redirect = Redirect::where('from_path', $path)->active()->first();
+            $redirect = Redirect::where('from_path', $path)->where('is_active', true)->first();
             $statusCode = $redirect ? $redirect->status_code : 301;
             return redirect($redirects[$path], $statusCode);
         }

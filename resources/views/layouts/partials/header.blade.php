@@ -122,7 +122,7 @@
 
                     {{-- Features --}}
                     <li class="has-submenu-mega-menu">
-                        <a href="#" class="menu-items">
+                        <a href="/features" class="menu-items">
                             Features
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6028 5.20534L7.81335 9.03556C7.36582 9.48791 6.6335 9.48791 6.18597 9.03556L2.39648 5.20534" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </a>
@@ -444,4 +444,6 @@
             <span></span>
         </div>
     </div>
+    {{-- Mobile overlay --}}
+    <div class="mobile-overlay" id="mobile-overlay"></div>
 </header>
