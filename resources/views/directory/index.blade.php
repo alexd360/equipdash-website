@@ -91,7 +91,7 @@
                         <h2 class="global-title">Ready to grow your business</h2>
                         <p class="sec-desc">Start your free 21-day trial and see how EquipDash helps you manage bookings, inventory, and customers in one place.</p>
                         <div class="gr-btn">
-                            <a href="/book-a-demo" class="global-btn">Start Your Free 21-Day Trial</a>
+                            <a href="https://app.equipdash.com/free-trial" class="global-btn">Start Your Free 21-Day Trial</a>
                             <a href="/book-a-demo" class="global-btn-white">See It In Action</a>
                         </div>
                         <div class="banner-content">

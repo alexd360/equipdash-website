@@ -51,7 +51,18 @@
       "Bash(node -e:*)",
       "Bash(for file in \"/Users/alexanderdanieli/Google Drive/Project Freedom/4. Development/equipdash-website/resources/views/pages/who-we-are-for\"/*.blade.php)",
       "WebFetch(domain:www.zaui.com)",
-      "Bash(docker exec:*)"
+      "Bash(docker exec:*)",
+      "Bash(for i in 1 2 3 4)",
+      "Bash(do echo \"=== local_$i.png ===\")",
+      "Bash(md5:*)",
+      "Bash(for f in fea-tabs-img1.png experience_thumb.png manage-thumb.png planning.png operati.png automatic.png fea-tabs-mb.png fe_1.png fe_3.png fe_4_mb.png fe_5_mb.png fe_6.png fe_6_mb.png)",
+      "Bash(do [ -f \"$f\" ])",
+      "Bash(echo:*)",
+      "Bash(for f in manage.png manage_mb.png experience_mb.png operati_mb.png planning_mb.png automatic_mb.png reports.png)",
+      "Bash(do [ -f \"features/$f\" ])",
+      "Bash([ -f \"hero-images/dashboard-hero-image.png\" ])",
+      "Bash(for f in features/fea-tabs-img1.png features/fea-tabs-mb.png features/experience_thumb.png features/manage-thumb.png features/planning.png features/operati.png features/automatic.png features/manage.png features/manage_mb.png features/experience_mb.png features/operati_mb.png features/planning_mb.png features/automatic_mb.png features/reports.png)",
+      "Bash(wc:*)"
     ]
   }
 }

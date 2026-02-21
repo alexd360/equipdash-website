@@ -21,9 +21,9 @@
                 <div class="banner-content">
                     <div class="banner-intro">
                         <div class="gr-img">
-                            <img src="{{ asset('images/smb-1.jpg') }}" alt="">
-                            <img src="{{ asset('images/smb-1.jpg') }}" alt="">
-                            <img src="{{ asset('images/smb-2.jpg') }}" alt="">
+                            <img src="{{ asset('images/testimonials/bike-rental-store-operator-testimonial.jpeg') }}" alt="Bike rental store operator">
+                            <img src="{{ asset('images/testimonials/ski-rental-store-testimonial.jpeg') }}" alt="Ski rental store operator">
+                            <img src="{{ asset('images/smb-2.jpg') }}" alt="Tour operator">
                         </div>
                         <span>Trusted by hundreds of rental and tour operators</span>
                     </div>

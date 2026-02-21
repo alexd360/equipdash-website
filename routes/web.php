@@ -13,7 +13,6 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/pricing', [PageController::class, 'pricing'])->name('pricing');
 Route::get('/book-a-demo', [PageController::class, 'bookADemo'])->name('book-a-demo');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
-Route::get('/help-docs', [PageController::class, 'helpDocs'])->name('help-docs');
 Route::get('/terms-of-use', [PageController::class, 'termsOfUse'])->name('terms-of-use');
 Route::get('/privacy-policy', [PageController::class, 'privacyPolicy'])->name('privacy-policy');
 

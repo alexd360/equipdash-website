@@ -26,10 +26,6 @@ class PageController extends Controller
         return view('pages.contact-us');
     }
 
-    public function helpDocs()
-    {
-        return view('pages.help-docs');
-    }
 
     public function termsOfUse()
     {

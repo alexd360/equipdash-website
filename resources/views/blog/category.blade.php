@@ -36,7 +36,7 @@
                         <div class="blog-card">
                             <a href="{{ route('blog.show', $post->slug) }}" class="blog-card__thumb">
                                 <img
-                                    src="{{ $post->getFirstMediaUrl('featured_image') ?: asset('images/post_1.png') }}"
+                                    src="{{ $post->getFirstMediaUrl('featured_image') ?: asset('images/blog/post_1.png') }}"
                                     alt="{{ $post->title }}"
                                 >
                             </a>

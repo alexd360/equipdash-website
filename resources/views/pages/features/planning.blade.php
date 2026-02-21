@@ -16,13 +16,13 @@
                     <h1 class="hero-heading">The right staff, in the right place, at the right time</h1>
                     <p class="hero-desc">EquipDash helps you build guest lists, generate trip manifests, and roster staff across locations — so you are always prepared, even during your busiest weeks.</p>
                     <div class="banner-btn">
-                        <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
+                        <a href="https://app.equipdash.com/free-trial" class="global-btn">Start Your Free Trial</a>
                         <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                     <p class="hero-credit">No credit card required, cancel anytime.</p>
                 </div>
                 <div class="fea-thumb">
-                    <img src="{{ asset('images/planning-banner.png') }}" alt="EquipDash Planning & Scheduling">
+                    <img src="{{ asset('images/hero-images/planning-banner.png') }}" alt="EquipDash Planning & Scheduling">
                 </div>
             </div>
         </div>

@@ -17,12 +17,12 @@
                     <h1 class="hero-heading">Know exactly who is on every trip</h1>
                     <p class="hero-desc">EquipDash builds guest lists from bookings automatically. Generate manifests with participant details, emergency contacts, and waiver status. Print or share with guides before departure.</p>
                     <div class="banner-btn">
-                        <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
+                        <a href="https://app.equipdash.com/free-trial" class="global-btn">Start Your Free Trial</a>
                         <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
-                    <img src="{{ asset('images/Guestlist-and-manifest-banner.png') }}" alt="EquipDash Guestlist & manifest">
+                    <img src="{{ asset('images/hero-images/Guestlist-and-manifest-banner.png') }}" alt="EquipDash Guestlist & manifest">
                 </div>
             </div>
         </div>

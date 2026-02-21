@@ -46,7 +46,7 @@
                     </div>
                     <p class="price_promo monthly">50% off for first 3 months</p>
                     <p class="price_fee">+ 3% platform fee *</p>
-                    <a href="{{ route('book-a-demo') }}" class="global-btn plan_btn">Start Free 21-Day Trial</a>
+                    <a href="https://app.equipdash.com/free-trial" class="global-btn plan_btn">Start Free 21-Day Trial</a>
                     <span class="plan_note">No credit card required. Cancel anytime.</span>
                     <span class="plan_line"></span>
                     <div class="plan_features-list">
@@ -85,7 +85,7 @@
                     </div>
                     <p class="price_promo monthly">50% off for first 3 months</p>
                     <p class="price_fee">+ 2% platform fee *</p>
-                    <a href="{{ route('book-a-demo') }}" class="global-btn plan_btn">Start Free 21-Day Trial</a>
+                    <a href="https://app.equipdash.com/free-trial" class="global-btn plan_btn">Start Free 21-Day Trial</a>
                     <span class="plan_note">No credit card required. Cancel anytime.</span>
                     <span class="plan_line"></span>
                     <div class="plan_features-list">
@@ -130,7 +130,7 @@
                     </div>
                     <p class="price_promo monthly">50% off for first 3 months</p>
                     <p class="price_fee">+ 1.5% platform fee *</p>
-                    <a href="{{ route('book-a-demo') }}" class="global-btn plan_btn">Start Free 21-Day Trial</a>
+                    <a href="https://app.equipdash.com/free-trial" class="global-btn plan_btn">Start Free 21-Day Trial</a>
                     <span class="plan_note">No credit card required. Cancel anytime.</span>
                     <span class="plan_line"></span>
                     <div class="plan_features-list">
@@ -169,17 +169,17 @@
                     <td>
                         <h3 class="compare_plan-title">Starter</h3>
                         <p class="compare_plan-price">$29/month</p>
-                        <a href="{{ route('book-a-demo') }}" class="compare_plan-btn">Start Free 21-Day Trial</a>
+                        <a href="https://app.equipdash.com/free-trial" class="compare_plan-btn">Start Free 21-Day Trial</a>
                     </td>
                     <td>
                         <h3 class="compare_plan-title">Growth</h3>
                         <p class="compare_plan-price">$69/month</p>
-                        <a href="{{ route('book-a-demo') }}" class="compare_plan-btn">Start Free 21-Day Trial</a>
+                        <a href="https://app.equipdash.com/free-trial" class="compare_plan-btn">Start Free 21-Day Trial</a>
                     </td>
                     <td>
                         <h3 class="compare_plan-title">Pro</h3>
                         <p class="compare_plan-price">$149/month</p>
-                        <a href="{{ route('book-a-demo') }}" class="compare_plan-btn">Start Free 21-Day Trial</a>
+                        <a href="https://app.equipdash.com/free-trial" class="compare_plan-btn">Start Free 21-Day Trial</a>
                     </td>
                 </tr>
                 @php

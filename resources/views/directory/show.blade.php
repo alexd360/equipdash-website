@@ -160,7 +160,7 @@
                         <h2 class="global-title">Manage your business with EquipDash</h2>
                         <p class="sec-desc">Start your free 21-day trial and simplify bookings, inventory, and customer management.</p>
                         <div class="gr-btn">
-                            <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
+                            <a href="https://app.equipdash.com/free-trial" class="global-btn">Start Your Free 21-Day Trial</a>
                             <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                         </div>
                         <div class="banner-content">

@@ -11,7 +11,7 @@
     <x-wwf-hero
         title="Built for rental shops that want to grow"
         description="EquipDash helps equipment rental providers manage bookings, track inventory, and coordinate staff from one platform. Whether you rent skis, bikes, boats, or camping gear, everything your business needs is in one place."
-        image="images/wwf-banner-thumb-1.png"
+        image="images/hero-images/who-we-are-for-equipment-rental-provider.png"
         imageAlt="Equipment Rental Management Dashboard"
     />
 
@@ -19,9 +19,9 @@
         title="How EquipDash helps rental providers"
         description="EquipDash replaces spreadsheets, paper waivers, and disconnected tools with a single platform built for how rental shops actually work."
         :cards="[
-            ['icon' => 'images/maximize-bookings.svg', 'title' => 'Fill more rental slots', 'description' => 'Online bookings with real-time availability, automated confirmations, and waitlist management. Customers book 24/7 from your website or phone.'],
-            ['icon' => 'images/master-inventory.svg', 'title' => 'Track every piece of gear', 'description' => 'See what is available, what is rented out, and what needs servicing — across every location. Low-stock alerts keep you prepared.'],
-            ['icon' => 'images/save-time-grow-revenue.svg', 'title' => 'Save hours every week', 'description' => 'Automated emails, staff rostering, POS, and reporting reduce the manual work that slows your team down.'],
+            ['icon' => 'images/icons/maximize-bookings.svg', 'title' => 'Fill more rental slots', 'description' => 'Online bookings with real-time availability, automated confirmations, and waitlist management. Customers book 24/7 from your website or phone.'],
+            ['icon' => 'images/icons/master-inventory.svg', 'title' => 'Track every piece of gear', 'description' => 'See what is available, what is rented out, and what needs servicing — across every location. Low-stock alerts keep you prepared.'],
+            ['icon' => 'images/icons/save-time-grow-revenue.svg', 'title' => 'Save hours every week', 'description' => 'Automated emails, staff rostering, POS, and reporting reduce the manual work that slows your team down.'],
         ]"
     />
 
@@ -29,13 +29,13 @@
         title="Purpose-built for your rental niche"
         description="EquipDash adapts to the specific needs of each equipment rental vertical."
         :threeColumn="[
-            ['url' => '/equipment-rental-providers/ski-snowboard', 'title' => 'Ski & Snowboard Rentals', 'description' => 'Manage high-volume winter seasons with inventory tracking by size, peak-day staffing, and real-time gear tracking.', 'image' => 'images/skisnowboard-rentals.png'],
-            ['url' => '/equipment-rental-providers/bikes', 'title' => 'Bike Rentals', 'description' => 'Handle hourly, daily, and multi-day rentals with fleet tracking and maintenance scheduling.', 'image' => 'images/bike-rentals.png'],
-            ['url' => '/equipment-rental-providers/water-sport', 'title' => 'Water Sports Rentals', 'description' => 'Coordinate kayaks, SUPs, and jet skis with weather-aware scheduling and safety waivers.', 'image' => 'images/water-sports-rentals.png'],
+            ['url' => '/equipment-rental-providers/ski-snowboard', 'title' => 'Ski & Snowboard Rentals', 'description' => 'Manage high-volume winter seasons with inventory tracking by size, peak-day staffing, and real-time gear tracking.', 'image' => 'images/use-cases/ski-snowboard-rentals.png'],
+            ['url' => '/equipment-rental-providers/bikes', 'title' => 'Bike Rentals', 'description' => 'Handle hourly, daily, and multi-day rentals with fleet tracking and maintenance scheduling.', 'image' => 'images/use-cases/bicycles-workshop.jpg'],
+            ['url' => '/equipment-rental-providers/water-sport', 'title' => 'Water Sports Rentals', 'description' => 'Coordinate kayaks, SUPs, and jet skis with weather-aware scheduling and safety waivers.', 'image' => 'images/use-cases/water-sports-rentals.png'],
         ]"
         :twoColumn="[
-            ['url' => '/equipment-rental-providers/boats', 'title' => 'Boat Rentals', 'description' => 'Schedule boats and captains, handle deposits, and manage dock logistics from one system.', 'image' => 'images/boat-rentals.png'],
-            ['url' => '/equipment-rental-providers/camping-hiking', 'title' => 'Camping & Hiking Gear Rentals', 'description' => 'Track gear kits, handle multi-day rentals, and manage return condition checks.', 'image' => 'images/campinghiking-gear-rentals.png'],
+            ['url' => '/equipment-rental-providers/boats', 'title' => 'Boat Rentals', 'description' => 'Schedule boats and captains, handle deposits, and manage dock logistics from one system.', 'image' => 'images/use-cases/boat-rentals.png'],
+            ['url' => '/equipment-rental-providers/camping-hiking', 'title' => 'Camping & Hiking Gear Rentals', 'description' => 'Track gear kits, handle multi-day rentals, and manage return condition checks.', 'image' => 'images/use-cases/camping-hiking-gear-rentals.png'],
         ]"
     />
 

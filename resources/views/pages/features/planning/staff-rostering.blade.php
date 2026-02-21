@@ -17,12 +17,12 @@
                     <h1 class="hero-heading">Build rosters that work for your team and your business</h1>
                     <p class="hero-desc">Create shift schedules based on staff availability, qualifications, and demand. Staff see their roster on the app. You see coverage gaps before they become problems.</p>
                     <div class="banner-btn">
-                        <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
+                        <a href="https://app.equipdash.com/free-trial" class="global-btn">Start Your Free Trial</a>
                         <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>
                 <div class="fea-thumb">
-                    <img src="{{ asset('images/staff-rostering-banner.png') }}" alt="EquipDash Staff rostering">
+                    <img src="{{ asset('images/hero-images/staff-rostering-banner.png') }}" alt="EquipDash Staff rostering">
                 </div>
             </div>
         </div>

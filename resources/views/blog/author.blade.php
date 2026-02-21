@@ -23,7 +23,7 @@
                         @if($author->avatar)
                             <img src="{{ $author->avatar }}" alt="{{ $author->name }}">
                         @else
-                            <img src="{{ asset('images/default-avatar.png') }}" alt="{{ $author->name }}">
+                            <img src="{{ asset('images/blog/default-avatar.png') }}" alt="{{ $author->name }}">
                         @endif
                     </div>
                     <h1 class="author__full-name">{{ $author->name }}</h1>
@@ -46,7 +46,7 @@
                         <div class="blog-card">
                             <a href="{{ route('blog.show', $post->slug) }}" class="blog-card__thumb">
                                 <img
-                                    src="{{ $post->getFirstMediaUrl('featured_image') ?: asset('images/post_1.png') }}"
+                                    src="{{ $post->getFirstMediaUrl('featured_image') ?: asset('images/blog/post_1.png') }}"
                                     alt="{{ $post->title }}"
                                 >
                             </a>

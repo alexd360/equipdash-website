@@ -840,7 +840,7 @@ body.mobile-menu-open {
 }
 
 .footer-top {
-    padding: 131px 0 70px;
+    padding: 210px 0 70px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #0C4176;
@@ -854,6 +854,10 @@ body.mobile-menu-open {
 
 .footer-top .footer-info .logo {
     margin: 0 0 17px;
+}
+
+.footer-top .footer-info .logo img {
+    width: 233px;
 }
 
 .footer-top .footer-info .desc p {
@@ -887,6 +891,10 @@ body.mobile-menu-open {
     width: 100%;
     display: flex;
     gap: 70px;
+}
+
+.footer-list .list-item {
+    list-style: none;
 }
 
 .footer-list .list-item h3 {
@@ -1292,18 +1300,2648 @@ body.mobile-menu-open {
 .list-features .box-features:nth-child(3),
 .list-features .box-features:nth-child(6) {
     flex-basis: calc(32.916% - 15px);
-    max-height: 420px;
+    max-height: 500px;
 }
 
 .list-features .box-features:nth-child(4),
 .list-features .box-features:nth-child(5) {
     flex-basis: calc(67.083% - 15px);
-    max-height: 420px;
+    max-height: 500px;
 }
 
 .list-features .box-features .img-mb {
     display: none;
 }
+
+/* ===== Bookings Product Mockup ===== */
+.mockup-bookings {
+    position: relative;
+    padding: 20px 25px 0;
+    height: 320px;
+    overflow: hidden;
+}
+
+.mockup-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+    font-family: inherit;
+}
+
+/* --- Background: Booking list --- */
+.mockup-list {
+    position: relative;
+    padding: 16px 18px 0;
+    z-index: 1;
+}
+
+.mockup-list-header {
+    margin-bottom: 12px;
+}
+
+.mockup-list-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1B2B4B;
+    letter-spacing: -0.01em;
+}
+
+.mockup-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #E5E7EB;
+    margin-bottom: 0;
+}
+
+.mockup-tab {
+    font-size: 12px;
+    font-weight: 500;
+    color: #667085;
+    padding: 6px 14px 8px;
+    cursor: default;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    white-space: nowrap;
+}
+
+.mockup-tab.active {
+    color: #003264;
+    border-bottom-color: #00A3FA;
+    font-weight: 600;
+}
+
+.mockup-badge {
+    display: inline-block;
+    background: #F2F4F7;
+    color: #667085;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 2px;
+}
+
+.mockup-tab.active .mockup-badge {
+    background: #00A3FA;
+    color: #fff;
+}
+
+.mockup-table {
+    width: 100%;
+}
+
+.mockup-row {
+    display: flex;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-row-head {
+    padding: 7px 0;
+}
+
+.mockup-row-head .mockup-col {
+    font-size: 10px;
+    font-weight: 600;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.mockup-col-check {
+    width: 28px;
+    flex-shrink: 0;
+}
+
+.mockup-checkbox {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid #D0D5DD;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.mockup-checkbox.checked {
+    background: #003264;
+    border-color: #003264;
+    position: relative;
+}
+
+.mockup-checkbox.checked::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    width: 5px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+}
+
+.mockup-col {
+    flex: 1;
+    font-size: 12px;
+    color: #344054;
+    font-weight: 400;
+}
+
+.mockup-status {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.mockup-status.picked-up {
+    background: #FFF4E5;
+    color: #B54708;
+    border: 1px solid #FECDAB;
+}
+
+.mockup-status.reserved {
+    background: #ECFDF3;
+    color: #027A48;
+    border: 1px solid #A6F4C5;
+}
+
+.mockup-status.confirmed {
+    background: #EFF8FF;
+    color: #175CD3;
+    border: 1px solid #B2DDFF;
+}
+
+/* --- Foreground: Booking detail popup --- */
+.mockup-detail {
+    position: absolute;
+    right: 20px;
+    top: 110px;
+    width: 260px;
+    padding: 16px 18px;
+    z-index: 2;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.mockup-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.mockup-detail-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1B2B4B;
+    letter-spacing: -0.01em;
+}
+
+.mockup-detail-dates {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #667085;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-detail-section {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-detail-label {
+    display: block;
+    font-size: 9px;
+    font-weight: 600;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+
+.mockup-detail-value {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #003264;
+}
+
+.mockup-detail-sub {
+    display: block;
+    font-size: 11px;
+    color: #667085;
+    margin-top: 1px;
+}
+
+.mockup-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.mockup-item-name {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #344054;
+}
+
+.mockup-item-variant {
+    display: block;
+    font-size: 10px;
+    color: #98A2B3;
+    margin-top: 1px;
+}
+
+.mockup-item-price {
+    font-size: 12px;
+    font-weight: 600;
+    color: #344054;
+    white-space: nowrap;
+}
+
+.mockup-detail-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1B2B4B;
+}
+
+.mockup-total-amount {
+    font-size: 15px;
+    font-weight: 700;
+    color: #003264;
+}
+
+/* ===== End Bookings Product Mockup ===== */
+
+/* ===== Customer Experience Product Mockup ===== */
+.mockup-customers {
+    position: relative;
+    padding: 20px 25px 0;
+    height: 320px;
+    overflow: hidden;
+}
+
+.mockup-cust-list {
+    position: relative;
+    padding: 16px 18px 0;
+    z-index: 1;
+}
+
+.mockup-search-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: #98A2B3;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    padding: 4px 10px;
+}
+
+.mockup-col-id {
+    flex: 0 0 36px;
+}
+
+.mockup-col-date {
+    flex: 0 0 90px;
+    text-align: right;
+}
+
+.mockup-text-muted {
+    color: #98A2B3 !important;
+    font-size: 11px !important;
+}
+
+.mockup-text-bold {
+    font-weight: 600;
+    color: #003264 !important;
+}
+
+.mockup-row-highlight {
+    background: #F8FAFC;
+    margin: 0 -18px;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+}
+
+/* Customer profile floating card */
+.mockup-cust-profile {
+    position: absolute;
+    right: 15px;
+    top: 70px;
+    width: 250px;
+    padding: 16px 16px 12px;
+    z-index: 2;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.mockup-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #26AF51;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mockup-profile-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1B2B4B;
+    line-height: 1.2;
+}
+
+.mockup-profile-stats {
+    display: flex;
+    gap: 0;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-stat {
+    flex: 1;
+    text-align: center;
+}
+
+.mockup-stat:not(:last-child) {
+    border-right: 1px solid #F2F4F7;
+}
+
+.mockup-stat-value {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #003264;
+    line-height: 1.2;
+}
+
+.mockup-stat-label {
+    display: block;
+    font-size: 9px;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+}
+
+.mockup-profile-section {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-profile-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.mockup-waiver-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.mockup-waiver-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: #344054;
+    flex: 1;
+}
+
+.mockup-waiver-date {
+    font-size: 10px;
+    color: #98A2B3;
+}
+
+.mockup-promo-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.mockup-promo-code {
+    font-size: 12px;
+    font-weight: 700;
+    color: #F7581F;
+    font-family: monospace;
+    background: #FFF4EE;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #FECDAB;
+}
+
+.mockup-promo-discount {
+    font-size: 11px;
+    color: #667085;
+    flex: 1;
+}
+
+/* ===== End Customer Experience Product Mockup ===== */
+
+/* ===== Operations Dashboard Product Mockup ===== */
+/* Compact version for narrow (33%) column */
+
+.mockup-operations {
+    position: relative;
+    padding: 20px 22px 0;
+    overflow: hidden;
+}
+
+.mockup-ops-dashboard {
+    position: relative;
+    z-index: 1;
+    padding: 16px 18px;
+}
+
+.mockup-ops-period {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    color: #667085;
+    background: #F8F9FB;
+    border: 1px solid #F2F4F7;
+    border-radius: 6px;
+    padding: 2px 6px;
+}
+
+.mockup-ops-stats {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.mockup-ops-stat-card {
+    flex: 1;
+    background: #F8F9FB;
+    border: 1px solid #F2F4F7;
+    border-radius: 8px;
+    padding: 6px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.mockup-ops-stat-label {
+    font-size: 8px;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.mockup-ops-stat-number {
+    font-size: 14px;
+    font-weight: 700;
+    color: #003264;
+}
+
+.mockup-ops-stat-change {
+    font-size: 8px;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 1px 4px;
+    width: fit-content;
+}
+
+.mockup-ops-stat-change.up {
+    color: #027A48;
+    background: #ECFDF3;
+}
+
+.mockup-ops-stat-change.down {
+    color: #B54708;
+    background: #FFF4E5;
+}
+
+/* Mini bar chart */
+.mockup-ops-chart {
+    margin-top: 10px;
+}
+
+.mockup-ops-chart-title {
+    font-size: 9px;
+    font-weight: 600;
+    color: #344054;
+}
+
+.mockup-ops-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    height: 60px;
+    margin-top: 5px;
+    padding-bottom: 14px;
+    position: relative;
+}
+
+.mockup-ops-bar-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.mockup-ops-bar {
+    width: 100%;
+    background: #E0EDFF;
+    border-radius: 3px 3px 0 0;
+    min-height: 3px;
+}
+
+.mockup-ops-bar.highlight {
+    background: #00A3FA;
+}
+
+.mockup-ops-bar-label {
+    font-size: 7px;
+    color: #98A2B3;
+    margin-top: 2px;
+    position: absolute;
+    bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .mockup-operations {
+        padding: 12px 14px 0;
+    }
+    .mockup-ops-stat-number {
+        font-size: 13px;
+    }
+    .mockup-ops-bars {
+        height: 50px;
+    }
+}
+
+/* ===== End Operations Dashboard Product Mockup ===== */
+
+/* ===== Dash AI Product Mockup ===== */
+/* Dark themed, vibrant — biggest differentiator */
+
+.mockup-dashai {
+    position: relative;
+    padding: 16px 20px 0;
+    overflow: hidden;
+}
+
+/* Dark background card */
+.mockup-ai-dark {
+    background: linear-gradient(145deg, #0a1628 0%, #1a1045 50%, #0f1d3d 100%);
+    border-radius: 12px;
+    padding: 14px 16px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15), 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.mockup-ai-hero {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.mockup-ai-logo {
+    flex-shrink: 0;
+    display: flex;
+}
+
+.mockup-ai-hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    flex: 1;
+}
+
+.mockup-ai-hero-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.mockup-ai-hero-counter {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 400;
+}
+
+/* Task grid */
+.mockup-ai-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.mockup-ai-task-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.mockup-ai-task-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.mockup-ai-task-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.mockup-ai-task-detail {
+    font-size: 9px;
+    color: rgba(255,255,255,0.45);
+}
+
+/* Running task with pulse */
+.mockup-ai-task-running {
+    border-color: rgba(124, 58, 237, 0.4);
+    background: rgba(124, 58, 237, 0.12);
+}
+
+.mockup-ai-task-running .mockup-ai-task-name {
+    color: #c4b5fd;
+}
+
+.mockup-ai-task-running .mockup-ai-task-detail {
+    color: rgba(196,181,253,0.6);
+}
+
+.mockup-ai-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #7C3AED;
+    display: inline-block;
+    animation: aiPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes aiPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.85); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Foreground: AI Insight card */
+.mockup-ai-insight {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 240px;
+    z-index: 2;
+    padding: 10px 12px !important;
+    border-left: 3px solid #7C3AED;
+}
+
+.mockup-ai-insight-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #7C3AED;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.mockup-ai-insight-text {
+    font-size: 11px;
+    color: #344054;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.mockup-ai-insight-text strong {
+    color: #003264;
+    font-weight: 700;
+}
+
+.mockup-ai-insight-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.mockup-ai-insight-btn {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: default;
+}
+
+.mockup-ai-insight-btn.primary {
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    color: #fff;
+}
+
+.mockup-ai-insight-btn.secondary {
+    background: #F2F4F7;
+    color: #667085;
+}
+
+@media (max-width: 991px) {
+    .mockup-dashai {
+        padding: 12px 14px 0;
+    }
+    .mockup-ai-grid {
+        gap: 5px;
+    }
+    .mockup-ai-insight {
+        width: 210px;
+        right: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .mockup-dashai {
+        padding: 10px 12px 0;
+    }
+    .mockup-ai-insight {
+        width: 190px;
+        right: 10px;
+    }
+}
+
+/* ===== End Dash AI Product Mockup ===== */
+
+/* ===========================================
+    Dash AI Feature Page Mockups
+=========================================== */
+
+/* ---- HERO: Dark AI Command Centre ---- */
+.mockup-dai-hero {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mockup-dai-dark {
+    background: linear-gradient(145deg, #0a1628 0%, #1a1045 50%, #0f1d3d 100%);
+    border-radius: 12px;
+    padding: 18px 20px 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.mockup-dai-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.mockup-dai-logo { flex-shrink: 0; display: flex; }
+
+.mockup-dai-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    flex: 1;
+}
+
+.mockup-dai-status {
+    font-size: 9px;
+    color: #26AF51;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.mockup-dai-pulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #26AF51;
+    display: inline-block;
+    animation: aiPulse 1.5s ease-in-out infinite;
+}
+
+.mockup-dai-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.mockup-dai-msg-user {
+    align-self: flex-end;
+    background: rgba(124, 58, 237, 0.25);
+    border: 1px solid rgba(124, 58, 237, 0.35);
+    color: #e0d4fc;
+    font-size: 11px;
+    padding: 7px 10px;
+    border-radius: 10px 10px 2px 10px;
+    max-width: 80%;
+    font-weight: 500;
+}
+
+.mockup-dai-msg-ai {
+    align-self: flex-start;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px 10px 10px 2px;
+    padding: 8px 10px;
+    max-width: 90%;
+}
+
+.mockup-dai-response-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #c4b5fd;
+    margin-bottom: 6px;
+}
+
+.mockup-dai-revenue-row {
+    margin-bottom: 8px;
+}
+
+.mockup-dai-rev-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.mockup-dai-rev-amount {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.mockup-dai-rev-change {
+    font-size: 10px;
+    font-weight: 600;
+    color: #26AF51;
+    background: rgba(38,175,81,0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.mockup-dai-product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.mockup-dai-product-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 0;
+}
+
+.mockup-dai-rank {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background: rgba(124,58,237,0.3);
+    color: #c4b5fd;
+    font-size: 9px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mockup-dai-prod-name {
+    font-size: 10px;
+    color: rgba(255,255,255,0.7);
+    flex: 1;
+}
+
+.mockup-dai-prod-rev {
+    font-size: 10px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.mockup-dai-input {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: -1px;
+}
+
+.mockup-dai-input-text {
+    flex: 1;
+    font-size: 10px;
+    color: rgba(255,255,255,0.3);
+}
+
+.mockup-dai-send {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Hero compact AI response */
+.mockup-dai-msg-compact {
+    padding: 7px 10px;
+}
+
+.mockup-dai-compact-text {
+    font-size: 10px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.35;
+    display: block;
+}
+
+.mockup-dai-compact-text strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Hero floating alert card */
+.mockup-dai-alert {
+    position: absolute;
+    right: 8px;
+    bottom: 20px;
+    width: 230px;
+    z-index: 2;
+    padding: 10px 12px !important;
+    border-left: 3px solid #7C3AED;
+}
+
+.mockup-dai-alert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #7C3AED;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.mockup-dai-alert-text {
+    font-size: 10px;
+    color: #344054;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.mockup-dai-alert-text strong { color: #003264; font-weight: 700; }
+
+.mockup-dai-alert-actions { display: flex; gap: 5px; }
+
+.mockup-dai-alert-btn {
+    font-size: 9px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.mockup-dai-alert-btn.primary {
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    color: #fff;
+}
+
+.mockup-dai-alert-btn.secondary { background: #F2F4F7; color: #667085; }
+
+/* ---- FEATURE 1: Natural Language Chat ---- */
+.mockup-dai-nlp {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mockup-dai-chatcard {
+    position: relative;
+    z-index: 1;
+}
+
+.mockup-dai-chatcard-head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #003264;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F2F4F7;
+    margin-bottom: 10px;
+}
+
+.mockup-dai-chatcard-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mockup-dai-bubble-user {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 10px 10px 2px 10px;
+    max-width: 75%;
+}
+
+.mockup-dai-bubble-ai {
+    align-self: flex-start;
+    background: #F8F9FB;
+    border: 1px solid #F2F4F7;
+    border-radius: 10px 10px 10px 2px;
+    padding: 8px 10px;
+    width: 100%;
+}
+
+.mockup-dai-bubble-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #003264;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.mockup-dai-booking-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.mockup-dai-bk-row {
+    display: grid;
+    grid-template-columns: 60px 85px 1fr 68px;
+    gap: 4px;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px solid #F2F4F7;
+    font-size: 9px;
+    color: #344054;
+}
+
+.mockup-dai-bk-row:last-child { border-bottom: none; }
+
+.mockup-dai-bk-head {
+    font-weight: 700;
+    color: #98A2B3;
+    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: 0.3px;
+}
+
+.mockup-dai-bk-row .mockup-status {
+    font-size: 8px;
+    padding: 2px 6px;
+}
+
+/* Floating suggestions */
+.mockup-dai-suggestions {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 180px;
+    z-index: 2;
+    padding: 8px 10px !important;
+}
+
+.mockup-dai-sug-label {
+    font-size: 9px;
+    font-weight: 700;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.mockup-dai-sug-pills { display: flex; flex-direction: column; gap: 4px; }
+
+.mockup-dai-pill {
+    font-size: 9px;
+    font-weight: 600;
+    color: #7C3AED;
+    background: rgba(124,58,237,0.08);
+    border: 1px solid rgba(124,58,237,0.2);
+    padding: 5px 8px;
+    border-radius: 6px;
+    cursor: default;
+}
+
+/* Feature 1: Confirmation text */
+.mockup-dai-confirm-text {
+    font-size: 9px;
+    color: #667085;
+    line-height: 1.4;
+    display: block;
+    margin-top: 2px;
+}
+
+.mockup-dai-bubble-label svg { flex-shrink: 0; }
+
+/* Chat message flow animation */
+@keyframes daiMsgAppear {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero animation — plays on page load */
+.dai-anim {
+    animation: daiMsgAppear 0.5s ease-out both;
+}
+
+.dai-anim-1 { animation-delay: 0s; }
+.dai-anim-2 { animation-delay: 1.2s; }
+.dai-anim-3 { animation-delay: 3.5s; }
+.dai-anim-4 { animation-delay: 5s; }
+
+/* Feature 1 animation — paused until scroll triggers .dai-scroll-active */
+.dai-scroll-anim {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.dai-scroll-active .dai-scroll-anim {
+    animation: daiMsgAppear 0.5s ease-out both;
+}
+
+.dai-scroll-active .dai-scroll-anim.dai-anim-1 { animation-delay: 0s; }
+.dai-scroll-active .dai-scroll-anim.dai-anim-2 { animation-delay: 1.2s; }
+.dai-scroll-active .dai-scroll-anim.dai-anim-3 { animation-delay: 3.5s; }
+.dai-scroll-active .dai-scroll-anim.dai-anim-4 { animation-delay: 5s; }
+
+/* ---- FEATURE 2: Smart Insights Dashboard ---- */
+.mockup-dai-insights {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mockup-dai-report {
+    position: relative;
+    z-index: 1;
+}
+
+.mockup-dai-report-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.mockup-dai-report-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #003264;
+}
+
+.mockup-dai-report-gen {
+    font-size: 8px;
+    color: #98A2B3;
+}
+
+.mockup-dai-stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.mockup-dai-stat-card {
+    background: #F8F9FB;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.mockup-dai-stat-label {
+    font-size: 8px;
+    font-weight: 600;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.mockup-dai-stat-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: #003264;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.mockup-dai-stat-change {
+    font-size: 9px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 1px 4px;
+    display: inline-flex;
+    align-self: flex-start;
+}
+
+.mockup-dai-stat-change.up {
+    color: #027A48;
+    background: #ECFDF3;
+}
+
+.mockup-dai-chart {
+    background: #F8F9FB;
+    border-radius: 8px;
+    padding: 10px 8px 4px;
+}
+
+.mockup-dai-chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 72px;
+}
+
+.mockup-dai-bar {
+    flex: 1;
+    background: linear-gradient(180deg, rgba(37,99,235,0.8), rgba(124,58,237,0.6));
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    min-height: 8px;
+}
+
+.mockup-dai-bar span {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 7px;
+    color: #98A2B3;
+    font-weight: 600;
+}
+
+.mockup-dai-bar-peak {
+    background: linear-gradient(180deg, #7C3AED, #9333EA);
+    box-shadow: 0 0 8px rgba(124,58,237,0.4);
+}
+
+.mockup-dai-chart-label {
+    font-size: 8px;
+    font-weight: 700;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+}
+
+/* Top products horizontal bar chart */
+.mockup-dai-top-products {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #F2F4F7;
+}
+
+.mockup-dai-top-label {
+    font-size: 8px;
+    font-weight: 700;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.mockup-dai-top-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 5px;
+}
+
+.mockup-dai-top-name {
+    font-size: 9px;
+    color: #344054;
+    font-weight: 500;
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.mockup-dai-top-bar {
+    flex: 1;
+    height: 6px;
+    background: #F2F4F7;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.mockup-dai-top-bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(37,99,235,0.7), rgba(124,58,237,0.7));
+    border-radius: 3px;
+}
+
+.mockup-dai-top-val {
+    font-size: 9px;
+    font-weight: 700;
+    color: #003264;
+    width: 36px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+/* Floating trend insight */
+.mockup-dai-trend {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 220px;
+    z-index: 2;
+    padding: 10px 12px !important;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    border-left: 3px solid #7C3AED;
+}
+
+.mockup-dai-trend-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(124,58,237,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mockup-dai-trend-body { flex: 1; }
+
+.mockup-dai-trend-title {
+    font-size: 9px;
+    font-weight: 700;
+    color: #7C3AED;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.mockup-dai-trend-text {
+    font-size: 10px;
+    color: #344054;
+    line-height: 1.35;
+    display: block;
+}
+
+.mockup-dai-trend-text strong { color: #003264; font-weight: 700; }
+
+/* ---- FEATURE 3: Operations Automation Timeline ---- */
+.mockup-dai-ops {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mockup-dai-ops-dark {
+    background: linear-gradient(145deg, #0a1628 0%, #1a1045 50%, #0f1d3d 100%);
+    border-radius: 12px;
+    padding: 14px 16px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.mockup-dai-ops-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.mockup-dai-ops-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.mockup-dai-ops-counter {
+    font-size: 10px;
+    font-weight: 600;
+    color: #26AF51;
+    background: rgba(38,175,81,0.15);
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.mockup-dai-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-left: 10px;
+    position: relative;
+}
+
+.mockup-dai-timeline::before {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: rgba(255,255,255,0.1);
+}
+
+.mockup-dai-tl-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 6px 0;
+    position: relative;
+}
+
+.mockup-dai-tl-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.mockup-dai-tl-item.done .mockup-dai-tl-dot {
+    background: #26AF51;
+    box-shadow: 0 0 6px rgba(38,175,81,0.4);
+}
+
+.mockup-dai-tl-item.active .mockup-dai-tl-dot {
+    background: #7C3AED;
+    animation: aiPulse 1.5s ease-in-out infinite;
+    box-shadow: 0 0 8px rgba(124,58,237,0.6);
+}
+
+.mockup-dai-tl-content { display: flex; flex-direction: column; gap: 1px; }
+
+.mockup-dai-tl-time {
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.35);
+}
+
+.mockup-dai-tl-action {
+    font-size: 10px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.3;
+}
+
+.mockup-dai-tl-action strong {
+    color: #F7581F;
+    font-weight: 700;
+}
+
+.mockup-dai-tl-item.active .mockup-dai-tl-time { color: #c4b5fd; }
+.mockup-dai-tl-item.active .mockup-dai-tl-action { color: #c4b5fd; font-weight: 500; }
+
+/* Floating quick actions */
+.mockup-dai-quick {
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+    width: 170px;
+    z-index: 2;
+    padding: 10px 12px !important;
+}
+
+.mockup-dai-quick-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: #003264;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.mockup-dai-quick-list { display: flex; flex-direction: column; gap: 5px; }
+
+.mockup-dai-quick-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 6px;
+    border-radius: 6px;
+    border: 1px solid #F2F4F7;
+    cursor: default;
+}
+
+.mockup-dai-quick-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: rgba(124,58,237,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mockup-dai-quick-name {
+    font-size: 10px;
+    font-weight: 600;
+    color: #344054;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 991px) {
+    .mockup-dai-alert { width: 200px; right: 4px; }
+    .mockup-dai-suggestions { width: 160px; }
+    .mockup-dai-trend { width: 190px; }
+    .mockup-dai-quick { width: 150px; }
+    .mockup-dai-rev-amount { font-size: 18px; }
+    .mockup-dai-stat-value { font-size: 15px; }
+}
+
+@media (max-width: 767px) {
+    .mockup-dai-alert { width: 180px; bottom: 10px; }
+    .mockup-dai-suggestions { width: 150px; }
+    .mockup-dai-trend { width: 170px; }
+    .mockup-dai-quick { width: 140px; }
+}
+
+/* ===== End Dash AI Feature Page Mockups ===== */
+
+/* ===========================================
+   Explore Features Tab Mockups (mockup-ef-*)
+   Sized for ~45% width features_media column
+   =========================================== */
+
+/* --- Base wrapper styles --- */
+.mockup-ef-bookings,
+.mockup-ef-cx,
+.mockup-ef-resources,
+.mockup-ef-ops,
+.mockup-ef-ai,
+.mockup-ef-schedule {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    padding: 16px 20px 0;
+}
+
+/* Shared card */
+.mockup-ef-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.04);
+    font-family: inherit;
+}
+
+/* Background card */
+.mockup-ef-bg {
+    position: relative;
+    padding: 14px 16px 0;
+    z-index: 1;
+}
+
+/* Foreground card (floating popup) */
+.mockup-ef-fg {
+    position: absolute;
+    right: 16px;
+    top: 100px;
+    width: 230px;
+    padding: 14px 14px 12px;
+    z-index: 2;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* --- Shared elements --- */
+.mockup-ef-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.mockup-ef-list-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1B2B4B;
+    letter-spacing: -0.01em;
+}
+
+.mockup-ef-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #E5E7EB;
+    margin-bottom: 0;
+}
+
+.mockup-ef-tab {
+    font-size: 10px;
+    font-weight: 500;
+    color: #667085;
+    padding: 5px 10px 6px;
+    cursor: default;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    white-space: nowrap;
+}
+
+.mockup-ef-tab.active {
+    color: #003264;
+    border-bottom-color: #00A3FA;
+    font-weight: 600;
+}
+
+.mockup-ef-badge {
+    display: inline-block;
+    background: #F2F4F7;
+    color: #667085;
+    font-size: 8px;
+    font-weight: 600;
+    padding: 1px 5px;
+    border-radius: 8px;
+    margin-left: 2px;
+}
+
+.mockup-ef-tab.active .mockup-ef-badge {
+    background: #00A3FA;
+    color: #fff;
+}
+
+/* Table */
+.mockup-ef-table {
+    width: 100%;
+}
+
+.mockup-ef-row {
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-ef-row-head {
+    padding: 6px 0;
+}
+
+.mockup-ef-row-head .mockup-ef-col {
+    font-size: 8px;
+    font-weight: 600;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.mockup-ef-col {
+    flex: 1;
+    font-size: 10px;
+    color: #344054;
+    font-weight: 400;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mockup-ef-text-bold {
+    font-weight: 600;
+    color: #003264 !important;
+}
+
+.mockup-ef-text-muted {
+    color: #98A2B3 !important;
+    font-size: 9px !important;
+}
+
+.mockup-ef-row-highlight {
+    background: #F8FAFC;
+    margin: 0 -16px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+}
+
+/* Status badges */
+.mockup-ef-status {
+    display: inline-block;
+    font-size: 8px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.mockup-ef-status.confirmed {
+    background: #ECFDF3;
+    color: #027A48;
+    border: 1px solid #A6F4C5;
+}
+
+.mockup-ef-status.picked-up {
+    background: #FFF4E5;
+    color: #B54708;
+    border: 1px solid #FECDAB;
+}
+
+.mockup-ef-status.cancelled {
+    background: #FEF3F2;
+    color: #B42318;
+    border: 1px solid #FECDCA;
+}
+
+/* Search pill */
+.mockup-ef-search-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    color: #98A2B3;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    padding: 3px 8px;
+}
+
+/* Period pill */
+.mockup-ef-period-pill {
+    font-size: 9px;
+    color: #667085;
+    background: #F8F9FB;
+    border: 1px solid #F2F4F7;
+    border-radius: 5px;
+    padding: 2px 6px;
+}
+
+/* Detail shared elements */
+.mockup-ef-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.mockup-ef-detail-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1B2B4B;
+    letter-spacing: -0.01em;
+}
+
+.mockup-ef-detail-dates {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9px;
+    color: #667085;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-ef-detail-section {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-ef-detail-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.mockup-ef-detail-label {
+    display: block;
+    font-size: 8px;
+    font-weight: 600;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+/* --- Bookings mockup detail --- */
+.mockup-ef-booking-detail {
+    top: 90px;
+}
+
+.mockup-ef-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.mockup-ef-item-name {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    color: #344054;
+}
+
+.mockup-ef-item-variant {
+    display: block;
+    font-size: 8px;
+    color: #98A2B3;
+    margin-top: 1px;
+}
+
+.mockup-ef-item-price {
+    font-size: 10px;
+    font-weight: 600;
+    color: #344054;
+    white-space: nowrap;
+}
+
+.mockup-ef-detail-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #1B2B4B;
+    border-top: 1px solid #F2F4F7;
+}
+
+.mockup-ef-total-amount {
+    font-size: 13px;
+    font-weight: 700;
+    color: #003264;
+}
+
+/* --- Customer Experience mockup --- */
+.mockup-ef-cx-profile {
+    top: 60px;
+    width: 220px;
+}
+
+.mockup-ef-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-ef-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #26AF51;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mockup-ef-profile-name {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1B2B4B;
+    line-height: 1.2;
+}
+
+.mockup-ef-profile-stats {
+    display: flex;
+    gap: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-ef-stat {
+    flex: 1;
+    text-align: center;
+}
+
+.mockup-ef-stat:not(:last-child) {
+    border-right: 1px solid #F2F4F7;
+}
+
+.mockup-ef-stat-value {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #003264;
+    line-height: 1.2;
+}
+
+.mockup-ef-stat-label {
+    display: block;
+    font-size: 7px;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 1px;
+}
+
+.mockup-ef-profile-section {
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-ef-profile-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.mockup-ef-waiver-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 4px;
+}
+
+.mockup-ef-waiver-name {
+    font-size: 9px;
+    font-weight: 500;
+    color: #344054;
+    flex: 1;
+}
+
+.mockup-ef-waiver-date {
+    font-size: 8px;
+    color: #98A2B3;
+}
+
+/* Signature card — bottom-left */
+.mockup-ef-cx-signature {
+    position: absolute;
+    bottom: 50px;
+    left: 16px;
+    background: #003264;
+    border-radius: 8px;
+    padding: 8px 10px 6px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    z-index: 3;
+    text-align: center;
+}
+
+.mockup-ef-signature-pad {
+    background: #fff;
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin-bottom: 4px;
+    min-width: 90px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mockup-ef-signature-submit {
+    font-size: 9px;
+    font-weight: 600;
+    color: #00A3FA;
+}
+
+/* Coupon card — bottom-right */
+.mockup-ef-cx-coupon {
+    position: absolute;
+    bottom: 20px;
+    right: 16px;
+    width: 175px;
+    z-index: 2;
+    display: flex;
+    overflow: hidden;
+}
+
+.mockup-ef-coupon-badge {
+    background: #003264;
+    color: #fff;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    padding: 8px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+
+.mockup-ef-coupon-body {
+    flex: 1;
+    padding: 8px 10px;
+}
+
+.mockup-ef-coupon-offer {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1B2B4B;
+    line-height: 1.2;
+}
+
+.mockup-ef-coupon-desc {
+    font-size: 8px;
+    color: #667085;
+    margin-bottom: 5px;
+}
+
+.mockup-ef-coupon-code-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F9FAFB;
+    border: 1px dashed #D0D5DD;
+    border-radius: 4px;
+    padding: 3px 7px;
+}
+
+.mockup-ef-coupon-code {
+    font-size: 9px;
+    font-weight: 700;
+    color: #1B2B4B;
+    font-family: monospace;
+    letter-spacing: 0.05em;
+}
+
+.mockup-ef-coupon-claim {
+    font-size: 8px;
+    font-weight: 600;
+    color: #00A3FA;
+}
+
+/* --- Resource Management mockup --- */
+.mockup-ef-product-detail {
+    top: 80px;
+    width: 210px;
+}
+
+.mockup-ef-detail-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-ef-avail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.mockup-ef-avail-loc {
+    font-size: 9px;
+    font-weight: 500;
+    color: #344054;
+}
+
+.mockup-ef-avail-count {
+    font-size: 8px;
+    font-weight: 600;
+    padding: 1px 5px;
+    border-radius: 6px;
+}
+
+.mockup-ef-avail-count.confirmed {
+    color: #027A48;
+    background: #ECFDF3;
+}
+
+.mockup-ef-avail-count.picked-up {
+    color: #B54708;
+    background: #FFF4E5;
+}
+
+.mockup-ef-variant-pills {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.mockup-ef-variant-pill {
+    font-size: 8px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 5px;
+    background: #F2F4F7;
+    color: #667085;
+    cursor: default;
+}
+
+.mockup-ef-variant-pill.active {
+    background: #003264;
+    color: #fff;
+}
+
+/* --- Operations mockup --- */
+.mockup-ef-stats-row {
+    display: flex;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.mockup-ef-stat-card {
+    flex: 1;
+    background: #F8F9FB;
+    border: 1px solid #F2F4F7;
+    border-radius: 7px;
+    padding: 5px 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.mockup-ef-stat-card-label {
+    font-size: 7px;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.mockup-ef-stat-card-value {
+    font-size: 12px;
+    font-weight: 700;
+    color: #003264;
+}
+
+.mockup-ef-stat-card-change {
+    font-size: 7px;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 1px 3px;
+    width: fit-content;
+}
+
+.mockup-ef-stat-card-change.up {
+    color: #027A48;
+    background: #ECFDF3;
+}
+
+/* Chart */
+.mockup-ef-chart {
+    margin-top: 8px;
+}
+
+.mockup-ef-chart-title {
+    font-size: 8px;
+    font-weight: 600;
+    color: #344054;
+}
+
+.mockup-ef-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    height: 50px;
+    margin-top: 4px;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.mockup-ef-bar-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.mockup-ef-bar {
+    width: 100%;
+    background: #E0EDFF;
+    border-radius: 3px 3px 0 0;
+    min-height: 3px;
+}
+
+.mockup-ef-bar.highlight {
+    background: #00A3FA;
+}
+
+.mockup-ef-bar-label {
+    font-size: 6px;
+    color: #98A2B3;
+    margin-top: 2px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Staff schedule card */
+.mockup-ef-staff-schedule {
+    top: 110px;
+    width: 200px;
+}
+
+.mockup-ef-staff-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-ef-staff-row:last-child {
+    border-bottom: none;
+}
+
+.mockup-ef-staff-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.mockup-ef-staff-name {
+    font-size: 10px;
+    font-weight: 600;
+    color: #344054;
+}
+
+.mockup-ef-staff-role {
+    font-size: 8px;
+    color: #98A2B3;
+}
+
+/* --- Dash AI mockup --- */
+.mockup-ef-ai {
+    padding: 14px 18px 0;
+}
+
+.mockup-ef-ai-dark {
+    background: linear-gradient(145deg, #0a1628 0%, #1a1045 50%, #0f1d3d 100%);
+    border-radius: 10px;
+    padding: 12px 14px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mockup-ef-ai-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.mockup-ef-ai-logo {
+    flex-shrink: 0;
+    display: flex;
+}
+
+.mockup-ef-ai-title {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.mockup-ef-ai-subtitle {
+    display: block;
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.mockup-ef-ai-chat {
+    margin-top: 8px;
+}
+
+.mockup-ef-ai-bubble {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+.mockup-ef-ai-bubble strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+.mockup-ef-ai-suggestions {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.mockup-ef-ai-pill {
+    font-size: 8px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 3px 8px;
+    cursor: default;
+}
+
+/* AI actions card */
+.mockup-ef-ai-actions {
+    top: 110px;
+    right: 14px;
+    width: 180px;
+    padding: 12px 12px 10px;
+}
+
+.mockup-ef-ai-action-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 0;
+    border-bottom: 1px solid #F2F4F7;
+    font-size: 9px;
+    font-weight: 500;
+    color: #344054;
+}
+
+.mockup-ef-ai-action-item:last-of-type {
+    border-bottom: none;
+}
+
+.mockup-ef-ai-usage {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #F2F4F7;
+}
+
+.mockup-ef-ai-usage-label {
+    display: block;
+    font-size: 7px;
+    font-weight: 600;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 3px;
+}
+
+.mockup-ef-ai-usage-bar {
+    width: 100%;
+    height: 5px;
+    background: #F2F4F7;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.mockup-ef-ai-usage-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7C3AED, #2563EB);
+    border-radius: 3px;
+}
+
+.mockup-ef-ai-usage-text {
+    display: block;
+    font-size: 7px;
+    color: #98A2B3;
+    margin-top: 2px;
+}
+
+/* --- Scheduling & Logistics mockup --- */
+.mockup-ef-calendar {
+    display: flex;
+    gap: 3px;
+    margin-top: 8px;
+}
+
+.mockup-ef-cal-day {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-height: 130px;
+    background: #F9FAFB;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.mockup-ef-cal-day.today {
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+}
+
+.mockup-ef-cal-label {
+    font-size: 7px;
+    font-weight: 600;
+    color: #667085;
+    text-align: center;
+    padding: 2px 0 3px;
+}
+
+.mockup-ef-cal-day.today .mockup-ef-cal-label {
+    color: #2563EB;
+}
+
+.mockup-ef-cal-block {
+    border-radius: 3px;
+    padding: 2px 3px;
+    font-size: 6px;
+    font-weight: 600;
+    line-height: 1.3;
+    overflow: hidden;
+}
+
+.mockup-ef-cal-block.rental {
+    background: #DBEAFE;
+    color: #1E40AF;
+    border-left: 2px solid #3B82F6;
+}
+
+.mockup-ef-cal-block.experience {
+    background: #FEF3C7;
+    color: #92400E;
+    border-left: 2px solid #F59E0B;
+}
+
+/* Manifest card */
+.mockup-ef-manifest {
+    top: 80px;
+    width: 210px;
+}
+
+.mockup-ef-manifest-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-ef-manifest-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.mockup-ef-manifest-guest {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 0;
+    border-bottom: 1px solid #F2F4F7;
+    font-size: 9px;
+    font-weight: 500;
+    color: #344054;
+}
+
+.mockup-ef-manifest-guest:last-child {
+    border-bottom: none;
+}
+
+/* --- Responsive: 991px --- */
+@media (max-width: 991px) {
+    .mockup-ef-bookings,
+    .mockup-ef-cx,
+    .mockup-ef-resources,
+    .mockup-ef-ops,
+    .mockup-ef-ai,
+    .mockup-ef-schedule {
+        height: 280px;
+        padding: 12px 14px 0;
+    }
+
+    .mockup-ef-fg,
+    .mockup-ef-cx-signature,
+    .mockup-ef-cx-coupon {
+        display: none !important;
+    }
+
+    .mockup-ef-bg {
+        padding: 12px 14px 0;
+    }
+
+    .mockup-ef-list-title {
+        font-size: 12px;
+    }
+
+    .mockup-ef-col {
+        font-size: 9px;
+    }
+
+    .mockup-ef-ai-dark {
+        padding: 10px 12px;
+    }
+}
+
+/* --- Responsive: 767px --- */
+@media (max-width: 767px) {
+    .mockup-ef-bookings,
+    .mockup-ef-cx,
+    .mockup-ef-resources,
+    .mockup-ef-ops,
+    .mockup-ef-ai,
+    .mockup-ef-schedule {
+        height: 300px;
+        padding: 14px 16px 0;
+    }
+
+    .mockup-ef-fg {
+        display: block;
+        width: 200px;
+        right: 12px;
+    }
+
+    .mockup-ef-cx-signature,
+    .mockup-ef-cx-coupon {
+        display: block !important;
+    }
+
+    .mockup-ef-cx-profile {
+        top: 50px;
+        width: 190px;
+    }
+
+    .mockup-ef-booking-detail {
+        top: 80px;
+    }
+
+    .mockup-ef-product-detail {
+        top: 70px;
+        width: 185px;
+    }
+
+    .mockup-ef-staff-schedule {
+        top: 100px;
+        width: 175px;
+    }
+
+    .mockup-ef-ai-actions {
+        top: 100px;
+        width: 165px;
+    }
+
+    .mockup-ef-manifest {
+        top: 70px;
+        width: 185px;
+    }
+}
+
+/* ===== End Explore Features Tab Mockups ===== */
 
 /* Integrations */
 .integrations {
@@ -1601,7 +4239,9 @@ body.mobile-menu-open {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 136px 0 60px;
+    padding: 80px 0 0;
+    margin-bottom: -150px;
+    z-index: 1;
 }
 
 .inner-ready {
@@ -1613,11 +4253,15 @@ body.mobile-menu-open {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
 .ready-content {
     max-width: 580px;
     width: 100%;
+    align-self: flex-start;
+    padding-top: 0;
+    margin-top: -45px;
 }
 
 .ready-content .sub-title {
@@ -1637,13 +4281,361 @@ body.mobile-menu-open {
 }
 
 .ready-thumb {
-    width: 43.083%;
-    margin-top: -6px;
+    width: 55%;
+    min-width: 55%;
     display: flex;
+    align-items: flex-end;
+    align-self: flex-end;
+    margin-bottom: -8px;
 }
 
 .ready-thumb img {
     max-width: 901px;
+}
+
+/* ===== CTA Dashboard Product Mockup ===== */
+.mockup-cta-dashboard {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mockup-cta-main {
+    display: flex;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    font-family: inherit;
+}
+
+.mockup-cta-sidebar {
+    width: 140px;
+    min-width: 140px;
+    background: #003264;
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mockup-cta-logo {
+    padding: 4px 0 12px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mockup-cta-logo img {
+    display: block;
+}
+
+.mockup-cta-nav-section {
+    margin-bottom: 6px;
+}
+
+.mockup-cta-nav-label {
+    font-size: 7px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.mockup-cta-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    padding: 5px 8px;
+    border-radius: 6px;
+    margin-bottom: 1px;
+}
+
+.mockup-cta-nav-item.active {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    font-weight: 600;
+}
+
+.mockup-cta-content {
+    flex: 1;
+    background: #fff;
+    padding: 14px 16px;
+}
+
+.mockup-cta-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.mockup-cta-page-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #003264;
+}
+
+.mockup-cta-topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mockup-cta-search {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 8px;
+    color: #98A2B3;
+    background: #F8F9FB;
+    border: 1px solid #E4E7EC;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.mockup-cta-new-btn {
+    font-size: 8px;
+    font-weight: 600;
+    color: #fff;
+    background: #003264;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.mockup-cta-tabs {
+    display: flex;
+    gap: 16px;
+    border-bottom: 2px solid #F2F4F7;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+}
+
+.mockup-cta-tab {
+    font-size: 9px;
+    font-weight: 500;
+    color: #667085;
+    position: relative;
+    padding-bottom: 4px;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.mockup-cta-tab.active {
+    color: #003264;
+    font-weight: 600;
+}
+
+.mockup-cta-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #00A3FA;
+}
+
+.mockup-cta-tab-count {
+    font-size: 7px;
+    background: #F2F4F7;
+    color: #667085;
+    padding: 1px 4px;
+    border-radius: 4px;
+    margin-left: 3px;
+}
+
+.mockup-cta-snapshot {
+    margin-bottom: 14px;
+}
+
+.mockup-cta-snapshot-title {
+    font-size: 10px;
+    font-weight: 600;
+    color: #003264;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.mockup-cta-snapshot-sub {
+    font-size: 8px;
+    color: #26AF51;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.mockup-cta-stats {
+    display: flex;
+    gap: 8px;
+}
+
+.mockup-cta-stat {
+    flex: 1;
+    border: 1px solid #F2F4F7;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.mockup-cta-stat-label {
+    font-size: 8px;
+    color: #667085;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.mockup-cta-stat-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #003264;
+    display: inline;
+}
+
+.mockup-cta-stat-change {
+    font-size: 8px;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.mockup-cta-stat-change.up {
+    color: #26AF51;
+}
+
+.mockup-cta-tables {
+    display: flex;
+    gap: 12px;
+}
+
+.mockup-cta-table-half {
+    flex: 1;
+}
+
+.mockup-cta-table-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.mockup-cta-table-header > span:first-child {
+    font-size: 10px;
+    font-weight: 600;
+    color: #003264;
+}
+
+.mockup-cta-late-badge {
+    font-size: 7px;
+    font-weight: 600;
+    color: #B54708;
+    background: #FFF4E5;
+    border: 1px solid #FECDAB;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+.mockup-cta-late-badge.orange {
+    color: #B42318;
+    background: #FEF3F2;
+    border-color: #FECDCA;
+}
+
+.mockup-cta-table-row {
+    display: grid;
+    grid-template-columns: 40px 1fr 62px 78px;
+    gap: 4px;
+    padding: 4px 0;
+    font-size: 8px;
+    color: #344054;
+    border-bottom: 1px solid #F2F4F7;
+    align-items: center;
+}
+
+.mockup-cta-table-row.head {
+    font-size: 7px;
+    color: #98A2B3;
+    font-weight: 600;
+    border-bottom: 1px solid #E4E7EC;
+}
+
+.mockup-cta-status {
+    font-size: 7px;
+    font-weight: 500;
+    padding: 2px 5px;
+    border-radius: 8px;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+}
+
+.mockup-cta-status.reserved {
+    color: #027A48;
+    background: #ECFDF3;
+}
+
+.mockup-cta-status.picked-up {
+    color: #B54708;
+    background: #FFF4E5;
+}
+
+.mockup-cta-status.confirmed {
+    color: #175CD3;
+    background: #EFF8FF;
+}
+
+.mockup-cta-status.completed {
+    color: #166534;
+    background: #F0FDF4;
+}
+
+.mockup-cta-status.processing {
+    color: #B54708;
+    background: #FFFAEB;
+}
+
+.mockup-cta-status.shipped {
+    color: #175CD3;
+    background: #EFF8FF;
+}
+
+.mockup-cta-dash-badge {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 1px 3px rgba(0,0,0,0.08);
+    z-index: 3;
+}
+
+.mockup-cta-dashboard [x-cloak] {
+    display: none !important;
+}
+
+@media (max-width: 991px) {
+    .mockup-cta-sidebar {
+        display: none;
+    }
+    .mockup-cta-main {
+        border-radius: 10px 10px 0 0;
+    }
+    .mockup-cta-tables {
+        flex-direction: column;
+    }
+    .mockup-cta-dash-badge {
+        width: 28px;
+        height: 28px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .mockup-cta-dash-badge svg {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 /* Subscribe section */
@@ -1944,6 +4936,35 @@ body.mobile-menu-open {
 
     .list-features .box-features .img-pc {
         display: none;
+    }
+
+    .mockup-bookings {
+        height: 280px;
+        padding: 15px 15px 0;
+    }
+
+    .mockup-detail {
+        width: 220px;
+        right: 10px;
+        top: 100px;
+        padding: 12px 14px;
+    }
+
+    .mockup-detail-title {
+        font-size: 13px;
+    }
+
+    .mockup-list {
+        padding: 12px 14px 0;
+    }
+
+    .mockup-list-title {
+        font-size: 15px;
+    }
+
+    .mockup-tab {
+        font-size: 11px;
+        padding: 5px 10px 7px;
     }
 }
 
@@ -2827,6 +5848,377 @@ h1.pricing-p_heading {
     margin-top: 10px;
 }
 
+/* ===== Industry Page Photo-Based Mockups ===== */
+/* Reusable across all industry/vertical pages (ski, boats, bikes, etc.) */
+
+.mockup-ind-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+}
+
+/* Odd items (1st, 3rd): image on left — add right whitespace before text */
+.features_item:nth-child(odd) .mockup-ind-wrap {
+    padding-right: 40px;
+}
+
+/* Even items (2nd): image on right — left whitespace handled by existing padding-left:60px on thumb */
+
+.mockup-ind-photo {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+
+.mockup-ind-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Odd items (image left): heavy radius on left side */
+.mockup-ind-photo.radius-left img {
+    border-radius: 150px 8px 8px 150px;
+}
+
+/* Even items (image right): heavy radius on right side */
+.mockup-ind-photo.radius-right img {
+    border-radius: 8px 150px 150px 8px;
+}
+
+/* Green decorative shapes */
+.mockup-ind-shape {
+    position: absolute;
+    z-index: 1;
+}
+
+/* Shapes for odd items (image on right, shapes on left edge of photo) */
+.mockup-ind-shape-left-1 {
+    width: 80px;
+    height: 120px;
+    background: #26AF51;
+    clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+    left: -10px;
+    top: 40px;
+}
+
+.mockup-ind-shape-left-2 {
+    width: 60px;
+    height: 90px;
+    background: #00CE69;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 80%);
+    left: 10px;
+    bottom: 50px;
+}
+
+/* Shapes for even items (image on left, shapes on right edge of photo) */
+.mockup-ind-shape-right-1 {
+    width: 80px;
+    height: 120px;
+    background: #26AF51;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+    right: -10px;
+    top: 40px;
+}
+
+.mockup-ind-shape-right-2 {
+    width: 60px;
+    height: 90px;
+    background: #00CE69;
+    clip-path: polygon(0 0, 100% 10%, 100% 80%, 0 100%);
+    right: 10px;
+    bottom: 50px;
+}
+
+/* Floating cards positioned over photos */
+.mockup-ind-card-main {
+    position: absolute;
+    z-index: 2;
+    padding: 14px 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+    max-width: 310px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.mockup-ind-card-secondary {
+    position: absolute;
+    z-index: 3;
+    padding: 10px 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+    max-width: 180px;
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+/* Odd items: cards on bottom-left + top-right */
+.mockup-ind-card-main.pos-bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.mockup-ind-card-secondary.pos-top-right {
+    top: 15px;
+    right: 20px;
+}
+
+/* Even items: cards on bottom-right + top-left */
+.mockup-ind-card-main.pos-bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+.mockup-ind-card-secondary.pos-top-left {
+    top: 15px;
+    left: 20px;
+}
+
+/* Industry mockup card header */
+.mockup-ind-header {
+    margin-bottom: 8px;
+}
+
+.mockup-ind-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1B2B4B;
+    letter-spacing: -0.01em;
+}
+
+.mockup-ind-subtitle {
+    font-size: 10px;
+    color: #98A2B3;
+    margin-top: 2px;
+}
+
+/* Industry mockup table (compact variant) */
+.mockup-ind-table {
+    width: 100%;
+}
+
+.mockup-ind-row {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #F2F4F7;
+    gap: 8px;
+}
+
+.mockup-ind-row-head {
+    padding: 5px 0;
+}
+
+.mockup-ind-row-head .mockup-ind-col {
+    font-size: 9px;
+    font-weight: 600;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.mockup-ind-col {
+    flex: 1;
+    font-size: 11px;
+    color: #344054;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mockup-ind-col-narrow {
+    flex: 0 0 55px;
+    font-size: 11px;
+}
+
+.mockup-ind-col-price {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #003264;
+    font-size: 11px;
+}
+
+/* Industry mockup small stat card */
+.mockup-ind-stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0;
+}
+
+.mockup-ind-stat-label {
+    font-size: 9px;
+    color: #667085;
+}
+
+.mockup-ind-stat-value {
+    font-size: 9px;
+    font-weight: 700;
+    color: #003264;
+}
+
+/* Schedule mockup specific */
+.mockup-ind-schedule-grid {
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    gap: 2px;
+    font-size: 9px;
+}
+
+.mockup-ind-schedule-header {
+    font-weight: 600;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 4px 2px;
+    text-align: center;
+    font-size: 8px;
+}
+
+.mockup-ind-schedule-header.today {
+    color: #00A3FA;
+    border-bottom: 2px solid #00A3FA;
+}
+
+.mockup-ind-schedule-name {
+    font-size: 10px;
+    font-weight: 600;
+    color: #344054;
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mockup-ind-schedule-cell {
+    padding: 4px 2px;
+    text-align: center;
+}
+
+.mockup-ind-shift-block {
+    background: #EFF8FF;
+    color: #175CD3;
+    font-size: 8px;
+    font-weight: 600;
+    padding: 3px 4px;
+    border-radius: 4px;
+    line-height: 1.2;
+}
+
+.mockup-ind-shift-block.peak {
+    background: #FFF4E5;
+    color: #B54708;
+}
+
+.mockup-ind-published-badge {
+    display: inline-block;
+    font-size: 8px;
+    font-weight: 600;
+    color: #027A48;
+    background: #ECFDF3;
+    border: 1px solid #A6F4C5;
+    padding: 1px 5px;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+
+/* Industry mockup responsive — 991px */
+@media (max-width: 991px) {
+    .mockup-ind-wrap {
+        min-height: 320px;
+    }
+
+    .mockup-ind-photo {
+        height: 320px;
+    }
+
+    .mockup-ind-card-main {
+        max-width: 270px;
+        padding: 12px 14px;
+    }
+
+    .mockup-ind-card-secondary {
+        max-width: 175px;
+        padding: 10px 12px;
+    }
+
+    .mockup-ind-schedule-grid {
+        font-size: 8px;
+        grid-template-columns: 65px repeat(7, 1fr);
+    }
+}
+
+/* Industry mockup responsive — 767px */
+@media (max-width: 767px) {
+    .mockup-ind-wrap {
+        min-height: 280px;
+    }
+
+    .mockup-ind-photo {
+        height: 280px;
+    }
+
+    .mockup-ind-photo.radius-left img,
+    .mockup-ind-photo.radius-right img {
+        border-radius: 80px;
+    }
+
+    .features_item:nth-child(odd) .mockup-ind-wrap {
+        padding-right: 0;
+    }
+
+    .mockup-ind-card-main {
+        max-width: 240px;
+        padding: 10px 12px;
+    }
+
+    .mockup-ind-card-main.pos-bottom-left,
+    .mockup-ind-card-main.pos-bottom-right {
+        bottom: 5px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    .mockup-ind-card-secondary {
+        max-width: 160px;
+        padding: 8px 10px;
+        top: 10px;
+    }
+
+    .mockup-ind-card-secondary.pos-top-right,
+    .mockup-ind-card-secondary.pos-top-left {
+        right: 10px;
+        left: auto;
+    }
+
+    .mockup-ind-shape-left-1,
+    .mockup-ind-shape-left-2,
+    .mockup-ind-shape-right-1,
+    .mockup-ind-shape-right-2 {
+        transform: scale(0.75);
+    }
+
+    .mockup-ind-schedule-grid {
+        grid-template-columns: 55px repeat(7, 1fr);
+        gap: 1px;
+        font-size: 7px;
+    }
+
+    .mockup-ind-shift-block {
+        font-size: 7px;
+        padding: 2px 3px;
+    }
+
+    .mockup-ind-schedule-name {
+        font-size: 8px;
+    }
+}
+
+/* ===== End Industry Page Photo-Based Mockups ===== */
+
 /*=======================
     Book a Demo Page
 =======================*/
@@ -2950,7 +6342,7 @@ h1.pricing-p_heading {
 .form_item .form_select {
     padding: 11px 16px;
     appearance: none;
-    background-image: url('/images/book-a-demo/arrow-down.svg');
+    background-image: url('/images/icons/arrow-down.svg');
     background-repeat: no-repeat;
     background-position: right 0.7rem top 50%;
     background-size: 3% auto;
@@ -3221,6 +6613,529 @@ section.fea-banner {
 .fea-thumb img {
     max-width: 1012px;
 }
+
+/* ===== Features Hero Animated Mockup ===== */
+.mockup-fea-hero {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+}
+
+.mockup-fea-hero .mockup-fea-dash {
+    position: relative;
+    z-index: 1;
+    padding: 14px 16px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.mockup-bk-hero-cal {
+    position: absolute;
+    bottom: 12px;
+    right: -20px;
+    width: 160px;
+    z-index: 3;
+    padding: 8px 10px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06) !important;
+}
+
+@media (max-width: 991px) {
+    .mockup-bk-hero-cal {
+        width: 140px;
+        right: -10px;
+        bottom: 8px;
+        padding: 6px 8px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .mockup-bk-hero-cal {
+        width: 130px;
+        right: -5px;
+        bottom: 5px;
+    }
+}
+
+.mockup-fea-perf-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1B2B4B;
+    margin-bottom: 2px;
+}
+
+.mockup-fea-perf-sub {
+    font-size: 10px;
+    color: #98A2B3;
+    margin-bottom: 10px;
+}
+
+.mockup-fea-stats {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.mockup-fea-stat-card {
+    flex: 1;
+    background: #F8F9FB;
+    border-radius: 8px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mockup-fea-stat-lbl {
+    font-size: 9px;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.mockup-fea-stat-val {
+    font-size: 18px;
+    font-weight: 700;
+    color: #003264;
+}
+
+.mockup-fea-section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.mockup-fea-section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1B2B4B;
+}
+
+.mockup-fea-late-badge {
+    font-size: 9px;
+    font-weight: 600;
+    color: #B54708;
+    background: #FFF4E5;
+    border: 1px solid #FECDAB;
+    border-radius: 10px;
+    padding: 2px 8px;
+}
+
+.mockup-fea-row-highlight {
+    background: #F0F7FF;
+}
+
+/* Booking detail modal — slides in on hover */
+.mockup-fea-modal {
+    position: absolute;
+    right: -30px;
+    top: 80px;
+    width: 240px;
+    z-index: 2;
+    padding: 14px 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06);
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+}
+
+.mockup-fea-hero:hover .mockup-fea-modal {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.mockup-fea-modal-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.mockup-fea-modal-close {
+    margin-left: auto;
+    font-size: 16px;
+    color: #98A2B3;
+    cursor: default;
+    line-height: 1;
+}
+
+.mockup-fea-modal-alert {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #FFF4E5;
+    border: 1px solid #FECDAB;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #B54708;
+}
+
+.mockup-fea-modal-dates {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: #667085;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.mockup-fea-modal-section {
+    margin-bottom: 10px;
+}
+
+.mockup-fea-modal-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: #98A2B3;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+}
+
+.mockup-fea-modal-items {
+    margin-top: 6px;
+}
+
+.mockup-fea-modal-item-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: #98A2B3;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #F2F4F7;
+    margin-bottom: 4px;
+}
+
+.mockup-fea-modal-item-head span:first-child {
+    flex: 1;
+}
+.mockup-fea-modal-item-head span:nth-child(2) {
+    width: 30px;
+    text-align: center;
+}
+.mockup-fea-modal-item-head span:last-child {
+    width: 60px;
+    text-align: right;
+}
+
+.mockup-fea-modal-item-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #344054;
+    padding: 4px 0;
+}
+
+.mockup-fea-modal-item-row span:first-child {
+    flex: 1;
+    font-weight: 500;
+    color: #003264;
+}
+.mockup-fea-modal-item-row span:nth-child(2) {
+    width: 30px;
+    text-align: center;
+    color: #667085;
+}
+.mockup-fea-modal-item-row span:last-child {
+    width: 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #003264;
+}
+
+.mockup-fea-modal-totals {
+    border-top: 1px solid #F2F4F7;
+    padding-top: 6px;
+    margin-top: 6px;
+}
+
+.mockup-fea-modal-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #667085;
+    padding: 2px 0;
+}
+
+.mockup-fea-modal-total-final {
+    font-weight: 700;
+    color: #003264;
+    font-size: 12px;
+    border-top: 1px solid #F2F4F7;
+    padding-top: 6px;
+    margin-top: 4px;
+}
+
+.mockup-fea-modal-btn {
+    background: #F7581F;
+    color: #fff;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+/* Customer Experience hero: coupon card */
+.mockup-fea-hero-coupon {
+    position: absolute;
+    left: -10px;
+    bottom: 20px;
+    width: 200px;
+    z-index: 3;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06);
+    background: #fff;
+}
+.mockup-fea-hero-nps {
+    position: absolute;
+    right: -30px;
+    top: -10px;
+    width: 240px;
+    z-index: 4;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06);
+    background: #fff;
+}
+
+/* ===== End Features Hero Animated Mockup ===== */
+
+/* ===== Features Section Product Mockups ===== */
+.mockup-fea-sec {
+    position: relative;
+    width: 100%;
+    padding: 16px 20px 0;
+    overflow: visible;
+    min-height: 320px;
+}
+
+.mockup-fea-sec .mockup-fea-sec-bg {
+    position: relative;
+    z-index: 1;
+    padding: 14px 16px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
+    overflow: hidden;
+}
+
+.mockup-fea-sec .mockup-fea-sec-fg {
+    position: absolute;
+    right: 15px;
+    bottom: -10px;
+    width: 240px;
+    z-index: 2;
+    padding: 14px 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* Even sections: image on right, fg card on left */
+.fea-sec2 .mockup-fea-sec .mockup-fea-sec-fg {
+    right: auto;
+    left: 15px;
+}
+
+/* Customer Experience fg card — far right, overlapping edge of bg card */
+.fea-sec2 .mockup-fea-sec.mockup-fea-custexp .mockup-fea-sec-fg {
+    left: auto;
+    right: -60px;
+    top: 30px;
+    bottom: auto;
+    width: 210px;
+}
+
+/* Schedule grid */
+.mockup-fea-schedule-grid {
+    display: grid;
+    grid-template-columns: 62px repeat(7, 1fr);
+    gap: 3px;
+}
+
+.mockup-fea-sched-head {
+    font-size: 9px;
+    font-weight: 600;
+    color: #98A2B3;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 4px 2px;
+}
+
+.mockup-fea-sched-name {
+    font-size: 10px;
+    font-weight: 500;
+    color: #003264;
+    padding: 6px 0;
+    white-space: nowrap;
+}
+
+.mockup-fea-sched-shift {
+    font-size: 9px;
+    font-weight: 600;
+    color: #175CD3;
+    background: #EFF8FF;
+    border-radius: 4px;
+    text-align: center;
+    padding: 6px 2px;
+}
+
+.mockup-fea-sched-off {
+    padding: 6px 2px;
+}
+
+.mockup-fea-sched-today {
+    background: #FFF4E5;
+    color: #B54708;
+    font-weight: 700;
+}
+
+.mockup-fea-sched-shift.mockup-fea-sched-today {
+    background: #FECDAB;
+    color: #B54708;
+}
+
+/* Chart */
+.mockup-fea-chart {
+    padding: 0 0 10px;
+}
+
+.mockup-fea-chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 100px;
+    padding: 0 4px;
+}
+
+.mockup-fea-chart-bar {
+    flex: 1;
+    background: #E0EDFF;
+    border-radius: 4px 4px 0 0;
+    min-width: 0;
+}
+
+.mockup-fea-chart-bar-accent {
+    background: #00A3FA;
+}
+
+.mockup-fea-chart-labels {
+    display: flex;
+    gap: 8px;
+    padding: 4px 4px 0;
+}
+
+.mockup-fea-chart-labels span {
+    flex: 1;
+    text-align: center;
+    font-size: 9px;
+    color: #98A2B3;
+}
+
+/* Maintenance rows */
+.mockup-fea-maint-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+/* Integration grid */
+.mockup-fea-integ-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mockup-fea-integ-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    background: #F8F9FB;
+    border-radius: 8px;
+}
+
+.mockup-fea-integ-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+/* ===== End Features Section Product Mockups ===== */
+
+/* ===== Booking Benefits Card Mockups ===== */
+.mockup-bk-benefit {
+    position: relative;
+    padding: 12px 10px 0;
+    overflow: visible;
+    min-height: 220px;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.mockup-bk-benefit .mockup-card:first-child {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.mockup-bk-benefit-fg {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    width: 200px;
+    z-index: 2;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06);
+}
+/* Mini calendar grid for hero rental period */
+.mockup-bk-cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    text-align: center;
+}
+.mockup-bk-cal-head {
+    font-size: 7px;
+    color: #98A2B3;
+    padding: 2px 0;
+    font-weight: 500;
+}
+.mockup-bk-cal-day {
+    font-size: 7px;
+    padding: 2px 0;
+    border-radius: 2px;
+}
+.mockup-bk-cal-day.avail {
+    color: #003264;
+}
+.mockup-bk-cal-day.dim {
+    color: #D0D5DD;
+}
+.mockup-bk-cal-day.selected {
+    color: #fff;
+    background: #027A48;
+    font-weight: 600;
+}
+.mockup-bk-cal-day.range {
+    color: #027A48;
+    background: #ECFDF3;
+}
+/* ===== End Booking Benefits Card Mockups ===== */
 
 .fea-content .banner-btn {
     display: flex;
@@ -3548,6 +7463,7 @@ section.sec-booking {
     display: flex;
     justify-content: center;
     margin: 0 0 13px;
+    overflow: hidden;
 }
 
 .box-booking .benefits-content h3 {
@@ -3589,7 +7505,7 @@ section.booking-benefits {
 =======================*/
 section.ol-banner {
     padding: 106px 0 78px;
-    background-image: url('/images/ol_booking/ol_hero_bg.png');
+    background-image: url('/images/ol_hero_bg.png');
     position: relative;
 }
 
@@ -3674,7 +7590,7 @@ section.ol-features {
     Feature Single Pages — OL Booking Ready
 =======================*/
 .olbooking-ready {
-    background-image: url('/images/ol_booking/olbk_ready-bg.png') !important;
+    background-image: url('/images/olbk_ready-bg.png') !important;
     padding: 136px 0 128px;
     background-size: 100% 100%;
     position: relative;
@@ -3890,6 +7806,20 @@ section.page-integration {
         padding-left: 20px;
     }
 
+    .mockup-fea-hero {
+        max-width: 100%;
+    }
+
+    .mockup-fea-modal {
+        right: -10px;
+        top: 60px;
+        width: 210px;
+    }
+
+    .mockup-fea-stat-val {
+        font-size: 15px;
+    }
+
     .fea-bk-banner .fea-content,
     .fea-bk-banner .fea-thumb {
         width: 100%;
@@ -3976,6 +7906,47 @@ section.page-integration {
     .features_main-banner .fea-sec-thumb,
     .features_main-banner .fea-sec-thumb img {
         flex-basis: 100%;
+    }
+
+    .mockup-fea-hero .mockup-fea-modal {
+        display: none;
+    }
+
+    .mockup-fea-hero {
+        max-width: 100%;
+    }
+
+    .mockup-fea-stat-val {
+        font-size: 14px;
+    }
+
+    .mockup-fea-stats {
+        gap: 6px;
+    }
+
+    .mockup-fea-stat-card {
+        padding: 8px 10px;
+    }
+
+    .mockup-fea-sec {
+        min-height: auto;
+        padding: 12px 14px 0;
+    }
+
+    .mockup-fea-sec .mockup-fea-sec-fg {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .fea-sec2 .mockup-fea-sec .mockup-fea-sec-fg {
+        left: auto;
+    }
+
+    .mockup-fea-schedule-grid {
+        grid-template-columns: 55px repeat(7, 1fr);
     }
 
     section.dth-features {
@@ -4624,7 +8595,7 @@ section.page-integration {
     display: inline-block;
     width: 18px;
     height: 18px;
-    background-image: url("/images/blog/vuesax_linear_search_normal 1.svg");
+    background-image: url("/images/icons/search-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -6737,7 +10708,8 @@ section.page-integration {
     font-weight: 700;
     font-size: 19px;
     line-height: 28px;
-    margin: 0 0 20px 20px;
+    margin: 0 0 20px 10px;
+    white-space: nowrap;
 }
 
 .box-location:hover {
@@ -6786,22 +10758,22 @@ section.page-integration {
 
 .location-slider .slick-next {
     right: 110px;
-    background-image: url('/images/icon/slick-next.svg');
+    background-image: url('/images/icons/slick-next.svg');
 }
 
 .location-slider .slick-prev {
     left: 110px;
-    background-image: url('/images/icon/slick-prev.svg');
+    background-image: url('/images/icons/slick-prev.svg');
 }
 
 .location-slider .slick-next:hover {
     opacity: 0.5;
-    background-image: url('/images/icon/slick-next.svg');
+    background-image: url('/images/icons/slick-next.svg');
 }
 
 .location-slider .slick-prev:hover {
     opacity: 0.5;
-    background-image: url('/images/icon/slick-prev.svg');
+    background-image: url('/images/icons/slick-prev.svg');
 }
 
 /* Brand slider - matches WP Slick autoplay */

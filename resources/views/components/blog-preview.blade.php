@@ -30,9 +30,9 @@
                         @if($post->og_image)
                             <img src="{{ asset($post->og_image) }}" alt="{{ $post->title }}">
                         @elseif($post->featured_image_id)
-                            <img src="{{ asset('images/blog-1-1.png') }}" alt="{{ $post->title }}">
+                            <img src="{{ asset('images/blog/blog-1-1.png') }}" alt="{{ $post->title }}">
                         @else
-                            <img src="{{ asset('images/blog-1-1.png') }}" alt="{{ $post->title }}">
+                            <img src="{{ asset('images/blog/blog-1-1.png') }}" alt="{{ $post->title }}">
                         @endif
                     </a>
                     @if($post->category)

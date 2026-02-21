@@ -2,7 +2,7 @@
     <div class="inner-header">
         <div class="logo">
             <a href="{{ route('home') }}">
-                <img src="{{ asset('images/logo.png') }}" alt="EquipDash">
+                <img src="{{ asset('images/equipdash-logo.svg') }}" alt="EquipDash">
             </a>
         </div>
         <div class="main-header">
@@ -26,7 +26,7 @@
                                         <p>Purpose-built for equipment rental providers and experience operators who want to grow without the complexity.</p>
                                         <div class="card-item">
                                             <a href="#">
-                                                <img class="icon" src="{{ asset('images/menu/see-it.svg') }}" alt="">
+                                                <img class="icon" src="{{ asset('images/icons/see-it.svg') }}" alt="">
                                                 <span>See It In Action</span>
                                             </a>
                                         </div>
@@ -47,31 +47,31 @@
                                             <div class="category-item">
                                                 <div class="card-item">
                                                     <a href="/equipment-rental-providers/ski-snowboard">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1.svg') }}" alt="">
                                                         <span>Ski & Snowboard</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/equipment-rental-providers/bikes">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-1.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-1.svg') }}" alt="">
                                                         <span>Bikes</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/equipment-rental-providers/water-sports">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-2.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-2.svg') }}" alt="">
                                                         <span>Water Sport</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/equipment-rental-providers/boats">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-3.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-3.svg') }}" alt="">
                                                         <span>Boats</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/equipment-rental-providers/camping-hiking">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-4.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-4.svg') }}" alt="">
                                                         <span>Camping & Hiking</span>
                                                     </a>
                                                 </div>
@@ -90,25 +90,25 @@
                                             <div class="category-item">
                                                 <div class="card-item">
                                                     <a href="/experience-tour-operator/tours">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-5.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-5.svg') }}" alt="">
                                                         <span>Tour</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/experience-tour-operator/activities-adventure">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-6.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-6.svg') }}" alt="">
                                                         <span>Activities & Adventures</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/experience-tour-operator/attractions">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-8.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-8.svg') }}" alt="">
                                                         <span>Attractions</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/experience-tour-operator/charters">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-7.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-7.svg') }}" alt="">
                                                         <span>Charters</span>
                                                     </a>
                                                 </div>
@@ -138,13 +138,13 @@
                                         <p>One platform to manage bookings, inventory, customers, and day-to-day operations.</p>
                                         <div class="card-item">
                                             <a href="/features/dash-ai">
-                                                <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-9.svg') }}" alt="">
+                                                <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-9.svg') }}" alt="">
                                                 <span>Dash AI</span>
                                             </a>
                                         </div>
                                         <div class="card-item">
                                             <a href="/integrations">
-                                                <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-10.svg') }}" alt="">
+                                                <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-10.svg') }}" alt="">
                                                 <span>Integrations</span>
                                             </a>
                                         </div>
@@ -167,43 +167,43 @@
                                             <div class="category-item">
                                                 <div class="card-item">
                                                     <a href="/features/bookings/online-booking">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-11.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-11.svg') }}" alt="">
                                                         <span>Online Booking</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/bookings/pos-management">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-12.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-12.svg') }}" alt="">
                                                         <span>POS Management</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/bookings/booking-management">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-13.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-13.svg') }}" alt="">
                                                         <span>Booking Management</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/bookings/refund-cancellation">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-14.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-14.svg') }}" alt="">
                                                         <span>Refund & Cancellation</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/bookings/workflow-automation">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-15.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-15.svg') }}" alt="">
                                                         <span>Workflow Automation</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/bookings/waitlist-management">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-16.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-16.svg') }}" alt="">
                                                         <span>Waitlist Management</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/bookings/secure-payment">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-17.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-17.svg') }}" alt="">
                                                         <span>Secure Payments</span>
                                                     </a>
                                                 </div>
@@ -223,37 +223,37 @@
                                             <div class="category-item">
                                                 <div class="card-item">
                                                     <a href="/features/customer-experience/crm">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-18.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-18.svg') }}" alt="">
                                                         <span>CRM</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/customer-experience/digital-waivers">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-19.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-19.svg') }}" alt="">
                                                         <span>Digital Waivers</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/customer-experience/custom-forms">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-20.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-20.svg') }}" alt="">
                                                         <span>Custom Forms</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/customer-experience/gift-cards-vouchers">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-2.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-2.svg') }}" alt="">
                                                         <span>Gift Cards and Vouchers</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/customer-experience/promotions-campaigns">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-3-1.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-3-1.svg') }}" alt="">
                                                         <span>Promotions and Campaigns</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/customer-experience/reviews-surveys">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-4.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-4.svg') }}" alt="">
                                                         <span>Reviews and Surveys</span>
                                                     </a>
                                                 </div>
@@ -273,37 +273,37 @@
                                             <div class="category-item">
                                                 <div class="card-item">
                                                     <a href="/features/resource-management/inventory-management">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-4-1.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-4-1.svg') }}" alt="">
                                                         <span>Inventory Management</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/resource-management/guide-management">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-23.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-23.svg') }}" alt="">
                                                         <span>Guide Management</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/resource-management/product-catalogue">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-24.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-24.svg') }}" alt="">
                                                         <span>Product Catalogue</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/resource-management/experience-catalogue">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-25.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-25.svg') }}" alt="">
                                                         <span>Experience Catalogue</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/resource-management/season-schedule">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-2-1.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-2-1.svg') }}" alt="">
                                                         <span>Season & Schedule</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/resource-management/store-catalogue">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-24.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-24.svg') }}" alt="">
                                                         <span>Store Catalogue</span>
                                                     </a>
                                                 </div>
@@ -323,19 +323,19 @@
                                             <div class="category-item">
                                                 <div class="card-item">
                                                     <a href="/features/scheduling-logistics/guestlist-manifest">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-26.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-26.svg') }}" alt="">
                                                         <span>Guestlist & Manifest</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/scheduling-logistics/staff-rostering">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-27.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-27.svg') }}" alt="">
                                                         <span>Staff Rostering</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/scheduling-logistics/calendar">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-26.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-26.svg') }}" alt="">
                                                         <span>Calendar</span>
                                                     </a>
                                                 </div>
@@ -355,19 +355,19 @@
                                             <div class="category-item">
                                                 <div class="card-item">
                                                     <a href="/features/operations/staff-management">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-28.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-28.svg') }}" alt="">
                                                         <span>Staff Management</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/operations/asset-equipment-maintenance">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-29.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-29.svg') }}" alt="">
                                                         <span>Asset Maintenance</span>
                                                     </a>
                                                 </div>
                                                 <div class="card-item">
                                                     <a href="/features/operations/reports-insights">
-                                                        <img class="icon" src="{{ asset('images/menu/vuesax_linear_flash-1-30.svg') }}" alt="">
+                                                        <img class="icon" src="{{ asset('images/icons/vuesax_linear_flash-1-30.svg') }}" alt="">
                                                         <span>Reports & Insights</span>
                                                     </a>
                                                 </div>
@@ -411,22 +411,22 @@
                                     <ul class="submenu-list">
                                         <li class="submenu-items">
                                             <div class="items-header">
-                                                <img src="{{ asset('images/menu/vuesax_linear_flash-1-31.svg') }}" alt="">
+                                                <img src="{{ asset('images/icons/vuesax_linear_flash-1-31.svg') }}" alt="">
                                                 <h3><a href="{{ route('blog.index') }}">Blog</a></h3>
                                             </div>
                                             <p>Tips and insights for rental and tour operators.</p>
                                         </li>
                                         <li class="submenu-items">
                                             <div class="items-header">
-                                                <img src="{{ asset('images/menu/vuesax_linear_flash-1-32.svg') }}" alt="">
+                                                <img src="{{ asset('images/icons/vuesax_linear_flash-1-32.svg') }}" alt="">
                                                 <h3><a href="{{ route('contact-us') }}">Contact Us</a></h3>
                                             </div>
                                             <p>Get in touch — our team is here to help.</p>
                                         </li>
                                         <li class="submenu-items">
                                             <div class="items-header">
-                                                <img src="{{ asset('images/menu/vuesax_linear_flash-1-33.svg') }}" alt="">
-                                                <h3><a href="{{ route('help-docs') }}">Help Docs</a></h3>
+                                                <img src="{{ asset('images/icons/vuesax_linear_flash-1-33.svg') }}" alt="">
+                                                <h3><a href="https://help.equipdash.com" target="_blank">Help Docs</a></h3>
                                             </div>
                                             <p>Step-by-step guides and product documentation.</p>
                                         </li>
@@ -434,7 +434,7 @@
                                     <div class="new-blog">
                                         <div class="card-blog">
                                             <a href="{{ route('blog.index') }}" class="card-thumb">
-                                                <img src="{{ asset('images/who-where-for/blog-1.png') }}" alt="">
+                                                <img src="{{ asset('images/blog/blog-1.png') }}" alt="">
                                             </a>
                                             <h4><a href="{{ route('blog.index') }}">Latest from the Blog</a></h4>
                                             <p>Max 4 min read</p>
@@ -448,7 +448,7 @@
             </nav>
             <div class="header-btn">
                 <a href="https://app.equipdash.com/login" class="login">Login</a>
-                <a href="{{ route('book-a-demo') }}" class="head-btn">Start Your Free Trial</a>
+                <a href="https://app.equipdash.com/free-trial" class="head-btn">Start Your Free Trial</a>
             </div>
         </div>
         <div class="click-mobile" id="menu">

@@ -20,7 +20,7 @@
                     <div class="blog-card blog-card--main">
                         <a href="{{ route('blog.show', $featured->slug) }}" class="blog-card__thumb">
                             <img
-                                src="{{ $featured->getFirstMediaUrl('featured_image') ?: asset('images/post_1.png') }}"
+                                src="{{ $featured->getFirstMediaUrl('featured_image') ?: asset('images/blog/post_1.png') }}"
                                 alt="{{ $featured->title }}"
                             >
                         </a>
@@ -46,7 +46,7 @@
                                 <div class="fv__blog-card blog-card">
                                     <a href="{{ route('blog.show', $secondary->slug) }}" class="blog-card__thumb">
                                         <img
-                                            src="{{ $secondary->getFirstMediaUrl('featured_image') ?: asset('images/post_1.png') }}"
+                                            src="{{ $secondary->getFirstMediaUrl('featured_image') ?: asset('images/blog/post_1.png') }}"
                                             alt="{{ $secondary->title }}"
                                         >
                                     </a>

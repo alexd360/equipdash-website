@@ -11,7 +11,7 @@
     <x-wwf-hero
         title="Tour and activity software that sells while you sleep"
         description="EquipDash helps tour and experience operators manage bookings, coordinate guides, and deliver consistent guest experiences. From walking tours to whale-watching charters, one platform handles it all."
-        image="images/Mask-group.png"
+        image="images/hero-images/experience-tour-operator-hero.png"
         imageAlt="Experience & Tour Operator Dashboard"
     />
 
@@ -19,9 +19,9 @@
         title="How EquipDash helps tour operators"
         description="EquipDash replaces manual scheduling, paper manifests, and fragmented booking systems with one platform designed for experience operators."
         :cards="[
-            ['icon' => 'images/boost-bookings.png', 'title' => 'Fill every departure', 'description' => 'Online bookings with real-time availability, OTA distribution, and automated waitlists. Customers book tours and activities around the clock.'],
-            ['icon' => 'images/optimize-operations.png', 'title' => 'Keep trips running smoothly', 'description' => 'Guide scheduling, guest manifests, and waiver collection — all connected to your bookings. Your team knows who is on every trip.'],
-            ['icon' => 'images/delight-customers.png', 'title' => 'Build guest loyalty', 'description' => 'CRM profiles, post-trip review requests, and loyalty programs turn one-time visitors into repeat customers.'],
+            ['icon' => 'images/icons/boost-bookings.png', 'title' => 'Fill every departure', 'description' => 'Online bookings with real-time availability, OTA distribution, and automated waitlists. Customers book tours and activities around the clock.'],
+            ['icon' => 'images/icons/optimize-operations.png', 'title' => 'Keep trips running smoothly', 'description' => 'Guide scheduling, guest manifests, and waiver collection — all connected to your bookings. Your team knows who is on every trip.'],
+            ['icon' => 'images/icons/delight-customers.png', 'title' => 'Build guest loyalty', 'description' => 'CRM profiles, post-trip review requests, and loyalty programs turn one-time visitors into repeat customers.'],
         ]"
     />
 
@@ -29,10 +29,10 @@
         title="Purpose-built for your experience niche"
         description="EquipDash adapts to the specific needs of each tour and activity vertical."
         :twoColumn="[
-            ['url' => '/experience-tour-operator/tours', 'title' => 'Tours', 'description' => 'Schedule guided tours, manage group sizes, and distribute across OTAs from one calendar.', 'image' => 'images/tours.jpg'],
-            ['url' => '/experience-tour-operator/activities-adventure', 'title' => 'Activities & Adventure', 'description' => 'Handle safety waivers, participant management, and multi-activity scheduling for high-energy experiences.', 'image' => 'images/activities-and-adventure.jpg'],
-            ['url' => '/experience-tour-operator/attractions', 'title' => 'Attractions', 'description' => 'Manage timed entry, capacity limits, and group bookings for parks, museums, and seasonal events.', 'image' => 'images/attractionss.jpg'],
-            ['url' => '/experience-tour-operator/charters', 'title' => 'Charters', 'description' => 'Coordinate vessels, crew, and passenger manifests for fishing, whale-watching, and boat tours.', 'image' => 'images/charters.jpg'],
+            ['url' => '/experience-tour-operator/tours', 'title' => 'Tours', 'description' => 'Schedule guided tours, manage group sizes, and distribute across OTAs from one calendar.', 'image' => 'images/use-cases/tours-use-case.jpg'],
+            ['url' => '/experience-tour-operator/activities-adventure', 'title' => 'Activities & Adventure', 'description' => 'Handle safety waivers, participant management, and multi-activity scheduling for high-energy experiences.', 'image' => 'images/use-cases/adventure-activity-use-use.jpg'],
+            ['url' => '/experience-tour-operator/attractions', 'title' => 'Attractions', 'description' => 'Manage timed entry, capacity limits, and group bookings for parks, museums, and seasonal events.', 'image' => 'images/use-cases/attractions-use-case.jpg'],
+            ['url' => '/experience-tour-operator/charters', 'title' => 'Charters', 'description' => 'Coordinate vessels, crew, and passenger manifests for fishing, whale-watching, and boat tours.', 'image' => 'images/use-cases/charters-use-case.jpg'],
         ]"
     />
 

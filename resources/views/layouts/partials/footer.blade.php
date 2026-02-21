@@ -4,24 +4,27 @@
             <div class="footer-info">
                 <div class="logo">
                     <a href="{{ route('home') }}">
-                        <img src="{{ asset('images/logo-white.png') }}" alt="EquipDash">
+                        <img src="{{ asset('images/equipdash-logo-white.svg') }}" alt="EquipDash">
                     </a>
                 </div>
                 <div class="desc">
                     <p>EquipDash is the all-in-one platform for equipment rental shops and tour operators.</p>
                 </div>
                 <div class="social">
-                    <a href="#" target="_blank">
-                        <img src="{{ asset('images/instagram.svg') }}" alt="Instagram">
+                    <a href="https://www.instagram.com/equipdash/" target="_blank">
+                        <img src="{{ asset('images/icons/instagram.svg') }}" alt="Instagram">
                     </a>
-                    <a href="#" target="_blank">
-                        <img src="{{ asset('images/linkedin.svg') }}" alt="LinkedIn">
+                    <a href="https://www.linkedin.com/company/equipdash" target="_blank">
+                        <img src="{{ asset('images/icons/linkedin.svg') }}" alt="LinkedIn">
                     </a>
-                    <a href="#" target="_blank">
-                        <img src="{{ asset('images/twitter.svg') }}" alt="Twitter">
+                    <a href="https://x.com/equipdash" target="_blank">
+                        <img src="{{ asset('images/icons/twitter.svg') }}" alt="X">
                     </a>
-                    <a href="#" target="_blank">
-                        <img src="{{ asset('images/facebook.svg') }}" alt="Facebook">
+                    <a href="https://www.facebook.com/equipdash" target="_blank">
+                        <img src="{{ asset('images/icons/facebook.svg') }}" alt="Facebook">
+                    </a>
+                    <a href="https://www.youtube.com/@equipdash" target="_blank">
+                        <img src="{{ asset('images/icons/youtube.svg') }}" alt="YouTube">
                     </a>
                 </div>
             </div>
@@ -39,9 +42,9 @@
                         <li><a href="/features/bookings/online-booking">Online Booking</a></li>
                         <li><a href="/features/resource-management/inventory-management">Inventory Management</a></li>
                         <li><a href="/features/bookings/booking-management">Booking Management</a></li>
-                        <li><a href="/features/operations/api-integrations">API & Integrations</a></li>
-                        <li><a href="/experience-tour-operator/activities-adventure">Activities & Adventure</a></li>
-                        <li class="features-hidden"><a href="/features/bookings/pos-management">POS Management</a></li>
+                        <li><a href="/features/bookings/pos-management">POS Management</a></li>
+                        <li><a href="/features/customer-experience/digital-waivers">Digital Waivers</a></li>
+                        <li class="features-hidden"><a href="/features/operations/api-integrations">API & Integrations</a></li>
                         <li class="features-hidden"><a href="/features/bookings/refund-cancellation">Refund & Cancellation</a></li>
                         <li class="features-hidden"><a href="/features/bookings/secure-payment">Secure Payment</a></li>
                         <li class="features-hidden"><a href="/features/bookings/waitlist-management">Waitlist Management</a></li>
@@ -55,7 +58,7 @@
                         <li><a href="{{ route('blog.index') }}">Blog</a></li>
                         <li><a href="{{ route('pricing') }}">Pricing</a></li>
                         <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
-                        <li><a href="{{ route('help-docs') }}">Help Docs</a></li>
+                        <li><a href="https://help.equipdash.com" target="_blank">Help Docs</a></li>
                     </ul>
                 </div>
             </div>

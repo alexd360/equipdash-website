@@ -17,7 +17,7 @@
                     <h1 class="hero-heading">Build custom integrations with the EquipDash API</h1>
                     <p class="hero-desc">EquipDash provides a REST API with full documentation. Connect your systems, automate data flows, and build custom integrations alongside our pre-built connections.</p>
                     <div class="banner-btn">
-                        <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free 21-Day Trial</a>
+                        <a href="https://app.equipdash.com/free-trial" class="global-btn">Start Your Free 21-Day Trial</a>
                         <a href="{{ route('book-a-demo') }}" class="global-btn-white">See It In Action</a>
                     </div>
                 </div>

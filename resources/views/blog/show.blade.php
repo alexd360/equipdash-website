@@ -52,7 +52,7 @@
 
                     {{-- Featured Image --}}
                     <div class="post__thumb">
-                        <img src="{{ $post->getFirstMediaUrl('featured_image') ?: asset('images/post_1.png') }}" alt="{{ $post->title }}">
+                        <img src="{{ $post->getFirstMediaUrl('featured_image') ?: asset('images/blog/post_1.png') }}" alt="{{ $post->title }}">
                     </div>
 
                     {{-- Article Body --}}
@@ -64,11 +64,11 @@
                             <div class="ready__title">Manage your business<br>in one place</div>
                             <div class="ready__desc txt-default">Start your free 21-day trial and see how EquipDash simplifies your operations.</div>
                             <div class="ready__btn">
-                                <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
+                                <a href="https://app.equipdash.com/free-trial" class="global-btn">Start Your Free Trial</a>
                             </div>
                         </div>
                         <div class="ready__thumb">
-                            <img src="{{ asset('images/ready__img.png') }}" alt="EquipDash Dashboard" />
+                            <img src="{{ asset('images/blog/ready__img.png') }}" alt="EquipDash Dashboard" />
                         </div>
                     </section>
                 </article>
@@ -88,7 +88,7 @@
                             <div class="sidebar-ready__title">Try EquipDash free for 21 days</div>
                             <div class="sidebar-ready__desc txt-default">No credit card required. Set up in minutes.</div>
                             <div class="sidebar-ready__btn">
-                                <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
+                                <a href="https://app.equipdash.com/free-trial" class="global-btn">Start Your Free Trial</a>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                             <div class="card-post">
                                 <a href="{{ route('blog.show', $relatedPost->slug) }}" class="thumb">
                                     <img
-                                        src="{{ $relatedPost->getFirstMediaUrl('featured_image') ?: asset('images/post_1.png') }}"
+                                        src="{{ $relatedPost->getFirstMediaUrl('featured_image') ?: asset('images/blog/post_1.png') }}"
                                         alt="{{ $relatedPost->title }}"
                                     >
                                 </a>

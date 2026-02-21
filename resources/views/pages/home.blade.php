@@ -28,10 +28,10 @@
             <div class="inner-banner">
                 <div class="banner-intro">
                     <div class="gr-img">
-                        <img src="{{ asset('images/smb-1.jpg') }}" alt="">
-                        <img src="{{ asset('images/smb-1.jpg') }}" alt="">
-                        <img src="{{ asset('images/smb-1.jpg') }}" alt="">
-                        <img src="{{ asset('images/smb-2.jpg') }}" alt="">
+                        <img src="{{ asset('images/testimonials/bike-rental-store-operator-testimonial.jpeg') }}" alt="Bike rental store operator">
+                        <img src="{{ asset('images/testimonials/ski-rental-store-testimonial.jpeg') }}" alt="Ski rental store operator">
+                        <img src="{{ asset('images/testimonials/experience-guide-testimonial.jpeg') }}" alt="Experience guide">
+                        <img src="{{ asset('images/testimonials/experience-operator-testimonial.jpg') }}" alt="Tour operator">
                     </div>
                     <span>Trusted by hundreds of rental shops and tour operators</span>
                 </div>
@@ -40,7 +40,7 @@
                     <h1 class="hero-heading">Get more bookings.<br>Simplify your operations.</h1>
                     <p class="desc hero-desc">Manage bookings, inventory, staff, waivers, and payments from a single dashboard — with Dash AI, a built-in assistant that handles the busywork for you. Whether you rent equipment or run tours, EquipDash gives you the tools to spend less time on operations and more time growing your business.</p>
                     <div class="banner-btn">
-                        <a href="{{ route('book-a-demo') }}" class="global-btn">Start Your Free Trial</a>
+                        <a href="https://app.equipdash.com/free-trial" class="global-btn">Start Your Free Trial</a>
                         <a href="/book-a-demo" class="global-btn-white">See It In Action</a>
                     </div>
                     <p class="credit">No credit card required. 21-day free trial.</p>
@@ -52,7 +52,7 @@
                     <div class="gift">
                         <iframe src="https://lottie.host/embed/6b3ad66a-c605-4b89-8f60-e25e71ead957/6qb39Eap9I.lottie"></iframe>
                     </div>
-                    <span class="play"><img src="{{ asset('images/icon-play.png') }}" alt="Play"></span>
+                    <span class="play"><img src="{{ asset('images/icons/icon-play.png') }}" alt="Play"></span>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
                 <div class="list-audience-post">
                     <div class="card-audience">
                         <a href="/equipment-rental-providers" class="thumb">
-                            <img src="{{ asset('images/audience-1.png') }}" alt="Equipment Rental Providers">
+                            <img src="{{ asset('images/equipment-rental-provider-customer.jpeg') }}" alt="Equipment Rental Providers" style="object-position: top;">
                         </a>
                         <div class="info-audience">
                             <h3>Equipment Rental Providers</h3>
@@ -106,7 +106,7 @@
                     </div>
                     <div class="card-audience">
                         <a href="/experience-tour-operator" class="thumb">
-                            <img src="{{ asset('images/audience-2.png') }}" alt="Experience and Tour Operators">
+                            <img src="{{ asset('images/experience-operator-hot-air-balloon.jpg') }}" alt="Experience and Tour Operators">
                         </a>
                         <div class="info-audience">
                             <h3>Experience and tour operators</h3>
@@ -130,7 +130,7 @@
                         <a href="/who-we-are-for/activities-adventure">
                         <h3>Activities & Adventures</h3>
                         <div class="thumb">
-                            <img src="{{ asset('images/local_2.png') }}" alt="">
+                            <img src="{{ asset('images/carousel/activities-and-adventure-use-case.jpeg') }}" alt="Activities & Adventures">
                         </div>
                         </a>
                     </div>
@@ -140,7 +140,7 @@
                         <a href="/who-we-are-for/ski-snowboard">
                         <h3>Ski & Snowboard</h3>
                         <div class="thumb">
-                            <img src="{{ asset('images/local_1.png') }}" alt="">
+                            <img src="{{ asset('images/carousel/skiing-use-case.jpg') }}" alt="Ski & Snowboard">
                         </div>
                         </a>
                     </div>
@@ -150,7 +150,7 @@
                         <a href="/who-we-are-for/camping-hiking">
                         <h3>Camping & Hiking</h3>
                         <div class="thumb">
-                            <img src="{{ asset('images/local_2.png') }}" alt="">
+                            <img src="{{ asset('images/carousel/camping-hiking-use-case.jpg') }}" alt="Camping & Hiking">
                         </div>
                         </a>
                     </div>
@@ -160,7 +160,7 @@
                         <a href="/who-we-are-for/water-sports">
                         <h3>Water Sports</h3>
                         <div class="thumb">
-                            <img src="{{ asset('images/local_3.png') }}" alt="">
+                            <img src="{{ asset('images/carousel/water-sports-use-case.jpg') }}" alt="Water Sports">
                         </div>
                         </a>
                     </div>
@@ -170,7 +170,7 @@
                         <a href="/who-we-are-for/attractions">
                         <h3>Attractions</h3>
                         <div class="thumb">
-                            <img src="{{ asset('images/local_4.png') }}" alt="">
+                            <img src="{{ asset('images/carousel/attractions-use-case.jpg') }}" alt="Attractions">
                         </div>
                         </a>
                     </div>
@@ -180,7 +180,7 @@
                         <a href="/who-we-are-for/tours">
                         <h3>Tours</h3>
                         <div class="thumb">
-                            <img src="{{ asset('images/local_1.png') }}" alt="">
+                            <img src="{{ asset('images/carousel/tours-use-case.jpg') }}" alt="Tours">
                         </div>
                         </a>
                     </div>
@@ -204,8 +204,77 @@
                                 <p>Let customers book and pay online 24/7 with real-time availability. In-store POS and automated confirmations mean fewer missed reservations and no double-bookings.</p>
                             </div>
                             <div class="gr-image">
-                                <img class="img-pc" src="{{ asset('images/fe_1.png') }}" alt="Bookings Made Easy">
-                                <img class="img-mb" src="{{ asset('images/fe_1.png') }}" alt="Bookings Made Easy">
+                                {{-- Product mockup: Bookings UI --}}
+                                <div class="mockup-bookings">
+                                    {{-- Background: Booking list --}}
+                                    <div class="mockup-card mockup-list">
+                                        <div class="mockup-list-header">
+                                            <span class="mockup-list-title">Bookings</span>
+                                        </div>
+                                        <div class="mockup-tabs">
+                                            <span class="mockup-tab active">All Bookings <span class="mockup-badge">234</span></span>
+                                            <span class="mockup-tab">Rentals <span class="mockup-badge">188</span></span>
+                                            <span class="mockup-tab">Experiences <span class="mockup-badge">46</span></span>
+                                        </div>
+                                        <div class="mockup-table">
+                                            <div class="mockup-row mockup-row-head">
+                                                <span class="mockup-col-check"></span>
+                                                <span class="mockup-col">Booking No</span>
+                                                <span class="mockup-col">Customer</span>
+                                                <span class="mockup-col">Status</span>
+                                            </div>
+                                            <div class="mockup-row">
+                                                <span class="mockup-col-check"><span class="mockup-checkbox"></span></span>
+                                                <span class="mockup-col">#125</span>
+                                                <span class="mockup-col">Megan Allen</span>
+                                                <span class="mockup-col"><span class="mockup-status picked-up">Picked Up</span></span>
+                                            </div>
+                                            <div class="mockup-row">
+                                                <span class="mockup-col-check"><span class="mockup-checkbox"></span></span>
+                                                <span class="mockup-col">#124</span>
+                                                <span class="mockup-col">James Chen</span>
+                                                <span class="mockup-col"><span class="mockup-status reserved">Reserved</span></span>
+                                            </div>
+                                            <div class="mockup-row">
+                                                <span class="mockup-col-check"><span class="mockup-checkbox checked"></span></span>
+                                                <span class="mockup-col">#123</span>
+                                                <span class="mockup-col">Lauren Walker</span>
+                                                <span class="mockup-col"><span class="mockup-status reserved">Reserved</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {{-- Foreground: Booking detail popup --}}
+                                    <div class="mockup-card mockup-detail">
+                                        <div class="mockup-detail-header">
+                                            <span class="mockup-detail-title">Booking #125</span>
+                                            <span class="mockup-status picked-up">Picked Up</span>
+                                        </div>
+                                        <div class="mockup-detail-dates">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="2" width="10" height="9" rx="1.5" stroke="#667085" stroke-width="1.2"/><path d="M1 5h10" stroke="#667085" stroke-width="1.2"/><path d="M4 1v2M8 1v2" stroke="#667085" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                            <span>Mar 2 — Mar 4, 2026</span>
+                                        </div>
+                                        <div class="mockup-detail-section">
+                                            <span class="mockup-detail-label">Customer</span>
+                                            <span class="mockup-detail-value">Megan Allen</span>
+                                            <span class="mockup-detail-sub">miller.deanna@example.com</span>
+                                        </div>
+                                        <div class="mockup-detail-section">
+                                            <span class="mockup-detail-label">Items</span>
+                                            <div class="mockup-detail-item">
+                                                <div class="mockup-item-info">
+                                                    <span class="mockup-item-name">Stand Up Paddleboard</span>
+                                                    <span class="mockup-item-variant">10ft All-Around · x1</span>
+                                                </div>
+                                                <span class="mockup-item-price">$147.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="mockup-detail-total">
+                                            <span>Total</span>
+                                            <span class="mockup-total-amount">$147.00</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -216,8 +285,97 @@
                                 <p>Digital waivers, CRM profiles, automated follow-ups, and loyalty tools help you turn one-time visitors into repeat customers and five-star reviews.</p>
                             </div>
                             <div class="gr-image">
-                                <img class="img-pc" src="{{ asset('images/fe_2.png') }}" alt="Customer Experience">
-                                <img class="img-mb" src="{{ asset('images/fe_2.png') }}" alt="Customer Experience">
+                                {{-- Product mockup: Customer Experience UI --}}
+                                <div class="mockup-customers">
+                                    {{-- Background: Customer list --}}
+                                    <div class="mockup-card mockup-cust-list">
+                                        <div class="mockup-list-header">
+                                            <span class="mockup-list-title">Customers</span>
+                                            <span class="mockup-search-pill">
+                                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><circle cx="4.5" cy="4.5" r="3.5" stroke="#98A2B3" stroke-width="1.2"/><path d="M7.5 7.5L10 10" stroke="#98A2B3" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                                Search
+                                            </span>
+                                        </div>
+                                        <div class="mockup-table">
+                                            <div class="mockup-row mockup-row-head">
+                                                <span class="mockup-col mockup-col-id">ID</span>
+                                                <span class="mockup-col">Name</span>
+                                                <span class="mockup-col">Email</span>
+                                                <span class="mockup-col mockup-col-date">Last booking</span>
+                                            </div>
+                                            <div class="mockup-row">
+                                                <span class="mockup-col mockup-col-id">165</span>
+                                                <span class="mockup-col">David Green</span>
+                                                <span class="mockup-col mockup-text-muted">acollier@example.net</span>
+                                                <span class="mockup-col mockup-col-date">Feb 15, 2026</span>
+                                            </div>
+                                            <div class="mockup-row mockup-row-highlight">
+                                                <span class="mockup-col mockup-col-id">164</span>
+                                                <span class="mockup-col mockup-text-bold">Emma Scott</span>
+                                                <span class="mockup-col mockup-text-muted">vwintheiser@example.org</span>
+                                                <span class="mockup-col mockup-col-date">Feb 15, 2026</span>
+                                            </div>
+                                            <div class="mockup-row">
+                                                <span class="mockup-col mockup-col-id">163</span>
+                                                <span class="mockup-col">Justin Hill</span>
+                                                <span class="mockup-col mockup-text-muted">sylvester.robel@example.org</span>
+                                                <span class="mockup-col mockup-col-date">Feb 14, 2026</span>
+                                            </div>
+                                            <div class="mockup-row">
+                                                <span class="mockup-col mockup-col-id">162</span>
+                                                <span class="mockup-col">Rachel Lopez</span>
+                                                <span class="mockup-col mockup-text-muted">jast.jettie@example.org</span>
+                                                <span class="mockup-col mockup-col-date">Feb 13, 2026</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {{-- Foreground: Customer profile card --}}
+                                    <div class="mockup-card mockup-cust-profile">
+                                        <div class="mockup-profile-header">
+                                            <div class="mockup-avatar">ES</div>
+                                            <div>
+                                                <span class="mockup-profile-name">Emma Scott</span>
+                                                <span class="mockup-detail-sub">Customer since Feb 2025</span>
+                                            </div>
+                                        </div>
+                                        <div class="mockup-profile-stats">
+                                            <div class="mockup-stat">
+                                                <span class="mockup-stat-value">12</span>
+                                                <span class="mockup-stat-label">Bookings</span>
+                                            </div>
+                                            <div class="mockup-stat">
+                                                <span class="mockup-stat-value">$1,840</span>
+                                                <span class="mockup-stat-label">Total Spent</span>
+                                            </div>
+                                            <div class="mockup-stat">
+                                                <span class="mockup-stat-value">$153</span>
+                                                <span class="mockup-stat-label">Avg. Value</span>
+                                            </div>
+                                        </div>
+                                        <div class="mockup-profile-section">
+                                            <span class="mockup-detail-label">Waivers</span>
+                                            <div class="mockup-waiver-row">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" fill="#ECFDF3" stroke="#A6F4C5" stroke-width="1"/><path d="M3.5 6.2L5.2 7.8L8.5 4.5" stroke="#027A48" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                <span class="mockup-waiver-name">Liability Waiver</span>
+                                                <span class="mockup-waiver-date">Signed Feb 3</span>
+                                            </div>
+                                            <div class="mockup-waiver-row">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" fill="#ECFDF3" stroke="#A6F4C5" stroke-width="1"/><path d="M3.5 6.2L5.2 7.8L8.5 4.5" stroke="#027A48" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                <span class="mockup-waiver-name">Rental Agreement</span>
+                                                <span class="mockup-waiver-date">Signed Feb 3</span>
+                                            </div>
+                                        </div>
+                                        <div class="mockup-profile-section">
+                                            <span class="mockup-detail-label">Promo Code</span>
+                                            <div class="mockup-promo-row">
+                                                <span class="mockup-promo-code">SUMMER15</span>
+                                                <span class="mockup-promo-discount">15% off</span>
+                                                <span class="mockup-status reserved">Active</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -225,23 +383,143 @@
                         <a href="/features/operations">
                             <div class="box-text">
                                 <h3>Run your operations without the spreadsheets</h3>
-                                <p>Track every piece of gear, schedule your staff, manage maintenance, and monitor performance — whether you operate year-round or seasonally.</p>
+                                <p>Track gear, schedule staff, manage maintenance, and monitor performance — all in one place.</p>
                             </div>
                             <div class="gr-image">
-                                <img class="img-pc" src="{{ asset('images/fe_3.png') }}" alt="Operations">
-                                <img class="img-mb" src="{{ asset('images/fe_3.png') }}" alt="Operations">
+                                {{-- Product mockup: Operations Dashboard UI (compact for narrow column) --}}
+                                <div class="mockup-operations">
+                                    {{-- Single card: Compact dashboard --}}
+                                    <div class="mockup-card mockup-ops-dashboard">
+                                        <div class="mockup-list-header">
+                                            <span class="mockup-list-title">Reports</span>
+                                            <span class="mockup-ops-period">
+                                                <svg width="10" height="10" viewBox="0 0 11 11" fill="none"><rect x="1" y="1.5" width="9" height="8" rx="1.5" stroke="#667085" stroke-width="1"/><path d="M1 4h9" stroke="#667085" stroke-width="1"/><path d="M3.5 0.5v2M7.5 0.5v2" stroke="#667085" stroke-width="1" stroke-linecap="round"/></svg>
+                                                This Week
+                                            </span>
+                                        </div>
+                                        <div class="mockup-ops-stats">
+                                            <div class="mockup-ops-stat-card">
+                                                <span class="mockup-ops-stat-label">Revenue</span>
+                                                <span class="mockup-ops-stat-number">$4,280</span>
+                                                <span class="mockup-ops-stat-change up">+12%</span>
+                                            </div>
+                                            <div class="mockup-ops-stat-card">
+                                                <span class="mockup-ops-stat-label">Utilisation</span>
+                                                <span class="mockup-ops-stat-number">78%</span>
+                                                <span class="mockup-ops-stat-change up">+5%</span>
+                                            </div>
+                                            <div class="mockup-ops-stat-card">
+                                                <span class="mockup-ops-stat-label">Rentals</span>
+                                                <span class="mockup-ops-stat-number">34</span>
+                                                <span class="mockup-ops-stat-change down">-2</span>
+                                            </div>
+                                        </div>
+                                        {{-- Mini bar chart --}}
+                                        <div class="mockup-ops-chart">
+                                            <span class="mockup-ops-chart-title">Weekly Revenue</span>
+                                            <div class="mockup-ops-bars">
+                                                <div class="mockup-ops-bar-group"><div class="mockup-ops-bar" style="height: 55%"></div><span class="mockup-ops-bar-label">M</span></div>
+                                                <div class="mockup-ops-bar-group"><div class="mockup-ops-bar" style="height: 72%"></div><span class="mockup-ops-bar-label">T</span></div>
+                                                <div class="mockup-ops-bar-group"><div class="mockup-ops-bar" style="height: 48%"></div><span class="mockup-ops-bar-label">W</span></div>
+                                                <div class="mockup-ops-bar-group"><div class="mockup-ops-bar highlight" style="height: 90%"></div><span class="mockup-ops-bar-label">T</span></div>
+                                                <div class="mockup-ops-bar-group"><div class="mockup-ops-bar" style="height: 65%"></div><span class="mockup-ops-bar-label">F</span></div>
+                                                <div class="mockup-ops-bar-group"><div class="mockup-ops-bar" style="height: 82%"></div><span class="mockup-ops-bar-label">S</span></div>
+                                                <div class="mockup-ops-bar-group"><div class="mockup-ops-bar" style="height: 40%"></div><span class="mockup-ops-bar-label">S</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="box-features">
-                        <a href="/integrations">
+                        <a href="/features/dash-ai">
                             <div class="box-text">
                                 <h3>Dash AI handles the busywork for you</h3>
-                                <p>Your built-in AI assistant automates 80+ tasks — from dynamic pricing and reporting to marketplace syncing with Viator, Expedia, and more. You focus on your customers; Dash AI handles the rest.</p>
+                                <p>Your built-in AI assistant manages bookings, inventory, customers, waivers, pickups, returns, and more — so you can focus on your customers while Dash AI handles the rest.</p>
                             </div>
                             <div class="gr-image">
-                                <img class="img-pc" src="{{ asset('images/fe_4.png') }}" alt="Dash AI & Growth">
-                                <img class="img-mb" src="{{ asset('images/fe_4_mb.png') }}" alt="Dash AI & Growth">
+                                {{-- Product mockup: Dash AI — dark themed, vibrant --}}
+                                <div class="mockup-dashai">
+                                    {{-- Background: Dark AI dashboard --}}
+                                    <div class="mockup-ai-dark">
+                                        <div class="mockup-ai-hero">
+                                            <div class="mockup-ai-logo">
+                                                <svg width="28" height="28" viewBox="0 0 120 120" fill="none">
+                                                    <path d="M60 6L102 33V87L60 114L18 87V33L60 6Z" fill="url(#dashGradMockup)"/>
+                                                    <path d="M66 30L45.6 62.4H57.6L54 90L74.4 57.6H62.4L66 30Z" fill="white"/>
+                                                    <path opacity="0.6" d="M84 51.6C85.99 51.6 87.6 49.99 87.6 48C87.6 46.01 85.99 44.4 84 44.4C82.01 44.4 80.4 46.01 80.4 48C80.4 49.99 82.01 51.6 84 51.6Z" fill="white"/>
+                                                    <path opacity="0.5" d="M90 63C91.66 63 93 61.66 93 60C93 58.34 91.66 57 90 57C88.34 57 87 58.34 87 60C87 61.66 88.34 63 90 63Z" fill="white"/>
+                                                    <path opacity="0.4" d="M86.4 74.4C87.73 74.4 88.8 73.33 88.8 72C88.8 70.67 87.73 69.6 86.4 69.6C85.07 69.6 84 70.67 84 72C84 73.33 85.07 74.4 86.4 74.4Z" fill="white"/>
+                                                    <defs><linearGradient id="dashGradMockup" x1="18" y1="6" x2="102" y2="114" gradientUnits="userSpaceOnUse"><stop stop-color="#2563EB"/><stop offset="0.5" stop-color="#7C3AED"/><stop offset="1" stop-color="#9333EA"/></linearGradient></defs>
+                                                </svg>
+                                            </div>
+                                            <div class="mockup-ai-hero-text">
+                                                <span class="mockup-ai-hero-title">Dash AI</span>
+                                                <span class="mockup-ai-hero-counter">23 tasks automated today</span>
+                                            </div>
+                                        </div>
+
+                                        {{-- Grid of completed automation cards --}}
+                                        <div class="mockup-ai-grid">
+                                            <div class="mockup-ai-task-card">
+                                                <span class="mockup-ai-task-icon">
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 8.5l2.5 2.5L11 3" stroke="#26AF51" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </span>
+                                                <span class="mockup-ai-task-name">Bookings confirmed</span>
+                                                <span class="mockup-ai-task-detail">9 bookings processed</span>
+                                            </div>
+                                            <div class="mockup-ai-task-card">
+                                                <span class="mockup-ai-task-icon">
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 8.5l2.5 2.5L11 3" stroke="#26AF51" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </span>
+                                                <span class="mockup-ai-task-name">Follow-up emails sent</span>
+                                                <span class="mockup-ai-task-detail">8 customers contacted</span>
+                                            </div>
+                                            <div class="mockup-ai-task-card">
+                                                <span class="mockup-ai-task-icon">
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 8.5l2.5 2.5L11 3" stroke="#26AF51" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </span>
+                                                <span class="mockup-ai-task-name">Waivers sent to guests</span>
+                                                <span class="mockup-ai-task-detail">14 waivers delivered</span>
+                                            </div>
+                                            <div class="mockup-ai-task-card">
+                                                <span class="mockup-ai-task-icon">
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 8.5l2.5 2.5L11 3" stroke="#26AF51" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </span>
+                                                <span class="mockup-ai-task-name">Staff schedule optimised</span>
+                                                <span class="mockup-ai-task-detail">3 shifts adjusted</span>
+                                            </div>
+                                            <div class="mockup-ai-task-card">
+                                                <span class="mockup-ai-task-icon">
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 8.5l2.5 2.5L11 3" stroke="#26AF51" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </span>
+                                                <span class="mockup-ai-task-name">Weekly report generated</span>
+                                                <span class="mockup-ai-task-detail">Revenue +18% vs last week</span>
+                                            </div>
+                                            <div class="mockup-ai-task-card mockup-ai-task-running">
+                                                <span class="mockup-ai-task-icon">
+                                                    <span class="mockup-ai-pulse"></span>
+                                                </span>
+                                                <span class="mockup-ai-task-name">Processing returns...</span>
+                                                <span class="mockup-ai-task-detail">In progress</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {{-- Foreground: AI Insight card --}}
+                                    <div class="mockup-card mockup-ai-insight">
+                                        <div class="mockup-ai-insight-badge">
+                                            <svg width="10" height="10" viewBox="0 0 120 120" fill="none"><path d="M60 6L102 33V87L60 114L18 87V33L60 6Z" fill="url(#dashGradSmall)"/><path d="M66 30L45.6 62.4H57.6L54 90L74.4 57.6H62.4L66 30Z" fill="white"/><defs><linearGradient id="dashGradSmall" x1="18" y1="6" x2="102" y2="114" gradientUnits="userSpaceOnUse"><stop stop-color="#2563EB"/><stop offset="0.5" stop-color="#7C3AED"/><stop offset="1" stop-color="#9333EA"/></linearGradient></defs></svg>
+                                            AI Insight
+                                        </div>
+                                        <span class="mockup-ai-insight-text"><strong>Performance Ski #7</strong> flagged for maintenance — 1 short for Saturday's bookings. Reschedule customer?</span>
+                                        <div class="mockup-ai-insight-actions">
+                                            <span class="mockup-ai-insight-btn primary">Reschedule</span>
+                                            <span class="mockup-ai-insight-btn secondary">Dismiss</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -261,30 +539,32 @@
         <div class="brand-slider">
             @php
                 $brands = [
-                    ['logo' => 'brand_1.png', 'name' => 'Viator'],
-                    ['logo' => 'brand_2.png', 'name' => 'Tripadvisor'],
-                    ['logo' => 'brand_3.png', 'name' => 'Stripe'],
-                    ['logo' => 'brand_4.png', 'name' => 'PayPal'],
-                    ['logo' => 'brand_5.png', 'name' => 'QuickBooks'],
-                    ['logo' => 'brand_6.png', 'name' => 'Xero'],
-                    ['logo' => 'brand_7.png', 'name' => 'Expedia'],
-                    ['logo' => 'brand_8.png', 'name' => 'Square'],
-                    ['logo' => 'brand_9.png', 'name' => 'PowerBI'],
-                    ['logo' => 'brand_11.png', 'name' => 'Mailchimp'],
-                    ['logo' => 'brand_12.png', 'name' => 'Shopify'],
-                    ['logo' => 'brand_13.png', 'name' => 'Open APIs'],
-                    ['logo' => 'brand_1.png', 'name' => 'Viator'],
-                    ['logo' => 'brand_2.png', 'name' => 'Tripadvisor'],
-                    ['logo' => 'brand_3.png', 'name' => 'Stripe'],
-                    ['logo' => 'brand_4.png', 'name' => 'PayPal'],
-                    ['logo' => 'brand_5.png', 'name' => 'QuickBooks'],
-                    ['logo' => 'brand_6.png', 'name' => 'Xero'],
-                    ['logo' => 'brand_7.png', 'name' => 'Expedia'],
-                    ['logo' => 'brand_8.png', 'name' => 'Square'],
-                    ['logo' => 'brand_9.png', 'name' => 'PowerBI'],
-                    ['logo' => 'brand_11.png', 'name' => 'Mailchimp'],
-                    ['logo' => 'brand_12.png', 'name' => 'Shopify'],
-                    ['logo' => 'brand_13.png', 'name' => 'Open APIs'],
+                    ['logo' => 'integrations/viator.png', 'name' => 'Viator'],
+                    ['logo' => 'integrations/tripadvisor.png', 'name' => 'Tripadvisor'],
+                    ['logo' => 'integrations/stripe.png', 'name' => 'Stripe'],
+                    ['logo' => 'integrations/hubspot.png', 'name' => 'HubSpot'],
+                    ['logo' => 'integrations/quickbooks.png', 'name' => 'QuickBooks'],
+                    ['logo' => 'integrations/xero.png', 'name' => 'Xero'],
+                    ['logo' => 'integrations/expedia.png', 'name' => 'Expedia'],
+                    ['logo' => 'integrations/google-analytics.png', 'name' => 'Google Analytics'],
+                    ['logo' => 'integrations/mailchimp.png', 'name' => 'Mailchimp'],
+                    ['logo' => 'integrations/shopify.png', 'name' => 'Shopify'],
+                    ['logo' => 'integrations/api.png', 'name' => 'Open APIs'],
+                    ['logo' => 'integrations/zapier.png', 'name' => 'Zapier'],
+                    ['logo' => 'integrations/wordpress.png', 'name' => 'WordPress'],
+                    ['logo' => 'integrations/viator.png', 'name' => 'Viator'],
+                    ['logo' => 'integrations/tripadvisor.png', 'name' => 'Tripadvisor'],
+                    ['logo' => 'integrations/stripe.png', 'name' => 'Stripe'],
+                    ['logo' => 'integrations/hubspot.png', 'name' => 'HubSpot'],
+                    ['logo' => 'integrations/quickbooks.png', 'name' => 'QuickBooks'],
+                    ['logo' => 'integrations/xero.png', 'name' => 'Xero'],
+                    ['logo' => 'integrations/expedia.png', 'name' => 'Expedia'],
+                    ['logo' => 'integrations/google-analytics.png', 'name' => 'Google Analytics'],
+                    ['logo' => 'integrations/mailchimp.png', 'name' => 'Mailchimp'],
+                    ['logo' => 'integrations/shopify.png', 'name' => 'Shopify'],
+                    ['logo' => 'integrations/api.png', 'name' => 'Open APIs'],
+                    ['logo' => 'integrations/zapier.png', 'name' => 'Zapier'],
+                    ['logo' => 'integrations/wordpress.png', 'name' => 'WordPress'],
                 ];
             @endphp
             @foreach(array_chunk($brands, 2) as $pair)
@@ -312,7 +592,7 @@
                 <div class="list-blog">
                     <div class="card-post">
                         <a href="{{ route('blog.index') }}" class="thumb">
-                            <img src="{{ asset('images/post_1.png') }}" alt="">
+                            <img src="{{ asset('images/blog/post_1.png') }}" alt="">
                         </a>
                         <a href="{{ route('blog.category', 'industry-insights') }}" class="cate">Industry Insights</a>
                         <h3><a href="{{ route('blog.index') }}">How to Reduce No-Shows and Last-Minute Cancellations</a></h3>
@@ -320,7 +600,7 @@
                     </div>
                     <div class="card-post">
                         <a href="{{ route('blog.index') }}" class="thumb">
-                            <img src="{{ asset('images/post_2.png') }}" alt="">
+                            <img src="{{ asset('images/blog/post_2.png') }}" alt="">
                         </a>
                         <a href="{{ route('blog.category', 'tips-tricks') }}" class="cate">Tips & Tricks</a>
                         <h3><a href="{{ route('blog.index') }}">5 Ways to Increase Online Bookings This Season</a></h3>
@@ -328,7 +608,7 @@
                     </div>
                     <div class="card-post">
                         <a href="{{ route('blog.index') }}" class="thumb">
-                            <img src="{{ asset('images/post_1.png') }}" alt="">
+                            <img src="{{ asset('images/blog/post_1.png') }}" alt="">
                         </a>
                         <a href="{{ route('blog.category', 'product-updates') }}" class="cate">Product Updates</a>
                         <h3><a href="{{ route('blog.index') }}">Introducing Dash AI: Your New Operations Assistant</a></h3>
