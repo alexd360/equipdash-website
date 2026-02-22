@@ -1,0 +1,22 @@
+{
+  "name": "equipdash-overview-video",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render EquipDashOverview --output=../public/videos/equipdash-overview.mp4 --codec=h264 --crf=20",
+    "render:webm": "remotion render EquipDashOverview --output=../public/videos/equipdash-overview.webm --codec=vp8"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.242",
+    "@remotion/renderer": "4.0.242",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.242",
+    "typescript": "5.6.3"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1"
+  }
+}

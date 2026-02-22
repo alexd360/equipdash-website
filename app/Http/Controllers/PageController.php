@@ -37,6 +37,11 @@ class PageController extends Controller
         return view('pages.privacy-policy');
     }
 
+    public function subscriptionAgreement()
+    {
+        return view('pages.subscription-agreement');
+    }
+
     public function featuresIndex()
     {
         return view('pages.features.index');

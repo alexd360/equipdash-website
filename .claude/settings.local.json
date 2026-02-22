@@ -62,7 +62,14 @@
       "Bash(do [ -f \"features/$f\" ])",
       "Bash([ -f \"hero-images/dashboard-hero-image.png\" ])",
       "Bash(for f in features/fea-tabs-img1.png features/fea-tabs-mb.png features/experience_thumb.png features/manage-thumb.png features/planning.png features/operati.png features/automatic.png features/manage.png features/manage_mb.png features/experience_mb.png features/operati_mb.png features/planning_mb.png features/automatic_mb.png features/reports.png)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "WebSearch",
+      "Bash(npx remotion render:*)",
+      "Bash(npx tsc:*)",
+      "Bash(/opt/homebrew/bin/ffmpeg:*)",
+      "Bash(/usr/local/bin/ffmpeg:*)",
+      "Bash(lsof:*)",
+      "Bash(ffprobe:*)"
     ]
   }
 }

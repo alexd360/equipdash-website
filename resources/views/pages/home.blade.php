@@ -46,12 +46,9 @@
                     <p class="credit">No credit card required. 21-day free trial.</p>
                 </div>
                 <div class="banner-thumb banner-thumb-video">
-                    <div class="poster">
-                        <img src="{{ asset('images/banner-thum.png') }}" alt="EquipDash Dashboard">
-                    </div>
-                    <div class="gift">
-                        <iframe src="https://lottie.host/embed/6b3ad66a-c605-4b89-8f60-e25e71ead957/6qb39Eap9I.lottie"></iframe>
-                    </div>
+                    <video id="hero-video" poster="{{ asset('images/dashboard-hero.jpeg') }}" preload="metadata" playsinline muted>
+                        <source src="{{ asset('videos/equipdash-overview-v3.mp4') }}" type="video/mp4">
+                    </video>
                     <span class="play"><img src="{{ asset('images/icons/icon-play.png') }}" alt="Play"></span>
                 </div>
             </div>
@@ -643,3 +640,37 @@
     />
 
 @endsection
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const video = document.getElementById('hero-video');
+    const playBtn = document.querySelector('.banner-thumb-video .play');
+    if (!video || !playBtn) return;
+
+    playBtn.addEventListener('click', function () {
+        if (video.paused) {
+            video.play();
+            video.muted = false;
+            playBtn.style.opacity = '0';
+            playBtn.style.pointerEvents = 'none';
+        }
+    });
+
+    video.addEventListener('ended', function () {
+        video.currentTime = 0;
+        video.muted = true;
+        playBtn.style.opacity = '1';
+        playBtn.style.pointerEvents = 'auto';
+    });
+
+    video.addEventListener('click', function () {
+        if (!video.paused) {
+            video.pause();
+            playBtn.style.opacity = '1';
+            playBtn.style.pointerEvents = 'auto';
+        }
+    });
+});
+</script>
+@endpush

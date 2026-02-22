@@ -11,10 +11,11 @@ use Illuminate\Support\Facades\Route;
 // Static pages
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/pricing', [PageController::class, 'pricing'])->name('pricing');
-Route::get('/book-a-demo', [PageController::class, 'bookADemo'])->name('book-a-demo');
-Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
+Route::get('/book-a-demo', [PageController::class, 'bookADemo'])->name('book-a-demo')->middleware(\Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class);
+Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us')->middleware(\Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class);
 Route::get('/terms-of-use', [PageController::class, 'termsOfUse'])->name('terms-of-use');
 Route::get('/privacy-policy', [PageController::class, 'privacyPolicy'])->name('privacy-policy');
+Route::get('/subscription-agreement', [PageController::class, 'subscriptionAgreement'])->name('subscription-agreement');
 
 // Features - index page
 Route::get('/features', [PageController::class, 'featuresIndex'])->name('features.index');

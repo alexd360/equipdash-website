@@ -13,8 +13,8 @@
                     <p class="hero-desc">Have a question or need help? Our team is ready to assist you. Fill out the form and we'll get back to you within 24 hours.</p>
                     <p class="book-a-demo_features_title" style="margin-top:40px;">Other ways to reach us:</p>
                     <p class="book-a-demo_feature">Email: support@equipdash.com</p>
-                    <p class="book-a-demo_feature">Live chat available Mon-Fri, 9am-6pm EST</p>
-                    <p class="book-a-demo_feature">Help documentation for quick answers</p>
+                    <p class="book-a-demo_feature">Priority support available in portal</p>
+                    <p class="book-a-demo_feature"><a href="https://help.equipdash.com" target="_blank" style="color:inherit;text-decoration:underline;">Help documentation</a> for quick answers</p>
                 </div>
                 <div class="global-form">
                     <h2 class="form_title">Send Us a Message</h2>
@@ -76,5 +76,9 @@
     <x-cta-section
         title="Ready to get started"
         description="Start your free 21-day trial or book a demo to see EquipDash in action."
+        buttonText="Start Your Free Trial"
+        buttonUrl="https://app.equipdash.com/free-trial"
+        secondButtonText="Book a Demo"
+        secondButtonUrl="/book-a-demo"
     />
 @endsection

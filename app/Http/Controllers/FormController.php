@@ -19,8 +19,8 @@ class FormController extends Controller
             'email' => 'required|email|max:255',
             'phone' => 'nullable|string|max:50',
             'company' => 'required|string|max:255',
-            'website' => 'required|url|max:255',
-            'business_type' => 'required|string|max:255',
+            'website' => 'nullable|url|max:255',
+            'business_type' => 'nullable|string|max:255',
         ]);
 
         $submission = FormSubmission::create([
