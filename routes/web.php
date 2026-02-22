@@ -13,6 +13,7 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/pricing', [PageController::class, 'pricing'])->name('pricing');
 Route::get('/book-a-demo', [PageController::class, 'bookADemo'])->name('book-a-demo')->middleware(\Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class);
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us')->middleware(\Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class);
+Route::get('/see-it-in-action', [PageController::class, 'seeItInAction'])->name('see-it-in-action');
 Route::get('/terms-of-use', [PageController::class, 'termsOfUse'])->name('terms-of-use');
 Route::get('/privacy-policy', [PageController::class, 'privacyPolicy'])->name('privacy-policy');
 Route::get('/subscription-agreement', [PageController::class, 'subscriptionAgreement'])->name('subscription-agreement');

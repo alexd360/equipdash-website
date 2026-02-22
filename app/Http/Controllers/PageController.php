@@ -26,6 +26,11 @@ class PageController extends Controller
         return view('pages.contact-us');
     }
 
+    public function seeItInAction()
+    {
+        return view('pages.see-it-in-action');
+    }
+
 
     public function termsOfUse()
     {

@@ -25,7 +25,7 @@
                                         <h2>Who We're For</h2>
                                         <p>Purpose-built for equipment rental providers and experience operators who want to grow without the complexity.</p>
                                         <div class="card-item">
-                                            <a href="#">
+                                            <a href="/see-it-in-action">
                                                 <img class="icon" src="{{ asset('images/icons/see-it.svg') }}" alt="">
                                                 <span>See It In Action</span>
                                             </a>

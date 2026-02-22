@@ -41,7 +41,7 @@
                     <p class="desc hero-desc">Manage bookings, inventory, staff, waivers, and payments from a single dashboard — with Dash AI, a built-in assistant that handles the busywork for you. Whether you rent equipment or run tours, EquipDash gives you the tools to spend less time on operations and more time growing your business.</p>
                     <div class="banner-btn">
                         <a href="https://app.equipdash.com/free-trial" class="global-btn">Start Your Free Trial</a>
-                        <a href="/book-a-demo" class="global-btn-white">See It In Action</a>
+                        <a href="/see-it-in-action" class="global-btn-white">See It In Action</a>
                     </div>
                     <p class="credit">No credit card required. 21-day free trial.</p>
                 </div>

@@ -21,3 +21,8 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+
+# Video source footage (too large for git)
+/video/public/footage/
+/video/public/soundtrack.mp3
+/video/node_modules/
